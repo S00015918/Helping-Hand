@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="Project.HelpingHand" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true">
+    <activity android:label="XamarinFirebaseAuth" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="DashBoard" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.DashBoard" />
+    <activity android:label="ForgetPasswordcs" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.ForgetPassword" />
+    <activity android:label="SignUp" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.SignUp" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Project.HelpingHand.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.Project.HelpingHand" />
+      </intent-filter>
+    </receiver>
+    <provider android:authorities="Project.HelpingHand.firebaseinitprovider" android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:initOrder="100" />
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
+</manifest>
