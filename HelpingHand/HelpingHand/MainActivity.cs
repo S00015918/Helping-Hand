@@ -17,8 +17,8 @@ namespace HelpingHand
     {
         Button btnLogin;
         EditText input_email, input_password;
-        TextView btnSignUp, btnForgetPassword;
-        RelativeLayout activity_main;
+        TextView btnSignUp, btnForgetPassword, btnBabysitterReg;
+        private RelativeLayout activity_main;
 
         public static FirebaseApp app;
         FirebaseAuth auth;
@@ -38,8 +38,10 @@ namespace HelpingHand
             input_email = FindViewById<EditText>(Resource.Id.login_email);
             input_password = FindViewById<EditText>(Resource.Id.login_password);
             btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
+            btnBabysitterReg = FindViewById<TextView>(Resource.Id.login_btn_Babysitter_reg);
             btnForgetPassword = FindViewById<TextView>(Resource.Id.login_btn_forget_password);
-            activity_main = FindViewById<RelativeLayout>(Resource.Id.activity_main);
+
+            btnBabysitterReg.SetOnClickListener(this);
             btnSignUp.SetOnClickListener(this);
             btnLogin.SetOnClickListener(this);
             btnForgetPassword.SetOnClickListener(this);
@@ -74,9 +76,24 @@ namespace HelpingHand
                 Finish();
             }
             else
+            if (v.Id == Resource.Id.login_btn_Babysitter_reg)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(SignUpBabysitter)));
+                Finish();
+            }
+            else
             if (v.Id == Resource.Id.login_btn_login)
             {
-                LoginUser(input_email.Text, input_password.Text);
+                if (input_email.Text == "" || input_password.Text == null)
+                {
+                    Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
+                    snackbar.Show();
+                }
+                else
+                {
+                    LoginUser(input_email.Text, input_password.Text);
+                }
+                
             }
         }
 
