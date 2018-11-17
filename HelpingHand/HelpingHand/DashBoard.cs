@@ -23,9 +23,12 @@ namespace XamarinFirebaseAuth
         EditText input_new_password, input_name, input_email;
         private ListView list_data;
 
-        private List<Parent> list_parents = new List<Parent>();
+        //private List<Parent> list_parents = new List<Parent>();
+        List<BabySitter> list_babySitters = new List<BabySitter>();
+
         private ListViewAdapter adapter;
-        Parent selectedParent;
+        //Parent selectedParent;
+        BabySitter selectedBabysitter;
         Button btnChangePass, btnLogout;
         RelativeLayout activity_dashboard;
         FirebaseAuth auth;
@@ -52,6 +55,7 @@ namespace XamarinFirebaseAuth
 
         private void ChangePassword(string newPassword)
         {
+            auth = FirebaseAuth.GetInstance(MainActivity.app);
             FirebaseUser user = auth.CurrentUser;
             user.UpdatePassword(newPassword)
             .AddOnCompleteListener(this);
@@ -61,20 +65,18 @@ namespace XamarinFirebaseAuth
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.DashBoard);
+            //Init Firebase
+            auth = FirebaseAuth.GetInstance(MainActivity.app);
 
             //Add Toolbar
-
             //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
 
             SetSupportActionBar(toolbar);
             //toolbar.Title = "Welcome , " + auth.CurrentUser.Email;
-            SupportActionBar.Title = "Welcome, " /*+ auth.CurrentUser.Email*/;
+            SupportActionBar.Title = "Welcome, " + auth.CurrentUser.Email;
             //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             //SupportActionBar.SetHomeButtonEnabled(true);
-
-            //Init Firebase
-            auth = FirebaseAuth.GetInstance(MainActivity.app);
 
             //View
             btnChangePass = FindViewById<Button>(Resource.Id.dashboard_btn_change_pass);
@@ -87,8 +89,8 @@ namespace XamarinFirebaseAuth
             list_data = FindViewById<ListView>(Resource.Id.list_data);
             list_data.ItemClick += (s, e) =>
             {
-                Parent account = list_parents[e.Position];
-                selectedParent = account;
+                BabySitter account = list_babySitters[e.Position];
+                selectedBabysitter = account;
                 input_name.Text = account.name;
                 input_email.Text = account.email;
             };
@@ -112,19 +114,19 @@ namespace XamarinFirebaseAuth
             list_data.Visibility = ViewStates.Invisible;
             var firebase = new FirebaseClient(FirebaseURL);
             var items = await firebase
-                .Child("parent")
-                .OnceAsync<Parent>();
-            list_parents.Clear();
+                .Child("babysitter")
+                .OnceAsync<BabySitter>();
+            list_babySitters.Clear();
             adapter = null;
             foreach (var item in items)
             {
-                Parent account = new Parent();
+                BabySitter account = new BabySitter();
                 account.id = item.Key;
                 account.name = item.Object.name;
                 account.email = item.Object.email;
-                list_parents.Add(account);
+                list_babySitters.Add(account);
             }
-            adapter = new ListViewAdapter(this, list_parents);
+            adapter = new ListViewAdapter(this, list_babySitters);
             adapter.NotifyDataSetChanged();
             list_data.Adapter = adapter;
 
