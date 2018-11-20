@@ -107,6 +107,7 @@ namespace XamarinFirebaseAuth
             {
                 Snackbar snackbar = Snackbar.Make(activity_sign_up, "Register Successfully ", Snackbar.LengthShort);
                 snackbar.Show();
+                StartActivity(new Intent(this, typeof(MainActivity)));
             }
             else
             {

@@ -12,16 +12,18 @@ using Firebase.Xamarin.Database.Query;
 using HelpingHand;
 using HelpingHand.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using static Android.Views.View;
 
 namespace XamarinFirebaseAuth
 {
     [Activity(Label = "DashBoard" ,Theme = "@style/AppTheme")]
-    public class DashBoard : AppCompatActivity, IOnClickListener, IOnCompleteListener
+    public class DashBoard : AppCompatActivity, IOnCompleteListener
     {
         EditText input_new_password, input_name, input_email;
         private ListView list_data;
+        private ArrayList filteredUsers;
 
         //private List<Parent> list_parents = new List<Parent>();
         List<BabySitter> list_babySitters = new List<BabySitter>();
@@ -29,19 +31,19 @@ namespace XamarinFirebaseAuth
         private ListViewAdapter adapter;
         //Parent selectedParent;
         BabySitter selectedBabysitter;
-        Button btnChangePass, btnLogout;
+
         RelativeLayout activity_dashboard;
         FirebaseAuth auth;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
-        public void OnClick(View v)
-        {
-            if (v.Id == Resource.Id.dashboard_btn_change_pass)
-                ChangePassword(input_new_password.Text);
-            else if (v.Id == Resource.Id.dashboard_btn_logout)
-                LogoutUser();
-        }
+        //public void OnClick(View v)
+        //{
+        //    if (v.Id == Resource.Id.dashboard_btn_change_pass)
+        //        ChangePassword(input_new_password.Text);
+        //    else if (v.Id == Resource.Id.dashboard_btn_logout)
+        //        LogoutUser();
+        //}
 
         private void LogoutUser()
         {
@@ -65,6 +67,7 @@ namespace XamarinFirebaseAuth
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.DashBoard);
+
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
 
@@ -74,18 +77,16 @@ namespace XamarinFirebaseAuth
 
             SetSupportActionBar(toolbar);
             //toolbar.Title = "Welcome , " + auth.CurrentUser.Email;
-            SupportActionBar.Title = "Welcome, " + auth.CurrentUser.Email;
+            SupportActionBar.Title = auth.CurrentUser.DisplayName;
             //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             //SupportActionBar.SetHomeButtonEnabled(true);
 
             //View
-            btnChangePass = FindViewById<Button>(Resource.Id.dashboard_btn_change_pass);
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
-            btnLogout = FindViewById<Button>(Resource.Id.dashboard_btn_logout);
-            input_new_password = FindViewById<EditText>(Resource.Id.dashboard_newpassword);
+
             activity_dashboard = FindViewById<RelativeLayout>(Resource.Id.activity_dashboard);
 
-            search.SetQueryHint("Babysitter Search");
+            search.SetQueryHint("Search");
             list_data = FindViewById<ListView>(Resource.Id.list_data);
             list_data.ItemClick += (s, e) =>
             {
@@ -95,17 +96,20 @@ namespace XamarinFirebaseAuth
                 input_email.Text = account.email;
             };
 
+
             LoadData();
 
             search.QueryTextChange += searchChange;
-            btnChangePass.SetOnClickListener(this);
-            btnLogout.SetOnClickListener(this);
+
+            //btnChangePass.SetOnClickListener(this);
+            //btnLogout.SetOnClickListener(this);
             
         }
 
         private void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             //Filter or Search
+            
         }
 
         private async void LoadData()
@@ -131,6 +135,30 @@ namespace XamarinFirebaseAuth
             list_data.Adapter = adapter;
 
             list_data.Visibility = ViewStates.Visible;
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+            if (id == Resource.Id.menu_message)
+            {
+                //CreateUser();
+            }
+            else if (id == Resource.Id.menu_star) //Update
+            {
+                //UpdateUser(selectedParent.id, input_name.Text, input_email.Text);
+            }
+            else if (id == Resource.Id.menu_user) //Delete
+            {
+                //DeleteUser(selectedParent.id);
+            }
+            return base.OnOptionsItemSelected(item);
         }
 
         public void OnComplete(Task task)

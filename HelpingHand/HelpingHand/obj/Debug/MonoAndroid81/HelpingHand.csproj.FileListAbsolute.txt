@@ -92,4 +92,14 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\babysitterreg.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_main.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\message.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\star.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\mail.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\member.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\favourite.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\notification.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\messages_main.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\send.png
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
