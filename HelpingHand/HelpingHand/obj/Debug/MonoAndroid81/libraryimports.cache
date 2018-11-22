@@ -18,6 +18,8 @@
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\26\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\27\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\28\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Debug\MonoAndroid81\lp\29\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Debug\MonoAndroid81\lp\30\jl\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />
   <Jars>
@@ -40,6 +42,8 @@
     <Jar>obj\\Debug\MonoAndroid81\lp\26\jl\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\27\jl\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\28\jl\classes.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid81\lp\29\jl\classes.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid81\lp\30\jl\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\9\jl\arch-core-common.jar</Jar>
   </Jars>
 </Paths>

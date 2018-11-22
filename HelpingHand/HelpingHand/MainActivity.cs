@@ -10,6 +10,7 @@ using Android.Gms.Tasks;
 using Android.Support.Design.Widget;
 using XamarinFirebaseAuth;
 
+
 namespace HelpingHand
 {
     [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/AppTheme")]

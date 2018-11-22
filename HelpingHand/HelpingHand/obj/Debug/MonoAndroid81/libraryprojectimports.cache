@@ -20,6 +20,8 @@
     <Jar>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\26\jl\classes.jar</Jar>
     <Jar>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\27\jl\classes.jar</Jar>
     <Jar>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\28\jl\classes.jar</Jar>
+    <Jar>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\29\jl\classes.jar</Jar>
+    <Jar>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\30\jl\classes.jar</Jar>
     <Jar>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\9\jl\arch-core-common.jar</Jar>
   </Jars>
   <ResolvedResourceDirectories>
@@ -29,8 +31,8 @@
     <ResolvedResourceDirectory>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\20\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\21\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\22\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\26\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\27\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\28\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\29\jl\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories />
   <ResolvedEnvironmentFiles />
@@ -41,7 +43,7 @@
     <ResolvedResourceDirectoryStamp>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\20.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\21.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\22.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\26.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\27.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\28.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\lp\29.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

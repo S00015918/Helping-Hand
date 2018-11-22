@@ -45,7 +45,7 @@ namespace XamarinFirebaseAuth
         //        LogoutUser();
         //}
 
-        private void LogoutUser()
+    private void LogoutUser()
         {
             auth.SignOut();
             if(auth.CurrentUser == null)
@@ -77,10 +77,8 @@ namespace XamarinFirebaseAuth
 
             SetSupportActionBar(toolbar);
             //toolbar.Title = "Welcome , " + auth.CurrentUser.Email;
-            SupportActionBar.Title = auth.CurrentUser.DisplayName;
-            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            //SupportActionBar.SetHomeButtonEnabled(true);
-
+            SupportActionBar.Title = auth.CurrentUser.Email;
+      
             //View
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
 
@@ -92,17 +90,16 @@ namespace XamarinFirebaseAuth
             {
                 BabySitter account = list_babySitters[e.Position];
                 selectedBabysitter = account;
-                input_name.Text = account.name;
-                input_email.Text = account.email;
+
+
+                //input_name.Text = account.name;
+                //input_email.Text = account.email;
             };
 
 
             LoadData();
 
             search.QueryTextChange += searchChange;
-
-            //btnChangePass.SetOnClickListener(this);
-            //btnLogout.SetOnClickListener(this);
             
         }
 
@@ -148,13 +145,14 @@ namespace XamarinFirebaseAuth
             int id = item.ItemId;
             if (id == Resource.Id.menu_message)
             {
-                //CreateUser();
+                StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
+                Finish();
             }
-            else if (id == Resource.Id.menu_star) //Update
+            else if (id == Resource.Id.menu_star) //favourites
             {
                 //UpdateUser(selectedParent.id, input_name.Text, input_email.Text);
             }
-            else if (id == Resource.Id.menu_user) //Delete
+            else if (id == Resource.Id.menu_user) //user profile
             {
                 //DeleteUser(selectedParent.id);
             }

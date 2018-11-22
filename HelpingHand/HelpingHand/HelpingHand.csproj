@@ -79,11 +79,16 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
   </ItemGroup>
+	<ItemGroup>
+	  <GoogleServicesJson Include="google-services.json" />
+	</ItemGroup>
   <ItemGroup>
     <Compile Include="DashBoard.cs" />
     <Compile Include="ForgetPassword.cs" />
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MessageActivity.cs" />
+    <Compile Include="MessageAdapter.cs" />
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\MessageContent.cs" />
     <Compile Include="Model\Parent.cs" />
@@ -130,6 +135,12 @@
       <Version>27.0.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Auth">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Database">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Database.Connection">
       <Version>60.1142.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Base">
@@ -192,6 +203,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\message_list.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
