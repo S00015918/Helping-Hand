@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
 using Firebase.Xamarin.Database;
+using Firebase.Xamarin.Database.Query;
 using HelpingHand;
 using HelpingHand.Model;
 using System;
@@ -85,8 +86,11 @@ namespace XamarinFirebaseAuth
 
         private async void CreateUser()
         {
+            var firebase = new FirebaseClient(FirebaseURL);
+            var Uid = firebase.Child("parent").Child(auth.CurrentUser.Uid).Equals(Parent);
+
             Parent parent = new Parent();
-            parent.id = String.Empty;
+            parent.id = Convert.ToString(Uid);
             parent.name = input_name.Text;
             //parent.surname = input_surname.Text;
             parent.email = input_email.Text;
@@ -95,7 +99,6 @@ namespace XamarinFirebaseAuth
             parent.address = input_address.Text;
             //parent.noOfKids = Convert.ToInt32(input_childCount);
 
-            var firebase = new FirebaseClient(FirebaseURL);
             //Add Item
             var item = await firebase.Child("parent").PostAsync<Parent>(parent);
 

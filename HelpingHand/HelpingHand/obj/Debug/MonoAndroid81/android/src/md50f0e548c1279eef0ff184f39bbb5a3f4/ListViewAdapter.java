@@ -4,16 +4,18 @@ package md50f0e548c1279eef0ff184f39bbb5a3f4;
 public class ListViewAdapter
 	extends android.widget.BaseAdapter
 	implements
-		mono.android.IGCUserPeer
+		mono.android.IGCUserPeer,
+		android.widget.Filterable
 {
 /** @hide */
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_getCount:()I:GetGetCountHandler\n" +
 			"n_getItem:(I)Ljava/lang/Object;:GetGetItem_IHandler\n" +
+			"n_getCount:()I:GetGetCountHandler\n" +
 			"n_getItemId:(I)J:GetGetItemId_IHandler\n" +
 			"n_getView:(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;:GetGetView_ILandroid_view_View_Landroid_view_ViewGroup_Handler\n" +
+			"n_getFilter:()Landroid/widget/Filter;:GetGetFilterHandler:Android.Widget.IFilterableInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("HelpingHand.ListViewAdapter, HelpingHand", ListViewAdapter.class, __md_methods);
 	}
@@ -27,20 +29,20 @@ public class ListViewAdapter
 	}
 
 
-	public int getCount ()
-	{
-		return n_getCount ();
-	}
-
-	private native int n_getCount ();
-
-
 	public java.lang.Object getItem (int p0)
 	{
 		return n_getItem (p0);
 	}
 
 	private native java.lang.Object n_getItem (int p0);
+
+
+	public int getCount ()
+	{
+		return n_getCount ();
+	}
+
+	private native int n_getCount ();
 
 
 	public long getItemId (int p0)
@@ -57,6 +59,14 @@ public class ListViewAdapter
 	}
 
 	private native android.view.View n_getView (int p0, android.view.View p1, android.view.ViewGroup p2);
+
+
+	public android.widget.Filter getFilter ()
+	{
+		return n_getFilter ();
+	}
+
+	private native android.widget.Filter n_getFilter ();
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

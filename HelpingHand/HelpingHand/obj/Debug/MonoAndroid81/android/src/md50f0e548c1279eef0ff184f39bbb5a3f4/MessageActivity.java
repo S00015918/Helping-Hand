@@ -13,6 +13,7 @@ public class MessageActivity
 		__md_methods = 
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onCancelled:(Lcom/google/firebase/database/DatabaseError;)V:GetOnCancelled_Lcom_google_firebase_database_DatabaseError_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
 			"n_onDataChange:(Lcom/google/firebase/database/DataSnapshot;)V:GetOnDataChange_Lcom_google_firebase_database_DataSnapshot_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
 			"";
@@ -42,6 +43,14 @@ public class MessageActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public boolean onOptionsItemSelected (android.view.MenuItem p0)
+	{
+		return n_onOptionsItemSelected (p0);
+	}
+
+	private native boolean n_onOptionsItemSelected (android.view.MenuItem p0);
 
 
 	public void onCancelled (com.google.firebase.database.DatabaseError p0)

@@ -107,4 +107,11 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\message_list.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\profilepage.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\grad.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_launcher_background.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_settings.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_user.png
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle_border.xml
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb

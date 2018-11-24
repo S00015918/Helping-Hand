@@ -7,6 +7,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using Firebase.Database;
 using Firebase.Xamarin.Database;
 using Firebase.Xamarin.Database.Query;
 using HelpingHand;
@@ -14,7 +15,7 @@ using HelpingHand.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using static Android.Views.View;
+using static Android.Content.ClipData;
 
 namespace XamarinFirebaseAuth
 {
@@ -37,13 +38,6 @@ namespace XamarinFirebaseAuth
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
-        //public void OnClick(View v)
-        //{
-        //    if (v.Id == Resource.Id.dashboard_btn_change_pass)
-        //        ChangePassword(input_new_password.Text);
-        //    else if (v.Id == Resource.Id.dashboard_btn_logout)
-        //        LogoutUser();
-        //}
 
     private void LogoutUser()
         {
@@ -92,8 +86,7 @@ namespace XamarinFirebaseAuth
                 selectedBabysitter = account;
 
 
-                //input_name.Text = account.name;
-                //input_email.Text = account.email;
+               
             };
 
 
@@ -103,10 +96,10 @@ namespace XamarinFirebaseAuth
             
         }
 
-        private void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
+        private async void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
-            //Filter or Search
-            
+            SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
+            search.QueryTextChange += (s, f) => adapter.Filter.InvokeFilter(f.NewText);
         }
 
         private async void LoadData()
@@ -124,7 +117,7 @@ namespace XamarinFirebaseAuth
                 BabySitter account = new BabySitter();
                 account.id = item.Key;
                 account.name = item.Object.name;
-                account.email = item.Object.email;
+                account.city = item.Object.city;
                 list_babySitters.Add(account);
             }
             adapter = new ListViewAdapter(this, list_babySitters);
@@ -154,7 +147,8 @@ namespace XamarinFirebaseAuth
             }
             else if (id == Resource.Id.menu_user) //user profile
             {
-                //DeleteUser(selectedParent.id);
+                StartActivity(new Android.Content.Intent(this, typeof(userProfile)));
+                Finish();
             }
             return base.OnOptionsItemSelected(item);
         }

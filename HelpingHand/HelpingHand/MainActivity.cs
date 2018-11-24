@@ -9,7 +9,8 @@ using Android.Views;
 using Android.Gms.Tasks;
 using Android.Support.Design.Widget;
 using XamarinFirebaseAuth;
-
+using Firebase.Xamarin.Database;
+using Firebase.Xamarin.Database.Query;
 
 namespace HelpingHand
 {
@@ -20,6 +21,7 @@ namespace HelpingHand
         EditText input_email, input_password;
         TextView btnSignUp, btnForgetPassword, btnBabysitterReg;
         private RelativeLayout activity_main;
+        private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
         public static FirebaseApp app;
         FirebaseAuth auth;
@@ -98,6 +100,14 @@ namespace HelpingHand
             }
         }
 
+        private async void UpdateUser(string uid)
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
+            var Uid = firebase.Child("parent").Child(auth.CurrentUser.Uid);
+
+            await firebase.Child("parent").Child(uid).Child("id").PutAsync(Uid);
+        }
+
         private void LoginUser(string email, string password)
         {
             auth.SignInWithEmailAndPassword(email, password).AddOnCompleteListener(this);
@@ -107,6 +117,7 @@ namespace HelpingHand
         {
             if (task.IsSuccessful)
             {
+                UpdateUser(auth.CurrentUser.Uid);
                 StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
                 Finish();
             }

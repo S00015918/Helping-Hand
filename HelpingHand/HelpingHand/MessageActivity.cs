@@ -41,6 +41,11 @@ namespace HelpingHand
             base.OnCreate(savedInstanceState);
             
             SetContentView(Resource.Layout.messages_main);
+            //Add Toolbar
+            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+
+            SetSupportActionBar(toolbar);
+
             firebaseClient = new FirebaseClient(firebase_database_url);
             FirebaseDatabase.Instance.GetReference("chats").AddValueEventListener(this);
             fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
@@ -84,6 +89,25 @@ namespace HelpingHand
                 lstMessage.Add(item.Object);
             MessageAdapter adapter = new MessageAdapter(this, lstMessage);
             lstChat.Adapter = adapter;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+            if (id == Resource.Id.menu_message)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
+                Finish();
+            }
+            else if (id == Resource.Id.menu_star) //favourites
+            {
+                //UpdateUser(selectedParent.id, input_name.Text, input_email.Text);
+            }
+            else if (id == Resource.Id.menu_user) //user profile
+            {
+                //DeleteUser(selectedParent.id);
+            }
+            return base.OnOptionsItemSelected(item);
         }
     }
 }
