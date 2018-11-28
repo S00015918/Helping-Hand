@@ -17,7 +17,7 @@ namespace HelpingHand
     [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/AppTheme")]
     public class MainActivity : Activity, IOnClickListener, IOnCompleteListener
     {
-        Button btnLogin;
+        FloatingActionButton btnLogin;
         EditText input_email, input_password;
         TextView btnSignUp, btnForgetPassword, btnBabysitterReg;
         private RelativeLayout activity_main;
@@ -37,7 +37,7 @@ namespace HelpingHand
             InitFirebaseAuth();
 
             //Views
-            btnLogin = FindViewById<Button>(Resource.Id.login_btn_login);
+            btnLogin = FindViewById<FloatingActionButton>(Resource.Id.login_btn_login);
             input_email = FindViewById<EditText>(Resource.Id.login_email);
             input_password = FindViewById<EditText>(Resource.Id.login_password);
             btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
@@ -89,8 +89,7 @@ namespace HelpingHand
             {
                 if (input_email.Text == "" || input_password.Text == null)
                 {
-                    Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
-                    snackbar.Show();
+                    Toast.MakeText(this, "Login Failed", ToastLength.Short).Show();
                 }
                 else
                 {
@@ -123,8 +122,9 @@ namespace HelpingHand
             }
             else
             {
-                Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Login Failed", ToastLength.Short).Show();
+                //Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
+                //snackbar.Show();
             }
         }
     }

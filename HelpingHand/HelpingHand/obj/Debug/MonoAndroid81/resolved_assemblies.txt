@@ -32,6 +32,8 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Common.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Database.Connection.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Database.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Storage.Common.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Storage.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Base.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Basement.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Tasks.dll

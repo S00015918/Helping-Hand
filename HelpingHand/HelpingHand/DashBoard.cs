@@ -71,7 +71,7 @@ namespace XamarinFirebaseAuth
 
             SetSupportActionBar(toolbar);
             //toolbar.Title = "Welcome , " + auth.CurrentUser.Email;
-            SupportActionBar.Title = auth.CurrentUser.Email;
+            //SupportActionBar.Title = auth.CurrentUser.Email;
       
             //View
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);

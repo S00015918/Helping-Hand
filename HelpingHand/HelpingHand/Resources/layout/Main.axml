@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto" 
+	xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:padding="16dp"
     android:layout_width="match_parent"
@@ -10,42 +12,29 @@
         android:layout_centerHorizontal="true"
         android:layout_width="100dp"
         android:layout_height="100dp" />
-    <android.support.design.widget.TextInputLayout
-        android:layout_below="@+id/icon"
-        android:id="@+id/login_input_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:hint="Enter your Email"
-            android:id="@+id/login_email"
-            android:inputType="textCapWords"
-            android:maxLines="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_below="@+id/login_input_email"
-        android:id="@+id/login_input_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:hint="Enter your Password"
-            android:id="@+id/login_password"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </android.support.design.widget.TextInputLayout>
-    <Button
-        android:layout_below="@+id/login_input_password"
-        android:id="@+id/login_btn_login"
-        android:text="Login"
-        android:background="#263238"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored" />
+	    <FrameLayout android:id="@+id/layout_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/login_top">  
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="30dp">  
+				<EditText android:id="@+id/login_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:theme="@style/EditTextWhite" android:inputType="textEmailAddress" android:drawableLeft="@drawable/ic_lock" android:layout_below="@+id/icon" />  
+                <EditText android:id="@+id/login_password" android:layout_marginTop="40dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Password" android:theme="@style/EditTextWhite" android:inputType="textPassword" android:drawableLeft="@drawable/ic_key" />
+			</LinearLayout>  
+        </FrameLayout>
+
+	 <FrameLayout android:id="@+id/layout_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top" android:background="@drawable/login_bottom">  
+            
+			<android.support.design.widget.FloatingActionButton 
+				android:id="@+id/login_btn_login" 
+				android:layout_width="wrap_content" 
+				android:layout_below="@+id/signup_eircode" 
+				android:layout_height="wrap_content" 
+				android:layout_gravity="top" 
+				android:layout_marginStart="40dp" 
+				app:backgroundTint="#003157" 
+				app:srcCompat="@drawable/ic_right_arrow" />
+
+		</FrameLayout>
+
     <TextView
-        android:layout_below="@+id/login_btn_login"
+        android:layout_below="@+id/layout_bottom"
         android:id="@+id/login_btn_forget_password"
         android:text="Forget Password"
         android:textStyle="bold"
@@ -55,6 +44,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimaryDark"
         style="@style/Widget.AppCompat.Button.Borderless" />
+	
     <LinearLayout
         android:layout_below="@+id/login_btn_forget_password"
         android:id="@+id/login_layout_or"
@@ -78,6 +68,7 @@
             android:background="#C4C8C9"
             android:layout_margin="5dp" />
     </LinearLayout>
+
     <TextView
         android:layout_below="@+id/login_layout_or"
         android:id="@+id/login_btn_sign_up"
@@ -100,4 +91,5 @@
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:textColor="@color/colorPrimaryDark" />
+
 </RelativeLayout>

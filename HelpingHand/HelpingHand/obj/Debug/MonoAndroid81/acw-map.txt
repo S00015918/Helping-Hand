@@ -202,6 +202,12 @@ mono.com.google.firebase.database.ChildEventListenerImplementor;mono.com.google.
 Firebase.Database.IValueEventListenerImplementor, Xamarin.Firebase.Database;mono.com.google.firebase.database.ValueEventListenerImplementor
 Firebase.Database.IValueEventListenerImplementor;mono.com.google.firebase.database.ValueEventListenerImplementor
 mono.com.google.firebase.database.ValueEventListenerImplementor;mono.com.google.firebase.database.ValueEventListenerImplementor
+Firebase.Storage.IOnPausedListenerImplementor, Xamarin.Firebase.Storage;mono.com.google.firebase.storage.OnPausedListenerImplementor
+Firebase.Storage.IOnPausedListenerImplementor;mono.com.google.firebase.storage.OnPausedListenerImplementor
+mono.com.google.firebase.storage.OnPausedListenerImplementor;mono.com.google.firebase.storage.OnPausedListenerImplementor
+Firebase.Storage.IOnProgressListenerImplementor, Xamarin.Firebase.Storage;mono.com.google.firebase.storage.OnProgressListenerImplementor
+Firebase.Storage.IOnProgressListenerImplementor;mono.com.google.firebase.storage.OnProgressListenerImplementor
+mono.com.google.firebase.storage.OnProgressListenerImplementor;mono.com.google.firebase.storage.OnProgressListenerImplementor
 Android.Gms.Common.Images.ImageManager+IOnImageLoadedListenerImplementor, Xamarin.GooglePlayServices.Base;mono.com.google.android.gms.common.images.ImageManager_OnImageLoadedListenerImplementor
 Android.Gms.Common.Images.ImageManager.IOnImageLoadedListenerImplementor;mono.com.google.android.gms.common.images.ImageManager_OnImageLoadedListenerImplementor
 mono.com.google.android.gms.common.images.ImageManager_OnImageLoadedListenerImplementor;mono.com.google.android.gms.common.images.ImageManager_OnImageLoadedListenerImplementor

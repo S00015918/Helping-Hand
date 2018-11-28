@@ -19,7 +19,7 @@ namespace XamarinFirebaseAuth
     [Activity(Label = "SignUp", Theme ="@style/AppTheme")]
     public class SignUp : Activity, IOnClickListener, IOnCompleteListener
     {
-        Button btnSignup;
+        FloatingActionButton btnSignup;
         TextView btnLogin, btnForgetPass;
         EditText input_name, input_email, input_password, input_phone, input_address, input_eircode;
         RelativeLayout activity_sign_up;
@@ -67,9 +67,9 @@ namespace XamarinFirebaseAuth
             auth = FirebaseAuth.GetInstance(MainActivity.app);
 
             //Views
-            btnSignup = FindViewById<Button>(Resource.Id.signup_btn_register);
+            btnSignup = FindViewById<FloatingActionButton>(Resource.Id.signup_btn_register);
             btnLogin = FindViewById<TextView>(Resource.Id.signup_btn_login);
-            btnForgetPass = FindViewById<TextView>(Resource.Id.signup_btn_forget_password);
+            //btnForgetPass = FindViewById<TextView>(Resource.Id.signup_btn_forget_password);
             input_name = FindViewById<EditText>(Resource.Id.signup_name);
             input_email = FindViewById<EditText>(Resource.Id.signup_email);
             input_password = FindViewById<EditText>(Resource.Id.signup_password);
@@ -80,7 +80,7 @@ namespace XamarinFirebaseAuth
 
             btnLogin.SetOnClickListener(this);
             btnSignup.SetOnClickListener(this);
-            btnForgetPass.SetOnClickListener(this);
+            //btnForgetPass.SetOnClickListener(this);
 
         }
 
@@ -88,6 +88,24 @@ namespace XamarinFirebaseAuth
         {
             var firebase = new FirebaseClient(FirebaseURL);
             var Uid = firebase.Child("parent").Child(auth.CurrentUser.Uid).Equals(Parent);
+
+            var spinner = FindViewById<Spinner>(Resource.Id.spinnerCount);
+            spinner.ItemSelected += (s, e) =>
+            {
+                string firstItem = spinner.SelectedItem.ToString();
+                if (firstItem.Equals(spinner.SelectedItem.ToString()))
+                {
+                    // To do when first item is selected
+                }
+                else
+                {
+                    Toast.MakeText(this, "You have selected " + e.Parent.GetItemIdAtPosition(e.Position).ToString(),
+                        ToastLength.Short).Show();
+                }
+            };
+
+
+            int input_childCount = int.Parse(spinner.SelectedItem.ToString());
 
             Parent parent = new Parent();
             parent.id = Convert.ToString(Uid);
@@ -97,7 +115,7 @@ namespace XamarinFirebaseAuth
             parent.phone = input_phone.Text;
             parent.eircode = input_eircode.Text;
             parent.address = input_address.Text;
-            //parent.noOfKids = Convert.ToInt32(input_childCount);
+            parent.noOfKids = Convert.ToInt32(input_childCount);
 
             //Add Item
             var item = await firebase.Child("parent").PostAsync<Parent>(parent);
@@ -108,14 +126,12 @@ namespace XamarinFirebaseAuth
         {
             if(task.IsSuccessful == true)
             {
-                Snackbar snackbar = Snackbar.Make(activity_sign_up, "Register Successfully ", Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Sign up Successful !", ToastLength.Short).Show();
                 StartActivity(new Intent(this, typeof(MainActivity)));
             }
             else
             {
-                Snackbar snackbar = Snackbar.Make(activity_sign_up, "Register Failed ", Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Register Failed", ToastLength.Short).Show();
             }
         }
     }

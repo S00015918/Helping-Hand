@@ -322,6 +322,39 @@
           "build/MonoAndroid80/Xamarin.Firebase.Database.Connection.targets": {}
         }
       },
+      "Xamarin.Firebase.Storage/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Firebase.Common": "[60.1142.1]",
+          "Xamarin.Firebase.Storage.Common": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Storage.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Storage.targets": {}
+        }
+      },
+      "Xamarin.Firebase.Storage.Common/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Storage.Common.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Storage.Common.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Storage.Common.targets": {}
+        }
+      },
       "Xamarin.GooglePlayServices.Base/60.1142.1": {
         "type": "package",
         "dependencies": {
@@ -644,6 +677,30 @@
         "xamarin.firebase.database.connection.nuspec"
       ]
     },
+    "Xamarin.Firebase.Storage/60.1142.1": {
+      "sha512": "hdQofZjt9uhqBDInXMAYkR9wYDiiH59QHbiqWuB9QtYBZcEdl7WxKGorHbRuo2FMsZU3Dpx/fHsP1BWwRUnxJA==",
+      "type": "package",
+      "path": "xamarin.firebase.storage/60.1142.1",
+      "files": [
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.Firebase.Storage.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Storage.dll",
+        "xamarin.firebase.storage.60.1142.1.nupkg.sha512",
+        "xamarin.firebase.storage.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.Storage.Common/60.1142.1": {
+      "sha512": "i3+vY94aIMwpDhU8/HWoyHoZAaUqoahlSUKW6GE63bQJDGl0+42ZZZ7wYVA7mFLmJ7j+IOSJz3tl8QQVBdWJlg==",
+      "type": "package",
+      "path": "xamarin.firebase.storage.common/60.1142.1",
+      "files": [
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.Firebase.Storage.Common.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Storage.Common.dll",
+        "xamarin.firebase.storage.common.60.1142.1.nupkg.sha512",
+        "xamarin.firebase.storage.common.nuspec"
+      ]
+    },
     "Xamarin.GooglePlayServices.Base/60.1142.1": {
       "sha512": "mEyHPIGA6fqE9AmO8zr3+izgt7rZDuB3OHGrDmU/Mg6cP0z205wXK5z5j4EfI0XZ0kgU0Z33IKbVDgndfFwZeA==",
       "type": "package",
@@ -690,6 +747,7 @@
       "Xamarin.Firebase.Auth >= 60.1142.1",
       "Xamarin.Firebase.Database >= 60.1142.1",
       "Xamarin.Firebase.Database.Connection >= 60.1142.1",
+      "Xamarin.Firebase.Storage >= 60.1142.1",
       "Xamarin.GooglePlayServices.Base >= 60.1142.1"
     ]
   },
@@ -747,6 +805,10 @@
             "version": "[60.1142.1, )"
           },
           "Xamarin.Firebase.Database.Connection": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
+          },
+          "Xamarin.Firebase.Storage": {
             "target": "Package",
             "version": "[60.1142.1, )"
           },

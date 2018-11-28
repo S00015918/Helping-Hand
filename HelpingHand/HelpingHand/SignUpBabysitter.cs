@@ -112,14 +112,11 @@ namespace HelpingHand
             if (task.IsSuccessful == true)
             {
                 Toast.MakeText(this, "Sign up Successful !", ToastLength.Short).Show();
-                //Snackbar snackbar = Snackbar.Make(Babysitter_reg, "Register Successfully ", Snackbar.LengthShort);
-                //snackbar.Show();
                 StartActivity(new Intent(this, typeof(MainActivity)));
             }
             else
             {
-                Snackbar snackbar = Snackbar.Make(Babysitter_reg, "Register Failed ", Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Register Failed", ToastLength.Short).Show();
             }
         }
     }
