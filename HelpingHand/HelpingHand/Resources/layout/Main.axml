@@ -75,13 +75,14 @@
         android:text="Parent Sign Up"
         android:textStyle="bold"
         android:clickable="true"
-        android:layout_centerHorizontal="true"
+		android:layout_alignLeft="@+id/login_btn_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:textColor="@color/colorPrimaryDark" />
 	<TextView
-        android:layout_below="@+id/login_btn_sign_up"
+        android:layout_toRightOf="@+id/login_btn_sign_up"
+		android:layout_below="@+id/login_layout_or"
         android:id="@+id/login_btn_Babysitter_reg"
         android:text="Babysitter Sign Up"
         android:textStyle="bold"

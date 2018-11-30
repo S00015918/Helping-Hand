@@ -37,12 +37,6 @@ namespace XamarinFirebaseAuth
                 Finish();
             }
             else
-            if (v.Id == Resource.Id.signup_btn_forget_password)
-            {
-                StartActivity(new Intent(this, typeof(ForgetPassword)));
-                Finish();
-            }
-            else
             if (v.Id == Resource.Id.signup_btn_register)
             {
                 CreateUser();

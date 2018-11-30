@@ -22,8 +22,8 @@ namespace HelpingHand
     [Activity(Label = "SignUp", Theme = "@style/AppTheme")]
     public class SignUpBabysitter : Activity, IOnClickListener, IOnCompleteListener
     {
-        Button btnSignup;
-        TextView btnLogin, btnForgetPass;
+        FloatingActionButton btnSignup;
+        TextView btnLogin;
         EditText input_name, input_email, input_password, input_age,
             input_phone, input_address, input_city, input_eircode;
         RelativeLayout Babysitter_reg;
@@ -43,9 +43,8 @@ namespace HelpingHand
             auth = FirebaseAuth.GetInstance(MainActivity.app);
 
             //Views
-            btnSignup = FindViewById<Button>(Resource.Id.signup_btn_BabyRegister);
+            btnSignup = FindViewById<FloatingActionButton>(Resource.Id.signup_btn_Babysitter);
             btnLogin = FindViewById<TextView>(Resource.Id.signup_btn_login);
-            btnForgetPass = FindViewById<TextView>(Resource.Id.signup_btn_forget_password);
 
             input_name = FindViewById<EditText>(Resource.Id.signup_name);
             input_email = FindViewById<EditText>(Resource.Id.signup_email);
@@ -60,7 +59,7 @@ namespace HelpingHand
 
             btnLogin.SetOnClickListener(this);
             btnSignup.SetOnClickListener(this);
-            btnForgetPass.SetOnClickListener(this);
+            //btnForgetPass.SetOnClickListener(this);
 
         }
 
@@ -71,14 +70,14 @@ namespace HelpingHand
                 StartActivity(new Intent(this, typeof(MainActivity)));
                 Finish();
             }
+            //else
+            //if (v.Id == Resource.Id.signup_btn_forget_password)
+            //{
+            //    StartActivity(new Intent(this, typeof(ForgetPassword)));
+            //    Finish();
+            //}
             else
-            if (v.Id == Resource.Id.signup_btn_forget_password)
-            {
-                StartActivity(new Intent(this, typeof(ForgetPassword)));
-                Finish();
-            }
-            else
-            if (v.Id == Resource.Id.signup_btn_BabyRegister)
+            if (v.Id == Resource.Id.signup_btn_Babysitter)
             {
                 CreateUser();
                 SignUpUser(input_email.Text, input_password.Text);

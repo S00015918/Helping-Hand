@@ -20,7 +20,8 @@
 				<EditText android:id="@+id/signup_address" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Adress" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_lock" />
 				<EditText android:id="@+id/signup_city" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="City" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_lock" />
 				<EditText android:id="@+id/signup_eircode" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Eircode" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_lock" />
-				<Spinner android:layout_below="@+id/ChildCount" android:padding="5dp" android:entries="@array/dropdown_kidCount" android:backgroundTint="#263238" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/spinnerCount" />
+				<TextView android:layout_below="@+id/txtNoOfKids" android:padding="5dp" android:text="No Of Children" android:maxLines="1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+				<Spinner android:id="@+id/spinnerCount" android:layout_toRightOf="@+id/txtNoOfKids" android:padding="5dp" android:entries="@array/dropdown_kidCount" android:backgroundTint="#263238" android:layout_width="match_parent" android:layout_height="wrap_content" />
 			</LinearLayout>  
         </FrameLayout> 
 

@@ -15,10 +15,11 @@ using Firebase.Xamarin.Database;
 using Android.Support.V7.App;
 using HelpingHand.Model;
 using Android.Support.Design.Widget;
+using XamarinFirebaseAuth;
 
 namespace HelpingHand
 {
-    [Activity(Label = "MessageActivity", Theme = "@style/AppTheme")]
+    [Activity(Label = "Messages", Theme = "@style/AppTheme")]
     public class MessageActivity : AppCompatActivity, IValueEventListener
     {
         private FirebaseClient firebaseClient;
@@ -91,22 +92,21 @@ namespace HelpingHand
             lstChat.Adapter = adapter;
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             int id = item.ItemId;
-            if (id == Resource.Id.menu_message)
+            if (id == Resource.Id.menu_home)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
+                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
                 Finish();
             }
-            else if (id == Resource.Id.menu_star) //favourites
-            {
-                //UpdateUser(selectedParent.id, input_name.Text, input_email.Text);
-            }
-            else if (id == Resource.Id.menu_user) //user profile
-            {
-                //DeleteUser(selectedParent.id);
-            }
+
             return base.OnOptionsItemSelected(item);
         }
     }

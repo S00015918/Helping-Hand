@@ -16,6 +16,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using static Android.Content.ClipData;
+using Newtonsoft.Json;
 
 namespace XamarinFirebaseAuth
 {
@@ -56,8 +57,8 @@ namespace XamarinFirebaseAuth
             user.UpdatePassword(newPassword)
             .AddOnCompleteListener(this);
         }
-
-        protected override void OnCreate(Bundle savedInstanceState)
+         
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.DashBoard);
@@ -80,13 +81,18 @@ namespace XamarinFirebaseAuth
 
             search.SetQueryHint("Search");
             list_data = FindViewById<ListView>(Resource.Id.list_data);
-            list_data.ItemClick += (s, e) =>
+            list_data.ItemClick += async (s, e) =>
             {
                 BabySitter account = list_babySitters[e.Position];
                 selectedBabysitter = account;
 
+                var userJson = JsonConvert.SerializeObject(account);
 
-               
+                var viewSelectedUser = new Intent(this, typeof(viewUser));
+                viewSelectedUser.PutExtra("KEY", userJson);
+                StartActivity(viewSelectedUser);
+
+
             };
 
 
