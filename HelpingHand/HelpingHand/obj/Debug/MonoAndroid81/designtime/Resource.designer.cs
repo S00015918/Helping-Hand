@@ -3468,11 +3468,14 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0015
 			public const int add = 2131492885;
 			
-			// aapt resource value: 0x7F020211
-			public const int adjust_height = 2130838033;
+			// aapt resource value: 0x7F020061
+			public const int address = 2130837601;
 			
-			// aapt resource value: 0x7F020210
-			public const int adjust_width = 2130838032;
+			// aapt resource value: 0x7F020213
+			public const int adjust_height = 2130838035;
+			
+			// aapt resource value: 0x7F020212
+			public const int adjust_width = 2130838034;
 			
 			// aapt resource value: 0x1
 			public const int ad_container = 1;
@@ -3504,8 +3507,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int android_pay_light_with_border = 1;
 			
-			// aapt resource value: 0x7F020209
-			public const int app_name = 2130838025;
+			// aapt resource value: 0x7F020211
+			public const int app_name = 2130838033;
 			
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
@@ -3654,8 +3657,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0024
 			public const int customPanel = 2131492900;
 			
-			// aapt resource value: 0x7F020215
-			public const int dark = 2130838037;
+			// aapt resource value: 0x7F020217
+			public const int dark = 2130838039;
 			
 			// aapt resource value: 0x1
 			public const int date = 1;
@@ -3695,6 +3698,9 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F0C002C
 			public const int edit_query = 2131492908;
+			
+			// aapt resource value: 0x7F020062
+			public const int eircode = 2130837602;
 			
 			// aapt resource value: 0x7F020054
 			public const int email = 2130837588;
@@ -3780,8 +3786,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C000B
 			public const int icon_group = 2131492875;
 			
-			// aapt resource value: 0x7F020214
-			public const int icon_only = 2130838036;
+			// aapt resource value: 0x7F020216
+			public const int icon_only = 2130838038;
 			
 			// aapt resource value: 0x1
 			public const int icon_uri = 1;
@@ -3855,8 +3861,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int license_list = 1;
 			
-			// aapt resource value: 0x7F020216
-			public const int light = 2130838038;
+			// aapt resource value: 0x7F020218
+			public const int light = 2130838040;
 			
 			// aapt resource value: 0x7F0C000E
 			public const int line1 = 2131492878;
@@ -3930,20 +3936,20 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0043
 			public const int media_actions = 2131492931;
 			
-			// aapt resource value: 0x7F020064
-			public const int menu_home = 2130837604;
-			
-			// aapt resource value: 0x7F020061
-			public const int menu_message = 2130837601;
-			
-			// aapt resource value: 0x7F020065
-			public const int menu_save = 2130837605;
-			
-			// aapt resource value: 0x7F020062
-			public const int menu_star = 2130837602;
+			// aapt resource value: 0x7F020066
+			public const int menu_home = 2130837606;
 			
 			// aapt resource value: 0x7F020063
-			public const int menu_user = 2130837603;
+			public const int menu_message = 2130837603;
+			
+			// aapt resource value: 0x7F020067
+			public const int menu_save = 2130837607;
+			
+			// aapt resource value: 0x7F020064
+			public const int menu_star = 2130837604;
+			
+			// aapt resource value: 0x7F020065
+			public const int menu_user = 2130837605;
 			
 			// aapt resource value: 0x7F0C0044
 			public const int message = 2131492932;
@@ -4215,8 +4221,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0072
 			public const int src_over = 2131492978;
 			
-			// aapt resource value: 0x7F020212
-			public const int standard = 2130838034;
+			// aapt resource value: 0x7F020214
+			public const int standard = 2130838036;
 			
 			// aapt resource value: 0x7F0C0073
 			public const int start = 2131492979;
@@ -4356,8 +4362,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C008F
 			public const int visible = 2131493007;
 			
-			// aapt resource value: 0x7F020213
-			public const int wide = 2130838035;
+			// aapt resource value: 0x7F020215
+			public const int wide = 2130838037;
 			
 			// aapt resource value: 0x7F0C0090
 			public const int wrap_content = 2131493008;

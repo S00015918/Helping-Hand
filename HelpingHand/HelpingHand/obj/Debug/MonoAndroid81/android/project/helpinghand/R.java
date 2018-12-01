@@ -3153,6 +3153,7 @@ containing a value of this type.
         public static final int design_navigation_view=0x7f0b00af;
         public static final int disableHome=0x7f0b0029;
         public static final int edit_query=0x7f0b0085;
+        public static final int eircode=0x7f0b00f1;
         public static final int email=0x7f0b00e8;
         public static final int end=0x7f0b0038;
         public static final int end_padder=0x7f0b00dd;
@@ -3207,13 +3208,13 @@ containing a value of this type.
         public static final int login_email=0x7f0b00be;
         public static final int login_layout_or=0x7f0b00c2;
         public static final int login_password=0x7f0b00bf;
-        public static final int masked=0x7f0b00f2;
+        public static final int masked=0x7f0b00f3;
         public static final int media_actions=0x7f0b00d1;
-        public static final int menu_home=0x7f0b00f6;
-        public static final int menu_message=0x7f0b00f3;
-        public static final int menu_save=0x7f0b00f7;
-        public static final int menu_star=0x7f0b00f4;
-        public static final int menu_user=0x7f0b00f5;
+        public static final int menu_home=0x7f0b00f7;
+        public static final int menu_message=0x7f0b00f4;
+        public static final int menu_save=0x7f0b00f8;
+        public static final int menu_star=0x7f0b00f5;
+        public static final int menu_user=0x7f0b00f6;
         public static final int message=0x7f0b00ef;
         public static final int message_text=0x7f0b00c7;
         public static final int message_time=0x7f0b00c6;
@@ -3324,7 +3325,7 @@ containing a value of this type.
         public static final int view1=0x7f0b009f;
         public static final int view2=0x7f0b00a0;
         public static final int view_offset_helper=0x7f0b0016;
-        public static final int visible=0x7f0b00f1;
+        public static final int visible=0x7f0b00f2;
         public static final int wide=0x7f0b0022;
         public static final int withText=0x7f0b0044;
         public static final int wrap_content=0x7f0b0036;

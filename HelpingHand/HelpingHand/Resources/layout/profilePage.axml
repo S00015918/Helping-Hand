@@ -64,7 +64,6 @@
             android:textColor="@color/white"
             android:textSize="32sp" />
 
-
         <EditText
             android:id="@+id/age"
             android:layout_width="wrap_content"

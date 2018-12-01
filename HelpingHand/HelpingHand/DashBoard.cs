@@ -83,23 +83,40 @@ namespace XamarinFirebaseAuth
             list_data = FindViewById<ListView>(Resource.Id.list_data);
             list_data.ItemClick += async (s, e) =>
             {
-                BabySitter account = list_babySitters[e.Position];
-                selectedBabysitter = account;
+                var firebase = new FirebaseClient(FirebaseURL);
+                var items = await firebase
+                    .Child("babysitter")
+                    .OnceAsync<BabySitter>();
+                list_babySitters.Clear();
+                adapter = null;
+                foreach (var item in items)
+                {
+                    BabySitter account = new BabySitter();
+                    account.id = item.Key;
+                    account.name = item.Object.name;
+                    account.age = item.Object.age;
+                    account.phone = item.Object.phone;
+                    account.city = item.Object.city;
+                    account.address = item.Object.address;
+                    account.email = item.Object.email;
+                    account.eircode = item.Object.eircode;
+                    account.ImageUrl = item.Object.ImageUrl;
+                    list_babySitters.Add(account);
+                }
+                adapter = new ListViewAdapter(this, list_babySitters);
 
-                var userJson = JsonConvert.SerializeObject(account);
+                BabySitter selectedBabysitter = list_babySitters[e.Position];
+
+                var userJson = JsonConvert.SerializeObject(selectedBabysitter);
 
                 var viewSelectedUser = new Intent(this, typeof(viewUser));
                 viewSelectedUser.PutExtra("KEY", userJson);
                 StartActivity(viewSelectedUser);
-
-
             };
-
 
             LoadData();
 
-            search.QueryTextChange += searchChange;
-            
+            search.QueryTextChange += searchChange;          
         }
 
         private async void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)

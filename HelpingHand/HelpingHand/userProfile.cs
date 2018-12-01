@@ -21,6 +21,7 @@ using Firebase.Xamarin.Database;
 using Firebase.Xamarin.Database.Query;
 using HelpingHand.Model;
 using Java.Lang;
+using Newtonsoft.Json;
 using XamarinFirebaseAuth;
 
 namespace HelpingHand
@@ -86,42 +87,58 @@ namespace HelpingHand
                 UploadImage();
             };
 
-            //LoadData();
+            LoadData();
         }
 
         private async void LoadData()
         {
             System.String frstname = input_new_name.GetType().ToString().Trim();
             System.String city = input_new_city.GetType().ToString().Trim();
-            //String uid = FirebaseAuth.GetInstance().CurrentUser.Uid;
+            System.String phone = input_new_phone.GetType().ToString().Trim();
+            string userLogin = auth.CurrentUser.Email;
             var firebase = new FirebaseClient(FirebaseURL);
             var items = await firebase
                 .Child("parent")
                 .OnceAsync<Parent>();
-            list_parents.Clear();
-            adapter = null;
+            //list_parents.Clear();
+            //adapter = null;
             foreach (var item in items)
             {
-                Parent account = new Parent();
+                    Parent account = new Parent();
                 account.id = item.Key;
                 account.name = item.Object.name;
-                frstname = account.name;
+                account.phone = item.Object.phone;
                 account.city = item.Object.city;
-                city = account.city;
-            }
+                account.address = item.Object.address;
+                account.email = item.Object.email;
+                string email = account.email;
+                account.eircode = item.Object.eircode;
+                account.ImageUrl = item.Object.ImageUrl;
 
-            adapter.NotifyDataSetChanged();
- 
-        }
+                if (userLogin == email)
+                {
+                    input_new_email.Text = account.email;
+                    input_new_name.Text = account.name;
+                    input_new_city.Text = account.city;
+                    input_new_phone.Text = account.phone;
+                    input_new_address.Text = account.address;
+                }
+             }
 
-        private async void UpdateUser(string uid, string newName, string newCity)
+                //adapter.NotifyDataSetChanged();
+
+          }
+
+        private async void UpdateUser(string userEmail, string newName, string newCity, string newPassword, string newEmail)
         {
             var firebase = new FirebaseClient(FirebaseURL);
-            var Uid = firebase.Child("parent").Child(auth.CurrentUser.Uid);
+            var user = firebase.Child("parent").Child(auth.CurrentUser.Email);
 
-            await firebase.Child("parent").Child(uid).Child("id").PutAsync(Uid);
-            await firebase.Child("parent").Child(uid).Child("name").PutAsync(newName);
-            await firebase.Child("parent").Child(uid).Child("city").PutAsync(newCity);
+            await firebase.Child("parent").Child(userEmail).Child("id").PutAsync(userEmail);
+            await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newName);
+            await firebase.Child("parent").Child(userEmail).Child("city").PutAsync(newCity);
+            await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
+            await firebase.Child("parent").Child(userEmail).Child("city").PutAsync(newEmail);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -140,7 +157,7 @@ namespace HelpingHand
             }
             else if (id == Resource.Id.menu_save) //save new data
             {
-                UpdateUser(auth.CurrentUser.Uid, input_new_name.Text, input_new_city.Text);
+                UpdateUser(auth.CurrentUser.Email, input_new_name.Text, input_new_city.Text, input_new_password.Text, input_new_email.Text);
             }
 
             return base.OnOptionsItemSelected(item);

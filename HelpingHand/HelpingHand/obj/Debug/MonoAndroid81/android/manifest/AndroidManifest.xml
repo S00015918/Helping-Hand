@@ -15,7 +15,7 @@
     <activity android:label="Messages" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MessageActivity" />
     <activity android:label="SignUp" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.SignUpBabysitter" />
     <activity android:label="Profile" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userProfile" />
-    <activity android:label="View Profile" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.viewUser" />
+    <activity android:label="View User Profile" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.viewUser" />
     <activity android:label="DashBoard" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.DashBoard" />
     <activity android:label="ForgetPasswordcs" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.ForgetPassword" />
     <activity android:label="SignUp" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.SignUp" />

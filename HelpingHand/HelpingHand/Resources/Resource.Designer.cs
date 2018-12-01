@@ -2787,6 +2787,9 @@ namespace HelpingHand
 			// aapt resource value: 0x7f0b0085
 			public const int edit_query = 2131427461;
 			
+			// aapt resource value: 0x7f0b00f1
+			public const int eircode = 2131427569;
+			
 			// aapt resource value: 0x7f0b00e8
 			public const int email = 2131427560;
 			
@@ -2949,26 +2952,26 @@ namespace HelpingHand
 			// aapt resource value: 0x7f0b00bf
 			public const int login_password = 2131427519;
 			
-			// aapt resource value: 0x7f0b00f2
-			public const int masked = 2131427570;
+			// aapt resource value: 0x7f0b00f3
+			public const int masked = 2131427571;
 			
 			// aapt resource value: 0x7f0b00d1
 			public const int media_actions = 2131427537;
 			
-			// aapt resource value: 0x7f0b00f6
-			public const int menu_home = 2131427574;
-			
-			// aapt resource value: 0x7f0b00f3
-			public const int menu_message = 2131427571;
-			
 			// aapt resource value: 0x7f0b00f7
-			public const int menu_save = 2131427575;
+			public const int menu_home = 2131427575;
 			
 			// aapt resource value: 0x7f0b00f4
-			public const int menu_star = 2131427572;
+			public const int menu_message = 2131427572;
+			
+			// aapt resource value: 0x7f0b00f8
+			public const int menu_save = 2131427576;
 			
 			// aapt resource value: 0x7f0b00f5
-			public const int menu_user = 2131427573;
+			public const int menu_star = 2131427573;
+			
+			// aapt resource value: 0x7f0b00f6
+			public const int menu_user = 2131427574;
 			
 			// aapt resource value: 0x7f0b00ef
 			public const int message = 2131427567;
@@ -3300,8 +3303,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7f0b0016
 			public const int view_offset_helper = 2131427350;
 			
-			// aapt resource value: 0x7f0b00f1
-			public const int visible = 2131427569;
+			// aapt resource value: 0x7f0b00f2
+			public const int visible = 2131427570;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int wide = 2131427362;

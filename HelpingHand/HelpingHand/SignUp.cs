@@ -21,7 +21,7 @@ namespace XamarinFirebaseAuth
     {
         FloatingActionButton btnSignup;
         TextView btnLogin, btnForgetPass;
-        EditText input_name, input_email, input_password, input_phone, input_address, input_eircode;
+        EditText input_name, input_email, input_password, input_city, input_phone, input_address, input_eircode;
         RelativeLayout activity_sign_up;
 
         private List<Parent> list_parents = new List<Parent>();
@@ -70,6 +70,7 @@ namespace XamarinFirebaseAuth
             input_phone = FindViewById<EditText>(Resource.Id.signup_phone);
             input_eircode = FindViewById<EditText>(Resource.Id.signup_eircode);
             input_address = FindViewById<EditText>(Resource.Id.signup_address);
+            input_city = FindViewById<EditText>(Resource.Id.signup_city);
             activity_sign_up = FindViewById<RelativeLayout>(Resource.Id.activity_sign_up);
 
             btnLogin.SetOnClickListener(this);
@@ -109,6 +110,7 @@ namespace XamarinFirebaseAuth
             parent.phone = input_phone.Text;
             parent.eircode = input_eircode.Text;
             parent.address = input_address.Text;
+            parent.city = input_city.Text;
             parent.noOfKids = Convert.ToInt32(input_childCount);
 
             //Add Item
