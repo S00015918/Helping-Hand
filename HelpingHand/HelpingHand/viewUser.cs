@@ -33,6 +33,7 @@ namespace HelpingHand
             userCity = FindViewById<TextView>(Resource.Id.city);
             userPhone = FindViewById<TextView>(Resource.Id.phone);
             userEircode = FindViewById<TextView>(Resource.Id.eircode);
+            userImage = FindViewById<ImageView>(Resource.Id.imgUser);
 
             string stringName = this.Intent.GetStringExtra("KEY");
 
@@ -45,11 +46,14 @@ namespace HelpingHand
             userCity.Text = user.city;
             userPhone.Text = user.phone;
             userEircode.Text = user.eircode;
+            //userImage.ImageMatrix = user.ImageUrl;
+
+            var userJson = JsonConvert.SerializeObject(userEmail);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
+            MenuInflater.Inflate(Resource.Menu.menu_viewUser, menu);
             return base.OnCreateOptionsMenu(menu);
         }
 
@@ -59,6 +63,11 @@ namespace HelpingHand
             if (id == Resource.Id.menu_home)
             {
                 StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                Finish();
+            }
+            else if (id == Resource.Id.menu_message) // message user
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
                 Finish();
             }
 

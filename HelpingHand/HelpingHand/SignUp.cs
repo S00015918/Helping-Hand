@@ -39,15 +39,18 @@ namespace XamarinFirebaseAuth
             else
             if (v.Id == Resource.Id.signup_btn_register)
             {
-                CreateUser();
-                SignUpUser(input_email.Text, input_password.Text); 
+                SignUpUser(input_email.Text, input_password.Text);
             }
                 
         }
 
         private void SignUpUser(string email, string password)
         {
+
             auth.CreateUserWithEmailAndPassword(email, password).AddOnCompleteListener(this, this);
+
+            CreateUser(auth.CurrentUser.Uid, input_name.Text, input_password.Text, input_phone.Text, input_address.Text,
+                    input_city.Text, input_email.Text, input_eircode.Text);
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -76,13 +79,13 @@ namespace XamarinFirebaseAuth
             btnLogin.SetOnClickListener(this);
             btnSignup.SetOnClickListener(this);
             //btnForgetPass.SetOnClickListener(this);
-
         }
 
-        private async void CreateUser()
+        private async void CreateUser(string uid, string name, string password, string phone, string address,
+            string city, string email, string eircode)
         {
             var firebase = new FirebaseClient(FirebaseURL);
-            var Uid = firebase.Child("parent").Child(auth.CurrentUser.Uid).Equals(Parent);
+            var id = auth.CurrentUser.Uid;
 
             var spinner = FindViewById<Spinner>(Resource.Id.spinnerCount);
             spinner.ItemSelected += (s, e) =>
@@ -98,24 +101,18 @@ namespace XamarinFirebaseAuth
                         ToastLength.Short).Show();
                 }
             };
-
-
             int input_childCount = int.Parse(spinner.SelectedItem.ToString());
 
-            Parent parent = new Parent();
-            parent.id = Convert.ToString(Uid);
-            parent.name = input_name.Text;
-            //parent.surname = input_surname.Text;
-            parent.email = input_email.Text;
-            parent.phone = input_phone.Text;
-            parent.eircode = input_eircode.Text;
-            parent.address = input_address.Text;
-            parent.city = input_city.Text;
-            parent.noOfKids = Convert.ToInt32(input_childCount);
-
-            //Add Item
-            var item = await firebase.Child("parent").PostAsync<Parent>(parent);
-
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("id").PutAsync(auth.CurrentUser.Uid);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("name").PutAsync(name);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("password").PutAsync(password);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("phone").PutAsync(phone);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("address").PutAsync(address);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("city").PutAsync(city);
+            //await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("email").PutAsync(email);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(eircode);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("noOfKids").PutAsync(input_childCount);
         }
 
         public void OnComplete(Task task)

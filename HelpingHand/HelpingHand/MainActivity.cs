@@ -99,14 +99,6 @@ namespace HelpingHand
             }
         }
 
-        private async void UpdateUser(string uid)
-        {
-            var firebase = new FirebaseClient(FirebaseURL);
-            var Uid = firebase.Child("parent").Child(auth.CurrentUser.Uid);
-
-            await firebase.Child("parent").Child(uid).Child("id").PutAsync(Uid);
-        }
-
         private void LoginUser(string email, string password)
         {
             auth.SignInWithEmailAndPassword(email, password).AddOnCompleteListener(this);
@@ -116,15 +108,12 @@ namespace HelpingHand
         {
             if (task.IsSuccessful)
             {
-                UpdateUser(auth.CurrentUser.Uid);
                 StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
                 Finish();
             }
             else
             {
                 Toast.MakeText(this, "Login Failed", ToastLength.Short).Show();
-                //Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
-                //snackbar.Show();
             }
         }
     }

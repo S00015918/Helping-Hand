@@ -91,6 +91,8 @@ namespace HelpingHand
 
         private async void CreateUser()
         {
+            CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
+
             BabySitter babysitter = new BabySitter();
             babysitter.id = string.Empty;
             babysitter.name = input_name.Text;
@@ -100,6 +102,7 @@ namespace HelpingHand
             babysitter.address = input_address.Text;
             babysitter.city = input_city.Text;
             babysitter.eircode = input_eircode.Text;
+            babysitter.gardaVetted = vetted.Checked;
 
             var firebase = new FirebaseClient(FirebaseURL);
             //Add Item

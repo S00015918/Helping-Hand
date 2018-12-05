@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
@@ -20,8 +17,6 @@ using Firebase.Storage;
 using Firebase.Xamarin.Database;
 using Firebase.Xamarin.Database.Query;
 using HelpingHand.Model;
-using Java.Lang;
-using Newtonsoft.Json;
 using XamarinFirebaseAuth;
 
 namespace HelpingHand
@@ -30,7 +25,7 @@ namespace HelpingHand
     public class userProfile : AppCompatActivity, IOnProgressListener, IOnSuccessListener, IOnFailureListener
     {
         EditText input_new_password, input_new_name, input_new_email,
-            input_new_address, input_new_phone, input_new_city;
+            input_new_address, input_new_phone, input_new_city, input_new_eircode;
         ImageView input_image, upload_image;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
@@ -39,11 +34,9 @@ namespace HelpingHand
         FirebaseStorage storage;
         StorageReference storageRef;
         private List<Parent> list_parents = new List<Parent>();
-        //List<BabySitter> list_babySitters = new List<BabySitter>();
+
         private Android.Net.Uri filePath;
-        private ListViewAdapter adapter;
-        //Parent selectedParent;
-        //BabySitter selectedBabysitter;
+        private ParentViewAdapter adapter;
 
         RelativeLayout activity_userProfile, activity_Rlayout;
         FirebaseAuth auth;
@@ -75,6 +68,7 @@ namespace HelpingHand
             input_new_phone = FindViewById<EditText>(Resource.Id.phone);
             input_new_address = FindViewById<EditText>(Resource.Id.age);
             input_new_city = FindViewById<EditText>(Resource.Id.city);
+            input_new_eircode = FindViewById<EditText>(Resource.Id.eircode);
             progressBar = FindViewById<ProgressBar>(Resource.Id.progressbar);
             progressBar.Visibility = ViewStates.Invisible;
 
@@ -92,19 +86,17 @@ namespace HelpingHand
 
         private async void LoadData()
         {
-            System.String frstname = input_new_name.GetType().ToString().Trim();
-            System.String city = input_new_city.GetType().ToString().Trim();
-            System.String phone = input_new_phone.GetType().ToString().Trim();
             string userLogin = auth.CurrentUser.Email;
             var firebase = new FirebaseClient(FirebaseURL);
             var items = await firebase
                 .Child("parent")
+                //.WithAuth(auth.CurrentUser.Uid)
                 .OnceAsync<Parent>();
-            //list_parents.Clear();
-            //adapter = null;
+            list_parents.Clear();
+            adapter = null;
             foreach (var item in items)
             {
-                    Parent account = new Parent();
+                Parent account = new Parent();
                 account.id = item.Key;
                 account.name = item.Object.name;
                 account.phone = item.Object.phone;
@@ -122,23 +114,30 @@ namespace HelpingHand
                     input_new_city.Text = account.city;
                     input_new_phone.Text = account.phone;
                     input_new_address.Text = account.address;
+                    input_new_eircode.Text = account.eircode;
                 }
-             }
+            }
+            adapter = new ParentViewAdapter(this, list_parents);
+            adapter.NotifyDataSetChanged();
+        }
 
-                //adapter.NotifyDataSetChanged();
-
-          }
-
-        private async void UpdateUser(string userEmail, string newName, string newCity, string newPassword, string newEmail)
+        private async void UpdateUser(string uid, string newName, string newPhone, string newAddress, 
+            string newCity, string newEmail, string newEircode)
         {
             var firebase = new FirebaseClient(FirebaseURL);
-            var user = firebase.Child("parent").Child(auth.CurrentUser.Email);
+            var id = auth.CurrentUser.Uid;
 
-            await firebase.Child("parent").Child(userEmail).Child("id").PutAsync(userEmail);
-            await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newName);
-            await firebase.Child("parent").Child(userEmail).Child("city").PutAsync(newCity);
-            await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
-            await firebase.Child("parent").Child(userEmail).Child("city").PutAsync(newEmail);
+            await firebase.Child("parent").Child(uid).Child("id").PutAsync(id);
+            await firebase.Child("parent").Child(uid).Child("name").PutAsync(newName);
+            await firebase.Child("parent").Child(uid).Child("phone").PutAsync(newPhone);
+            await firebase.Child("parent").Child(uid).Child("address").PutAsync(newAddress);
+            await firebase.Child("parent").Child(uid).Child("city").PutAsync(newCity);
+            //await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
+            await firebase.Child("parent").Child(uid).Child("email").PutAsync(newEmail);
+            await firebase.Child("parent").Child(uid).Child("eircode").PutAsync(newEircode);
+
+            LoadData();
+            Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -155,9 +154,10 @@ namespace HelpingHand
                 StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
                 Finish();
             }
-            else if (id == Resource.Id.menu_save) //save new data
+            else if (id == Resource.Id.menu_save) // Update users details
             {
-                UpdateUser(auth.CurrentUser.Email, input_new_name.Text, input_new_city.Text, input_new_password.Text, input_new_email.Text);
+                UpdateUser(auth.CurrentUser.Uid, input_new_name.Text, input_new_phone.Text, input_new_address.Text,
+                    input_new_city.Text, input_new_email.Text, input_new_eircode.Text);
             }
 
             return base.OnOptionsItemSelected(item);
@@ -176,7 +176,7 @@ namespace HelpingHand
             if (filePath != null)
 
                 progressBar.Visibility = ViewStates.Visible;
-            var images = storageRef.Child("images/" + Guid.NewGuid().ToString());
+            var images = storageRef.Child(user.Uid + "/profile pic/" + user.DisplayName);
             images.PutFile(filePath)
                 .AddOnProgressListener(this)
                 .AddOnSuccessListener(this)
@@ -207,12 +207,11 @@ namespace HelpingHand
         {
             var taskSnapShot = (UploadTask.TaskSnapshot)snapshot;
             double progress = (100.0 * taskSnapShot.BytesTransferred / taskSnapShot.TotalByteCount);
-            //progressBar.Visibility.ToString("Uploaded " + (int)progress + " %");
         }
         public void OnSuccess(Java.Lang.Object result)
         {
             progressBar.Visibility = ViewStates.Invisible;
-            Toast.MakeText(this, "Uploaded Successful", ToastLength.Short).Show();
+            Toast.MakeText(this, "Upload Successful", ToastLength.Short).Show();
         }
         public void OnFailure(Java.Lang.Exception e)
         {

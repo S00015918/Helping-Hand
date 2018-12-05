@@ -21,6 +21,9 @@
 				<EditText android:id="@+id/signup_address" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Address" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_lock" />
 				<EditText android:id="@+id/signup_city" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="City" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_lock" />
 				<EditText android:id="@+id/signup_eircode" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Eircode" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_lock" />
+				<TextView android:padding="5dp" android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+				<CheckBox android:id="@+id/signup_vetted_yes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Garda Vetted" />
+				
 			</LinearLayout>  
         </FrameLayout> 
 

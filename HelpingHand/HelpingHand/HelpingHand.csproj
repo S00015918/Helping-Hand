@@ -96,6 +96,7 @@
     <Compile Include="Model\MessageContent.cs" />
     <Compile Include="Model\ObjectExtensions.cs" />
     <Compile Include="Model\Parent.cs" />
+    <Compile Include="ParentViewAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.cs" />
@@ -400,6 +401,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\user_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu_viewUser.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

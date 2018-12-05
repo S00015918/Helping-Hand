@@ -4,10 +4,12 @@ using System.Linq;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Common.Images;
 using Android.Views;
 using Android.Widget;
 using HelpingHand.Model;
 using Java.Lang;
+using static Android.Support.V7.Widget.RecyclerView;
 
 namespace HelpingHand
 {
@@ -51,16 +53,20 @@ namespace HelpingHand
 
         public override View GetView(int position, View convertView, ViewGroup babySitter)
         {
+            var view = convertView;
+
             inflater = (LayoutInflater)activity.BaseContext.GetSystemService(Context.LayoutInflaterService);
             View itemView = inflater.Inflate(Resource.Layout.list_Item, null);
             var txtuser = itemView.FindViewById<TextView>(Resource.Id.list_name);
-            var txtemail = itemView.FindViewById<TextView>(Resource.Id.list_email);
             var txtcity = itemView.FindViewById<TextView>(Resource.Id.list_city);
+            var imguser = itemView.FindViewById<ImageView>(Resource.Id.list_img);
+
             if (lstSitters.Count > 0)
             {
                 txtuser.Text = lstSitters[position].name;
-                txtemail.Text = lstSitters[position].email;
                 txtcity.Text = lstSitters[position].city;
+                //imguser.SetImageDrawable(ImageManager.Get(babySitter.Context, lstSitters[position].ImageUrl));
+
             }
             return itemView;
         }
@@ -81,7 +87,7 @@ namespace HelpingHand
                 if (listViewAdapter.originalData == null)
                     listViewAdapter.originalData = listViewAdapter.lstSitters;
 
-                if (constraint == null) return returnObj;
+                if (constraint == null) return returnObj; 
 
                 if (listViewAdapter.originalData != null && listViewAdapter.originalData.Any())
                 {
@@ -95,6 +101,7 @@ namespace HelpingHand
                 constraint.Dispose();
 
                 return returnObj;
+
             }
 
             protected override void PublishResults(ICharSequence constraint, FilterResults results)
