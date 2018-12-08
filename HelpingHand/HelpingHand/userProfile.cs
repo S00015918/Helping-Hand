@@ -50,6 +50,7 @@ namespace HelpingHand
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             storage = FirebaseStorage.Instance;
             storageRef = storage.GetReferenceFromUrl("gs://th-year-project-37928.appspot.com");
+            StorageReference userImage = storageRef.Child("user/profile pic/");
 
             //Add Toolbar
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
@@ -126,6 +127,7 @@ namespace HelpingHand
         {
             var firebase = new FirebaseClient(FirebaseURL);
             var id = auth.CurrentUser.Uid;
+            StorageReference userImage = storageRef.Child("user/profile pic/");
 
             await firebase.Child("parent").Child(uid).Child("id").PutAsync(id);
             await firebase.Child("parent").Child(uid).Child("name").PutAsync(newName);

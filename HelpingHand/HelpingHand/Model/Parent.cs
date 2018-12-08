@@ -24,5 +24,6 @@ namespace HelpingHand.Model
         public string eircode { get; set; }
         public int noOfKids { get; set; }
         public string ImageUrl { get; set; }
+        public bool isAParent = true;
     }
 }

@@ -20,9 +20,10 @@ namespace XamarinFirebaseAuth
     public class SignUp : Activity, IOnClickListener, IOnCompleteListener
     {
         FloatingActionButton btnSignup;
-        TextView btnLogin, btnForgetPass;
+        TextView btnLogin;
         EditText input_name, input_email, input_password, input_city, input_phone, input_address, input_eircode;
         RelativeLayout activity_sign_up;
+        public bool isAParent = true;
 
         private List<Parent> list_parents = new List<Parent>();
 
@@ -46,11 +47,10 @@ namespace XamarinFirebaseAuth
 
         private void SignUpUser(string email, string password)
         {
-
             auth.CreateUserWithEmailAndPassword(email, password).AddOnCompleteListener(this, this);
 
             CreateUser(auth.CurrentUser.Uid, input_name.Text, input_password.Text, input_phone.Text, input_address.Text,
-                    input_city.Text, input_email.Text, input_eircode.Text);
+                    input_city.Text, input_email.Text, input_eircode.Text, isAParent);
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -82,7 +82,7 @@ namespace XamarinFirebaseAuth
         }
 
         private async void CreateUser(string uid, string name, string password, string phone, string address,
-            string city, string email, string eircode)
+            string city, string email, string eircode, bool getParent)
         {
             var firebase = new FirebaseClient(FirebaseURL);
             var id = auth.CurrentUser.Uid;
@@ -113,6 +113,7 @@ namespace XamarinFirebaseAuth
             await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("email").PutAsync(email);
             await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(eircode);
             await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("noOfKids").PutAsync(input_childCount);
+            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("isAParent").PutAsync(getParent);
         }
 
         public void OnComplete(Task task)

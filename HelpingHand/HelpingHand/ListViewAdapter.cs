@@ -101,7 +101,6 @@ namespace HelpingHand
                 constraint.Dispose();
 
                 return returnObj;
-
             }
 
             protected override void PublishResults(ICharSequence constraint, FilterResults results)

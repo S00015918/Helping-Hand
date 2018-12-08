@@ -17,6 +17,8 @@ using System.Collections;
 using System.Collections.Generic;
 using static Android.Content.ClipData;
 using Newtonsoft.Json;
+using System.Reflection;
+using System.Linq;
 
 namespace XamarinFirebaseAuth
 {
@@ -27,10 +29,11 @@ namespace XamarinFirebaseAuth
         private ListView list_data;
         private ArrayList filteredUsers;
 
-        //private List<Parent> list_parents = new List<Parent>();
+        List<Parent> list_parents = new List<Parent>();
         List<BabySitter> list_babySitters = new List<BabySitter>();
 
-        private ListViewAdapter adapter;
+        private ListViewAdapter babysitterAdapter;
+        private ParentViewAdapter parentAdapter;
         //Parent selectedParent;
         BabySitter selectedBabysitter;
 
@@ -40,7 +43,7 @@ namespace XamarinFirebaseAuth
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
 
-    private void LogoutUser()
+        private void LogoutUser()
         {
             auth.SignOut();
             if(auth.CurrentUser == null)
@@ -72,23 +75,24 @@ namespace XamarinFirebaseAuth
 
             SetSupportActionBar(toolbar);
             //toolbar.Title = "Welcome , " + auth.CurrentUser.Email;
-            //SupportActionBar.Title = auth.CurrentUser.Email;
-      
+            //SupportActionBar.Title = auth.CurrentUser.Email;;
+
             //View
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
 
             activity_dashboard = FindViewById<RelativeLayout>(Resource.Id.activity_dashboard);
 
+            var firebase = new FirebaseClient(FirebaseURL);
+
             search.SetQueryHint("Search");
             list_data = FindViewById<ListView>(Resource.Id.list_data);
             list_data.ItemClick += async (s, e) =>
             {
-                var firebase = new FirebaseClient(FirebaseURL);
                 var items = await firebase
                     .Child("babysitter")
                     .OnceAsync<BabySitter>();
                 list_babySitters.Clear();
-                adapter = null;
+                babysitterAdapter = null;
                 foreach (var item in items)
                 {
                     BabySitter account = new BabySitter();
@@ -103,7 +107,7 @@ namespace XamarinFirebaseAuth
                     account.ImageUrl = item.Object.ImageUrl;
                     list_babySitters.Add(account);
                 }
-                adapter = new ListViewAdapter(this, list_babySitters);
+                babysitterAdapter = new ListViewAdapter(this, list_babySitters);
 
                 BabySitter selectedBabysitter = list_babySitters[e.Position];
 
@@ -122,7 +126,8 @@ namespace XamarinFirebaseAuth
         private async void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
-            search.QueryTextChange += (s, f) => adapter.Filter.InvokeFilter(f.NewText);
+            search.QueryTextChange += (s, f) => babysitterAdapter.Filter.InvokeFilter(f.NewText);
+            search.QueryTextChange += (s, f) => parentAdapter.Filter.InvokeFilter(f.NewText);
         }
 
         private async void LoadData()
@@ -130,24 +135,52 @@ namespace XamarinFirebaseAuth
 
             list_data.Visibility = ViewStates.Invisible;
             var firebase = new FirebaseClient(FirebaseURL);
-            var items = await firebase
-                .Child("babysitter")
-                .OnceAsync<BabySitter>();
+
+            var users = await firebase
+                    .Child("parent")
+                    .OnceAsync<Parent>();
             list_babySitters.Clear();
-            adapter = null;
-            foreach (var item in items)
+            babysitterAdapter = null;
+            foreach (var item in users)
             {
-                BabySitter account = new BabySitter();
+                Parent account = new Parent();
                 account.id = item.Key;
                 account.name = item.Object.name;
                 account.city = item.Object.city;
-                list_babySitters.Add(account);
+                list_parents.Add(account);
             }
-            adapter = new ListViewAdapter(this, list_babySitters);
-            adapter.NotifyDataSetChanged();
-            list_data.Adapter = adapter;
+
+            if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
+            {
+                // You are a parent
+                var items = await firebase
+                        .Child("babysitter")
+                        .OnceAsync<BabySitter>();
+                list_babySitters.Clear();
+                babysitterAdapter = null;
+                foreach (var item in items)
+                {
+                    BabySitter account = new BabySitter();
+                    account.id = item.Key;
+                    account.name = item.Object.name;
+                    account.city = item.Object.city;
+                    list_babySitters.Add(account);
+                }
+                babysitterAdapter = new ListViewAdapter(this, list_babySitters);
+                babysitterAdapter.NotifyDataSetChanged();
+                list_data.Adapter = babysitterAdapter;
+
+            }
+            else
+            {
+                // you are a babysitter
+                parentAdapter = new ParentViewAdapter(this, list_parents);
+                parentAdapter.NotifyDataSetChanged();
+                list_data.Adapter = parentAdapter;
+            }
 
             list_data.Visibility = ViewStates.Visible;
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
