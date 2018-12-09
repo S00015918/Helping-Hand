@@ -1,10 +1,12 @@
 ﻿using System;
-
+using System.Linq;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Firebase.Auth;
 using HelpingHand.Model;
 using Newtonsoft.Json;
 using XamarinFirebaseAuth;
@@ -16,6 +18,7 @@ namespace HelpingHand
     {
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
+        FirebaseAuth auth;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,6 +29,9 @@ namespace HelpingHand
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
+            //Init Firebase
+            auth = FirebaseAuth.GetInstance(MainActivity.app);
+
             userName = FindViewById<TextView>(Resource.Id.name);
             userAge = FindViewById<TextView>(Resource.Id.age);
             userEmail = FindViewById<TextView>(Resource.Id.email);
@@ -35,20 +41,48 @@ namespace HelpingHand
             userEircode = FindViewById<TextView>(Resource.Id.eircode);
             userImage = FindViewById<ImageView>(Resource.Id.imgUser);
 
-            string stringName = this.Intent.GetStringExtra("KEY");
+            string babysitter = this.Intent.GetStringExtra("KEY");
 
-            BabySitter user = JsonConvert.DeserializeObject<BabySitter>(stringName);
+            BabySitter userSitter = JsonConvert.DeserializeObject<BabySitter>(babysitter);
 
-            userName.Text = user.name;
-            userAge.Text = Convert.ToString(user.age);
-            userEmail.Text = user.email;
-            userAddress.Text = user.address;
-            userCity.Text = user.city;
-            userPhone.Text = user.phone;
-            userEircode.Text = user.eircode;
-            //userImage.ImageMatrix = user.ImageUrl;
+            if (userSitter.id != auth.CurrentUser.Uid)
+            {
+                userName.Text = userSitter.name;
+                userAge.Text = Convert.ToString(userSitter.age);
+                userEmail.Text = userSitter.email;
+                userAddress.Text = userSitter.address;
+                userCity.Text = userSitter.city;
+                userPhone.Text = userSitter.phone;
+                userEircode.Text = userSitter.eircode;
+                //userImage.ImageMatrix = user.ImageUrl;
+            }
+            else
+            {
+                string _parent = this.Intent.GetStringExtra("KEY");
+                Parent userParent = JsonConvert.DeserializeObject<Parent>(_parent);
+
+                userName.Text = userParent.name;
+                userEmail.Text = userParent.email;
+                userAddress.Text = userParent.address;
+                userCity.Text = userParent.city;
+                userPhone.Text = userParent.phone;
+                userEircode.Text = userParent.eircode;
+            }
+
 
             var userJson = JsonConvert.SerializeObject(userEmail);
+
+            RatingBar ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
+
+            ratingbar.RatingBarChange += (o, e) => {
+                Toast.MakeText(this, "New Rating: " + ratingbar.Rating.ToString(), ToastLength.Short).Show();
+            };
+
+            //var favouritesJson = JsonConvert.SerializeObject(user);
+
+            //var viewSelectedUser = new Intent(this, typeof(userFavourites));
+            //viewSelectedUser.PutExtra("FAV", favouritesJson);
+            //StartActivity(viewSelectedUser);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -68,6 +102,11 @@ namespace HelpingHand
             else if (id == Resource.Id.menu_message) // message user
             {
                 StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
+                Finish();
+            }
+            else if (id == Resource.Id.menu_star) //favourites
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(userFavourites)));
                 Finish();
             }
 

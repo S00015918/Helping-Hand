@@ -101,6 +101,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.cs" />
     <Compile Include="SignUpBabysitter.cs" />
+    <Compile Include="userFavourites.cs" />
     <Compile Include="userProfile.cs" />
     <Compile Include="viewUser.cs" />
   </ItemGroup>
@@ -409,6 +410,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\menu_viewUser.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\myFavourites.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

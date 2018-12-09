@@ -25,5 +25,6 @@ namespace HelpingHand.Model
         public string eircode { get; set; }
         public bool gardaVetted { get; set; }
         public string ImageUrl { get; set; }
+        public int rating { get; set; }
     }
 }

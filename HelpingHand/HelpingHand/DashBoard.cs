@@ -86,55 +86,8 @@ namespace XamarinFirebaseAuth
 
             search.SetQueryHint("Search");
             list_data = FindViewById<ListView>(Resource.Id.list_data);
-            list_data.ItemClick += async (s, e) =>
-            {
-                var items = await firebase
-                    .Child("babysitter")
-                    .OnceAsync<BabySitter>();
-                list_babySitters.Clear();
-                babysitterAdapter = null;
-                foreach (var item in items)
-                {
-                    BabySitter account = new BabySitter();
-                    account.id = item.Key;
-                    account.name = item.Object.name;
-                    account.age = item.Object.age;
-                    account.phone = item.Object.phone;
-                    account.city = item.Object.city;
-                    account.address = item.Object.address;
-                    account.email = item.Object.email;
-                    account.eircode = item.Object.eircode;
-                    account.ImageUrl = item.Object.ImageUrl;
-                    list_babySitters.Add(account);
-                }
-                babysitterAdapter = new ListViewAdapter(this, list_babySitters);
-
-                BabySitter selectedBabysitter = list_babySitters[e.Position];
-
-                var userJson = JsonConvert.SerializeObject(selectedBabysitter);
-
-                var viewSelectedUser = new Intent(this, typeof(viewUser));
-                viewSelectedUser.PutExtra("KEY", userJson);
-                StartActivity(viewSelectedUser);
-            };
-
-            LoadData();
-
-            search.QueryTextChange += searchChange;          
-        }
-
-        private async void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
-        {
-            SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
-            search.QueryTextChange += (s, f) => babysitterAdapter.Filter.InvokeFilter(f.NewText);
-            search.QueryTextChange += (s, f) => parentAdapter.Filter.InvokeFilter(f.NewText);
-        }
-
-        private async void LoadData()
-        {
 
             list_data.Visibility = ViewStates.Invisible;
-            var firebase = new FirebaseClient(FirebaseURL);
 
             var users = await firebase
                     .Child("parent")
@@ -146,9 +99,26 @@ namespace XamarinFirebaseAuth
                 Parent account = new Parent();
                 account.id = item.Key;
                 account.name = item.Object.name;
+                account.phone = item.Object.phone;
                 account.city = item.Object.city;
+                account.address = item.Object.address;
+                account.email = item.Object.email;
+                account.eircode = item.Object.eircode;
+                account.noOfKids = item.Object.noOfKids;
                 list_parents.Add(account);
+
             }
+
+            list_data.ItemClick += (s, e) =>
+            {
+                Parent selectedParent = list_parents[e.Position];
+
+                var parentJson = JsonConvert.SerializeObject(selectedParent);
+
+                var viewSelectedUser = new Intent(this, typeof(viewUser));
+                viewSelectedUser.PutExtra("KEY", parentJson);
+                StartActivity(viewSelectedUser);
+            };
 
             if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
             {
@@ -163,9 +133,27 @@ namespace XamarinFirebaseAuth
                     BabySitter account = new BabySitter();
                     account.id = item.Key;
                     account.name = item.Object.name;
+                    account.age = item.Object.age;
+                    account.phone = item.Object.phone;
                     account.city = item.Object.city;
+                    account.address = item.Object.address;
+                    account.email = item.Object.email;
+                    account.eircode = item.Object.eircode;
                     list_babySitters.Add(account);
+
                 }
+
+                list_data.ItemClick += (s, e) =>
+                {
+                    BabySitter selectedBabysitter = list_babySitters[e.Position];
+
+                    var babysitterJson = JsonConvert.SerializeObject(selectedBabysitter);
+
+                    var viewSelectedUser = new Intent(this, typeof(viewUser));
+                    viewSelectedUser.PutExtra("KEY", babysitterJson);
+                    StartActivity(viewSelectedUser);
+                };
+
                 babysitterAdapter = new ListViewAdapter(this, list_babySitters);
                 babysitterAdapter.NotifyDataSetChanged();
                 list_data.Adapter = babysitterAdapter;
@@ -180,6 +168,71 @@ namespace XamarinFirebaseAuth
             }
 
             list_data.Visibility = ViewStates.Visible;
+
+            
+
+            //LoadData();
+
+            search.QueryTextChange += searchChange;          
+        }
+
+        private async void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
+        {
+            SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
+            search.QueryTextChange += (s, f) => babysitterAdapter.Filter.InvokeFilter(f.NewText);
+            search.QueryTextChange += (s, f) => parentAdapter.Filter.InvokeFilter(f.NewText);
+        }
+
+        private async void LoadData()
+        {
+
+            //list_data.Visibility = ViewStates.Invisible;
+            //var firebase = new FirebaseClient(FirebaseURL);
+
+            //var users = await firebase
+            //        .Child("parent")
+            //        .OnceAsync<Parent>();
+            //list_babySitters.Clear();
+            //babysitterAdapter = null;
+            //foreach (var item in users)
+            //{
+            //    Parent account = new Parent();
+            //    account.id = item.Key;
+            //    account.name = item.Object.name;
+            //    account.city = item.Object.city;
+            //    list_parents.Add(account);
+            //}
+
+            //if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
+            //{
+            //    // You are a parent
+            //    var items = await firebase
+            //            .Child("babysitter")
+            //            .OnceAsync<BabySitter>();
+            //    list_babySitters.Clear();
+            //    babysitterAdapter = null;
+            //    foreach (var item in items)
+            //    {
+            //        BabySitter account = new BabySitter();
+            //        account.id = item.Key;
+            //        account.name = item.Object.name;
+            //        account.city = item.Object.city;
+            //        list_babySitters.Add(account);
+            //    }
+            //    babysitterAdapter = new ListViewAdapter(this, list_babySitters);
+            //    babysitterAdapter.NotifyDataSetChanged();
+            //    list_data.Adapter = babysitterAdapter;
+
+            //}
+            //else
+            //{
+            //    // you are a babysitter
+            //    parentAdapter = new ParentViewAdapter(this, list_parents);
+            //    parentAdapter.NotifyDataSetChanged();
+            //    list_data.Adapter = parentAdapter;
+            //}
+
+            //list_data.Visibility = ViewStates.Visible;
 
         }
 
@@ -199,7 +252,8 @@ namespace XamarinFirebaseAuth
             }
             else if (id == Resource.Id.menu_star) //favourites
             {
-                //UpdateUser(selectedParent.id, input_name.Text, input_email.Text);
+                StartActivity(new Android.Content.Intent(this, typeof(userFavourites)));
+                Finish();
             }
             else if (id == Resource.Id.menu_user) //user profile
             {
