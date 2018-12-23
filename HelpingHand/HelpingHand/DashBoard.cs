@@ -42,7 +42,6 @@ namespace XamarinFirebaseAuth
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
-
         private void LogoutUser()
         {
             auth.SignOut();
@@ -169,71 +168,14 @@ namespace XamarinFirebaseAuth
 
             list_data.Visibility = ViewStates.Visible;
 
-            
-
-            //LoadData();
-
             search.QueryTextChange += searchChange;          
         }
 
-        private async void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
+        private void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
             search.QueryTextChange += (s, f) => babysitterAdapter.Filter.InvokeFilter(f.NewText);
-            search.QueryTextChange += (s, f) => parentAdapter.Filter.InvokeFilter(f.NewText);
-        }
-
-        private async void LoadData()
-        {
-
-            //list_data.Visibility = ViewStates.Invisible;
-            //var firebase = new FirebaseClient(FirebaseURL);
-
-            //var users = await firebase
-            //        .Child("parent")
-            //        .OnceAsync<Parent>();
-            //list_babySitters.Clear();
-            //babysitterAdapter = null;
-            //foreach (var item in users)
-            //{
-            //    Parent account = new Parent();
-            //    account.id = item.Key;
-            //    account.name = item.Object.name;
-            //    account.city = item.Object.city;
-            //    list_parents.Add(account);
-            //}
-
-            //if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
-            //{
-            //    // You are a parent
-            //    var items = await firebase
-            //            .Child("babysitter")
-            //            .OnceAsync<BabySitter>();
-            //    list_babySitters.Clear();
-            //    babysitterAdapter = null;
-            //    foreach (var item in items)
-            //    {
-            //        BabySitter account = new BabySitter();
-            //        account.id = item.Key;
-            //        account.name = item.Object.name;
-            //        account.city = item.Object.city;
-            //        list_babySitters.Add(account);
-            //    }
-            //    babysitterAdapter = new ListViewAdapter(this, list_babySitters);
-            //    babysitterAdapter.NotifyDataSetChanged();
-            //    list_data.Adapter = babysitterAdapter;
-
-            //}
-            //else
-            //{
-            //    // you are a babysitter
-            //    parentAdapter = new ParentViewAdapter(this, list_parents);
-            //    parentAdapter.NotifyDataSetChanged();
-            //    list_data.Adapter = parentAdapter;
-            //}
-
-            //list_data.Visibility = ViewStates.Visible;
-
+            //search.QueryTextChange += (s, f) => parentAdapter.Filter.InvokeFilter(f.NewText);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

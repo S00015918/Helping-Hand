@@ -7,6 +7,8 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using Firebase.Xamarin.Database;
+using Firebase.Xamarin.Database.Query;
 using HelpingHand.Model;
 using Newtonsoft.Json;
 using XamarinFirebaseAuth;
@@ -19,6 +21,7 @@ namespace HelpingHand
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
         FirebaseAuth auth;
+        private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -76,13 +79,12 @@ namespace HelpingHand
 
             ratingbar.RatingBarChange += (o, e) => {
                 Toast.MakeText(this, "New Rating: " + ratingbar.Rating.ToString(), ToastLength.Short).Show();
+
+                int newrating = Convert.ToInt32(ratingbar.Rating.ToString());
+
+                UpdateUser(userSitter.id, newrating);
             };
 
-            //var favouritesJson = JsonConvert.SerializeObject(user);
-
-            //var viewSelectedUser = new Intent(this, typeof(userFavourites));
-            //viewSelectedUser.PutExtra("FAV", favouritesJson);
-            //StartActivity(viewSelectedUser);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -111,6 +113,16 @@ namespace HelpingHand
             }
 
             return base.OnOptionsItemSelected(item);
+        }
+
+        private async void UpdateUser(string uid, int rating)
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
+
+            await firebase.Child("babysitter").Child(uid).Child("id").PutAsync(uid);
+            await firebase.Child("babysitter").Child(uid).Child("rating").PutAsync(rating);
+
+            Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
         }
     }
 }
