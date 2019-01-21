@@ -20,7 +20,7 @@ namespace HelpingHand
     {
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
-        protected void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.myFavourites);
@@ -57,7 +57,7 @@ namespace HelpingHand
             return base.OnOptionsItemSelected(item);
         }
 
-        private async void UpdateUser()
+        private void UpdateUser()
         {
             var firebase = new FirebaseClient(FirebaseURL);
 

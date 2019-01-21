@@ -67,7 +67,6 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\member.png
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_main.xml
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\message.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\star.png
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user.png
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\mail.png
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\favourite.png
@@ -196,4 +195,6 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user_icon.png
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_viewuser.xml
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\myfavourites.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\schedule_view.xml
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\calendar.png
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb

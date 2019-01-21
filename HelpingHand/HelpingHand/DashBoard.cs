@@ -25,9 +25,9 @@ namespace XamarinFirebaseAuth
     [Activity(Label = "DashBoard" ,Theme = "@style/AppTheme")]
     public class DashBoard : AppCompatActivity, IOnCompleteListener
     {
-        EditText input_new_password, input_name, input_email;
+        //EditText input_new_password, input_name, input_email;
         private ListView list_data;
-        private ArrayList filteredUsers;
+        //private ArrayList filteredUsers;
 
         List<Parent> list_parents = new List<Parent>();
         List<BabySitter> list_babySitters = new List<BabySitter>();
@@ -35,7 +35,7 @@ namespace XamarinFirebaseAuth
         private ListViewAdapter babysitterAdapter;
         private ParentViewAdapter parentAdapter;
         //Parent selectedParent;
-        BabySitter selectedBabysitter;
+        //BabySitter selectedBabysitter;
 
         RelativeLayout activity_dashboard;
         FirebaseAuth auth;
@@ -190,6 +190,11 @@ namespace XamarinFirebaseAuth
             if (id == Resource.Id.menu_message)
             {
                 StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
+                Finish();
+            }
+            else if (id == Resource.Id.menu_calendar) //calendar
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(userSchedule)));
                 Finish();
             }
             else if (id == Resource.Id.menu_star) //favourites

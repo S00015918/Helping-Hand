@@ -24,7 +24,7 @@ namespace HelpingHand
     [Activity(Label = "Profile", Theme = "@style/AppTheme")]
     public class userProfile : AppCompatActivity, IOnProgressListener, IOnSuccessListener, IOnFailureListener
     {
-        EditText input_new_password, input_new_name, input_new_email,
+        EditText input_new_email, input_new_name,
             input_new_address, input_new_phone, input_new_city, input_new_eircode;
         ImageView input_image, upload_image;
 

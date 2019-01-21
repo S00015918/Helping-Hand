@@ -11,6 +11,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using XamarinFirebaseAuth;
 
 namespace HelpingHand
 {
@@ -20,10 +21,10 @@ namespace HelpingHand
         RelativeLayout activity_schedule;
         FirebaseAuth auth;
 
-        protected async override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.DashBoard);
+            SetContentView(Resource.Layout.schedule_view);
 
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
@@ -33,6 +34,42 @@ namespace HelpingHand
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
 
             SetSupportActionBar(toolbar);
+
+            var calendarView = FindViewById<CalendarView>(Resource.Id.calendar);
+
+            calendarView.DateChange += (s, e) => {
+                int day = e.DayOfMonth;
+                int month = e.Month;
+                int year = e.Year;
+            };
         }
-     }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+            if (id == Resource.Id.menu_home)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                Finish();
+            }
+            if (id == Resource.Id.menu_message) //messages
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
+                Finish();
+            }
+
+            else if (id == Resource.Id.menu_user) //user profile
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(userProfile)));
+                Finish();
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+    }
 }

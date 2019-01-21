@@ -20,7 +20,7 @@ namespace HelpingHand
         FloatingActionButton btnLogin;
         EditText input_email, input_password;
         TextView btnSignUp, btnForgetPassword, btnBabysitterReg;
-        private RelativeLayout activity_main;
+        //private RelativeLayout activity_main;
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
         public static FirebaseApp app;
