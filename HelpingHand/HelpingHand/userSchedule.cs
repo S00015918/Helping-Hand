@@ -18,7 +18,7 @@ namespace HelpingHand
     [Activity(Label = "Schedule", Theme = "@style/AppTheme")]
     public class userSchedule : AppCompatActivity
     {
-        RelativeLayout activity_schedule;
+        //RelativeLayout activity_schedule;
         FirebaseAuth auth;
 
         protected override void OnCreate(Bundle savedInstanceState)

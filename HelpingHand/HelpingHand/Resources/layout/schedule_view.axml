@@ -2,14 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:local="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_schedule"
-    android:padding="16dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="30dp">  
 				<CalendarView
 					android:id="@+id/calendar"
-					android:layout_below="@id/toolbar"
+					android:padding="16dp"
+					android:layout_below="@+id/toolbar"
 					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"/>
+					android:layout_height="wrap_content">  
+				</CalendarView>
+
+				<GridLayout
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:rowCount="8"
+					android:columnCount="8"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_below="@+id/calendar"
+					android:id="@+id/scheduleGrid" />
 			</LinearLayout>  
 </RelativeLayout>
