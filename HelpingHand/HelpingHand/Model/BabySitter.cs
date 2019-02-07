@@ -26,5 +26,10 @@ namespace HelpingHand.Model
         public bool gardaVetted { get; set; }
         public string ImageUrl { get; set; }
         public int rating { get; set; }
+        public enum availabiltyTime { morning, afternoon, evening, night }
+        public enum availabiltyDay { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
+        public string availableDays { get; set; }
+        public string availableTime { get; set; }
+        public string[] availabilty { get; set; }
     }
 }

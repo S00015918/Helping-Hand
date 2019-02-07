@@ -38,6 +38,7 @@ namespace HelpingHand
         private List<BabySitter> list_babysitters = new List<BabySitter>();
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
         FirebaseAuth auth;
+        string[] values = new string[28];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -103,6 +104,8 @@ namespace HelpingHand
                         Toast.MakeText(this, "Monday Morning selected", ToastLength.Short).Show();
                         btnMonMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        //string day = "monday";
+                        values[0] = "Monday Morning";
                     }
                     else if (count >= 1)
                     {
@@ -117,6 +120,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Tuesday Morning selected", ToastLength.Short).Show();
                         btnTueMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[1] = "Tuesday Morning";
                     }
                     else if (count >= 1)
                     {
@@ -131,6 +135,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Wednesday Morning selected", ToastLength.Short).Show();
                         btnWedMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[2] = "Wednesday Morning";
                     }
                     else if (count >= 1)
                     {
@@ -145,6 +150,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Thursday Morning selected", ToastLength.Short).Show();
                         btnThuMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[3] = "Thursday Morning";
                     }
                     else if (count >= 1)
                     {
@@ -159,6 +165,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Friday Morning selected", ToastLength.Short).Show();
                         btnFriMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[4] = "Friday Morning";
                     }
                     else if (count >= 1)
                     {
@@ -173,6 +180,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Saturday Morning selected", ToastLength.Short).Show();
                         btnSatMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[5] = "Saturday Morning";
                     }
                     else if (count >= 1)
                     {
@@ -187,6 +195,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Sunday Morning selected", ToastLength.Short).Show();
                         btnSunMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[6] = "Sunday Morning";
                     }
                     else if (count >= 1)
                     {
@@ -201,6 +210,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Monday Afternoon selected", ToastLength.Short).Show();
                         btnMonAft.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[7] = "Monday Afternoon";
                     }
                     else if (count >= 1)
                     {
@@ -215,6 +225,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Tuesday Afternoon selected", ToastLength.Short).Show();
                         btnTueAft.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[8] = "Tuesday Afternoon";
                     }
                     else if (count >= 1)
                     {
@@ -229,6 +240,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Wednesday Afternoon selected", ToastLength.Short).Show();
                         btnWedAft.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[9] = "Wednesday Afternoon";
                     }
                     else if (count >= 1)
                     {
@@ -243,6 +255,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Thursday Afternoon selected", ToastLength.Short).Show();
                         btnThuAft.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[10] = "Thursday Afternoon";
                     }
                     else if (count >= 1)
                     {
@@ -257,6 +270,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Friday Afternoon selected", ToastLength.Short).Show();
                         btnFriAft.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[11] = "Friday Afternoon";
                     }
                     else if (count >= 1)
                     {
@@ -271,6 +285,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Saturday Afternoon selected", ToastLength.Short).Show();
                         btnSatAft.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[12] = "Saturday Afternoon";
                     }
                     else if (count >= 1)
                     {
@@ -285,6 +300,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Sunday Afternoon selected", ToastLength.Short).Show();
                         btnSunAft.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[13] = "Sunday Afternoon";
                     }
                     else if (count >= 1)
                     {
@@ -299,6 +315,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Monday Evening selected", ToastLength.Short).Show();
                         btnMonEve.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[14] = "Monday Evening";
                     }
                     else if (count >= 1)
                     {
@@ -313,6 +330,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Tuesday Evening selected", ToastLength.Short).Show();
                         btnTueEve.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[15] = "Tuesday Evening";
                     }
                     else if (count >= 1)
                     {
@@ -327,6 +345,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Wednesday Evening selected", ToastLength.Short).Show();
                         btnWedEve.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[16] = "Wednesday Evening";
                     }
                     else if (count >= 1)
                     {
@@ -341,6 +360,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Thursday Evening selected", ToastLength.Short).Show();
                         btnThuEve.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[17] = "Thursday Evening";
                     }
                     else if (count >= 1)
                     {
@@ -355,6 +375,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Friday Evening selected", ToastLength.Short).Show();
                         btnFriEve.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[18] = "Friday Evening";
                     }
                     else if (count >= 1)
                     {
@@ -369,6 +390,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Saturday Evening selected", ToastLength.Short).Show();
                         btnSatEve.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[19] = "Saturday Evening";
                     }
                     else if (count >= 1)
                     {
@@ -383,6 +405,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Sunday Evening selected", ToastLength.Short).Show();
                         btnSunEve.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[20] = "Sunday Evening";
                     }
                     else if (count >= 1)
                     {
@@ -397,6 +420,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Monday Night selected", ToastLength.Short).Show();
                         btnMonNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[21] = "Monday Night";
                     }
                     else if (count >= 1)
                     {
@@ -411,6 +435,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Tuesday Night selected", ToastLength.Short).Show();
                         btnTueNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[22] = "Tuesday Night";
                     }
                     else if (count >= 1)
                     {
@@ -425,6 +450,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Wednesday Night selected", ToastLength.Short).Show();
                         btnWedNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[23] = "Wednesday Night";
                     }
                     else if (count >= 1)
                     {
@@ -439,6 +465,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Thursday Night selected", ToastLength.Short).Show();
                         btnThuNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[24] = "Thursday Night";
                     }
                     else if (count >= 1)
                     {
@@ -453,6 +480,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Friday Night selected", ToastLength.Short).Show();
                         btnFriNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[25] = "Friday Night";
                     }
                     else if (count >= 1)
                     {
@@ -467,6 +495,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Saturday Night selected", ToastLength.Short).Show();
                         btnSatNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[26] = "Saturday Night";
                     }
                     else if (count >= 1)
                     {
@@ -481,6 +510,7 @@ namespace HelpingHand
                         Toast.MakeText(this, "Sunday Night selected", ToastLength.Short).Show();
                         btnSunNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
                         count++;
+                        values[27] = "Sunday Night";
                     }
                     else if (count >= 1)
                     {
@@ -520,6 +550,37 @@ namespace HelpingHand
         private async void CreateUser()
         {
             CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
+            var spinnerDays = FindViewById<Spinner>(Resource.Id.spinnerDays);
+            spinnerDays.ItemSelected += (s, e) =>
+            {
+                string firstItem = spinnerDays.SelectedItem.ToString();
+                if (firstItem.Equals(spinnerDays.SelectedItem.ToString()))
+                {
+                    // To do when first item is selected
+                }
+                else
+                {
+                    Toast.MakeText(this, "You have selected " + e.Parent.GetItemIdAtPosition(e.Position).ToString(),
+                        ToastLength.Short).Show();
+                }
+            };
+            string input_availableDays = spinnerDays.SelectedItem.ToString();
+
+            var spinnerTime = FindViewById<Spinner>(Resource.Id.spinnerTime);
+            spinnerTime.ItemSelected += (s, e) =>
+            {
+                string firstItem = spinnerTime.SelectedItem.ToString();
+                if (firstItem.Equals(spinnerTime.SelectedItem.ToString()))
+                {
+                    // To do when first item is selected
+                }
+                else
+                {
+                    Toast.MakeText(this, "You have selected " + e.Parent.GetItemIdAtPosition(e.Position).ToString(),
+                        ToastLength.Short).Show();
+                }
+            };
+            string input_availableTime = spinnerTime.SelectedItem.ToString();
 
             BabySitter babysitter = new BabySitter();
             babysitter.id = string.Empty;
@@ -531,6 +592,9 @@ namespace HelpingHand
             babysitter.city = input_city.Text;
             babysitter.eircode = input_eircode.Text;
             babysitter.gardaVetted = vetted.Checked;
+            babysitter.availableDays = input_availableDays;
+            babysitter.availableTime = input_availableTime;
+            babysitter.availabilty = values;
 
             var firebase = new FirebaseClient(FirebaseURL);
             //Add Item

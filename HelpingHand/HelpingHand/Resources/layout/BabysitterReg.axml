@@ -23,10 +23,11 @@
 				<EditText android:id="@+id/signup_eircode" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Eircode" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_lock" />
 				<TextView android:padding="5dp" android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 				<CheckBox android:id="@+id/signup_vetted_yes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Garda Vetted" />
-				
+				<Spinner android:id="@+id/spinnerDays" android:padding="5dp" android:layout_width="100dp" android:layout_height="wrap_content" android:entries="@array/dropdown_Day" />
+				<Spinner android:id="@+id/spinnerTime" android:padding="5dp" android:layout_width="100dp" android:layout_height="wrap_content" android:entries="@array/dropdown_Time" />
 			</LinearLayout>  
         </FrameLayout> 
-        <FrameLayout android:id="@+id/layout_middle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top" android:background="@drawable/login_bottom">  
+        <FrameLayout android:id="@+id/layout_middle" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top" android:background="@drawable/login_bottom">  
             <HorizontalScrollView android:id="@+id/horizontalscrollView" android:layout_below="@+id/layout_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
 			<GridLayout android:layout_below="@+id/signup_vetted_yes" android:minWidth="200px" android:minHeight="200px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="8" android:rowCount="6" android:id="@+id/gridSchedule" >
 				<TextView android:text="" android:width="80dp" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView1" />

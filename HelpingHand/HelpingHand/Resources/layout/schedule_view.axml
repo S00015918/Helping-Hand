@@ -16,14 +16,12 @@
 					android:layout_height="wrap_content">  
 				</CalendarView>
 
-				<GridLayout
-					android:minWidth="25px"
-					android:minHeight="25px"
-					android:rowCount="8"
-					android:columnCount="8"
-					android:layout_width="match_parent"
-					android:layout_height="match_parent"
-					android:layout_below="@+id/calendar"
-					android:id="@+id/scheduleGrid" />
+				<ListView  
+					android:id="@+id/list_appointments"
+					android:minWidth="25px" 
+					android:minHeight="500px"
+					android:layout_below="@+id/calendar"  
+					android:layout_width="match_parent"  
+					android:layout_height="wrap_content"/>
 			</LinearLayout>  
 </RelativeLayout>

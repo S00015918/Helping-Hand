@@ -18,6 +18,7 @@ namespace HelpingHand
     [Activity(Label = "View User Profile", Theme = "@style/AppTheme")]
     public class viewUser : AppCompatActivity
     {
+        Button btnCreateAppointment;
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
         FirebaseAuth auth;
@@ -43,6 +44,9 @@ namespace HelpingHand
             userPhone = FindViewById<TextView>(Resource.Id.phone);
             userEircode = FindViewById<TextView>(Resource.Id.eircode);
             userImage = FindViewById<ImageView>(Resource.Id.imgUser);
+
+            btnCreateAppointment = FindViewById<Button>(Resource.Id.btnCreate_appointment);
+            btnCreateAppointment.Click += CreateAppointment;
 
             string babysitter = this.Intent.GetStringExtra("KEY");
 
@@ -85,6 +89,11 @@ namespace HelpingHand
                 UpdateUser(userSitter.id, newrating);
             };
 
+        }
+        void CreateAppointment(object sender, EventArgs e)
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(CreateAppointment)));
+            Finish();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
