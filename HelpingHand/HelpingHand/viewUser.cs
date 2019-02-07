@@ -22,6 +22,7 @@ namespace HelpingHand
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
         FirebaseAuth auth;
+        string[] userAvailabilty;
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -61,6 +62,7 @@ namespace HelpingHand
                 userCity.Text = userSitter.city;
                 userPhone.Text = userSitter.phone;
                 userEircode.Text = userSitter.eircode;
+                userAvailabilty = userSitter.availabilty;
                 //userImage.ImageMatrix = user.ImageUrl;
             }
             else
@@ -92,8 +94,12 @@ namespace HelpingHand
         }
         void CreateAppointment(object sender, EventArgs e)
         {
-            StartActivity(new Android.Content.Intent(this, typeof(CreateAppointment)));
-            Finish();
+            var babySitter = new Intent(this, typeof(CreateAppointment));
+            babySitter.PutExtra("KEY", userAvailabilty);
+            StartActivity(babySitter);
+
+            //StartActivity(new Android.Content.Intent(this, typeof(CreateAppointment)));
+            //Finish();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

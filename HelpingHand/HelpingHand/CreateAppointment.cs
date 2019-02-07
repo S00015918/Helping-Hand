@@ -20,7 +20,7 @@ namespace HelpingHand
         FirebaseAuth auth;
         RelativeLayout activity_book_appointment;
         DatePicker datePicker;
-        TimePicker timePicker;
+        //TimePicker timePicker;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -54,12 +54,12 @@ namespace HelpingHand
             auth = FirebaseAuth.GetInstance(MainActivity.app);
         }
 
-        private string getTime()
-        {
-            StringBuilder strTime = new StringBuilder();
-            strTime.Append("Time: " + timePicker.Hour + ":" + timePicker.Minute);
-            return strTime.ToString();
-        }
+        //private string getTime()
+        //{
+        //    StringBuilder strTime = new StringBuilder();
+        //    strTime.Append("Time: " + timePicker.Hour + ":" + timePicker.Minute);
+        //    return strTime.ToString();
+        //}
 
         private string getDate()
         {

@@ -550,37 +550,6 @@ namespace HelpingHand
         private async void CreateUser()
         {
             CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
-            var spinnerDays = FindViewById<Spinner>(Resource.Id.spinnerDays);
-            spinnerDays.ItemSelected += (s, e) =>
-            {
-                string firstItem = spinnerDays.SelectedItem.ToString();
-                if (firstItem.Equals(spinnerDays.SelectedItem.ToString()))
-                {
-                    // To do when first item is selected
-                }
-                else
-                {
-                    Toast.MakeText(this, "You have selected " + e.Parent.GetItemIdAtPosition(e.Position).ToString(),
-                        ToastLength.Short).Show();
-                }
-            };
-            string input_availableDays = spinnerDays.SelectedItem.ToString();
-
-            var spinnerTime = FindViewById<Spinner>(Resource.Id.spinnerTime);
-            spinnerTime.ItemSelected += (s, e) =>
-            {
-                string firstItem = spinnerTime.SelectedItem.ToString();
-                if (firstItem.Equals(spinnerTime.SelectedItem.ToString()))
-                {
-                    // To do when first item is selected
-                }
-                else
-                {
-                    Toast.MakeText(this, "You have selected " + e.Parent.GetItemIdAtPosition(e.Position).ToString(),
-                        ToastLength.Short).Show();
-                }
-            };
-            string input_availableTime = spinnerTime.SelectedItem.ToString();
 
             BabySitter babysitter = new BabySitter();
             babysitter.id = string.Empty;
@@ -592,8 +561,6 @@ namespace HelpingHand
             babysitter.city = input_city.Text;
             babysitter.eircode = input_eircode.Text;
             babysitter.gardaVetted = vetted.Checked;
-            babysitter.availableDays = input_availableDays;
-            babysitter.availableTime = input_availableTime;
             babysitter.availabilty = values;
 
             var firebase = new FirebaseClient(FirebaseURL);
