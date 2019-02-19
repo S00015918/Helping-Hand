@@ -2,6 +2,8 @@ crypto
 Firebase.Xamarin
 JWT
 Newtonsoft.Json
+Stripe.net
+System.Collections.Immutable
 System.Reactive.Core
 System.Reactive.Interfaces
 System.Reactive.Linq
@@ -30,4 +32,7 @@ Xamarin.Firebase.Storage.Common
 Xamarin.Firebase.Storage
 Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
+Xamarin.GooglePlayServices.Identity
+Xamarin.GooglePlayServices.Maps
 Xamarin.GooglePlayServices.Tasks
+Xamarin.GooglePlayServices.Wallet

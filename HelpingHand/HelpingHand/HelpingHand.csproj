@@ -88,19 +88,25 @@
     <Compile Include="ForgetPassword.cs" />
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MakePayment.cs" />
     <Compile Include="MessageActivity.cs" />
     <Compile Include="MessageAdapter.cs" />
-    <Compile Include="Model\appointment.cs" />
+    <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\BabySitter.cs" />
+    <Compile Include="Model\CreditCard.cs" />
+    <Compile Include="Model\IStripeServices.cs" />
     <Compile Include="Model\MessageContent.cs" />
     <Compile Include="Model\ObjectExtensions.cs" />
     <Compile Include="Model\Parent.cs" />
     <Compile Include="Model\Rating.cs" />
+    <Compile Include="Model\StripeServices.cs" />
     <Compile Include="ParentViewAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.cs" />
     <Compile Include="SignUpBabysitter.cs" />
+    <Compile Include="Model\StripeCreditCardOptions.cs" />
+    <Compile Include="Model\StripeTokenCreateOptions.cs" />
     <Compile Include="userFavourites.cs" />
     <Compile Include="userProfile.cs" />
     <Compile Include="userSchedule.cs" />
@@ -139,6 +145,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Stripe.net">
+      <Version>22.8.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Compat">
       <Version>27.0.2.1</Version>
     </PackageReference>
@@ -159,6 +168,9 @@
       <Version>60.1142.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Base">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Wallet">
       <Version>60.1142.1</Version>
     </PackageReference>
   </ItemGroup>
@@ -431,6 +443,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Home.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\payment_form.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -11,6 +11,28 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Stripe.net/22.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "System.Collections.Immutable": "1.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Stripe.net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Stripe.net.dll": {}
+        }
+      },
+      "System.Collections.Immutable/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
       "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
         "type": "package",
         "dependencies": {
@@ -400,6 +422,38 @@
           "build/MonoAndroid80/Xamarin.GooglePlayServices.Basement.targets": {}
         }
       },
+      "Xamarin.GooglePlayServices.Identity/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Identity.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Identity.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Identity.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Maps.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
       "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
         "type": "package",
         "dependencies": {
@@ -413,6 +467,25 @@
         },
         "build": {
           "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Wallet/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Identity": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Maps": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Wallet.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Wallet.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Wallet.targets": {}
         }
       }
     }
@@ -454,6 +527,47 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "Stripe.net/22.8.1": {
+      "sha512": "uxOIP0wOjL5u5EqrEMFXNcv2CXyJjbVHgeDPN0qROo5Sj2fFSSbchLc6ZsjfzngdfQI8rdrtpH29POeZ+9+oLg==",
+      "type": "package",
+      "path": "stripe.net/22.8.1",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/Stripe.net.dll",
+        "lib/net45/Stripe.net.pdb",
+        "lib/net45/Stripe.net.xml",
+        "lib/netstandard1.2/Stripe.net.dll",
+        "lib/netstandard1.2/Stripe.net.pdb",
+        "lib/netstandard1.2/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.pdb",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.22.8.1.nupkg.sha512",
+        "stripe.net.nuspec"
+      ]
+    },
+    "System.Collections.Immutable/1.5.0": {
+      "sha512": "T5XGQlcHhEO75Qx38GGCUDPdk4n/7yrRmTgy4yczzJV8alPHaxPU55TBC2UFrkQ42bu34sZPfK0dU+nWZUOEJA==",
+      "type": "package",
+      "path": "system.collections.immutable/1.5.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Collections.Immutable.dll",
+        "lib/netstandard1.0/System.Collections.Immutable.xml",
+        "lib/netstandard1.3/System.Collections.Immutable.dll",
+        "lib/netstandard1.3/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
+        "system.collections.immutable.1.5.0.nupkg.sha512",
+        "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
@@ -773,6 +887,30 @@
         "xamarin.googleplayservices.basement.nuspec"
       ]
     },
+    "Xamarin.GooglePlayServices.Identity/60.1142.1": {
+      "sha512": "6dTm6YMZbFRSG+V382t48JZq+LOTn9PyhU+vFRUfm/Q/5YmKrVP9YlTPTt8GsGtTsVPL8Hp27p4/LQpDBsmp0w==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.identity/60.1142.1",
+      "files": [
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Identity.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Identity.dll",
+        "xamarin.googleplayservices.identity.60.1142.1.nupkg.sha512",
+        "xamarin.googleplayservices.identity.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Maps/60.1142.1": {
+      "sha512": "1c0X3Ro/tfDu3/G8Y3JG4qgPSqFFvKebAZYNEChd0L2Lsk0Wa8LipSpzK5h7+/0Qvxpbyx53+76DOdSRecPodA==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.maps/60.1142.1",
+      "files": [
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Maps.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Maps.dll",
+        "xamarin.googleplayservices.maps.60.1142.1.nupkg.sha512",
+        "xamarin.googleplayservices.maps.nuspec"
+      ]
+    },
     "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
       "sha512": "300vD5hWHqAQ5SXwwDlyDkeK1O73fqIQMdz9i+8Y7h8yB1+3DitD9SuLBSh+6aJhldYOGo1lBsdlsXBc12t+vw==",
       "type": "package",
@@ -784,11 +922,24 @@
         "xamarin.googleplayservices.tasks.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.tasks.nuspec"
       ]
+    },
+    "Xamarin.GooglePlayServices.Wallet/60.1142.1": {
+      "sha512": "/4tI9111lrnp0C0PQtIC7QIhv77t7NDoR1n8l1MQUaFctVXJkfcNAnU2Wh0OyPL2Hy+QNPwkU7ee66maOcY4BA==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.wallet/60.1142.1",
+      "files": [
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Wallet.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Wallet.dll",
+        "xamarin.googleplayservices.wallet.60.1142.1.nupkg.sha512",
+        "xamarin.googleplayservices.wallet.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
       "Newtonsoft.Json >= 12.0.1",
+      "Stripe.net >= 22.8.1",
       "Xamarin.Android.Support.Compat >= 27.0.2.1",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
@@ -796,7 +947,8 @@
       "Xamarin.Firebase.Database >= 60.1142.1",
       "Xamarin.Firebase.Database.Connection >= 60.1142.1",
       "Xamarin.Firebase.Storage >= 60.1142.1",
-      "Xamarin.GooglePlayServices.Base >= 60.1142.1"
+      "Xamarin.GooglePlayServices.Base >= 60.1142.1",
+      "Xamarin.GooglePlayServices.Wallet >= 60.1142.1"
     ]
   },
   "packageFolders": {
@@ -836,6 +988,10 @@
             "target": "Package",
             "version": "[12.0.1, )"
           },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[22.8.1, )"
+          },
           "Xamarin.Android.Support.Compat": {
             "target": "Package",
             "version": "[27.0.2.1, )"
@@ -865,6 +1021,10 @@
             "version": "[60.1142.1, )"
           },
           "Xamarin.GooglePlayServices.Base": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
+          },
+          "Xamarin.GooglePlayServices.Wallet": {
             "target": "Package",
             "version": "[60.1142.1, )"
           }

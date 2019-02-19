@@ -6,6 +6,8 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Mono.Android.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\mscorlib.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Stripe.net.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Collections.Immutable.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Core.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Reactive.Core.dll
@@ -36,7 +38,10 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Storage.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Base.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Identity.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Maps.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Tasks.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Wallet.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Runtime.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ComponentModel.Composition.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Diagnostics.Debug.dll
@@ -75,6 +80,7 @@ C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndro
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.XPath.XDocument.dll
+C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Microsoft.CSharp.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Mono.Security.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ComponentModel.dll
 C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Diagnostics.Tools.dll

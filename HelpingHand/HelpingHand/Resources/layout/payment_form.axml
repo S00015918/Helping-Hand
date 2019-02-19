@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<StackLayout>
+		<Entry Text="{Binding CreditCardNumber}" Placeholder="Enter your credit card number"></Entry>
+		<StackLayout Orientation="Horizontal">
+			<Entry Text="{Binding ExpiryDate}" Placeholder="Expiry date"></Entry>
+			<Entry Text="{Binding CVV}" Placeholder="CVV"></Entry>
+		</StackLayout>
+	</StackLayout>
+</LinearLayout>

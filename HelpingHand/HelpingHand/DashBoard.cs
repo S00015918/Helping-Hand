@@ -31,6 +31,7 @@ namespace XamarinFirebaseAuth
 
         List<Parent> list_parents = new List<Parent>();
         List<BabySitter> list_babySitters = new List<BabySitter>();
+        BabySitter babySitter;
 
         private ListViewAdapter babysitterAdapter;
         private ParentViewAdapter parentAdapter;
@@ -121,26 +122,49 @@ namespace XamarinFirebaseAuth
 
             if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
             {
+
                 // You are a parent
-                var items = await firebase
-                        .Child("babysitter")
-                        .OnceAsync<BabySitter>();
+                //var items = await firebase
+                //        .Child("babysitter")
+                //        .OnceAsync<BabySitter>();
+
+                var items = await firebase.Child("babysitter").OnceAsync<object>();
                 list_babySitters.Clear();
                 babysitterAdapter = null;
+
                 foreach (var item in items)
                 {
-                    BabySitter account = new BabySitter();
-                    account.id = item.Key;
-                    account.name = item.Object.name;
-                    account.age = item.Object.age;
-                    account.phone = item.Object.phone;
-                    account.city = item.Object.city;
-                    account.address = item.Object.address;
-                    account.email = item.Object.email;
-                    account.eircode = item.Object.eircode;
-                    list_babySitters.Add(account);
-
+                    try
+                    {
+                        babySitter = JsonConvert.DeserializeObject<BabySitter>(item.Object.ToString());
+                        if (babySitter.availability != null)
+                        {
+                            string[] values = babySitter.availability;
+                        }
+                        list_babySitters.Add(babySitter);
+                    }
+                    catch (Exception)
+                    {
+                        var babySitter = JsonConvert.DeserializeObject<BabySitter>(item.Object.ToString());
+                        throw;
+                    }
                 }
+
+                //foreach (var item in items)
+                //{
+                //BabySitter account = new BabySitter();
+                //account.id = item.Key;
+                //account.name = item.Object.name;
+                //account.age = item.Object.age;
+                //account.phone = item.Object.phone;
+                //account.city = item.Object.city;
+                //account.address = item.Object.address;
+                //account.email = item.Object.email;
+                //account.eircode = item.Object.eircode;
+                //account.availability = item.Object.availability;
+                //list_babySitters.Add(account);
+
+                //}
 
                 list_data.ItemClick += (s, e) =>
                 {

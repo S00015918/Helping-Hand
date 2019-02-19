@@ -111,6 +111,8 @@ class MonoPackageManager_Resources {
 		"Firebase.Xamarin.dll",
 		"JWT.dll",
 		"Newtonsoft.Json.dll",
+		"Stripe.net.dll",
+		"System.Collections.Immutable.dll",
 		"System.Reactive.Core.dll",
 		"System.Reactive.Interfaces.dll",
 		"System.Reactive.Linq.dll",
@@ -138,7 +140,10 @@ class MonoPackageManager_Resources {
 		"Xamarin.Firebase.Storage.dll",
 		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Identity.dll",
+		"Xamarin.GooglePlayServices.Maps.dll",
 		"Xamarin.GooglePlayServices.Tasks.dll",
+		"Xamarin.GooglePlayServices.Wallet.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

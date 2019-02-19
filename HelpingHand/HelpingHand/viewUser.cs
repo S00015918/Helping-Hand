@@ -22,7 +22,7 @@ namespace HelpingHand
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
         FirebaseAuth auth;
-        string[] userAvailabilty;
+        Array userAvailabilty;
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -62,7 +62,7 @@ namespace HelpingHand
                 userCity.Text = userSitter.city;
                 userPhone.Text = userSitter.phone;
                 userEircode.Text = userSitter.eircode;
-                userAvailabilty = userSitter.availabilty;
+                userAvailabilty = userSitter.availability;
                 //userImage.ImageMatrix = user.ImageUrl;
             }
             else
@@ -78,9 +78,6 @@ namespace HelpingHand
                 userEircode.Text = userParent.eircode;
             }
 
-
-            var userJson = JsonConvert.SerializeObject(userEmail);
-
             RatingBar ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
 
             ratingbar.RatingBarChange += (o, e) => {
@@ -90,16 +87,30 @@ namespace HelpingHand
 
                 UpdateUser(userSitter.id, newrating);
             };
-
         }
+
+
         void CreateAppointment(object sender, EventArgs e)
         {
-            var babySitter = new Intent(this, typeof(CreateAppointment));
-            babySitter.PutExtra("KEY", userAvailabilty);
-            StartActivity(babySitter);
+            string babysitter = this.Intent.GetStringExtra("KEY");
 
-            //StartActivity(new Android.Content.Intent(this, typeof(CreateAppointment)));
-            //Finish();
+            BabySitter userSitter = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+
+            userName.Text = userSitter.name;
+            userAge.Text = Convert.ToString(userSitter.age);
+            userEmail.Text = userSitter.email;
+            userAddress.Text = userSitter.address;
+            userCity.Text = userSitter.city;
+            userPhone.Text = userSitter.phone;
+            userEircode.Text = userSitter.eircode;
+            userAvailabilty = userSitter.availability;
+
+            var userJson = JsonConvert.SerializeObject(userSitter);
+
+            var appointment = new Intent(this, typeof(CreateAppointment));
+            appointment.PutExtra("KEY", Convert.ToString(userSitter));
+            StartActivity(appointment);
+            Finish();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

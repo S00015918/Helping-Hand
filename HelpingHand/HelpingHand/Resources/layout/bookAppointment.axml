@@ -17,54 +17,25 @@
 				<TextView android:id="@+id/textViewDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Display Date" android:textSize="16sp"/>
 			</LinearLayout>  
         </FrameLayout> 
-		<FrameLayout android:id="@+id/layout_bottom" android:layout_below="@+id/layout_top" android:layout_width="match_parent" android:layout_height="wrap_content">  
+		<FrameLayout android:id="@+id/layout_middle" android:layout_below="@+id/layout_top" android:layout_width="match_parent" android:layout_height="wrap_content">  
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="30dp">  
-				<HorizontalScrollView android:id="@+id/horizontalscrollView" android:layout_below="@+id/layout_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
-					<GridLayout android:layout_below="@+id/signup_vetted_yes" android:minWidth="200px" android:minHeight="200px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="8" android:rowCount="6" android:id="@+id/gridSchedule" >
-						<TextView android:text="" android:width="80dp" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView1" />
-						<TextView android:text="Mon" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView2" />
-						<TextView android:text="Tue" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView3" />
-						<TextView android:text="Wed" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView4" />
-						<TextView android:text="Thu" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView5" />
-						<TextView android:text="Fri" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView6" />
-						<TextView android:text="Sat" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView7" />
-						<TextView android:text="Sun" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView8" />
-						<TextView android:text="Morning" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView9"/>
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/btnMonMorn" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/btnTueMorn" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/btnWedMorn" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/btnThuMorn" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/btnFriMorn" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/btnSatMorn" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/btnSunMorn" />
-						<TextView android:text="Afternoon" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView10"/>
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnMonAfter" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnTueAfter" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnWedAfter" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnThuAfter" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnFriAfter" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnSatAfter" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnSunAfter" android:layout_height="wrap_content" />
-						<TextView android:text="Evening" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView11"/>
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnMonEve" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnTueEve" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnWedEve" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnThuEve" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnFriEve" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnSatEve" android:layout_height="wrap_content" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/btnSunEve" android:layout_height="wrap_content" />
-						<TextView android:text="Night" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView12"/>
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/btnMonNight" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/btnTueNight" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/btnWedNight" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/btnThuNight" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/btnFriNight" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/btnSatNight" />
-						<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/btnSunNight" />
-					</GridLayout>
-				</HorizontalScrollView>
+				<TimePicker android:id="@+id/timePicker" android:layout_width="wrap_content" android:layout_height="match_parent" />
+				<Button android:id="@+id/btnChange_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Change Time" android:textSize="20sp"/>
+				<TextView android:id="@+id/textViewTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Display Time" android:textSize="16sp"/>
 			</LinearLayout>  
-        </FrameLayout> 
+        </FrameLayout>
+		<FrameLayout android:id="@+id/layout_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_middle">  
+            
+			<android.support.design.widget.FloatingActionButton 
+				android:id="@+id/btnCreateAppointment" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_gravity="top" 
+				android:layout_marginStart="40dp" 
+				app:backgroundTint="#003157" 
+				app:srcCompat="@drawable/ic_right_arrow" />
+
+		</FrameLayout>
 </RelativeLayout>
 
 </ScrollView>

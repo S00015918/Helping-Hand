@@ -561,7 +561,7 @@ namespace HelpingHand
             babysitter.city = input_city.Text;
             babysitter.eircode = input_eircode.Text;
             babysitter.gardaVetted = vetted.Checked;
-            babysitter.availabilty = values;
+            babysitter.availability = values;
 
             var firebase = new FirebaseClient(FirebaseURL);
             //Add Item
