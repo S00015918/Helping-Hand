@@ -27,13 +27,11 @@ namespace HelpingHand
         DatePicker datePicker;
         TimePicker timePicker;
         FloatingActionButton btnCreateApointment;
+        string selectedTime, selectedDate;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            string babysitter = this.Intent.GetStringExtra("KEY");
-
-            BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
 
             // set the view
             SetContentView(Resource.Layout.bookAppointment);
@@ -65,18 +63,20 @@ namespace HelpingHand
             btnCreateApointment.SetOnClickListener(this);
         }
 
-        private string getTime()
+        public string getTime()
         {
             StringBuilder strTime = new StringBuilder();
             strTime.Append("Time: " + timePicker.Hour + ":" + timePicker.Minute);
+            selectedTime = strTime.ToString();
             return strTime.ToString();
         }
 
-        private string getDate()
+        public string getDate()
         {
             StringBuilder strCurrentDate = new StringBuilder();
             int month = datePicker.Month + 1;
             strCurrentDate.Append("Date : " + month + "/" + datePicker.DayOfMonth + "/" + datePicker.Year);
+            selectedDate = strCurrentDate.ToString();
             return strCurrentDate.ToString();
         }
 
@@ -95,8 +95,6 @@ namespace HelpingHand
             string babysitter = this.Intent.GetStringExtra("KEY");
 
             BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
-            var txtDate = FindViewById<TextView>(Resource.Id.textViewDate);
-            var txtTime = FindViewById<TextView>(Resource.Id.textViewTime);
 
             string name = userAppointment.name;
             string city = userAppointment.city;
@@ -104,8 +102,8 @@ namespace HelpingHand
             string address = userAppointment.address;
 
             Appointment appointment = new Appointment();
-            appointment.Date = txtDate.ToString();
-            appointment.Time = txtTime.ToString();
+            appointment.Date = selectedDate;
+            appointment.Time = selectedTime;
             //appointment.Color = TitleColor(gre)
             appointment.User = name;
             appointment.City = city;

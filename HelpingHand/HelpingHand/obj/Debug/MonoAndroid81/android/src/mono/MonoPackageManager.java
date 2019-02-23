@@ -112,6 +112,7 @@ class MonoPackageManager_Resources {
 		"JWT.dll",
 		"Newtonsoft.Json.dll",
 		"Stripe.net.dll",
+		"Syncfusion.SfCalendar.Android.dll",
 		"System.Collections.Immutable.dll",
 		"System.Reactive.Core.dll",
 		"System.Reactive.Interfaces.dll",

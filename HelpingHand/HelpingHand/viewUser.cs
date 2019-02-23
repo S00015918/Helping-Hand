@@ -108,9 +108,8 @@ namespace HelpingHand
             var userJson = JsonConvert.SerializeObject(userSitter);
 
             var appointment = new Intent(this, typeof(CreateAppointment));
-            appointment.PutExtra("KEY", Convert.ToString(userSitter));
+            appointment.PutExtra("KEY", Convert.ToString(userJson));
             StartActivity(appointment);
-            Finish();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

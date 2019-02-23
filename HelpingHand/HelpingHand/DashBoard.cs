@@ -106,7 +106,6 @@ namespace XamarinFirebaseAuth
                 account.eircode = item.Object.eircode;
                 account.noOfKids = item.Object.noOfKids;
                 list_parents.Add(account);
-
             }
 
             list_data.ItemClick += (s, e) =>

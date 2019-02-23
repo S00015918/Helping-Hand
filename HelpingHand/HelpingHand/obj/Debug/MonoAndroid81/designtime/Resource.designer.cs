@@ -26,6 +26,57 @@ namespace HelpingHand
 		
 		public static void UpdateIdValues()
 		{
+			global::Com.Syncfusion.Calendar.Resource.Attribute.agendaViewHeight = global::HelpingHand.Resource.Attribute.agendaViewHeight;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.calendarFirstDayOfWeek = global::HelpingHand.Resource.Attribute.calendarFirstDayOfWeek;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.calendarSelectionMode = global::HelpingHand.Resource.Attribute.calendarSelectionMode;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.enableDatesInPast = global::HelpingHand.Resource.Attribute.enableDatesInPast;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.inlineViewMode = global::HelpingHand.Resource.Attribute.inlineViewMode;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.maximumEventIndicatorCount = global::HelpingHand.Resource.Attribute.maximumEventIndicatorCount;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.navigateToMonthOnInActiveDatesSelection = global::HelpingHand.Resource.Attribute.navigateToMonthOnInActiveDatesSelection;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.navigationArrowThickness = global::HelpingHand.Resource.Attribute.navigationArrowThickness;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.navigationButtonHeight = global::HelpingHand.Resource.Attribute.navigationButtonHeight;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.navigationButtonWidth = global::HelpingHand.Resource.Attribute.navigationButtonWidth;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.navigationEnable = global::HelpingHand.Resource.Attribute.navigationEnable;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.showEventsInline = global::HelpingHand.Resource.Attribute.showEventsInline;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.showNavigationButtons = global::HelpingHand.Resource.Attribute.showNavigationButtons;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.showYearView = global::HelpingHand.Resource.Attribute.showYearView;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.toggleDaySelection = global::HelpingHand.Resource.Attribute.toggleDaySelection;
+			global::Com.Syncfusion.Calendar.Resource.Attribute.viewMode = global::HelpingHand.Resource.Attribute.viewMode;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.activity_horizontal_margin = global::HelpingHand.Resource.Dimension.activity_horizontal_margin;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.activity_vertical_margin = global::HelpingHand.Resource.Dimension.activity_vertical_margin;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.date_text_size = global::HelpingHand.Resource.Dimension.date_text_size;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.date_text_tab_size = global::HelpingHand.Resource.Dimension.date_text_tab_size;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.month_row_size = global::HelpingHand.Resource.Dimension.month_row_size;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.month_row_tab_size = global::HelpingHand.Resource.Dimension.month_row_tab_size;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.month_text_size = global::HelpingHand.Resource.Dimension.month_text_size;
+			global::Com.Syncfusion.Calendar.Resource.Dimension.month_text_tab_size = global::HelpingHand.Resource.Dimension.month_text_tab_size;
+			global::Com.Syncfusion.Calendar.Resource.Id.agenda = global::HelpingHand.Resource.Id.agenda;
+			global::Com.Syncfusion.Calendar.Resource.Id.inline = global::HelpingHand.Resource.Id.inline;
+			global::Com.Syncfusion.Calendar.Resource.Id.monthView = global::HelpingHand.Resource.Id.monthView;
+			global::Com.Syncfusion.Calendar.Resource.Id.multiRangeSelection = global::HelpingHand.Resource.Id.multiRangeSelection;
+			global::Com.Syncfusion.Calendar.Resource.Id.multiSelection = global::HelpingHand.Resource.Id.multiSelection;
+			global::Com.Syncfusion.Calendar.Resource.Id.rangeSelection = global::HelpingHand.Resource.Id.rangeSelection;
+			global::Com.Syncfusion.Calendar.Resource.Id.singleSelection = global::HelpingHand.Resource.Id.singleSelection;
+			global::Com.Syncfusion.Calendar.Resource.Id.yearView = global::HelpingHand.Resource.Id.yearView;
+			global::Com.Syncfusion.Calendar.Resource.String.sfcalendar_inlineviewalldaytext = global::HelpingHand.Resource.String.sfcalendar_inlineviewalldaytext;
+			global::Com.Syncfusion.Calendar.Resource.String.sfcalendar_inlineviewnoappointmenttext = global::HelpingHand.Resource.String.sfcalendar_inlineviewnoappointmenttext;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar = global::HelpingHand.Resource.Styleable.SfCalendar;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_agendaViewHeight = global::HelpingHand.Resource.Styleable.SfCalendar_agendaViewHeight;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_calendarFirstDayOfWeek = global::HelpingHand.Resource.Styleable.SfCalendar_calendarFirstDayOfWeek;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_calendarSelectionMode = global::HelpingHand.Resource.Styleable.SfCalendar_calendarSelectionMode;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_enableDatesInPast = global::HelpingHand.Resource.Styleable.SfCalendar_enableDatesInPast;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_inlineViewMode = global::HelpingHand.Resource.Styleable.SfCalendar_inlineViewMode;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_maximumEventIndicatorCount = global::HelpingHand.Resource.Styleable.SfCalendar_maximumEventIndicatorCount;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_navigateToMonthOnInActiveDatesSelection = global::HelpingHand.Resource.Styleable.SfCalendar_navigateToMonthOnInActiveDatesSelection;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_navigationArrowThickness = global::HelpingHand.Resource.Styleable.SfCalendar_navigationArrowThickness;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_navigationButtonHeight = global::HelpingHand.Resource.Styleable.SfCalendar_navigationButtonHeight;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_navigationButtonWidth = global::HelpingHand.Resource.Styleable.SfCalendar_navigationButtonWidth;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_navigationEnable = global::HelpingHand.Resource.Styleable.SfCalendar_navigationEnable;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_showEventsInline = global::HelpingHand.Resource.Styleable.SfCalendar_showEventsInline;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_showNavigationButtons = global::HelpingHand.Resource.Styleable.SfCalendar_showNavigationButtons;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_showYearView = global::HelpingHand.Resource.Styleable.SfCalendar_showYearView;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_toggleDaySelection = global::HelpingHand.Resource.Styleable.SfCalendar_toggleDaySelection;
+			global::Com.Syncfusion.Calendar.Resource.Styleable.SfCalendar_viewMode = global::HelpingHand.Resource.Styleable.SfCalendar_viewMode;
 		}
 		
 		public partial class Animation
@@ -241,6 +292,9 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int adUnitId = 1;
 			
+			// aapt resource value: 0x7F110006
+			public const int agendaViewHeight = 2131820550;
+			
 			// aapt resource value: 0x7F040023
 			public const int alertDialogButtonGroupStyle = 2130968611;
 			
@@ -361,8 +415,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F040047
 			public const int buttonPanelSideLayout = 2130968647;
 			
-			// aapt resource value: 0x7F110351
-			public const int buttonSize = 2131821393;
+			// aapt resource value: 0x7F110367
+			public const int buttonSize = 2131821415;
 			
 			// aapt resource value: 0x7F040048
 			public const int buttonStyle = 2130968648;
@@ -387,6 +441,12 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x1
 			public const int buyButtonWidth = 1;
+			
+			// aapt resource value: 0x7F110005
+			public const int calendarFirstDayOfWeek = 2131820549;
+			
+			// aapt resource value: 0x7F110004
+			public const int calendarSelectionMode = 2131820548;
 			
 			// aapt resource value: 0x1
 			public const int cameraBearing = 1;
@@ -505,8 +565,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F04004D
 			public const int checkedTextViewStyle = 2130968653;
 			
-			// aapt resource value: 0x7F110350
-			public const int circleCrop = 2131821392;
+			// aapt resource value: 0x7F110366
+			public const int circleCrop = 2131821414;
 			
 			// aapt resource value: 0x7F04004E
 			public const int closeIcon = 2130968654;
@@ -556,8 +616,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F04005D
 			public const int colorPrimaryDark = 2130968669;
 			
-			// aapt resource value: 0x7F110352
-			public const int colorScheme = 2131821394;
+			// aapt resource value: 0x7F110368
+			public const int colorScheme = 2131821416;
 			
 			// aapt resource value: 0x7F04005E
 			public const int colorSwitchThumbNormal = 2130968670;
@@ -675,6 +735,9 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F04007D
 			public const int elevation = 2130968701;
+			
+			// aapt resource value: 0x7F110017
+			public const int enableDatesInPast = 2131820567;
 			
 			// aapt resource value: 0x1
 			public const int environment = 1;
@@ -814,11 +877,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0400A6
 			public const int iconTintMode = 2130968742;
 			
-			// aapt resource value: 0x7F110349
-			public const int imageAspectRatio = 2131821385;
+			// aapt resource value: 0x7F110365
+			public const int imageAspectRatio = 2131821413;
 			
-			// aapt resource value: 0x7F110348
-			public const int imageAspectRatioAdjust = 2131821384;
+			// aapt resource value: 0x7F110364
+			public const int imageAspectRatioAdjust = 2131821412;
 			
 			// aapt resource value: 0x7F0400A8
 			public const int imageButtonStyle = 2130968744;
@@ -831,6 +894,9 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F0400AA
 			public const int initialActivityCount = 2130968746;
+			
+			// aapt resource value: 0x7F110003
+			public const int inlineViewMode = 2131820547;
 			
 			// aapt resource value: 0x1
 			public const int inputEnabled = 1;
@@ -979,6 +1045,9 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0400CD
 			public const int maxButtonHeight = 2130968781;
 			
+			// aapt resource value: 0x7F110013
+			public const int maximumEventIndicatorCount = 2131820563;
+			
 			// aapt resource value: 0x7F0400CE
 			public const int measureWithLargestChild = 2130968782;
 			
@@ -988,8 +1057,23 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0400D0
 			public const int multiChoiceItemLayout = 2130968784;
 			
+			// aapt resource value: 0x7F110010
+			public const int navigateToMonthOnInActiveDatesSelection = 2131820560;
+			
+			// aapt resource value: 0x7F110016
+			public const int navigationArrowThickness = 2131820566;
+			
+			// aapt resource value: 0x7F110014
+			public const int navigationButtonHeight = 2131820564;
+			
+			// aapt resource value: 0x7F110015
+			public const int navigationButtonWidth = 2131820565;
+			
 			// aapt resource value: 0x7F0400D1
 			public const int navigationContentDescription = 2130968785;
+			
+			// aapt resource value: 0x7F110008
+			public const int navigationEnable = 2131820552;
 			
 			// aapt resource value: 0x7F0400D2
 			public const int navigationIcon = 2130968786;
@@ -1102,8 +1186,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int schemaOrgType = 1;
 			
-			// aapt resource value: 0x7F110353
-			public const int scopeUris = 2131821395;
+			// aapt resource value: 0x7F110369
+			public const int scopeUris = 2131821417;
 			
 			// aapt resource value: 0x7F0400F1
 			public const int scrimAnimationDuration = 2130968817;
@@ -1162,11 +1246,20 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0400FA
 			public const int showDividers = 2130968826;
 			
+			// aapt resource value: 0x7F110007
+			public const int showEventsInline = 2131820551;
+			
+			// aapt resource value: 0x7F110009
+			public const int showNavigationButtons = 2131820553;
+			
 			// aapt resource value: 0x7F0400FB
 			public const int showText = 2130968827;
 			
 			// aapt resource value: 0x7F0400FC
 			public const int showTitle = 2130968828;
+			
+			// aapt resource value: 0x7F110012
+			public const int showYearView = 2131820562;
 			
 			// aapt resource value: 0x7F0400FD
 			public const int singleChoiceItemLayout = 2130968829;
@@ -1396,6 +1489,9 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int toAddressesSection = 1;
 			
+			// aapt resource value: 0x7F110011
+			public const int toggleDaySelection = 2131820561;
+			
 			// aapt resource value: 0x7F040146
 			public const int toolbarId = 2130968902;
 			
@@ -1464,6 +1560,9 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x1
 			public const int useViewLifecycle = 1;
+			
+			// aapt resource value: 0x7F110002
+			public const int viewMode = 2131820546;
 			
 			// aapt resource value: 0x7F040150
 			public const int voiceIcon = 2130968912;
@@ -2236,6 +2335,12 @@ namespace HelpingHand
 			// aapt resource value: 0x7F08004A
 			public const int abc_text_size_title_material_toolbar = 2131230794;
 			
+			// aapt resource value: 0x7F120002
+			public const int activity_horizontal_margin = 2131886082;
+			
+			// aapt resource value: 0x7F120003
+			public const int activity_vertical_margin = 2131886083;
+			
 			// aapt resource value: 0x1
 			public const int cast_expanded_controller_ad_background_layout_height = 1;
 			
@@ -2337,6 +2442,12 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F080005
 			public const int compat_control_corner_material = 2131230725;
+			
+			// aapt resource value: 0x7F120004
+			public const int date_text_size = 2131886084;
+			
+			// aapt resource value: 0x7F120005
+			public const int date_text_tab_size = 2131886085;
 			
 			// aapt resource value: 0x7F080050
 			public const int design_appbar_elevation = 2131230800;
@@ -2496,6 +2607,18 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F080084
 			public const int item_touch_helper_swipe_escape_velocity = 2131230852;
+			
+			// aapt resource value: 0x7F120008
+			public const int month_row_size = 2131886088;
+			
+			// aapt resource value: 0x7F120009
+			public const int month_row_tab_size = 2131886089;
+			
+			// aapt resource value: 0x7F120006
+			public const int month_text_size = 2131886086;
+			
+			// aapt resource value: 0x7F120007
+			public const int month_text_tab_size = 2131886087;
 			
 			// aapt resource value: 0x7F080006
 			public const int notification_action_icon_size = 2131230726;
@@ -3489,11 +3612,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020121
 			public const int address = 2130837793;
 			
-			// aapt resource value: 0x7F020275
-			public const int adjust_height = 2130838133;
+			// aapt resource value: 0x7F020283
+			public const int adjust_height = 2130838147;
 			
-			// aapt resource value: 0x7F020274
-			public const int adjust_width = 2130838132;
+			// aapt resource value: 0x7F020282
+			public const int adjust_width = 2130838146;
 			
 			// aapt resource value: 0x1
 			public const int ad_container = 1;
@@ -3510,6 +3633,9 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020105
 			public const int age = 2130837765;
 			
+			// aapt resource value: 0x7F020133
+			public const int agenda = 2130837811;
+			
 			// aapt resource value: 0x7F0C0016
 			public const int alertTitle = 2131492886;
 			
@@ -3525,8 +3651,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int android_pay_light_with_border = 1;
 			
-			// aapt resource value: 0x7F020273
-			public const int app_name = 2130838131;
+			// aapt resource value: 0x7F020281
+			public const int app_name = 2130838145;
 			
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
@@ -3774,8 +3900,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0024
 			public const int customPanel = 2131492900;
 			
-			// aapt resource value: 0x7F020279
-			public const int dark = 2130838137;
+			// aapt resource value: 0x7F020287
+			public const int dark = 2130838151;
 			
 			// aapt resource value: 0x1
 			public const int date = 1;
@@ -3915,8 +4041,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C000B
 			public const int icon_group = 2131492875;
 			
-			// aapt resource value: 0x7F020278
-			public const int icon_only = 2130838136;
+			// aapt resource value: 0x7F020286
+			public const int icon_only = 2130838150;
 			
 			// aapt resource value: 0x1
 			public const int icon_uri = 1;
@@ -3935,6 +4061,9 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F0C000C
 			public const int info = 2131492876;
+			
+			// aapt resource value: 0x7F020132
+			public const int inline = 2130837810;
 			
 			// aapt resource value: 0x7F020093
 			public const int input = 2130837651;
@@ -3993,8 +4122,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int license_list = 1;
 			
-			// aapt resource value: 0x7F020280
-			public const int light = 2130838144;
+			// aapt resource value: 0x7F020288
+			public const int light = 2130838152;
 			
 			// aapt resource value: 0x7F0C000E
 			public const int line1 = 2131492878;
@@ -4110,8 +4239,17 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int monochrome = 1;
 			
+			// aapt resource value: 0x7F020130
+			public const int monthView = 2130837808;
+			
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
+			
+			// aapt resource value: 0x7F020137
+			public const int multiRangeSelection = 2130837815;
+			
+			// aapt resource value: 0x7F020135
+			public const int multiSelection = 2130837813;
 			
 			// aapt resource value: 0x7F020104
 			public const int name = 2130837764;
@@ -4199,6 +4337,9 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
+			
+			// aapt resource value: 0x7F020136
+			public const int rangeSelection = 2130837814;
 			
 			// aapt resource value: 0x7F020120
 			public const int ratingbar = 2130837792;
@@ -4338,6 +4479,9 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020013
 			public const int signup_vetted_yes = 2130837523;
 			
+			// aapt resource value: 0x7F020134
+			public const int singleSelection = 2130837812;
+			
 			// aapt resource value: 0x1
 			public const int slide = 1;
 			
@@ -4368,8 +4512,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0072
 			public const int src_over = 2131492978;
 			
-			// aapt resource value: 0x7F020276
-			public const int standard = 2130838134;
+			// aapt resource value: 0x7F020284
+			public const int standard = 2130838148;
 			
 			// aapt resource value: 0x7F0C0073
 			public const int start = 2131492979;
@@ -4557,11 +4701,14 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C008F
 			public const int visible = 2131493007;
 			
-			// aapt resource value: 0x7F020277
-			public const int wide = 2130838135;
+			// aapt resource value: 0x7F020285
+			public const int wide = 2130838149;
 			
 			// aapt resource value: 0x7F0C0090
 			public const int wrap_content = 2131493008;
+			
+			// aapt resource value: 0x7F020131
+			public const int yearView = 2130837809;
 			
 			static Id()
 			{
@@ -5180,56 +5327,56 @@ namespace HelpingHand
 			// aapt resource value: 0x7F150020
 			public const int character_counter_pattern = 2132082720;
 			
-			// aapt resource value: 0x7F070043
-			public const int common_google_play_services_enable_button = 2131165251;
-			
-			// aapt resource value: 0x7F070044
-			public const int common_google_play_services_enable_text = 2131165252;
-			
 			// aapt resource value: 0x7F070045
-			public const int common_google_play_services_enable_title = 2131165253;
+			public const int common_google_play_services_enable_button = 2131165253;
 			
 			// aapt resource value: 0x7F070046
-			public const int common_google_play_services_install_button = 2131165254;
+			public const int common_google_play_services_enable_text = 2131165254;
 			
 			// aapt resource value: 0x7F070047
-			public const int common_google_play_services_install_text = 2131165255;
+			public const int common_google_play_services_enable_title = 2131165255;
 			
 			// aapt resource value: 0x7F070048
-			public const int common_google_play_services_install_title = 2131165256;
+			public const int common_google_play_services_install_button = 2131165256;
 			
 			// aapt resource value: 0x7F070049
-			public const int common_google_play_services_notification_ticker = 2131165257;
+			public const int common_google_play_services_install_text = 2131165257;
+			
+			// aapt resource value: 0x7F070050
+			public const int common_google_play_services_install_title = 2131165264;
+			
+			// aapt resource value: 0x7F070051
+			public const int common_google_play_services_notification_ticker = 2131165265;
 			
 			// aapt resource value: 0x1
 			public const int common_google_play_services_unknown_issue = 1;
 			
-			// aapt resource value: 0x7F070050
-			public const int common_google_play_services_unsupported_text = 2131165264;
-			
-			// aapt resource value: 0x7F070051
-			public const int common_google_play_services_update_button = 2131165265;
-			
 			// aapt resource value: 0x7F070052
-			public const int common_google_play_services_update_text = 2131165266;
+			public const int common_google_play_services_unsupported_text = 2131165266;
 			
 			// aapt resource value: 0x7F070053
-			public const int common_google_play_services_update_title = 2131165267;
+			public const int common_google_play_services_update_button = 2131165267;
 			
 			// aapt resource value: 0x7F070054
-			public const int common_google_play_services_updating_text = 2131165268;
+			public const int common_google_play_services_update_text = 2131165268;
 			
 			// aapt resource value: 0x7F070055
-			public const int common_google_play_services_wear_update_text = 2131165269;
+			public const int common_google_play_services_update_title = 2131165269;
 			
 			// aapt resource value: 0x7F070056
-			public const int common_open_on_phone = 2131165270;
+			public const int common_google_play_services_updating_text = 2131165270;
 			
 			// aapt resource value: 0x7F070057
-			public const int common_signin_button_text = 2131165271;
+			public const int common_google_play_services_wear_update_text = 2131165271;
 			
 			// aapt resource value: 0x7F070058
-			public const int common_signin_button_text_long = 2131165272;
+			public const int common_open_on_phone = 2131165272;
+			
+			// aapt resource value: 0x7F070059
+			public const int common_signin_button_text = 2131165273;
+			
+			// aapt resource value: 0x7F070060
+			public const int common_signin_button_text_long = 2131165280;
 			
 			// aapt resource value: 0x1
 			public const int fcm_fallback_notification_channel_label = 1;
@@ -5290,6 +5437,12 @@ namespace HelpingHand
 			
 			// aapt resource value: 0x7F150026
 			public const int search_menu_title = 2132082726;
+			
+			// aapt resource value: 0x7F070005
+			public const int sfcalendar_inlineviewalldaytext = 2131165189;
+			
+			// aapt resource value: 0x7F070004
+			public const int sfcalendar_inlineviewnoappointmenttext = 2131165188;
 			
 			// aapt resource value: 0x7F150001
 			public const int status_bar_notification_info_overflow = 2132082689;
@@ -6575,11 +6728,11 @@ namespace HelpingHand
 			public static int[] ActionBarLayout = new int[] {
 					16842931};
 			
-			// aapt resource value: 0x7F100047
-			public const int ActionBarLayout_android_layout_gravity = 2131755079;
+			// aapt resource value: 0x7F100064
+			public const int ActionBarLayout_android_layout_gravity = 2131755108;
 			
-			// aapt resource value: 0x7F100017
-			public const int ActionBar_background = 2131755031;
+			// aapt resource value: 0x7F100034
+			public const int ActionBar_background = 2131755060;
 			
 			// aapt resource value: 0x1
 			public const int ActionBar_backgroundSplit = 1;
@@ -6668,8 +6821,8 @@ namespace HelpingHand
 			public static int[] ActionMenuItemView = new int[] {
 					16843071};
 			
-			// aapt resource value: 0x7F100049
-			public const int ActionMenuItemView_android_minWidth = 2131755081;
+			// aapt resource value: 0x7F100066
+			public const int ActionMenuItemView_android_minWidth = 2131755110;
 			
 			public static int[] ActionMode = new int[] {
 					2130968626,
@@ -6679,8 +6832,8 @@ namespace HelpingHand
 					2130968847,
 					2130968901};
 			
-			// aapt resource value: 0x7F100051
-			public const int ActionMode_background = 2131755089;
+			// aapt resource value: 0x7F100068
+			public const int ActionMode_background = 2131755112;
 			
 			// aapt resource value: 0x1
 			public const int ActionMode_backgroundSplit = 1;
@@ -6701,8 +6854,8 @@ namespace HelpingHand
 					2130968704,
 					2130968746};
 			
-			// aapt resource value: 0x7F100058
-			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131755096;
+			// aapt resource value: 0x7F100075
+			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131755125;
 			
 			// aapt resource value: 0x1
 			public const int ActivityChooserView_initialActivityCount = 1;
@@ -6712,8 +6865,8 @@ namespace HelpingHand
 					1,
 					1};
 			
-			// aapt resource value: 0x7F100549
-			public const int AdsAttrs_adSize = 2131756361;
+			// aapt resource value: 0x7F100566
+			public const int AdsAttrs_adSize = 2131756390;
 			
 			// aapt resource value: 0x1
 			public const int AdsAttrs_adSizes = 1;
@@ -6730,8 +6883,8 @@ namespace HelpingHand
 					2130968828,
 					2130968829};
 			
-			// aapt resource value: 0x7F100061
-			public const int AlertDialog_android_layout = 2131755105;
+			// aapt resource value: 0x7F100078
+			public const int AlertDialog_android_layout = 2131755128;
 			
 			// aapt resource value: 0x1
 			public const int AlertDialog_buttonPanelSideLayout = 1;
@@ -6762,14 +6915,14 @@ namespace HelpingHand
 					2130968838,
 					2130968839};
 			
-			// aapt resource value: 0x7F100075
-			public const int AppBarLayoutStates_state_collapsed = 2131755125;
+			// aapt resource value: 0x7F100092
+			public const int AppBarLayoutStates_state_collapsed = 2131755154;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayoutStates_state_collapsible = 1;
 			
-			// aapt resource value: 0x7F100069
-			public const int AppBarLayout_android_background = 2131755113;
+			// aapt resource value: 0x7F100086
+			public const int AppBarLayout_android_background = 2131755142;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_android_keyboardNavigationCluster = 1;
@@ -6787,8 +6940,8 @@ namespace HelpingHand
 					2130968765,
 					2130968766};
 			
-			// aapt resource value: 0x7F100078
-			public const int AppBarLayout_Layout_layout_scrollFlags = 2131755128;
+			// aapt resource value: 0x7F100095
+			public const int AppBarLayout_Layout_layout_scrollFlags = 2131755157;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_Layout_layout_scrollInterpolator = 1;
@@ -6799,8 +6952,8 @@ namespace HelpingHand
 					2130968889,
 					2130968890};
 			
-			// aapt resource value: 0x7F100081
-			public const int AppCompatImageView_android_src = 2131755137;
+			// aapt resource value: 0x7F100098
+			public const int AppCompatImageView_android_src = 2131755160;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatImageView_srcCompat = 1;
@@ -6817,8 +6970,8 @@ namespace HelpingHand
 					2130968887,
 					2130968888};
 			
-			// aapt resource value: 0x7F100086
-			public const int AppCompatSeekBar_android_thumb = 2131755142;
+			// aapt resource value: 0x7F100103
+			public const int AppCompatSeekBar_android_thumb = 2131755267;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatSeekBar_tickMark = 1;
@@ -6838,8 +6991,8 @@ namespace HelpingHand
 					16843117,
 					16842804};
 			
-			// aapt resource value: 0x7F100091
-			public const int AppCompatTextHelper_android_drawableBottom = 2131755153;
+			// aapt resource value: 0x7F100108
+			public const int AppCompatTextHelper_android_drawableBottom = 2131755272;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextHelper_android_drawableEnd = 1;
@@ -6869,8 +7022,8 @@ namespace HelpingHand
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F100099
-			public const int AppCompatTextView_android_textAppearance = 2131755161;
+			// aapt resource value: 0x7F100116
+			public const int AppCompatTextView_android_textAppearance = 2131755286;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextView_autoSizeMaxTextSize = 1;
@@ -7014,8 +7167,8 @@ namespace HelpingHand
 					2130968921,
 					2130968922};
 			
-			// aapt resource value: 0x7F100108
-			public const int AppCompatTheme_actionBarDivider = 2131755272;
+			// aapt resource value: 0x7F100125
+			public const int AppCompatTheme_actionBarDivider = 2131755301;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTheme_actionBarItemBackground = 1;
@@ -7381,8 +7534,8 @@ namespace HelpingHand
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F100228
-			public const int BottomNavigationView_elevation = 2131755560;
+			// aapt resource value: 0x7F100245
+			public const int BottomNavigationView_elevation = 2131755589;
 			
 			// aapt resource value: 0x1
 			public const int BottomNavigationView_itemBackground = 1;
@@ -7401,8 +7554,8 @@ namespace HelpingHand
 					2130968635,
 					2130968636};
 			
-			// aapt resource value: 0x7F100234
-			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131755572;
+			// aapt resource value: 0x7F100251
+			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131755601;
 			
 			// aapt resource value: 0x1
 			public const int BottomSheetBehavior_Layout_behavior_peekHeight = 1;
@@ -7413,8 +7566,8 @@ namespace HelpingHand
 			public static int[] ButtonBarLayout = new int[] {
 					2130968615};
 			
-			// aapt resource value: 0x7F100238
-			public const int ButtonBarLayout_allowStacking = 2131755576;
+			// aapt resource value: 0x7F100255
+			public const int ButtonBarLayout_allowStacking = 2131755605;
 			
 			public static int[] CastExpandedController = new int[] {
 					1,
@@ -7455,8 +7608,8 @@ namespace HelpingHand
 			// aapt resource value: 0x9
 			public const int CastExpandedController_castRewind30ButtonDrawable = 9;
 			
-			// aapt resource value: 0x7F100562
-			public const int CastExpandedController_castSeekBarProgressDrawable = 2131756386;
+			// aapt resource value: 0x7F100579
+			public const int CastExpandedController_castSeekBarProgressDrawable = 2131756409;
 			
 			// aapt resource value: 0x1
 			public const int CastExpandedController_castSeekBarThumbDrawable = 1;
@@ -7478,8 +7631,8 @@ namespace HelpingHand
 					1,
 					1};
 			
-			// aapt resource value: 0x7F100568
-			public const int CastIntroOverlay_castBackgroundColor = 2131756392;
+			// aapt resource value: 0x7F100585
+			public const int CastIntroOverlay_castBackgroundColor = 2131756421;
 			
 			// aapt resource value: 0x1
 			public const int CastIntroOverlay_castButtonBackgroundColor = 1;
@@ -7571,8 +7724,8 @@ namespace HelpingHand
 			// aapt resource value: 0x2
 			public const int CastMiniController_castSubtitleTextAppearance = 2;
 			
-			// aapt resource value: 0x7F100593
-			public const int CastMiniController_castTitleTextAppearance = 2131756435;
+			// aapt resource value: 0x7F100610
+			public const int CastMiniController_castTitleTextAppearance = 2131756560;
 			
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130968658,
@@ -7592,8 +7745,8 @@ namespace HelpingHand
 					2130968892,
 					2130968902};
 			
-			// aapt resource value: 0x7F100240
-			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131755584;
+			// aapt resource value: 0x7F100257
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131755607;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 1;
@@ -7626,8 +7779,8 @@ namespace HelpingHand
 					2130968760,
 					2130968761};
 			
-			// aapt resource value: 0x7F100257
-			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131755607;
+			// aapt resource value: 0x7F100274
+			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131755636;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
@@ -7655,8 +7808,8 @@ namespace HelpingHand
 					16843551,
 					16843173};
 			
-			// aapt resource value: 0x7F100260
-			public const int ColorStateListItem_alpha = 2131755616;
+			// aapt resource value: 0x7F100277
+			public const int ColorStateListItem_alpha = 2131755639;
 			
 			// aapt resource value: 0x1
 			public const int ColorStateListItem_android_alpha = 1;
@@ -7669,8 +7822,8 @@ namespace HelpingHand
 					2130968650,
 					2130968651};
 			
-			// aapt resource value: 0x7F100264
-			public const int CompoundButton_android_button = 2131755620;
+			// aapt resource value: 0x7F100281
+			public const int CompoundButton_android_button = 2131755649;
 			
 			// aapt resource value: 0x1
 			public const int CompoundButton_buttonTint = 1;
@@ -7682,8 +7835,8 @@ namespace HelpingHand
 					2130968754,
 					2130968840};
 			
-			// aapt resource value: 0x7F100268
-			public const int CoordinatorLayout_keylines = 2131755624;
+			// aapt resource value: 0x7F100285
+			public const int CoordinatorLayout_keylines = 2131755653;
 			
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
@@ -7694,8 +7847,8 @@ namespace HelpingHand
 					2130968763,
 					2130968764};
 			
-			// aapt resource value: 0x7F100271
-			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131755633;
+			// aapt resource value: 0x7F100288
+			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131755656;
 			
 			// aapt resource value: 0x1
 			public const int CoordinatorLayout_Layout_layout_anchor = 1;
@@ -7731,8 +7884,8 @@ namespace HelpingHand
 			// aapt resource value: 0x2
 			public const int Corpus_contentProviderUri = 2;
 			
-			// aapt resource value: 0x7F100596
-			public const int Corpus_corpusId = 2131756438;
+			// aapt resource value: 0x7F100613
+			public const int Corpus_corpusId = 2131756563;
 			
 			// aapt resource value: 0x1
 			public const int Corpus_corpusVersion = 1;
@@ -7760,8 +7913,8 @@ namespace HelpingHand
 			// aapt resource value: 0x2
 			public const int CustomCastTheme_castExpandedControllerStyle = 2;
 			
-			// aapt resource value: 0x7F100605
-			public const int CustomCastTheme_castIntroOverlayStyle = 2131756549;
+			// aapt resource value: 0x7F100622
+			public const int CustomCastTheme_castIntroOverlayStyle = 2131756578;
 			
 			// aapt resource value: 0x1
 			public const int CustomCastTheme_castMiniControllerStyle = 1;
@@ -7773,16 +7926,16 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int CustomWalletTheme_toolbarTextColorStyle = 1;
 			
-			// aapt resource value: 0x7F100609
-			public const int CustomWalletTheme_windowTransitionStyle = 2131756553;
+			// aapt resource value: 0x7F100626
+			public const int CustomWalletTheme_windowTransitionStyle = 2131756582;
 			
 			public static int[] DesignTheme = new int[] {
 					2130968639,
 					2130968640,
 					2130968879};
 			
-			// aapt resource value: 0x7F100279
-			public const int DesignTheme_bottomSheetDialogTheme = 2131755641;
+			// aapt resource value: 0x7F100296
+			public const int DesignTheme_bottomSheetDialogTheme = 2131755670;
 			
 			// aapt resource value: 0x1
 			public const int DesignTheme_bottomSheetStyle = 1;
@@ -7800,8 +7953,8 @@ namespace HelpingHand
 					2130968831,
 					2130968882};
 			
-			// aapt resource value: 0x7F100283
-			public const int DrawerArrowToggle_arrowHeadLength = 2131755651;
+			// aapt resource value: 0x7F100300
+			public const int DrawerArrowToggle_arrowHeadLength = 2131755776;
 			
 			// aapt resource value: 0x1
 			public const int DrawerArrowToggle_arrowShaftLength = 1;
@@ -7828,8 +7981,8 @@ namespace HelpingHand
 					1,
 					1};
 			
-			// aapt resource value: 0x7F100611
-			public const int FeatureParam_paramName = 2131756561;
+			// aapt resource value: 0x7F100628
+			public const int FeatureParam_paramName = 2131756584;
 			
 			// aapt resource value: 0x1
 			public const int FeatureParam_paramValue = 1;
@@ -7844,8 +7997,8 @@ namespace HelpingHand
 					2130968816,
 					2130968911};
 			
-			// aapt resource value: 0x7F100292
-			public const int FloatingActionButton_backgroundTint = 2131755666;
+			// aapt resource value: 0x7F100309
+			public const int FloatingActionButton_backgroundTint = 2131755785;
 			
 			// aapt resource value: 0x1
 			public const int FloatingActionButton_backgroundTintMode = 1;
@@ -7853,8 +8006,8 @@ namespace HelpingHand
 			public static int[] FloatingActionButton_Behavior_Layout = new int[] {
 					2130968632};
 			
-			// aapt resource value: 0x7F100301
-			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131755777;
+			// aapt resource value: 0x7F100318
+			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131755800;
 			
 			// aapt resource value: 0x2
 			public const int FloatingActionButton_borderWidth = 2;
@@ -7890,8 +8043,8 @@ namespace HelpingHand
 					2130968584,
 					2130968585};
 			
-			// aapt resource value: 0x7F100010
-			public const int FontFamilyFont_android_font = 2131755024;
+			// aapt resource value: 0x7F100027
+			public const int FontFamilyFont_android_font = 2131755047;
 			
 			// aapt resource value: 0x1
 			public const int FontFamilyFont_android_fontStyle = 1;
@@ -7908,8 +8061,8 @@ namespace HelpingHand
 			// aapt resource value: 0x5
 			public const int FontFamilyFont_fontWeight = 5;
 			
-			// aapt resource value: 0x7F100003
-			public const int FontFamily_fontProviderAuthority = 2131755011;
+			// aapt resource value: 0x7F100020
+			public const int FontFamily_fontProviderAuthority = 2131755040;
 			
 			// aapt resource value: 0x1
 			public const int FontFamily_fontProviderCerts = 1;
@@ -7931,8 +8084,8 @@ namespace HelpingHand
 					16843264,
 					2130968729};
 			
-			// aapt resource value: 0x7F100303
-			public const int ForegroundLinearLayout_android_foreground = 2131755779;
+			// aapt resource value: 0x7F100320
+			public const int ForegroundLinearLayout_android_foreground = 2131755808;
 			
 			// aapt resource value: 0x1
 			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
@@ -7951,8 +8104,8 @@ namespace HelpingHand
 			public static int[] GlobalSearchCorpus = new int[] {
 					1};
 			
-			// aapt resource value: 0x7F100621
-			public const int GlobalSearchCorpus_allowShortcuts = 2131756577;
+			// aapt resource value: 0x7F100638
+			public const int GlobalSearchCorpus_allowShortcuts = 2131756600;
 			
 			public static int[] GlobalSearchSection = new int[] {
 					1,
@@ -7961,8 +8114,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int GlobalSearchSection_sectionContent = 1;
 			
-			// aapt resource value: 0x7F100624
-			public const int GlobalSearchSection_sectionType = 2131756580;
+			// aapt resource value: 0x7F100641
+			public const int GlobalSearchSection_sectionType = 2131756609;
 			
 			// aapt resource value: 0x3
 			public const int GlobalSearch_defaultIntentAction = 3;
@@ -7973,8 +8126,8 @@ namespace HelpingHand
 			// aapt resource value: 0x4
 			public const int GlobalSearch_defaultIntentData = 4;
 			
-			// aapt resource value: 0x7F100617
-			public const int GlobalSearch_searchEnabled = 2131756567;
+			// aapt resource value: 0x7F100634
+			public const int GlobalSearch_searchEnabled = 2131756596;
 			
 			// aapt resource value: 0x1
 			public const int GlobalSearch_searchLabel = 1;
@@ -7990,8 +8143,8 @@ namespace HelpingHand
 					1,
 					1};
 			
-			// aapt resource value: 0x7F100626
-			public const int IMECorpus_inputEnabled = 2131756582;
+			// aapt resource value: 0x7F100643
+			public const int IMECorpus_inputEnabled = 2131756611;
 			
 			// aapt resource value: 0x1
 			public const int IMECorpus_sourceClass = 1;
@@ -8019,8 +8172,8 @@ namespace HelpingHand
 					2130968782,
 					2130968826};
 			
-			// aapt resource value: 0x7F100307
-			public const int LinearLayoutCompat_android_baselineAligned = 2131755783;
+			// aapt resource value: 0x7F100324
+			public const int LinearLayoutCompat_android_baselineAligned = 2131755812;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_android_baselineAlignedChildIndex = 1;
@@ -8046,8 +8199,8 @@ namespace HelpingHand
 					16843137,
 					16842996};
 			
-			// aapt resource value: 0x7F100317
-			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131755799;
+			// aapt resource value: 0x7F100334
+			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131755828;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_Layout_android_layout_height = 1;
@@ -8068,8 +8221,8 @@ namespace HelpingHand
 					16843436,
 					16843437};
 			
-			// aapt resource value: 0x7F100322
-			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131755810;
+			// aapt resource value: 0x7F100339
+			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131755833;
 			
 			// aapt resource value: 0x1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
@@ -8079,14 +8232,14 @@ namespace HelpingHand
 					0,
 					0};
 			
-			// aapt resource value: 0x7F100542
-			public const int LoadingImageView_circleCrop = 2131756354;
+			// aapt resource value: 0x7F100559
+			public const int LoadingImageView_circleCrop = 2131756377;
 			
-			// aapt resource value: 0x7F100541
-			public const int LoadingImageView_imageAspectRatio = 2131756353;
+			// aapt resource value: 0x7F100558
+			public const int LoadingImageView_imageAspectRatio = 2131756376;
 			
-			// aapt resource value: 0x7F100540
-			public const int LoadingImageView_imageAspectRatioAdjust = 2131756352;
+			// aapt resource value: 0x7F100557
+			public const int LoadingImageView_imageAspectRatioAdjust = 2131756375;
 			
 			public static int[] MapAttrs = new int[] {
 					1,
@@ -8152,8 +8305,8 @@ namespace HelpingHand
 			// aapt resource value: 0x6
 			public const int MapAttrs_liteMode = 6;
 			
-			// aapt resource value: 0x7F100646
-			public const int MapAttrs_mapType = 2131756614;
+			// aapt resource value: 0x7F100663
+			public const int MapAttrs_mapType = 2131756643;
 			
 			// aapt resource value: 0x7
 			public const int MapAttrs_uiCompass = 7;
@@ -8190,8 +8343,8 @@ namespace HelpingHand
 					16843231,
 					16843156};
 			
-			// aapt resource value: 0x7F100325
-			public const int MenuGroup_android_checkableBehavior = 2131755813;
+			// aapt resource value: 0x7F100342
+			public const int MenuGroup_android_checkableBehavior = 2131755842;
 			
 			// aapt resource value: 0x1
 			public const int MenuGroup_android_enabled = 1;
@@ -8233,8 +8386,8 @@ namespace HelpingHand
 					2130968825,
 					2130968907};
 			
-			// aapt resource value: 0x7F100332
-			public const int MenuItem_actionLayout = 2131755826;
+			// aapt resource value: 0x7F100349
+			public const int MenuItem_actionLayout = 2131755849;
 			
 			// aapt resource value: 0x1
 			public const int MenuItem_actionProviderClass = 1;
@@ -8313,8 +8466,8 @@ namespace HelpingHand
 					2130968805,
 					2130968842};
 			
-			// aapt resource value: 0x7F100356
-			public const int MenuView_android_headerBackground = 2131755862;
+			// aapt resource value: 0x7F100373
+			public const int MenuView_android_headerBackground = 2131755891;
 			
 			// aapt resource value: 0x1
 			public const int MenuView_android_horizontalDivider = 1;
@@ -8352,8 +8505,8 @@ namespace HelpingHand
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F100366
-			public const int NavigationView_android_background = 2131755878;
+			// aapt resource value: 0x7F100383
+			public const int NavigationView_android_background = 2131755907;
 			
 			// aapt resource value: 0x1
 			public const int NavigationView_android_fitsSystemWindows = 1;
@@ -8390,11 +8543,11 @@ namespace HelpingHand
 			public static int[] PopupWindowBackgroundState = new int[] {
 					2130968837};
 			
-			// aapt resource value: 0x7F100381
-			public const int PopupWindowBackgroundState_state_above_anchor = 2131755905;
+			// aapt resource value: 0x7F100398
+			public const int PopupWindowBackgroundState_state_above_anchor = 2131755928;
 			
-			// aapt resource value: 0x7F100377
-			public const int PopupWindow_android_popupAnimationStyle = 2131755895;
+			// aapt resource value: 0x7F100394
+			public const int PopupWindow_android_popupAnimationStyle = 2131755924;
 			
 			// aapt resource value: 0x1
 			public const int PopupWindow_android_popupBackground = 1;
@@ -8406,8 +8559,8 @@ namespace HelpingHand
 					2130968790,
 					2130968793};
 			
-			// aapt resource value: 0x7F100383
-			public const int RecycleListView_paddingBottomNoButtons = 2131755907;
+			// aapt resource value: 0x7F100400
+			public const int RecycleListView_paddingBottomNoButtons = 2131756032;
 			
 			// aapt resource value: 0x1
 			public const int RecycleListView_paddingTopNoTitle = 1;
@@ -8425,8 +8578,8 @@ namespace HelpingHand
 					2130968830,
 					2130968836};
 			
-			// aapt resource value: 0x7F100386
-			public const int RecyclerView_android_descendantFocusability = 2131755910;
+			// aapt resource value: 0x7F100403
+			public const int RecyclerView_android_descendantFocusability = 2131756035;
 			
 			// aapt resource value: 0x1
 			public const int RecyclerView_android_orientation = 1;
@@ -8461,14 +8614,14 @@ namespace HelpingHand
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130968747};
 			
-			// aapt resource value: 0x7F100398
-			public const int ScrimInsetsFrameLayout_insetForeground = 2131755928;
+			// aapt resource value: 0x7F100415
+			public const int ScrimInsetsFrameLayout_insetForeground = 2131756053;
 			
 			public static int[] ScrollingViewBehavior_Layout = new int[] {
 					2130968634};
 			
-			// aapt resource value: 0x7F100400
-			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131756032;
+			// aapt resource value: 0x7F100417
+			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131756055;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -8489,8 +8642,8 @@ namespace HelpingHand
 					2130968848,
 					2130968912};
 			
-			// aapt resource value: 0x7F100402
-			public const int SearchView_android_focusable = 2131756034;
+			// aapt resource value: 0x7F100419
+			public const int SearchView_android_focusable = 2131756057;
 			
 			// aapt resource value: 0x1
 			public const int SearchView_android_imeOptions = 1;
@@ -8552,8 +8705,8 @@ namespace HelpingHand
 			public static int[] SectionFeature = new int[] {
 					1};
 			
-			// aapt resource value: 0x7F100665
-			public const int SectionFeature_featureType = 2131756645;
+			// aapt resource value: 0x7F100682
+			public const int SectionFeature_featureType = 2131756674;
 			
 			// aapt resource value: 0x4
 			public const int Section_indexPrefixes = 4;
@@ -8567,8 +8720,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int Section_sectionFormat = 1;
 			
-			// aapt resource value: 0x7F100661
-			public const int Section_sectionId = 2131756641;
+			// aapt resource value: 0x7F100678
+			public const int Section_sectionId = 2131756664;
 			
 			// aapt resource value: 0x3
 			public const int Section_sectionWeight = 3;
@@ -8576,27 +8729,93 @@ namespace HelpingHand
 			// aapt resource value: 0x5
 			public const int Section_subsectionSeparator = 5;
 			
+			public static int[] SfCalendar = new int[] {
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0};
+			
+			// aapt resource value: 0x7F100006
+			public const int SfCalendar_agendaViewHeight = 2131755014;
+			
+			// aapt resource value: 0x7F100005
+			public const int SfCalendar_calendarFirstDayOfWeek = 2131755013;
+			
+			// aapt resource value: 0x7F100004
+			public const int SfCalendar_calendarSelectionMode = 2131755012;
+			
+			// aapt resource value: 0x7F100017
+			public const int SfCalendar_enableDatesInPast = 2131755031;
+			
+			// aapt resource value: 0x7F100003
+			public const int SfCalendar_inlineViewMode = 2131755011;
+			
+			// aapt resource value: 0x7F100013
+			public const int SfCalendar_maximumEventIndicatorCount = 2131755027;
+			
+			// aapt resource value: 0x7F100010
+			public const int SfCalendar_navigateToMonthOnInActiveDatesSelection = 2131755024;
+			
+			// aapt resource value: 0x7F100016
+			public const int SfCalendar_navigationArrowThickness = 2131755030;
+			
+			// aapt resource value: 0x7F100014
+			public const int SfCalendar_navigationButtonHeight = 2131755028;
+			
+			// aapt resource value: 0x7F100015
+			public const int SfCalendar_navigationButtonWidth = 2131755029;
+			
+			// aapt resource value: 0x7F100008
+			public const int SfCalendar_navigationEnable = 2131755016;
+			
+			// aapt resource value: 0x7F100007
+			public const int SfCalendar_showEventsInline = 2131755015;
+			
+			// aapt resource value: 0x7F100009
+			public const int SfCalendar_showNavigationButtons = 2131755017;
+			
+			// aapt resource value: 0x7F100012
+			public const int SfCalendar_showYearView = 2131755026;
+			
+			// aapt resource value: 0x7F100011
+			public const int SfCalendar_toggleDaySelection = 2131755025;
+			
+			// aapt resource value: 0x7F100002
+			public const int SfCalendar_viewMode = 2131755010;
+			
 			public static int[] SignInButton = new int[] {
 					0,
 					0,
 					0};
 			
-			// aapt resource value: 0x7F100544
-			public const int SignInButton_buttonSize = 2131756356;
+			// aapt resource value: 0x7F100561
+			public const int SignInButton_buttonSize = 2131756385;
 			
-			// aapt resource value: 0x7F100545
-			public const int SignInButton_colorScheme = 2131756357;
+			// aapt resource value: 0x7F100562
+			public const int SignInButton_colorScheme = 2131756386;
 			
-			// aapt resource value: 0x7F100546
-			public const int SignInButton_scopeUris = 2131756358;
+			// aapt resource value: 0x7F100563
+			public const int SignInButton_scopeUris = 2131756387;
 			
 			public static int[] SnackbarLayout = new int[] {
 					16843039,
 					2130968701,
 					2130968780};
 			
-			// aapt resource value: 0x7F100420
-			public const int SnackbarLayout_android_maxWidth = 2131756064;
+			// aapt resource value: 0x7F100437
+			public const int SnackbarLayout_android_maxWidth = 2131756087;
 			
 			// aapt resource value: 0x1
 			public const int SnackbarLayout_elevation = 1;
@@ -8611,8 +8830,8 @@ namespace HelpingHand
 					16843131,
 					2130968803};
 			
-			// aapt resource value: 0x7F100424
-			public const int Spinner_android_dropDownWidth = 2131756068;
+			// aapt resource value: 0x7F100441
+			public const int Spinner_android_dropDownWidth = 2131756097;
 			
 			// aapt resource value: 0x1
 			public const int Spinner_android_entries = 1;
@@ -8642,8 +8861,8 @@ namespace HelpingHand
 					2130968909,
 					2130968910};
 			
-			// aapt resource value: 0x7F100430
-			public const int SwitchCompat_android_textOff = 2131756080;
+			// aapt resource value: 0x7F100447
+			public const int SwitchCompat_android_textOff = 2131756103;
 			
 			// aapt resource value: 0x1
 			public const int SwitchCompat_android_textOn = 1;
@@ -8689,8 +8908,8 @@ namespace HelpingHand
 					16842994,
 					16843087};
 			
-			// aapt resource value: 0x7F100445
-			public const int TabItem_android_icon = 2131756101;
+			// aapt resource value: 0x7F100462
+			public const int TabItem_android_icon = 2131756130;
 			
 			// aapt resource value: 0x1
 			public const int TabItem_android_layout = 1;
@@ -8716,8 +8935,8 @@ namespace HelpingHand
 					2130968867,
 					2130968868};
 			
-			// aapt resource value: 0x7F100449
-			public const int TabLayout_tabBackground = 2131756105;
+			// aapt resource value: 0x7F100466
+			public const int TabLayout_tabBackground = 2131756134;
 			
 			// aapt resource value: 0x1
 			public const int TabLayout_tabContentStart = 1;
@@ -8779,8 +8998,8 @@ namespace HelpingHand
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F100466
-			public const int TextAppearance_android_fontFamily = 2131756134;
+			// aapt resource value: 0x7F100483
+			public const int TextAppearance_android_fontFamily = 2131756163;
 			
 			// aapt resource value: 0x1
 			public const int TextAppearance_android_shadowColor = 1;
@@ -8836,8 +9055,8 @@ namespace HelpingHand
 					2130968800,
 					2130968801};
 			
-			// aapt resource value: 0x7F100480
-			public const int TextInputLayout_android_hint = 2131756160;
+			// aapt resource value: 0x7F100497
+			public const int TextInputLayout_android_hint = 2131756183;
 			
 			// aapt resource value: 0x1
 			public const int TextInputLayout_android_textColorHint = 1;
@@ -8915,8 +9134,8 @@ namespace HelpingHand
 					2130968899,
 					2130968900};
 			
-			// aapt resource value: 0x7F100497
-			public const int Toolbar_android_gravity = 2131756183;
+			// aapt resource value: 0x7F100514
+			public const int Toolbar_android_gravity = 2131756308;
 			
 			// aapt resource value: 0x1
 			public const int Toolbar_android_minHeight = 1;
@@ -9014,8 +9233,8 @@ namespace HelpingHand
 					2130968629,
 					2130968630};
 			
-			// aapt resource value: 0x7F100533
-			public const int ViewBackgroundHelper_android_background = 2131756339;
+			// aapt resource value: 0x7F100550
+			public const int ViewBackgroundHelper_android_background = 2131756368;
 			
 			// aapt resource value: 0x1
 			public const int ViewBackgroundHelper_backgroundTint = 1;
@@ -9028,8 +9247,8 @@ namespace HelpingHand
 					16842995,
 					16842994};
 			
-			// aapt resource value: 0x7F100537
-			public const int ViewStubCompat_android_id = 2131756343;
+			// aapt resource value: 0x7F100554
+			public const int ViewStubCompat_android_id = 2131756372;
 			
 			// aapt resource value: 0x1
 			public const int ViewStubCompat_android_inflatedId = 1;
@@ -9037,8 +9256,8 @@ namespace HelpingHand
 			// aapt resource value: 0x2
 			public const int ViewStubCompat_android_layout = 2;
 			
-			// aapt resource value: 0x7F100527
-			public const int View_android_focusable = 2131756327;
+			// aapt resource value: 0x7F100544
+			public const int View_android_focusable = 2131756356;
 			
 			// aapt resource value: 0x1
 			public const int View_android_theme = 1;
@@ -9058,8 +9277,8 @@ namespace HelpingHand
 					1,
 					1};
 			
-			// aapt resource value: 0x7F100667
-			public const int WalletFragmentOptions_appTheme = 2131756647;
+			// aapt resource value: 0x7F100684
+			public const int WalletFragmentOptions_appTheme = 2131756676;
 			
 			// aapt resource value: 0x1
 			public const int WalletFragmentOptions_environment = 1;
@@ -9086,8 +9305,8 @@ namespace HelpingHand
 			// aapt resource value: 0x3
 			public const int WalletFragmentStyle_buyButtonAppearance = 3;
 			
-			// aapt resource value: 0x7F100673
-			public const int WalletFragmentStyle_buyButtonHeight = 2131756659;
+			// aapt resource value: 0x7F100690
+			public const int WalletFragmentStyle_buyButtonHeight = 2131756688;
 			
 			// aapt resource value: 0x2
 			public const int WalletFragmentStyle_buyButtonText = 2;
