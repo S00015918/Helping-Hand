@@ -86,6 +86,7 @@
     <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentListAdapter.cs" />
     <Compile Include="CreateAppointment.cs" />
     <Compile Include="DashBoard.cs" />
     <Compile Include="ForgetPassword.cs" />

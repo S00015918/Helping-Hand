@@ -14,11 +14,12 @@ using Java.Sql;
 
 namespace HelpingHand.Model
 {
-    class Appointment
+    public class Appointment
     {
+        public string Parent { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
-        public string User { get; set; }
+        public string Babysitter { get; set; }
         public string Address { get; set; }
         public string Eircode { get; set; }
         public string City { get; set; }

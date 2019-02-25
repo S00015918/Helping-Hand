@@ -96,16 +96,18 @@ namespace HelpingHand
 
             BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
 
+            FirebaseUser user = auth.CurrentUser;
             string name = userAppointment.name;
             string city = userAppointment.city;
             string eircode = userAppointment.eircode;
             string address = userAppointment.address;
 
             Appointment appointment = new Appointment();
+            appointment.Parent = user.DisplayName;
             appointment.Date = selectedDate;
             appointment.Time = selectedTime;
             //appointment.Color = TitleColor(gre)
-            appointment.User = name;
+            appointment.Babysitter = name;
             appointment.City = city;
             appointment.Address = address;
             appointment.Eircode = eircode;

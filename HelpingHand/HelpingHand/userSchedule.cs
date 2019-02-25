@@ -23,7 +23,7 @@ namespace HelpingHand
     {
         //RelativeLayout activity_schedule;
         FirebaseAuth auth;
-        private ListView list_data;
+        //private ListView list_data;
         List<Appointment> list_appointments = new List<Appointment>();
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
