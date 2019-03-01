@@ -22,7 +22,7 @@ using System.Linq;
 
 namespace XamarinFirebaseAuth
 {
-    [Activity(Label = "DashBoard" ,Theme = "@style/AppTheme")]
+    [Activity(Label = "DashBoard", Theme = "@style/AppTheme")]
     public class DashBoard : AppCompatActivity, IOnCompleteListener
     {
         //EditText input_new_password, input_name, input_email;
@@ -46,7 +46,7 @@ namespace XamarinFirebaseAuth
         private void LogoutUser()
         {
             auth.SignOut();
-            if(auth.CurrentUser == null)
+            if (auth.CurrentUser == null)
             {
                 StartActivity(new Intent(this, typeof(MainActivity)));
                 Finish();
@@ -60,7 +60,7 @@ namespace XamarinFirebaseAuth
             user.UpdatePassword(newPassword)
             .AddOnCompleteListener(this);
         }
-         
+
         protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -149,22 +149,6 @@ namespace XamarinFirebaseAuth
                     }
                 }
 
-                //foreach (var item in items)
-                //{
-                //BabySitter account = new BabySitter();
-                //account.id = item.Key;
-                //account.name = item.Object.name;
-                //account.age = item.Object.age;
-                //account.phone = item.Object.phone;
-                //account.city = item.Object.city;
-                //account.address = item.Object.address;
-                //account.email = item.Object.email;
-                //account.eircode = item.Object.eircode;
-                //account.availability = item.Object.availability;
-                //list_babySitters.Add(account);
-
-                //}
-
                 list_data.ItemClick += (s, e) =>
                 {
                     BabySitter selectedBabysitter = list_babySitters[e.Position];
@@ -191,7 +175,7 @@ namespace XamarinFirebaseAuth
 
             list_data.Visibility = ViewStates.Visible;
 
-            search.QueryTextChange += searchChange;          
+            search.QueryTextChange += searchChange;
         }
 
         private void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)

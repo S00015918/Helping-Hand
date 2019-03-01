@@ -25,9 +25,10 @@ namespace HelpingHand
         FirebaseAuth auth;
         RelativeLayout activity_book_appointment;
         DatePicker datePicker;
-        TimePicker timePicker;
+        TimePicker timePicker, endTimePicker;
         FloatingActionButton btnCreateApointment;
-        string selectedTime, selectedDate;
+        string selectedStartTime, selectedEndTime;
+        string selectedDate;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,12 +39,15 @@ namespace HelpingHand
             activity_book_appointment = FindViewById<RelativeLayout>(Resource.Id.activity_book_appointment);
             datePicker = FindViewById<DatePicker>(Resource.Id.datePicker);
             timePicker = FindViewById<TimePicker>(Resource.Id.timePicker);
+            endTimePicker = FindViewById<TimePicker>(Resource.Id.endTimePicker);
             btnCreateApointment = FindViewById<FloatingActionButton>(Resource.Id.btnCreateAppointment);
 
             var btnChangeDate = FindViewById<Button>(Resource.Id.btnChange_date);
             var btnChangeTime = FindViewById<Button>(Resource.Id.btnChange_time);
+            var btnChangeEndTime = FindViewById<Button>(Resource.Id.btnChange_Endtime);
             var txtDate = FindViewById<TextView>(Resource.Id.textViewDate);
-            var txtTime = FindViewById<TextView>(Resource.Id.textViewTime);
+            var txtStartTime = FindViewById<TextView>(Resource.Id.textViewTime);
+            var txtEndTime = FindViewById<TextView>(Resource.Id.textViewEndTime);
 
             txtDate.Text = (getDate());
             btnChangeDate.Click += (s, e) =>
@@ -53,21 +57,36 @@ namespace HelpingHand
 
             btnChangeTime.Click += (s, e) =>
             {
-                txtTime.Text = getTime();
+                txtStartTime.Text = getStartTime();
             };
             timePicker.SetIs24HourView(Java.Lang.Boolean.True);
-            txtTime.Text = getTime();
+            txtStartTime.Text = getStartTime();
+
+            btnChangeEndTime.Click += (s, e) =>
+            {
+                txtEndTime.Text = getEndTime();
+            };
+            endTimePicker.SetIs24HourView(Java.Lang.Boolean.True);
+            txtEndTime.Text = getEndTime();
 
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             btnCreateApointment.SetOnClickListener(this);
         }
 
-        public string getTime()
+        private string getEndTime()
+        {
+            StringBuilder strEndTime = new StringBuilder();
+            strEndTime.Append(endTimePicker.Hour + ":" + endTimePicker.Minute);
+            selectedEndTime = strEndTime.ToString();
+            return strEndTime.ToString();
+        }
+
+        public string getStartTime()
         {
             StringBuilder strTime = new StringBuilder();
-            strTime.Append("Time: " + timePicker.Hour + ":" + timePicker.Minute);
-            selectedTime = strTime.ToString();
+            strTime.Append(timePicker.Hour + ":" + timePicker.Minute);
+            selectedStartTime = strTime.ToString();
             return strTime.ToString();
         }
 
@@ -76,7 +95,10 @@ namespace HelpingHand
             StringBuilder strCurrentDate = new StringBuilder();
             int month = datePicker.Month + 1;
             strCurrentDate.Append("Date : " + month + "/" + datePicker.DayOfMonth + "/" + datePicker.Year);
-            selectedDate = strCurrentDate.ToString();
+            int day = datePicker.DayOfMonth;
+            int _month = month;
+            int year = datePicker.Year;
+            selectedDate = datePicker.DayOfMonth + "/" + month + "/" + datePicker.Year;
             return strCurrentDate.ToString();
         }
 
@@ -104,9 +126,11 @@ namespace HelpingHand
 
             Appointment appointment = new Appointment();
             appointment.Parent = user.DisplayName;
-            appointment.Date = selectedDate;
-            appointment.Time = selectedTime;
-            //appointment.Color = TitleColor(gre)
+            appointment.Date = Convert.ToDateTime(selectedDate);
+            appointment.startTime = selectedStartTime;
+            appointment.endTime = selectedEndTime;
+            appointment.userEmail = auth.CurrentUser.Email;
+            appointment.babysitterEmail = userAppointment.email;
             appointment.Babysitter = name;
             appointment.City = city;
             appointment.Address = address;
