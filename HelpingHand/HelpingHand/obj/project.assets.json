@@ -948,6 +948,7 @@
       "Xamarin.Firebase.Database.Connection >= 60.1142.1",
       "Xamarin.Firebase.Storage >= 60.1142.1",
       "Xamarin.GooglePlayServices.Base >= 60.1142.1",
+      "Xamarin.GooglePlayServices.Maps >= 60.1142.1",
       "Xamarin.GooglePlayServices.Wallet >= 60.1142.1"
     ]
   },
@@ -1021,6 +1022,10 @@
             "version": "[60.1142.1, )"
           },
           "Xamarin.GooglePlayServices.Base": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
+          },
+          "Xamarin.GooglePlayServices.Maps": {
             "target": "Package",
             "version": "[60.1142.1, )"
           },

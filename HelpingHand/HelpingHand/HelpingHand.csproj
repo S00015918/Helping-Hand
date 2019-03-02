@@ -93,6 +93,7 @@
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MakePayment.cs" />
+    <Compile Include="MapWithMarkersActivity.cs" />
     <Compile Include="MessageActivity.cs" />
     <Compile Include="MessageAdapter.cs" />
     <Compile Include="Model\Appointment.cs" />
@@ -172,6 +173,9 @@
       <Version>60.1142.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Base">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Maps">
       <Version>60.1142.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Wallet">
@@ -452,6 +456,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\payment_form.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\calendar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\map_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

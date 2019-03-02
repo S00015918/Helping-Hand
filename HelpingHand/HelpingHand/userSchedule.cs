@@ -34,14 +34,26 @@ namespace HelpingHand
         {
             base.OnCreate(savedInstanceState);
 
-            SfCalendar sfCalendar = new SfCalendar(this);
-            sfCalendar.ViewMode = ViewMode.MonthView;
-            SetContentView(sfCalendar);
+            //SetContentView(Resource.Layout.calendar);
+            //SfCalendar sfCalendar = FindViewById<SfCalendar>(Resource.Id.calendar);
+            SfCalendar calendar = new SfCalendar(this);
+            Calendar minCalendar = Calendar.Instance;
+            minCalendar.Set(2018, 12, 12);
+            calendar.MinDate = minCalendar;
+            //SfCalendar calendar = (SfCalendar)FindViewById(Resource.Id.calendar);
+            calendar.ViewMode = ViewMode.MonthView;
+            SetContentView(calendar);
 
-            sfCalendar.TransitionMode = TransitionMode.Card;
-            sfCalendar.ShowEventsInline = true;
+            calendar.TransitionMode = TransitionMode.Card;
+            calendar.ShowEventsInline = true;
             Calendar currentDate = Calendar.Instance;
+            CalendarEventCollection eventCollection = new CalendarEventCollection();
             //SetContentView(Resource.Layout.schedule_view);
+            MonthViewLabelSetting labelSettings = new MonthViewLabelSetting();
+            labelSettings.DateFormat = "dd";
+            labelSettings.DayLabelSize = 10;
+            labelSettings.DayFormat = "EEE";
+            labelSettings.DateLabelSize = 12;
 
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
@@ -89,7 +101,7 @@ namespace HelpingHand
                     int endHour = end[0];
                     int endMinute = end[1];
 
-                    _event.Subject = appointment.Babysitter + ", " + appointment.startTime + ", " + appointment.Address;
+                    _event.Subject = appointment.Babysitter + ", " + appointment.startTime + ", " + appointment.Address + ", " + appointment.Eircode;
                     _event.Color = Android.Graphics.Color.LightBlue;
 
                     //starting date of event
@@ -101,10 +113,9 @@ namespace HelpingHand
                     Calendar endEventDate = Calendar.Instance;
                     endEventDate.Set(year, month, day, endHour, endMinute);
                     _event.EndTime = endEventDate;
-
-                    CalendarEventCollection eventCollection = new CalendarEventCollection();
+                 
                     eventCollection.Add(_event);
-                    sfCalendar.DataSource = eventCollection;
+                    calendar.DataSource = eventCollection;
                 }
                 if (appointment.babysitterEmail == auth.CurrentUser.Email)
                 {
@@ -116,30 +127,43 @@ namespace HelpingHand
                     _event.StartTime.Equals(start).ToString();
                     _event.Color.Equals(ConsoleColor.DarkGreen);
 
-                    CalendarEventCollection eventCollection = new CalendarEventCollection();
                     eventCollection.Add(_event);
-                    sfCalendar.DataSource = eventCollection;
+                    calendar.DataSource = eventCollection;
                 }
             }
             MonthViewSettings monthViewSettings = new MonthViewSettings();
             monthViewSettings.TodayTextColor.Equals("#1B79D6");
             //monthViewSettings.InlineBackgroundColor = Android.Graphics.Color.ParseColor("#cee4e5");
             monthViewSettings.DateSelectionColor = Android.Graphics.Color.ParseColor("#cee4e5");
-            sfCalendar.MonthViewSettings = monthViewSettings;
+            calendar.MonthViewSettings = monthViewSettings;
 
-            sfCalendar.AddDatesInPast();
+            calendar.AddDatesInPast();
 
             //sfCalendar.InlineItemLoaded += Calendar_InlineItemLoaded;
+            calendar.InlineItemTapped += Calendar_InlineItemTapped;
+        }
+
+        private void Calendar_InlineItemTapped(object sender, InlineItemTappedEventArgs e)
+        {
+            var appointment = e.InlineEvent;
+            Toast.MakeText(this, appointment.Subject + " - " + appointment.StartTime.Time.ToString(), ToastLength.Long).Show();
+            showMap();
         }
 
         private void Calendar_InlineItemLoaded(object sender, InlineItemLoadedEventArgs e)
         {
             var appointment = e.CalendarInlineEvent;
             Button button = new Button(this);
-            button.Text = "Appointment :" + appointment.Subject;
+            button.Text = "Appointment : " + appointment.Subject;
             button.SetBackgroundColor(Android.Graphics.Color.LightBlue);
-            button.SetTextColor(Android.Graphics.Color.LightGray);
+            //button.SetTextColor(Android.Graphics.Color.LightGray);
+            //button.Click += showMap();
             e.View = button;
+        }
+
+        public void showMap()
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(MapWithMarkersActivity)));
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -154,17 +178,6 @@ namespace HelpingHand
             if (id == Resource.Id.menu_home)
             {
                 StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
-                Finish();
-            }
-            if (id == Resource.Id.menu_message) //messages
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
-                Finish();
-            }
-
-            else if (id == Resource.Id.menu_user) //user profile
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(userProfile)));
                 Finish();
             }
             return base.OnOptionsItemSelected(item);

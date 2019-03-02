@@ -195,6 +195,14 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int activityChooserViewStyle=0x7f0100a3;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int agendaViewHeight=0x7f01018c;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -611,6 +619,27 @@ containing a value of this type.
 </table>
          */
         public static int buyButtonWidth=0x7f010007;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int calendarFirstDayOfWeek=0x7f01018b;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>singleSelection</code></td><td>0</td><td></td></tr>
+<tr><td><code>multiSelection</code></td><td>1</td><td></td></tr>
+<tr><td><code>rangeSelection</code></td><td>2</td><td></td></tr>
+<tr><td><code>multiRangeSelection</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static int calendarSelectionMode=0x7f01018a;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1061,6 +1090,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int elevation=0x7f010053;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int enableDatesInPast=0x7f010197;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -1452,6 +1489,17 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int initialActivityCount=0x7f010056;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>inline</code></td><td>0</td><td></td></tr>
+<tr><td><code>agenda</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int inlineViewMode=0x7f010189;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -1839,6 +1887,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int maxButtonHeight=0x7f01011f;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int maximumEventIndicatorCount=0x7f010193;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1855,6 +1911,38 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int multiChoiceItemLayout=0x7f01005a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int navigateToMonthOnInActiveDatesSelection=0x7f010190;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int navigationArrowThickness=0x7f010196;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int navigationButtonHeight=0x7f010194;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int navigationButtonWidth=0x7f010195;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1863,6 +1951,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int navigationContentDescription=0x7f010124;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int navigationEnable=0x7f01018e;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -2173,6 +2269,22 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static int showEventsInline=0x7f01018d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int showNavigationButtons=0x7f01018f;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static int showText=0x7f010116;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -2182,6 +2294,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int showTitle=0x7f01005d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int showYearView=0x7f010192;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -2727,6 +2847,14 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int titleTextStyle=0x7f01003e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int toggleDaySelection=0x7f010191;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -2868,6 +2996,17 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int useViewLifecycle=0x7f01001e;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>monthView</code></td><td>0</td><td></td></tr>
+<tr><td><code>yearView</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int viewMode=0x7f010188;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -3221,11 +3360,15 @@ containing a value of this type.
         public static int abc_text_size_subtitle_material_toolbar=0x7f0b0009;
         public static int abc_text_size_title_material=0x7f0b004f;
         public static int abc_text_size_title_material_toolbar=0x7f0b000a;
+        public static int activity_horizontal_margin=0x7f0b009b;
+        public static int activity_vertical_margin=0x7f0b009c;
         public static int compat_button_inset_horizontal_material=0x7f0b008b;
         public static int compat_button_inset_vertical_material=0x7f0b008c;
         public static int compat_button_padding_horizontal_material=0x7f0b008d;
         public static int compat_button_padding_vertical_material=0x7f0b008e;
         public static int compat_control_corner_material=0x7f0b008f;
+        public static int date_text_size=0x7f0b009d;
+        public static int date_text_tab_size=0x7f0b009e;
         public static int design_appbar_elevation=0x7f0b0069;
         public static int design_bottom_navigation_active_item_max_width=0x7f0b006a;
         public static int design_bottom_navigation_active_text_size=0x7f0b006b;
@@ -3279,6 +3422,10 @@ containing a value of this type.
         public static int item_touch_helper_max_drag_scroll_per_frame=0x7f0b0003;
         public static int item_touch_helper_swipe_escape_max_velocity=0x7f0b0004;
         public static int item_touch_helper_swipe_escape_velocity=0x7f0b0005;
+        public static int month_row_size=0x7f0b00a1;
+        public static int month_row_tab_size=0x7f0b00a2;
+        public static int month_text_size=0x7f0b009f;
+        public static int month_text_tab_size=0x7f0b00a0;
         public static int notification_action_icon_size=0x7f0b0090;
         public static int notification_action_text_size=0x7f0b0091;
         public static int notification_big_circle_margin=0x7f0b0092;
@@ -3470,45 +3617,46 @@ containing a value of this type.
         public static int CTRL=0x7f0c0059;
         public static int FUNCTION=0x7f0c005a;
         public static int META=0x7f0c005b;
-        public static int Rlayout=0x7f0c0132;
+        public static int Rlayout=0x7f0c0143;
         public static int SHIFT=0x7f0c005c;
         public static int SYM=0x7f0c005d;
-        public static int action0=0x7f0c011e;
-        public static int action_bar=0x7f0c00a1;
+        public static int action0=0x7f0c012f;
+        public static int action_bar=0x7f0c00a9;
         public static int action_bar_activity_content=0x7f0c0001;
-        public static int action_bar_container=0x7f0c00a0;
-        public static int action_bar_root=0x7f0c009c;
+        public static int action_bar_container=0x7f0c00a8;
+        public static int action_bar_root=0x7f0c00a4;
         public static int action_bar_spinner=0x7f0c0002;
-        public static int action_bar_subtitle=0x7f0c0080;
-        public static int action_bar_title=0x7f0c007f;
-        public static int action_container=0x7f0c011b;
-        public static int action_context_bar=0x7f0c00a2;
-        public static int action_divider=0x7f0c0122;
-        public static int action_image=0x7f0c011c;
+        public static int action_bar_subtitle=0x7f0c0088;
+        public static int action_bar_title=0x7f0c0087;
+        public static int action_container=0x7f0c012c;
+        public static int action_context_bar=0x7f0c00aa;
+        public static int action_divider=0x7f0c0133;
+        public static int action_image=0x7f0c012d;
         public static int action_menu_divider=0x7f0c0003;
         public static int action_menu_presenter=0x7f0c0004;
-        public static int action_mode_bar=0x7f0c009e;
-        public static int action_mode_bar_stub=0x7f0c009d;
-        public static int action_mode_close_button=0x7f0c0081;
-        public static int action_text=0x7f0c011d;
-        public static int actions=0x7f0c012b;
-        public static int activity_Babysitter_reg=0x7f0c00b0;
-        public static int activity_book_appointment=0x7f0c00eb;
-        public static int activity_chooser_view_content=0x7f0c0082;
-        public static int activity_dashboard=0x7f0c00ef;
-        public static int activity_favourites=0x7f0c011a;
-        public static int activity_forget=0x7f0c0101;
-        public static int activity_main=0x7f0c010c;
-        public static int activity_schedule=0x7f0c013c;
-        public static int activity_sign_up=0x7f0c013f;
-        public static int activity_userProfile=0x7f0c012e;
-        public static int activity_viewUser=0x7f0c0145;
+        public static int action_mode_bar=0x7f0c00a6;
+        public static int action_mode_bar_stub=0x7f0c00a5;
+        public static int action_mode_close_button=0x7f0c0089;
+        public static int action_text=0x7f0c012e;
+        public static int actions=0x7f0c013c;
+        public static int activity_Babysitter_reg=0x7f0c00b8;
+        public static int activity_book_appointment=0x7f0c00f3;
+        public static int activity_chooser_view_content=0x7f0c008a;
+        public static int activity_dashboard=0x7f0c0101;
+        public static int activity_favourites=0x7f0c012b;
+        public static int activity_forget=0x7f0c0112;
+        public static int activity_main=0x7f0c011d;
+        public static int activity_schedule=0x7f0c014d;
+        public static int activity_sign_up=0x7f0c0150;
+        public static int activity_userProfile=0x7f0c013f;
+        public static int activity_viewUser=0x7f0c0156;
         public static int add=0x7f0c004e;
-        public static int address=0x7f0c0137;
+        public static int address=0x7f0c0148;
         public static int adjust_height=0x7f0c0040;
         public static int adjust_width=0x7f0c0041;
-        public static int age=0x7f0c0135;
-        public static int alertTitle=0x7f0c0095;
+        public static int age=0x7f0c0146;
+        public static int agenda=0x7f0c0081;
+        public static int alertTitle=0x7f0c009d;
         public static int all=0x7f0c0077;
         public static int always=0x7f0c005e;
         public static int android_pay=0x7f0c003b;
@@ -3521,180 +3669,190 @@ containing a value of this type.
         public static int blocking=0x7f0c007c;
         public static int book_now=0x7f0c002b;
         public static int bottom=0x7f0c0063;
-        public static int btnChange_date=0x7f0c00ed;
-        public static int btnCreate_appointment=0x7f0c0148;
-        public static int btnFriAfter=0x7f0c00d4;
-        public static int btnFriEve=0x7f0c00dc;
-        public static int btnFriMorn=0x7f0c00cc;
-        public static int btnFriNight=0x7f0c00e4;
-        public static int btnMonAfter=0x7f0c00d0;
-        public static int btnMonEve=0x7f0c00d8;
-        public static int btnMonMorn=0x7f0c00c8;
-        public static int btnMonNight=0x7f0c00e0;
-        public static int btnSatAfter=0x7f0c00d5;
-        public static int btnSatEve=0x7f0c00dd;
-        public static int btnSatMorn=0x7f0c00cd;
-        public static int btnSatNight=0x7f0c00e5;
-        public static int btnSunAfter=0x7f0c00d6;
-        public static int btnSunEve=0x7f0c00de;
-        public static int btnSunMorn=0x7f0c00ce;
-        public static int btnSunNight=0x7f0c00e6;
-        public static int btnThuAfter=0x7f0c00d3;
-        public static int btnThuEve=0x7f0c00db;
-        public static int btnThuMorn=0x7f0c00cb;
-        public static int btnThuNight=0x7f0c00e3;
-        public static int btnTueAfter=0x7f0c00d1;
-        public static int btnTueEve=0x7f0c00d9;
-        public static int btnTueMorn=0x7f0c00c9;
-        public static int btnTueNight=0x7f0c00e1;
-        public static int btnWedAfter=0x7f0c00d2;
-        public static int btnWedEve=0x7f0c00da;
-        public static int btnWedMorn=0x7f0c00ca;
-        public static int btnWedNight=0x7f0c00e2;
-        public static int buttonPanel=0x7f0c0088;
+        public static int btnChange_Endtime=0x7f0c00fc;
+        public static int btnChange_date=0x7f0c00f5;
+        public static int btnChange_time=0x7f0c00f8;
+        public static int btnCreateAppointment=0x7f0c00fe;
+        public static int btnCreate_appointment=0x7f0c0159;
+        public static int btnFriAfter=0x7f0c00dc;
+        public static int btnFriEve=0x7f0c00e4;
+        public static int btnFriMorn=0x7f0c00d4;
+        public static int btnFriNight=0x7f0c00ec;
+        public static int btnMonAfter=0x7f0c00d8;
+        public static int btnMonEve=0x7f0c00e0;
+        public static int btnMonMorn=0x7f0c00d0;
+        public static int btnMonNight=0x7f0c00e8;
+        public static int btnSatAfter=0x7f0c00dd;
+        public static int btnSatEve=0x7f0c00e5;
+        public static int btnSatMorn=0x7f0c00d5;
+        public static int btnSatNight=0x7f0c00ed;
+        public static int btnSunAfter=0x7f0c00de;
+        public static int btnSunEve=0x7f0c00e6;
+        public static int btnSunMorn=0x7f0c00d6;
+        public static int btnSunNight=0x7f0c00ee;
+        public static int btnThuAfter=0x7f0c00db;
+        public static int btnThuEve=0x7f0c00e3;
+        public static int btnThuMorn=0x7f0c00d3;
+        public static int btnThuNight=0x7f0c00eb;
+        public static int btnTueAfter=0x7f0c00d9;
+        public static int btnTueEve=0x7f0c00e1;
+        public static int btnTueMorn=0x7f0c00d1;
+        public static int btnTueNight=0x7f0c00e9;
+        public static int btnWedAfter=0x7f0c00da;
+        public static int btnWedEve=0x7f0c00e2;
+        public static int btnWedMorn=0x7f0c00d2;
+        public static int btnWedNight=0x7f0c00ea;
+        public static int buttonPanel=0x7f0c0090;
         public static int buyButton=0x7f0c0027;
         public static int buy_now=0x7f0c002c;
         public static int buy_with=0x7f0c002d;
         public static int buy_with_google=0x7f0c002e;
-        public static int calendar=0x7f0c013d;
-        public static int cancel_action=0x7f0c011f;
+        public static int calendar=0x7f0c014e;
+        public static int cancel_action=0x7f0c0130;
         public static int center=0x7f0c006a;
         public static int center_horizontal=0x7f0c006b;
         public static int center_vertical=0x7f0c006c;
-        public static int checkbox=0x7f0c0098;
-        public static int chronometer=0x7f0c0127;
-        public static int city=0x7f0c013a;
+        public static int checkbox=0x7f0c00a0;
+        public static int chronometer=0x7f0c0138;
+        public static int city=0x7f0c014b;
         public static int classic=0x7f0c0035;
         public static int clip_horizontal=0x7f0c0073;
         public static int clip_vertical=0x7f0c0074;
         public static int collapseActionView=0x7f0c005f;
-        public static int container=0x7f0c00f5;
-        public static int contentPanel=0x7f0c008b;
-        public static int coordinator=0x7f0c00f6;
-        public static int custom=0x7f0c0092;
-        public static int customPanel=0x7f0c0091;
+        public static int container=0x7f0c0106;
+        public static int contentPanel=0x7f0c0093;
+        public static int coordinator=0x7f0c0107;
+        public static int custom=0x7f0c009a;
+        public static int customPanel=0x7f0c0099;
         public static int dark=0x7f0c001f;
-        public static int datePicker=0x7f0c00ec;
-        public static int decor_content_parent=0x7f0c009f;
-        public static int default_activity_button=0x7f0c0085;
-        public static int design_bottom_sheet=0x7f0c00f8;
-        public static int design_menu_item_action_area=0x7f0c00ff;
-        public static int design_menu_item_action_area_stub=0x7f0c00fe;
-        public static int design_menu_item_text=0x7f0c00fd;
-        public static int design_navigation_view=0x7f0c00fc;
+        public static int datePicker=0x7f0c00f4;
+        public static int decor_content_parent=0x7f0c00a7;
+        public static int default_activity_button=0x7f0c008d;
+        public static int design_bottom_sheet=0x7f0c0109;
+        public static int design_menu_item_action_area=0x7f0c0110;
+        public static int design_menu_item_action_area_stub=0x7f0c010f;
+        public static int design_menu_item_text=0x7f0c010e;
+        public static int design_navigation_view=0x7f0c010d;
         public static int disableHome=0x7f0c0048;
         public static int donate_with=0x7f0c002f;
         public static int donate_with_google=0x7f0c0030;
-        public static int edit_query=0x7f0c00a3;
-        public static int eircode=0x7f0c013b;
-        public static int email=0x7f0c0138;
+        public static int edit_query=0x7f0c00ab;
+        public static int eircode=0x7f0c014c;
+        public static int email=0x7f0c0149;
         public static int end=0x7f0c0056;
-        public static int end_padder=0x7f0c012d;
+        public static int endTimePicker=0x7f0c00fb;
+        public static int end_padder=0x7f0c013e;
         public static int enterAlways=0x7f0c0065;
         public static int enterAlwaysCollapsed=0x7f0c0066;
         public static int exitUntilCollapsed=0x7f0c0067;
-        public static int expand_activities_button=0x7f0c0083;
-        public static int expanded_menu=0x7f0c0097;
-        public static int fab=0x7f0c0117;
-        public static int facebook=0x7f0c0147;
+        public static int expand_activities_button=0x7f0c008b;
+        public static int expanded_menu=0x7f0c009f;
+        public static int fab=0x7f0c0128;
+        public static int facebook=0x7f0c0158;
         public static int fill=0x7f0c0075;
         public static int fill_horizontal=0x7f0c0076;
         public static int fill_vertical=0x7f0c006d;
         public static int fixed=0x7f0c0079;
         public static int forever=0x7f0c007d;
-        public static int forget_btn_back=0x7f0c0106;
-        public static int forget_btn_reset=0x7f0c0105;
-        public static int forget_email=0x7f0c0104;
-        public static int forget_input_email=0x7f0c0103;
-        public static int forget_message=0x7f0c0102;
-        public static int framelauout=0x7f0c0131;
+        public static int forget_btn_back=0x7f0c0117;
+        public static int forget_btn_reset=0x7f0c0116;
+        public static int forget_email=0x7f0c0115;
+        public static int forget_input_email=0x7f0c0114;
+        public static int forget_message=0x7f0c0113;
+        public static int framelauout=0x7f0c0142;
         public static int ghost_view=0x7f0c000a;
         public static int google_wallet_classic=0x7f0c0036;
         public static int google_wallet_grayscale=0x7f0c0037;
         public static int google_wallet_monochrome=0x7f0c0038;
         public static int grayscale=0x7f0c0039;
-        public static int gridSchedule=0x7f0c00be;
+        public static int gridSchedule=0x7f0c00c6;
         public static int holo_dark=0x7f0c0021;
         public static int holo_light=0x7f0c0022;
         public static int home=0x7f0c0005;
         public static int homeAsUp=0x7f0c0049;
-        public static int horizontalscrollView=0x7f0c00bd;
+        public static int horizontalscrollView=0x7f0c00c5;
         public static int hybrid=0x7f0c003c;
-        public static int icon=0x7f0c0087;
-        public static int icon_group=0x7f0c012c;
+        public static int icon=0x7f0c008f;
+        public static int icon_group=0x7f0c013d;
         public static int icon_only=0x7f0c0042;
         public static int ifRoom=0x7f0c0060;
-        public static int image=0x7f0c0084;
-        public static int imgUser=0x7f0c0133;
-        public static int info=0x7f0c0128;
-        public static int input=0x7f0c0118;
+        public static int image=0x7f0c008c;
+        public static int imgUser=0x7f0c0144;
+        public static int info=0x7f0c0139;
+        public static int inline=0x7f0c0082;
+        public static int input=0x7f0c0129;
         public static int italic=0x7f0c007e;
         public static int item_touch_helper_previous_elevation=0x7f0c0000;
-        public static int largeLabel=0x7f0c00f4;
-        public static int layout_bottom=0x7f0c00e7;
-        public static int layout_middle=0x7f0c00bc;
-        public static int layout_top=0x7f0c00b1;
+        public static int largeLabel=0x7f0c0105;
+        public static int layout_bottom=0x7f0c00ef;
+        public static int layout_middle=0x7f0c00c4;
+        public static int layout_middle2=0x7f0c00fa;
+        public static int layout_top=0x7f0c00b9;
         public static int left=0x7f0c006e;
         public static int light=0x7f0c0020;
         public static int line1=0x7f0c0017;
         public static int line3=0x7f0c0018;
         public static int listMode=0x7f0c0046;
-        public static int list_appointments=0x7f0c013e;
-        public static int list_city=0x7f0c010b;
-        public static int list_data=0x7f0c00f2;
-        public static int list_img=0x7f0c0109;
-        public static int list_item=0x7f0c0086;
-        public static int list_name=0x7f0c010a;
-        public static int list_of_messages=0x7f0c0119;
-        public static int login_btn_Babysitter_reg=0x7f0c0113;
-        public static int login_btn_forget_password=0x7f0c0110;
-        public static int login_btn_login=0x7f0c010f;
-        public static int login_btn_sign_up=0x7f0c0112;
-        public static int login_email=0x7f0c010d;
-        public static int login_layout_or=0x7f0c0111;
-        public static int login_password=0x7f0c010e;
+        public static int list_appointments=0x7f0c014f;
+        public static int list_city=0x7f0c011c;
+        public static int list_data=0x7f0c0103;
+        public static int list_img=0x7f0c011a;
+        public static int list_item=0x7f0c008e;
+        public static int list_name=0x7f0c011b;
+        public static int list_of_messages=0x7f0c012a;
+        public static int login_btn_Babysitter_reg=0x7f0c0124;
+        public static int login_btn_forget_password=0x7f0c0121;
+        public static int login_btn_login=0x7f0c0120;
+        public static int login_btn_sign_up=0x7f0c0123;
+        public static int login_email=0x7f0c011e;
+        public static int login_layout_or=0x7f0c0122;
+        public static int login_password=0x7f0c011f;
         public static int logo_only=0x7f0c0031;
-        public static int mainGrid=0x7f0c0108;
-        public static int masked=0x7f0c014a;
+        public static int mainGrid=0x7f0c0119;
+        public static int masked=0x7f0c015b;
         public static int match_parent=0x7f0c0029;
-        public static int media_actions=0x7f0c0121;
-        public static int menu_calendar=0x7f0c014b;
-        public static int menu_home=0x7f0c014f;
-        public static int menu_message=0x7f0c014c;
-        public static int menu_save=0x7f0c0150;
-        public static int menu_star=0x7f0c014d;
-        public static int menu_user=0x7f0c014e;
-        public static int message=0x7f0c0144;
-        public static int message_text=0x7f0c0116;
-        public static int message_time=0x7f0c0115;
-        public static int message_user=0x7f0c0114;
+        public static int media_actions=0x7f0c0132;
+        public static int menu_calendar=0x7f0c015c;
+        public static int menu_home=0x7f0c0160;
+        public static int menu_message=0x7f0c015d;
+        public static int menu_save=0x7f0c0161;
+        public static int menu_star=0x7f0c015e;
+        public static int menu_user=0x7f0c015f;
+        public static int message=0x7f0c0155;
+        public static int message_text=0x7f0c0127;
+        public static int message_time=0x7f0c0126;
+        public static int message_user=0x7f0c0125;
         public static int middle=0x7f0c0057;
         public static int mini=0x7f0c0078;
         public static int monochrome=0x7f0c003a;
+        public static int monthView=0x7f0c007f;
+        public static int multiRangeSelection=0x7f0c0083;
+        public static int multiSelection=0x7f0c0084;
         public static int multiply=0x7f0c004f;
-        public static int name=0x7f0c0134;
-        public static int navigation_header_container=0x7f0c00fb;
+        public static int name=0x7f0c0145;
+        public static int navigation_header_container=0x7f0c010c;
         public static int never=0x7f0c0061;
         public static int none=0x7f0c001d;
         public static int normal=0x7f0c003d;
-        public static int notification_background=0x7f0c012a;
-        public static int notification_main_column=0x7f0c0124;
-        public static int notification_main_column_container=0x7f0c0123;
+        public static int notification_background=0x7f0c013b;
+        public static int notification_main_column=0x7f0c0135;
+        public static int notification_main_column_container=0x7f0c0134;
         public static int parallax=0x7f0c0071;
-        public static int parentPanel=0x7f0c008a;
+        public static int parentPanel=0x7f0c0092;
         public static int parent_matrix=0x7f0c000b;
-        public static int phone=0x7f0c0139;
+        public static int phone=0x7f0c014a;
         public static int pin=0x7f0c0072;
         public static int production=0x7f0c0023;
         public static int progress_circular=0x7f0c0006;
         public static int progress_horizontal=0x7f0c0007;
-        public static int progressbar=0x7f0c0130;
-        public static int radio=0x7f0c009a;
-        public static int ratingbar=0x7f0c0146;
-        public static int rellay1=0x7f0c012f;
+        public static int progressbar=0x7f0c0141;
+        public static int radio=0x7f0c00a2;
+        public static int rangeSelection=0x7f0c0085;
+        public static int ratingbar=0x7f0c0157;
+        public static int rellay1=0x7f0c0140;
         public static int right=0x7f0c006f;
-        public static int right_icon=0x7f0c0129;
-        public static int right_side=0x7f0c0125;
+        public static int right_icon=0x7f0c013a;
+        public static int right_side=0x7f0c0136;
         public static int sandbox=0x7f0c0024;
         public static int satellite=0x7f0c003e;
         public static int save_image_matrix=0x7f0c000c;
@@ -3702,107 +3860,113 @@ containing a value of this type.
         public static int save_scale_type=0x7f0c000e;
         public static int screen=0x7f0c0050;
         public static int scroll=0x7f0c0068;
-        public static int scrollIndicatorDown=0x7f0c0090;
-        public static int scrollIndicatorUp=0x7f0c008c;
-        public static int scrollView=0x7f0c008d;
+        public static int scrollIndicatorDown=0x7f0c0098;
+        public static int scrollIndicatorUp=0x7f0c0094;
+        public static int scrollView=0x7f0c0095;
         public static int scrollable=0x7f0c007a;
-        public static int search_badge=0x7f0c00a5;
-        public static int search_bar=0x7f0c00a4;
-        public static int search_button=0x7f0c00a6;
-        public static int search_close_btn=0x7f0c00ab;
-        public static int search_edit_frame=0x7f0c00a7;
-        public static int search_go_btn=0x7f0c00ad;
-        public static int search_mag_icon=0x7f0c00a8;
-        public static int search_plate=0x7f0c00a9;
-        public static int search_src_text=0x7f0c00aa;
-        public static int search_voice_btn=0x7f0c00ae;
-        public static int searchview=0x7f0c00f1;
-        public static int select_dialog_listview=0x7f0c00af;
+        public static int search_badge=0x7f0c00ad;
+        public static int search_bar=0x7f0c00ac;
+        public static int search_button=0x7f0c00ae;
+        public static int search_close_btn=0x7f0c00b3;
+        public static int search_edit_frame=0x7f0c00af;
+        public static int search_go_btn=0x7f0c00b5;
+        public static int search_mag_icon=0x7f0c00b0;
+        public static int search_plate=0x7f0c00b1;
+        public static int search_src_text=0x7f0c00b2;
+        public static int search_voice_btn=0x7f0c00b6;
+        public static int searchview=0x7f0c0102;
+        public static int select_dialog_listview=0x7f0c00b7;
         public static int selectionDetails=0x7f0c0028;
-        public static int shortcut=0x7f0c0099;
+        public static int sfCalendar=0x7f0c0100;
+        public static int shortcut=0x7f0c00a1;
         public static int showCustom=0x7f0c004a;
         public static int showHome=0x7f0c004b;
         public static int showTitle=0x7f0c004c;
-        public static int signup_address=0x7f0c00b8;
-        public static int signup_age=0x7f0c00b7;
-        public static int signup_btn_Babysitter=0x7f0c00e8;
-        public static int signup_btn_login=0x7f0c00ea;
-        public static int signup_btn_register=0x7f0c0142;
-        public static int signup_city=0x7f0c00b9;
-        public static int signup_eircode=0x7f0c00ba;
-        public static int signup_email=0x7f0c00b4;
-        public static int signup_name=0x7f0c00b2;
-        public static int signup_password=0x7f0c00b5;
-        public static int signup_phone=0x7f0c00b6;
-        public static int signup_surname=0x7f0c00b3;
-        public static int signup_vetted_yes=0x7f0c00bb;
+        public static int signup_address=0x7f0c00c0;
+        public static int signup_age=0x7f0c00bf;
+        public static int signup_btn_Babysitter=0x7f0c00f0;
+        public static int signup_btn_login=0x7f0c00f2;
+        public static int signup_btn_register=0x7f0c0153;
+        public static int signup_city=0x7f0c00c1;
+        public static int signup_eircode=0x7f0c00c2;
+        public static int signup_email=0x7f0c00bc;
+        public static int signup_name=0x7f0c00ba;
+        public static int signup_password=0x7f0c00bd;
+        public static int signup_phone=0x7f0c00be;
+        public static int signup_surname=0x7f0c00bb;
+        public static int signup_vetted_yes=0x7f0c00c3;
+        public static int singleSelection=0x7f0c0086;
         public static int slide=0x7f0c001e;
-        public static int smallLabel=0x7f0c00f3;
-        public static int snackbar_action=0x7f0c00fa;
-        public static int snackbar_text=0x7f0c00f9;
+        public static int smallLabel=0x7f0c0104;
+        public static int snackbar_action=0x7f0c010b;
+        public static int snackbar_text=0x7f0c010a;
         public static int snap=0x7f0c0069;
-        public static int spacer=0x7f0c0089;
-        public static int spinnerCount=0x7f0c0141;
+        public static int spacer=0x7f0c0091;
+        public static int spinnerCount=0x7f0c0152;
         public static int split_action_bar=0x7f0c0008;
         public static int src_atop=0x7f0c0051;
         public static int src_in=0x7f0c0052;
         public static int src_over=0x7f0c0053;
         public static int standard=0x7f0c0043;
         public static int start=0x7f0c0070;
-        public static int status_bar_latest_event_content=0x7f0c0120;
+        public static int status_bar_latest_event_content=0x7f0c0131;
         public static int strict_sandbox=0x7f0c0025;
-        public static int submenuarrow=0x7f0c009b;
-        public static int submit_area=0x7f0c00ac;
+        public static int submenuarrow=0x7f0c00a3;
+        public static int submit_area=0x7f0c00b4;
         public static int tabMode=0x7f0c0047;
         public static int tag_transition_group=0x7f0c0019;
         public static int terrain=0x7f0c003f;
         public static int test=0x7f0c0026;
         public static int text=0x7f0c001a;
         public static int text2=0x7f0c001b;
-        public static int textGrid=0x7f0c0107;
-        public static int textSpacerNoButtons=0x7f0c008f;
-        public static int textSpacerNoTitle=0x7f0c008e;
-        public static int textView1=0x7f0c00bf;
-        public static int textView10=0x7f0c00cf;
-        public static int textView11=0x7f0c00d7;
-        public static int textView12=0x7f0c00df;
-        public static int textView2=0x7f0c00c0;
-        public static int textView3=0x7f0c00c1;
-        public static int textView4=0x7f0c00c2;
-        public static int textView5=0x7f0c00c3;
-        public static int textView6=0x7f0c00c4;
-        public static int textView7=0x7f0c00c5;
-        public static int textView8=0x7f0c00c6;
-        public static int textView9=0x7f0c00c7;
-        public static int textViewDate=0x7f0c00ee;
-        public static int text_input_password_toggle=0x7f0c0100;
+        public static int textGrid=0x7f0c0118;
+        public static int textSpacerNoButtons=0x7f0c0097;
+        public static int textSpacerNoTitle=0x7f0c0096;
+        public static int textView1=0x7f0c00c7;
+        public static int textView10=0x7f0c00d7;
+        public static int textView11=0x7f0c00df;
+        public static int textView12=0x7f0c00e7;
+        public static int textView2=0x7f0c00c8;
+        public static int textView3=0x7f0c00c9;
+        public static int textView4=0x7f0c00ca;
+        public static int textView5=0x7f0c00cb;
+        public static int textView6=0x7f0c00cc;
+        public static int textView7=0x7f0c00cd;
+        public static int textView8=0x7f0c00ce;
+        public static int textView9=0x7f0c00cf;
+        public static int textViewDate=0x7f0c00f6;
+        public static int textViewEndTime=0x7f0c00fd;
+        public static int textViewTime=0x7f0c00f9;
+        public static int text_input_password_toggle=0x7f0c0111;
         public static int textinput_counter=0x7f0c0014;
         public static int textinput_error=0x7f0c0015;
-        public static int time=0x7f0c0126;
+        public static int time=0x7f0c0137;
+        public static int timePicker=0x7f0c00f7;
         public static int title=0x7f0c001c;
-        public static int titleDividerNoCustom=0x7f0c0096;
-        public static int title_template=0x7f0c0094;
-        public static int toolbar=0x7f0c00f0;
+        public static int titleDividerNoCustom=0x7f0c009e;
+        public static int title_template=0x7f0c009c;
+        public static int toolbar=0x7f0c00ff;
         public static int top=0x7f0c0064;
-        public static int topPanel=0x7f0c0093;
-        public static int touch_outside=0x7f0c00f7;
+        public static int topPanel=0x7f0c009b;
+        public static int touch_outside=0x7f0c0108;
         public static int transition_current_scene=0x7f0c000f;
         public static int transition_layout_save=0x7f0c0010;
         public static int transition_position=0x7f0c0011;
         public static int transition_scene_layoutid_cache=0x7f0c0012;
         public static int transition_transform=0x7f0c0013;
-        public static int txtNoOfKids=0x7f0c0140;
+        public static int txtNoOfKids=0x7f0c0151;
         public static int uniform=0x7f0c0054;
         public static int up=0x7f0c0009;
-        public static int uploadImage=0x7f0c0136;
+        public static int uploadImage=0x7f0c0147;
         public static int useLogo=0x7f0c004d;
-        public static int view1=0x7f0c00e9;
-        public static int view2=0x7f0c0143;
+        public static int view1=0x7f0c00f1;
+        public static int view2=0x7f0c0154;
         public static int view_offset_helper=0x7f0c0016;
-        public static int visible=0x7f0c0149;
+        public static int visible=0x7f0c015a;
         public static int wide=0x7f0c0044;
         public static int withText=0x7f0c0062;
         public static int wrap_content=0x7f0c002a;
+        public static int yearView=0x7f0c0080;
     }
     public static final class integer {
         public static int abc_config_activityDefaultDur=0x7f0a0001;
@@ -3846,55 +4010,56 @@ containing a value of this type.
         public static int abc_select_dialog_material=0x7f040019;
         public static int babysitterreg=0x7f04001a;
         public static int bookappointment=0x7f04001b;
-        public static int dashboard=0x7f04001c;
-        public static int design_bottom_navigation_item=0x7f04001d;
-        public static int design_bottom_sheet_dialog=0x7f04001e;
-        public static int design_layout_snackbar=0x7f04001f;
-        public static int design_layout_snackbar_include=0x7f040020;
-        public static int design_layout_tab_icon=0x7f040021;
-        public static int design_layout_tab_text=0x7f040022;
-        public static int design_menu_item_action_area=0x7f040023;
-        public static int design_navigation_item=0x7f040024;
-        public static int design_navigation_item_header=0x7f040025;
-        public static int design_navigation_item_separator=0x7f040026;
-        public static int design_navigation_item_subheader=0x7f040027;
-        public static int design_navigation_menu=0x7f040028;
-        public static int design_navigation_menu_item=0x7f040029;
-        public static int design_text_input_password_icon=0x7f04002a;
-        public static int forgetpassword=0x7f04002b;
-        public static int home=0x7f04002c;
-        public static int list_item=0x7f04002d;
-        public static int main=0x7f04002e;
-        public static int message_list=0x7f04002f;
-        public static int messages_main=0x7f040030;
-        public static int myfavourites=0x7f040031;
-        public static int notification_action=0x7f040032;
-        public static int notification_action_tombstone=0x7f040033;
-        public static int notification_media_action=0x7f040034;
-        public static int notification_media_cancel_action=0x7f040035;
-        public static int notification_template_big_media=0x7f040036;
-        public static int notification_template_big_media_custom=0x7f040037;
-        public static int notification_template_big_media_narrow=0x7f040038;
-        public static int notification_template_big_media_narrow_custom=0x7f040039;
-        public static int notification_template_custom_big=0x7f04003a;
-        public static int notification_template_icon_group=0x7f04003b;
-        public static int notification_template_lines_media=0x7f04003c;
-        public static int notification_template_media=0x7f04003d;
-        public static int notification_template_media_custom=0x7f04003e;
-        public static int notification_template_part_chronometer=0x7f04003f;
-        public static int notification_template_part_time=0x7f040040;
-        public static int payment_form=0x7f040041;
-        public static int profilepage=0x7f040042;
-        public static int schedule_view=0x7f040043;
-        public static int select_dialog_item_material=0x7f040044;
-        public static int select_dialog_multichoice_material=0x7f040045;
-        public static int select_dialog_singlechoice_material=0x7f040046;
-        public static int signup=0x7f040047;
-        public static int support_simple_spinner_dropdown_item=0x7f040048;
-        public static int toolbar=0x7f040049;
-        public static int tooltip=0x7f04004a;
-        public static int user_view=0x7f04004b;
-        public static int wallet_test_layout=0x7f04004c;
+        public static int calendar=0x7f04001c;
+        public static int dashboard=0x7f04001d;
+        public static int design_bottom_navigation_item=0x7f04001e;
+        public static int design_bottom_sheet_dialog=0x7f04001f;
+        public static int design_layout_snackbar=0x7f040020;
+        public static int design_layout_snackbar_include=0x7f040021;
+        public static int design_layout_tab_icon=0x7f040022;
+        public static int design_layout_tab_text=0x7f040023;
+        public static int design_menu_item_action_area=0x7f040024;
+        public static int design_navigation_item=0x7f040025;
+        public static int design_navigation_item_header=0x7f040026;
+        public static int design_navigation_item_separator=0x7f040027;
+        public static int design_navigation_item_subheader=0x7f040028;
+        public static int design_navigation_menu=0x7f040029;
+        public static int design_navigation_menu_item=0x7f04002a;
+        public static int design_text_input_password_icon=0x7f04002b;
+        public static int forgetpassword=0x7f04002c;
+        public static int home=0x7f04002d;
+        public static int list_item=0x7f04002e;
+        public static int main=0x7f04002f;
+        public static int message_list=0x7f040030;
+        public static int messages_main=0x7f040031;
+        public static int myfavourites=0x7f040032;
+        public static int notification_action=0x7f040033;
+        public static int notification_action_tombstone=0x7f040034;
+        public static int notification_media_action=0x7f040035;
+        public static int notification_media_cancel_action=0x7f040036;
+        public static int notification_template_big_media=0x7f040037;
+        public static int notification_template_big_media_custom=0x7f040038;
+        public static int notification_template_big_media_narrow=0x7f040039;
+        public static int notification_template_big_media_narrow_custom=0x7f04003a;
+        public static int notification_template_custom_big=0x7f04003b;
+        public static int notification_template_icon_group=0x7f04003c;
+        public static int notification_template_lines_media=0x7f04003d;
+        public static int notification_template_media=0x7f04003e;
+        public static int notification_template_media_custom=0x7f04003f;
+        public static int notification_template_part_chronometer=0x7f040040;
+        public static int notification_template_part_time=0x7f040041;
+        public static int payment_form=0x7f040042;
+        public static int profilepage=0x7f040043;
+        public static int schedule_view=0x7f040044;
+        public static int select_dialog_item_material=0x7f040045;
+        public static int select_dialog_multichoice_material=0x7f040046;
+        public static int select_dialog_singlechoice_material=0x7f040047;
+        public static int signup=0x7f040048;
+        public static int support_simple_spinner_dropdown_item=0x7f040049;
+        public static int toolbar=0x7f04004a;
+        public static int tooltip=0x7f04004b;
+        public static int user_view=0x7f04004c;
+        public static int wallet_test_layout=0x7f04004d;
     }
     public static final class menu {
         public static int menu_main=0x7f0f0000;
@@ -3937,8 +4102,8 @@ containing a value of this type.
         public static int abc_shareactionprovider_share_with=0x7f070027;
         public static int abc_shareactionprovider_share_with_application=0x7f070028;
         public static int abc_toolbar_collapse_description=0x7f070029;
-        public static int action_settings=0x7f070041;
-        public static int app_name=0x7f070040;
+        public static int action_settings=0x7f070043;
+        public static int app_name=0x7f070042;
         public static int appbar_scrolling_view_behavior=0x7f070037;
         public static int bottom_sheet_behavior=0x7f070038;
         public static int character_counter_pattern=0x7f070039;
@@ -3972,6 +4137,8 @@ containing a value of this type.
         public static int path_password_eye_mask_visible=0x7f07003d;
         public static int path_password_strike_through=0x7f07003e;
         public static int search_menu_title=0x7f07002a;
+        public static int sfcalendar_inlineviewalldaytext=0x7f070041;
+        public static int sfcalendar_inlineviewnoappointmenttext=0x7f070040;
         public static int status_bar_notification_info_overflow=0x7f07003f;
         public static int wallet_buy_button_place_holder=0x7f070007;
     }
@@ -10529,6 +10696,287 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name android.support.v7.appcompat:voiceIcon
         */
         public static int SearchView_voiceIcon = 12;
+        /** Attributes that can be used with a SfCalendar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SfCalendar_agendaViewHeight android.support.v7.appcompat:agendaViewHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_calendarFirstDayOfWeek android.support.v7.appcompat:calendarFirstDayOfWeek}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_calendarSelectionMode android.support.v7.appcompat:calendarSelectionMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_enableDatesInPast android.support.v7.appcompat:enableDatesInPast}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_inlineViewMode android.support.v7.appcompat:inlineViewMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_maximumEventIndicatorCount android.support.v7.appcompat:maximumEventIndicatorCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_navigateToMonthOnInActiveDatesSelection android.support.v7.appcompat:navigateToMonthOnInActiveDatesSelection}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_navigationArrowThickness android.support.v7.appcompat:navigationArrowThickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_navigationButtonHeight android.support.v7.appcompat:navigationButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_navigationButtonWidth android.support.v7.appcompat:navigationButtonWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_navigationEnable android.support.v7.appcompat:navigationEnable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_showEventsInline android.support.v7.appcompat:showEventsInline}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_showNavigationButtons android.support.v7.appcompat:showNavigationButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_showYearView android.support.v7.appcompat:showYearView}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_toggleDaySelection android.support.v7.appcompat:toggleDaySelection}</code></td><td></td></tr>
+           <tr><td><code>{@link #SfCalendar_viewMode android.support.v7.appcompat:viewMode}</code></td><td></td></tr>
+           </table>
+           @see #SfCalendar_agendaViewHeight
+           @see #SfCalendar_calendarFirstDayOfWeek
+           @see #SfCalendar_calendarSelectionMode
+           @see #SfCalendar_enableDatesInPast
+           @see #SfCalendar_inlineViewMode
+           @see #SfCalendar_maximumEventIndicatorCount
+           @see #SfCalendar_navigateToMonthOnInActiveDatesSelection
+           @see #SfCalendar_navigationArrowThickness
+           @see #SfCalendar_navigationButtonHeight
+           @see #SfCalendar_navigationButtonWidth
+           @see #SfCalendar_navigationEnable
+           @see #SfCalendar_showEventsInline
+           @see #SfCalendar_showNavigationButtons
+           @see #SfCalendar_showYearView
+           @see #SfCalendar_toggleDaySelection
+           @see #SfCalendar_viewMode
+         */
+        public static final int[] SfCalendar = {
+            0x7f010188, 0x7f010189, 0x7f01018a, 0x7f01018b,
+            0x7f01018c, 0x7f01018d, 0x7f01018e, 0x7f01018f,
+            0x7f010190, 0x7f010191, 0x7f010192, 0x7f010193,
+            0x7f010194, 0x7f010195, 0x7f010196, 0x7f010197
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#agendaViewHeight}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:agendaViewHeight
+        */
+        public static int SfCalendar_agendaViewHeight = 4;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#calendarFirstDayOfWeek}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:calendarFirstDayOfWeek
+        */
+        public static int SfCalendar_calendarFirstDayOfWeek = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#calendarSelectionMode}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>singleSelection</code></td><td>0</td><td></td></tr>
+<tr><td><code>multiSelection</code></td><td>1</td><td></td></tr>
+<tr><td><code>rangeSelection</code></td><td>2</td><td></td></tr>
+<tr><td><code>multiRangeSelection</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name android.support.v7.appcompat:calendarSelectionMode
+        */
+        public static int SfCalendar_calendarSelectionMode = 2;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#enableDatesInPast}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:enableDatesInPast
+        */
+        public static int SfCalendar_enableDatesInPast = 15;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#inlineViewMode}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>inline</code></td><td>0</td><td></td></tr>
+<tr><td><code>agenda</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name android.support.v7.appcompat:inlineViewMode
+        */
+        public static int SfCalendar_inlineViewMode = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#maximumEventIndicatorCount}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:maximumEventIndicatorCount
+        */
+        public static int SfCalendar_maximumEventIndicatorCount = 11;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#navigateToMonthOnInActiveDatesSelection}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:navigateToMonthOnInActiveDatesSelection
+        */
+        public static int SfCalendar_navigateToMonthOnInActiveDatesSelection = 8;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#navigationArrowThickness}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:navigationArrowThickness
+        */
+        public static int SfCalendar_navigationArrowThickness = 14;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#navigationButtonHeight}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:navigationButtonHeight
+        */
+        public static int SfCalendar_navigationButtonHeight = 12;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#navigationButtonWidth}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:navigationButtonWidth
+        */
+        public static int SfCalendar_navigationButtonWidth = 13;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#navigationEnable}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:navigationEnable
+        */
+        public static int SfCalendar_navigationEnable = 6;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#showEventsInline}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:showEventsInline
+        */
+        public static int SfCalendar_showEventsInline = 5;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#showNavigationButtons}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:showNavigationButtons
+        */
+        public static int SfCalendar_showNavigationButtons = 7;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#showYearView}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:showYearView
+        */
+        public static int SfCalendar_showYearView = 10;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#toggleDaySelection}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.v7.appcompat:toggleDaySelection
+        */
+        public static int SfCalendar_toggleDaySelection = 9;
+        /**
+          <p>This symbol is the offset where the {@link android.support.v7.appcompat.R.attr#viewMode}
+          attribute's value can be found in the {@link #SfCalendar} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>monthView</code></td><td>0</td><td></td></tr>
+<tr><td><code>yearView</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name android.support.v7.appcompat:viewMode
+        */
+        public static int SfCalendar_viewMode = 0;
         /** Attributes that can be used with a SignInButton.
            <p>Includes the following attributes:</p>
            <table>

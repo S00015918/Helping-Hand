@@ -3,6 +3,7 @@ Firebase.Xamarin
 JWT
 Newtonsoft.Json
 Stripe.net
+Syncfusion.SfCalendar.Android
 System.Collections.Immutable
 System.Reactive.Core
 System.Reactive.Interfaces
@@ -36,4 +37,3 @@ Xamarin.GooglePlayServices.Identity
 Xamarin.GooglePlayServices.Maps
 Xamarin.GooglePlayServices.Tasks
 Xamarin.GooglePlayServices.Wallet
-Syncfusion.SfCalendar.Android
