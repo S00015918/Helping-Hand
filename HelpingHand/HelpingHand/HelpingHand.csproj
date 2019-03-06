@@ -86,16 +86,16 @@
     <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppointmentListAdapter.cs" />
-    <Compile Include="CreateAppointment.cs" />
-    <Compile Include="DashBoard.cs" />
-    <Compile Include="ForgetPassword.cs" />
-    <Compile Include="ListViewAdapter.cs" />
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="MakePayment.cs" />
-    <Compile Include="MapWithMarkersActivity.cs" />
-    <Compile Include="MessageActivity.cs" />
-    <Compile Include="MessageAdapter.cs" />
+    <Compile Include="Adapter\AppointmentListAdapter.cs" />
+    <Compile Include="Adapter\CreateAppointment.cs" />
+    <Compile Include="Activity\DashBoard.cs" />
+    <Compile Include="Activity\ForgetPassword.cs" />
+    <Compile Include="Adapter\ListViewAdapter.cs" />
+    <Compile Include="Activity\MainActivity.cs" />
+    <Compile Include="Activity\MakePayment.cs" />
+    <Compile Include="Activity\MapWithMarkersActivity.cs" />
+    <Compile Include="Activity\MessageActivity.cs" />
+    <Compile Include="Adapter\MessageAdapter.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\CreditCard.cs" />
@@ -105,17 +105,17 @@
     <Compile Include="Model\Parent.cs" />
     <Compile Include="Model\Rating.cs" />
     <Compile Include="Model\StripeServices.cs" />
-    <Compile Include="ParentViewAdapter.cs" />
+    <Compile Include="Adapter\ParentViewAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.cs" />
-    <Compile Include="SignUpBabysitter.cs" />
+    <Compile Include="Activity\SignUp.cs" />
+    <Compile Include="Activity\SignUpBabysitter.cs" />
     <Compile Include="Model\StripeCreditCardOptions.cs" />
     <Compile Include="Model\StripeTokenCreateOptions.cs" />
-    <Compile Include="userFavourites.cs" />
-    <Compile Include="userProfile.cs" />
-    <Compile Include="userSchedule.cs" />
-    <Compile Include="viewUser.cs" />
+    <Compile Include="Activity\userFavourites.cs" />
+    <Compile Include="Activity\userProfile.cs" />
+    <Compile Include="Activity\userSchedule.cs" />
+    <Compile Include="Activity\viewUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <GoogleServicesJson Include="google-services.json" />
@@ -159,6 +159,9 @@
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
       <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Auth">
       <Version>60.1142.1</Version>

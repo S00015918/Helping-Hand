@@ -14,7 +14,6 @@
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\25\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\26\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\27\jl\AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj\\Debug\MonoAndroid81\lp\28\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\29\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\30\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\31\jl\AndroidManifest.xml</ManifestDocument>
@@ -25,6 +24,8 @@
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\36\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\37\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\\Debug\MonoAndroid81\lp\38\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Debug\MonoAndroid81\lp\39\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Debug\MonoAndroid81\lp\40\jl\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />
   <Jars>
@@ -43,8 +44,7 @@
     <Jar>obj\\Debug\MonoAndroid81\lp\24\jl\bin\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\25\jl\bin\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\26\jl\bin\classes.jar</Jar>
-    <Jar>obj\\Debug\MonoAndroid81\lp\27\jl\classes.jar</Jar>
-    <Jar>obj\\Debug\MonoAndroid81\lp\28\jl\classes.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid81\lp\27\jl\bin\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\29\jl\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\30\jl\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\31\jl\classes.jar</Jar>
@@ -55,5 +55,7 @@
     <Jar>obj\\Debug\MonoAndroid81\lp\36\jl\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\37\jl\classes.jar</Jar>
     <Jar>obj\\Debug\MonoAndroid81\lp\38\jl\classes.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid81\lp\39\jl\classes.jar</Jar>
+    <Jar>obj\\Debug\MonoAndroid81\lp\40\jl\classes.jar</Jar>
   </Jars>
 </Paths>
