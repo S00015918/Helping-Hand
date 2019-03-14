@@ -22,7 +22,7 @@ namespace HelpingHand
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
         FirebaseAuth auth;
-        Array userAvailabilty;
+
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -62,8 +62,11 @@ namespace HelpingHand
                 userCity.Text = userSitter.city;
                 userPhone.Text = userSitter.phone;
                 userEircode.Text = userSitter.eircode;
-                userAvailabilty = userSitter.availability;
+                //userAvailabilty = userSitter.availability;
                 //userImage.ImageMatrix = user.ImageUrl;
+
+                btnCreateAppointment.Visibility = ViewStates.Invisible;
+
             }
             else
             {
@@ -103,7 +106,7 @@ namespace HelpingHand
             userCity.Text = userSitter.city;
             userPhone.Text = userSitter.phone;
             userEircode.Text = userSitter.eircode;
-            userAvailabilty = userSitter.availability;
+            //userAvailabilty = userSitter.availability;
 
             var userJson = JsonConvert.SerializeObject(userSitter);
 

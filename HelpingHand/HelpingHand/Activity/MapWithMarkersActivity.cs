@@ -63,7 +63,10 @@ namespace HelpingHand
             string _locations = this.Intent.GetStringExtra("KEY");
 
             var getLocation = _locations.Split(',');
-            string address = getLocation[4];
+            string postcode = getLocation[5];
+            string city = getLocation[4];
+            string street = getLocation[3];
+            string address = street + city + postcode;
             //Appointment userAddress = JsonConvert.DeserializeObject<Appointment>(_locations);
             //var address = userAddress.Address + userAddress.City + userAddress.Eircode;
 

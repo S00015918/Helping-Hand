@@ -87,15 +87,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapter\AppointmentListAdapter.cs" />
-    <Compile Include="Adapter\CreateAppointment.cs" />
+    <Compile Include="Activity\CreateAppointment.cs" />
     <Compile Include="Activity\DashBoard.cs" />
     <Compile Include="Activity\ForgetPassword.cs" />
+    <Compile Include="Adapter\CustomGridViewAdapter.cs" />
     <Compile Include="Adapter\ListViewAdapter.cs" />
     <Compile Include="Activity\MainActivity.cs" />
     <Compile Include="Activity\MakePayment.cs" />
     <Compile Include="Activity\MapWithMarkersActivity.cs" />
     <Compile Include="Activity\MessageActivity.cs" />
     <Compile Include="Adapter\MessageAdapter.cs" />
+    <Compile Include="HomeActivity.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\CreditCard.cs" />
@@ -221,9 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mail.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\favourite.png" />
@@ -471,6 +470,30 @@
     <AndroidResource Include="Resources\layout\map_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\messages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\gridview_layout.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

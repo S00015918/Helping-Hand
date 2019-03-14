@@ -1,225 +1,432 @@
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\HelpingHand.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\HelpingHand.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Project.HelpingHand.apk
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Project.HelpingHand-Signed.apk
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\crypto.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Firebase.Xamarin.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\JWT.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Syncfusion.SfCalendar.Android.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Core.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Interfaces.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Linq.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.PlatformServices.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csprojAssemblyReference.cache
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Identity.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Wallet.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Storage.Common.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Common.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Storage.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Database.Connection.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Database.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Auth.dll.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\proguard\dc663e480.txt
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\dc663e48.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\0757626b.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\2f4d086a.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\ea5c07c4.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\32fc87cc.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\eed31217.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\fb4df8d5.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\1f4fd9cc.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\67b1d0a9.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\e5bf1881.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\c756521f.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\00d975c9.proguard.stamp
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\googsvcsjson\values\goog_svcs_json.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res.flag
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csproj.CoreCompileInputs.cache
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csproj.CopyComplete
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\bin\Project.HelpingHand.apk
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\colors.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\ic_launcher_background.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\strings.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\styles.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\ic_launcher.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\ic_launcher_round.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher_foreground.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher_round.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher_foreground.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher_round.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher_foreground.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher_round.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher_foreground.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher_round.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher_foreground.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher_round.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\forgetpassword.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\main.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\signup.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\dashboard.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\toolbar.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\list_item.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\babysitterreg.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\member.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_main.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\message.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\mail.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\favourite.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\notification.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\messages_main.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\send.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\message_list.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\profilepage.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\grad.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_launcher_background.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_settings.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_user.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle_border.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\save_icon.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\home_icon.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_profile.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\upload_icon.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_arrow_back.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_chevron_left.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_key.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_lock.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_person.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_right_arrow.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\login_bottom.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\login_top.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\main_bg.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_arrow_back.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_chevron_left.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_key.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_lock.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_person.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_right_arrow.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\login_bottom.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\login_top.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\main_bg.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_arrow_back.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_chevron_left.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_key.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_lock.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_person.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_right_arrow.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\login_bottom.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\login_top.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\main_bg.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_arrow_back.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_chevron_left.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_key.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_lock.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_person.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_right_arrow.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\login_bottom.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\login_top.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\main_bg.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_arrow_back.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_chevron_left.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_key.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_lock.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_person.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_right_arrow.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\login_bottom.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\login_top.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\main_bg.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_messages.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\user_view.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user_icon.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_viewuser.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\myfavourites.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\schedule_view.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\calendar.png
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\bookappointment.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\home.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\payment_form.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\calendar.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\map_view.xml
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.cs.flag
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.txt
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\uploadflags.txt
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Microsoft.CSharp.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Mono.Android.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Mono.Security.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\mscorlib.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Newtonsoft.Json.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Stripe.net.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.ComponentModel.Composition.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Core.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Data.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.IO.Compression.FileSystem.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.IO.Compression.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Net.Http.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Numerics.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Runtime.Serialization.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.ServiceModel.Internals.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Transactions.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Web.Services.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Xml.Linq.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Xml.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\System.Numerics.Vectors.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Mono.Android.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\mscorlib.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Newtonsoft.Json.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Stripe.net.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Core.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Numerics.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Numerics.Vectors.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Xml.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.ComponentModel.Composition.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Net.Http.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Runtime.Serialization.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.ServiceModel.Internals.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Data.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Transactions.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.FileSystem.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Web.Services.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Xml.Linq.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Microsoft.CSharp.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\bin\Debug\Xamarin.Essentials.dll.mdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Essentials.dll.mdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\HelpingHand.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Microsoft.CSharp.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Mono.Android.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Mono.Security.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\mscorlib.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Stripe.net.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ComponentModel.Composition.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Core.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Data.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.FileSystem.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Numerics.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Numerics.Vectors.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Runtime.Serialization.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Transactions.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
-C:\Users\Ana\Source\Repos\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\HelpingHand.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\HelpingHand.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Project.HelpingHand.apk
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Project.HelpingHand-Signed.apk
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\crypto.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Firebase.Xamarin.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\JWT.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Core.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csprojAssemblyReference.cache
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Identity.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Wallet.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Storage.Common.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Common.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Storage.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Database.Connection.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Database.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Auth.dll.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\proguard\dc663e480.txt
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\dc663e48.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\0757626b.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\2f4d086a.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\ea5c07c4.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\32fc87cc.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\eed31217.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\fb4df8d5.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\1f4fd9cc.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\67b1d0a9.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\e5bf1881.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\c756521f.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\00d975c9.proguard.stamp
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\googsvcsjson\values\goog_svcs_json.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res.flag
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csproj.CoreCompileInputs.cache
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csproj.CopyComplete
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\bin\Project.HelpingHand.apk
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\colors.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\ic_launcher_background.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\strings.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\styles.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\ic_launcher.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\ic_launcher_round.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\forgetpassword.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\main.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\signup.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\dashboard.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\toolbar.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\list_item.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\babysitterreg.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\member.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_main.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\message.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\mail.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\favourite.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\notification.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\messages_main.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\send.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\message_list.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\profilepage.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\grad.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_launcher_background.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_settings.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_user.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle_border.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\save_icon.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\home_icon.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_profile.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\upload_icon.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_key.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_lock.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_person.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\login_bottom.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\login_top.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\main_bg.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_key.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_lock.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_person.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\login_bottom.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\login_top.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\main_bg.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_key.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_lock.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_person.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\login_bottom.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\login_top.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\main_bg.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_key.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_lock.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_person.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\login_bottom.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\login_top.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\main_bg.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_key.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_lock.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_person.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\login_bottom.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\login_top.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\main_bg.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_messages.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\user_view.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user_icon.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_viewuser.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\myfavourites.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\schedule_view.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\calendar.png
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\bookappointment.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\home.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\payment_form.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\calendar.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\map_view.xml
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.cs.flag
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.txt
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\uploadflags.txt
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Microsoft.CSharp.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Mono.Android.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Mono.Security.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\mscorlib.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Stripe.net.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.ComponentModel.Composition.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Core.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Data.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.IO.Compression.FileSystem.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.IO.Compression.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Net.Http.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Numerics.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Numerics.Vectors.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Runtime.Serialization.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.ServiceModel.Internals.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Transactions.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Web.Services.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Xml.Linq.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\System.Xml.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Syncfusion.SfCalendar.Android.dll
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\bin\Debug\Xamarin.Essentials.dll.mdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Mono.Android.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\mscorlib.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Newtonsoft.Json.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Stripe.net.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Core.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Numerics.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Numerics.Vectors.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Xml.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.ComponentModel.Composition.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Net.Http.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Runtime.Serialization.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.ServiceModel.Internals.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Data.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Transactions.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.FileSystem.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Web.Services.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Xml.Linq.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Microsoft.CSharp.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
+C:\Users\Ana\Documents\Jimmy Folder\Year 4\Project\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\HelpingHand.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\HelpingHand.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Project.HelpingHand.apk
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Project.HelpingHand-Signed.apk
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\crypto.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Firebase.Xamarin.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\JWT.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Syncfusion.SfCalendar.Android.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Core.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csprojAssemblyReference.cache
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Identity.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Wallet.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Storage.Common.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Common.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Storage.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Database.Connection.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Database.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.Firebase.Auth.dll.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\proguard\dc663e480.txt
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\dc663e48.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\0757626b.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\2f4d086a.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\ea5c07c4.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\32fc87cc.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\eed31217.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\fb4df8d5.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\1f4fd9cc.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\67b1d0a9.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\e5bf1881.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\c756521f.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\00d975c9.proguard.stamp
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\googsvcsjson\values\goog_svcs_json.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res.flag
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csproj.CoreCompileInputs.cache
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csproj.CopyComplete
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\bin\Project.HelpingHand.apk
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\colors.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\ic_launcher_background.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\strings.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\values\styles.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\ic_launcher.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-anydpi-v26\ic_launcher_round.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher_foreground.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\ic_launcher_round.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\forgetpassword.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\main.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\signup.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\dashboard.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\toolbar.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\list_item.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\babysitterreg.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\member.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_main.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\message.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\favourite.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\notification.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\messages_main.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\send.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\message_list.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\profilepage.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\grad.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_launcher_background.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_settings.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\ic_user.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\circle_border.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\save_icon.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\home_icon.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_profile.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\upload_icon.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_key.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_lock.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_person.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\login_bottom.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\login_top.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\main_bg.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_key.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_lock.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_person.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\login_bottom.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\login_top.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\main_bg.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_key.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_lock.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_person.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\login_bottom.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\login_top.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-hdpi\main_bg.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_key.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_lock.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_person.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\login_bottom.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\login_top.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-mdpi\main_bg.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_arrow_back.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_chevron_left.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_key.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_lock.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_person.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\ic_right_arrow.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\login_bottom.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\login_top.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable-xhdpi\main_bg.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_messages.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\user_view.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\user_icon.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\menu\menu_viewuser.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\myfavourites.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\schedule_view.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\calendar.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\bookappointment.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\home.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\payment_form.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\calendar.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\map_view.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\logout.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\map.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\messages.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\star.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\dashboard.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\info.png
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.cs.flag
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.txt
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\uploadflags.txt
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Microsoft.CSharp.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Mono.Android.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Mono.Security.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\mscorlib.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Stripe.net.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.ComponentModel.Composition.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Core.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Data.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.IO.Compression.FileSystem.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.IO.Compression.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Net.Http.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Numerics.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Numerics.Vectors.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Runtime.Serialization.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.ServiceModel.Internals.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Transactions.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Web.Services.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Xml.Linq.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\System.Xml.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\bin\Debug\Xamarin.Essentials.dll.mdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Xamarin.Essentials.dll.mdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\HelpingHand.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Microsoft.CSharp.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Mono.Android.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Mono.Security.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\mscorlib.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\Stripe.net.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ComponentModel.Composition.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Core.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Data.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.FileSystem.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.IO.Compression.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Net.Http.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Numerics.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Numerics.Vectors.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Runtime.Serialization.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.ServiceModel.Internals.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Transactions.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Microsoft.CSharp.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Mono.Android.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\mscorlib.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Newtonsoft.Json.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Stripe.net.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.ComponentModel.Composition.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Core.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Data.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.FileSystem.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.IO.Compression.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Net.Http.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Numerics.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Numerics.Vectors.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Runtime.Serialization.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.ServiceModel.Internals.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Transactions.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Web.Services.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Xml.Linq.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\System.Xml.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\gridview_layout.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\activity_main.xml
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
+C:\Users\Ana\Documents\Milena Folder\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb

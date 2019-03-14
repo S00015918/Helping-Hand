@@ -549,6 +549,20 @@ namespace HelpingHand
 
         private async void CreateUser()
         {
+            string[] _days = values;
+            StringBuilder strTime = new StringBuilder();
+            foreach (var i in _days)
+            {
+                string s = i;
+                if (s != null)
+                {
+
+                    string availableDays = s + ", ";
+                    strTime.Append(availableDays);
+                }
+            }
+            string availableTime = strTime.ToString();
+
             CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
 
             BabySitter babysitter = new BabySitter();
@@ -561,7 +575,7 @@ namespace HelpingHand
             babysitter.city = input_city.Text;
             babysitter.eircode = input_eircode.Text;
             babysitter.gardaVetted = vetted.Checked;
-            babysitter.availability = values;
+            babysitter.availability = availableTime;
 
             var firebase = new FirebaseClient(FirebaseURL);
             //Add Item

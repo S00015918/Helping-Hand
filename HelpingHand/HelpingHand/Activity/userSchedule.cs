@@ -103,7 +103,7 @@ namespace HelpingHand
                     int endHour = end[0];
                     int endMinute = end[1];
 
-                    _event.Subject = appointment.Babysitter + ", " + appointment.startTime + ", " + appointment.Address;
+                    _event.Subject = appointment.startTime + " - " + appointment.endTime + ", " + appointment.Address + ", " + appointment.City + ", " + appointment.Eircode + ", Babysitters Name: " + appointment.Babysitter;
                     _event.Color = Android.Graphics.Color.LightBlue;
 
                     //starting date of event
@@ -138,7 +138,7 @@ namespace HelpingHand
                     int endHour = end[0];
                     int endMinute = end[1];
 
-                    _event.Subject = appointment.startTime + ", " + appointment.Address + ", " + appointment.City + ", " + appointment.Eircode + ", " + appointment.userEmail;
+                    _event.Subject = appointment.startTime + " - " + appointment.endTime + ", " + appointment.Address + ", " + appointment.City + ", " + appointment.Eircode + ", " + appointment.userEmail;
                     _event.Color = Android.Graphics.Color.LightBlue;
 
                     //starting date of event
@@ -163,7 +163,7 @@ namespace HelpingHand
 
             calendar.AddDatesInPast();
 
-            //sfCalendar.InlineItemLoaded += Calendar_InlineItemLoaded;
+            //calendar.InlineItemLoaded += Calendar_InlineItemLoaded;
             calendar.InlineItemTapped += Calendar_InlineItemTapped;
         }
 
@@ -184,36 +184,11 @@ namespace HelpingHand
         {
             var appointment = e.CalendarInlineEvent;
             Button button = new Button(this);
-            button.Text = "Appointment : " + appointment.Subject;
-            button.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+            button.Text = "Appointment : " + appointment.StartTime + " - " + appointment.EndTime + "&#10; - "
+                + appointment.Subject;
+            //button.SetBackgroundColor(Android.Graphics.Color.LightBlue);
             //button.SetTextColor(Android.Graphics.Color.LightGray);
-            //button.Click += showMap();
             e.View = button;
-        }
-
-        public async void showMap()
-        {
-            //var firebase = new FirebaseClient(FirebaseURL);
-            //var appointments = await firebase
-            //        .Child("appointment")
-            //        .OnceAsync<Parent>();
-            //list_appointments.Clear();
-            //foreach (var item in appointments)
-            //{
-            //    Appointment app = new Appointment();
-            //    app.Address = item.Object.address;
-            //    app.City = item.Object.city;
-            //    app.Eircode = item.Object.eircode;
-            //    list_appointments.Add(app);
-            //}
-
-            //var userJson = JsonConvert.SerializeObject(list_appointments);
-
-            //var appointment = new Intent(this, typeof(MapWithMarkersActivity));
-            //appointment.PutExtra("KEY", Convert.ToString(userJson));
-            //StartActivity(appointment);
-
-            //StartActivity(new Android.Content.Intent(this, typeof(MapWithMarkersActivity)));
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
