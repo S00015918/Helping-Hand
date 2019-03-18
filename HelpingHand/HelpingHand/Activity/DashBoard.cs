@@ -197,33 +197,19 @@ namespace XamarinFirebaseAuth
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
             return base.OnCreateOptionsMenu(menu);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             int id = item.ItemId;
-            if (id == Resource.Id.menu_message)
+            if (id == Resource.Id.menu_home)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(MessageActivity)));
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
                 Finish();
             }
-            else if (id == Resource.Id.menu_calendar) //calendar
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(userSchedule)));
-                Finish();
-            }
-            else if (id == Resource.Id.menu_star) //favourites
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(userFavourites)));
-                Finish();
-            }
-            else if (id == Resource.Id.menu_user) //user profile
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(userProfile)));
-                Finish();
-            }
+
             return base.OnOptionsItemSelected(item);
         }
 

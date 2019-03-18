@@ -98,6 +98,7 @@
     <Compile Include="Activity\MessageActivity.cs" />
     <Compile Include="Adapter\MessageAdapter.cs" />
     <Compile Include="HomeActivity.cs" />
+    <Compile Include="MapActivity.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\CreditCard.cs" />
@@ -223,9 +224,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\favourite.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\notification.png" />
@@ -481,9 +479,6 @@
     <AndroidResource Include="Resources\drawable\messages.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\star.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\dashboard.png" />
   </ItemGroup>
   <ItemGroup>
@@ -494,6 +489,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\faviourtes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

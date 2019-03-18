@@ -1095,11 +1095,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ana\\Source\\Repos\\Project401\\Project401\\HelpingHand\\HelpingHand\\HelpingHand.csproj",
+      "projectUniqueName": "C:\\Users\\Ana\\Source\\Repos\\Helping-Hand\\Project401\\HelpingHand\\HelpingHand\\HelpingHand.csproj",
       "projectName": "HelpingHand",
-      "projectPath": "C:\\Users\\Ana\\Source\\Repos\\Project401\\Project401\\HelpingHand\\HelpingHand\\HelpingHand.csproj",
+      "projectPath": "C:\\Users\\Ana\\Source\\Repos\\Helping-Hand\\Project401\\HelpingHand\\HelpingHand\\HelpingHand.csproj",
       "packagesPath": "C:\\Users\\Ana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ana\\Source\\Repos\\Project401\\Project401\\HelpingHand\\HelpingHand\\obj\\",
+      "outputPath": "C:\\Users\\Ana\\Source\\Repos\\Helping-Hand\\Project401\\HelpingHand\\HelpingHand\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

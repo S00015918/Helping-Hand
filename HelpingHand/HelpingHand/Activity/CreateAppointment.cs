@@ -37,6 +37,7 @@ namespace HelpingHand
         private int minutes = 0;
         public string strStart, strEnd;
         public int selection;
+        string[] values = new string[28];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,6 +47,8 @@ namespace HelpingHand
             SetContentView(Resource.Layout.bookAppointment);
             activity_book_appointment = FindViewById<RelativeLayout>(Resource.Id.activity_book_appointment);
             datePicker = FindViewById<DatePicker>(Resource.Id.datePicker);
+            datePicker.MinDate= Java.Lang.JavaSystem.CurrentTimeMillis();
+
             btnCreateApointment = FindViewById<FloatingActionButton>(Resource.Id.btnCreateAppointment);
 
             var btnChangeDate = FindViewById<Button>(Resource.Id.btnChange_date);
@@ -171,6 +174,7 @@ namespace HelpingHand
             int _month = month;
             int year = datePicker.Year;
             selectedDate = datePicker.DayOfMonth + "/" + month + "/" + datePicker.Year;
+
             return strCurrentDate.ToString();
         }
 
@@ -178,10 +182,41 @@ namespace HelpingHand
         {
             if (v.Id == Resource.Id.btnCreateAppointment)
             {
-                CreateNewAppointment();
-                StartActivity(new Android.Content.Intent(this, typeof(userSchedule)));
-                Finish();
+                getAvailabilty();
             }
+        }
+
+        public void getAvailabilty()
+        {
+            string babysitter = this.Intent.GetStringExtra("KEY");
+            BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+            FirebaseUser user = auth.CurrentUser;
+
+            string availabilty = userAppointment.availability; // compare availabilty to book schedule
+            var days = availabilty.Split(',');
+            if (days == null)
+            {
+                string y = Convert.ToString(days + "");
+            }
+
+            string[] schedule = days;
+            DateTime dateSelected = Convert.ToDateTime(selectedDate);
+            DateTime start = Convert.ToDateTime(selectedStartTime);
+
+            var today = dateSelected.DayOfWeek.ToString().TrimEnd();
+
+            foreach (var item in schedule)
+            {
+                if (item.Contains(today))
+                {
+                    CreateNewAppointment();
+                }
+                else
+                {
+                    //Toast.MakeText(this, "Please change appointment, Babysitter not available for selected date", ToastLength.Long).Show();
+                }
+            }
+
         }
 
         private async void CreateNewAppointment()
@@ -208,9 +243,23 @@ namespace HelpingHand
             appointment.Address = address;
             appointment.Eircode = eircode;
 
-            var firebase = new FirebaseClient(FirebaseURL);
-            ////Add Item
-            var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
+            DateTime validDate = Convert.ToDateTime(selectedDate);
+            DateTime start = Convert.ToDateTime(selectedStartTime);
+            DateTime end = Convert.ToDateTime(selectedEndTime);
+
+            if (end < start)
+            {
+                Toast.MakeText(this, "Please change Appointment end time.", ToastLength.Short).Show();
+            }
+            else
+            {
+                var firebase = new FirebaseClient(FirebaseURL);
+                ////Add Item
+                var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
+                StartActivity(new Android.Content.Intent(this, typeof(userSchedule)));
+                Finish();
+            }
+
         }
     }
 }

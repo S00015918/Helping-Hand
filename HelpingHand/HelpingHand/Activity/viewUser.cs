@@ -65,8 +65,6 @@ namespace HelpingHand
                 //userAvailabilty = userSitter.availability;
                 //userImage.ImageMatrix = user.ImageUrl;
 
-                btnCreateAppointment.Visibility = ViewStates.Invisible;
-
             }
             else
             {
@@ -79,6 +77,8 @@ namespace HelpingHand
                 userCity.Text = userParent.city;
                 userPhone.Text = userParent.phone;
                 userEircode.Text = userParent.eircode;
+
+                btnCreateAppointment.Visibility = ViewStates.Invisible;
             }
 
             RatingBar ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
