@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 
 using Android.App;
 using Android.Content;
 using Android.Gms.Tasks;
+using Android.Graphics;
 using Android.OS;
+using Android.Provider;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using Firebase.Storage;
 using Firebase.Xamarin.Database;
 using HelpingHand.Model;
 using XamarinFirebaseAuth;
@@ -21,20 +25,27 @@ using static Android.Views.View;
 namespace HelpingHand
 {
     [Activity(Label = "SignUp", Theme = "@style/AppTheme")]
-    public class SignUpBabysitter : Activity, IOnClickListener, IOnCompleteListener
+    public class SignUpBabysitter : Activity, IOnClickListener, IOnCompleteListener, IOnProgressListener, IOnSuccessListener, IOnFailureListener
     {
+        FirebaseStorage storage;
+        StorageReference storageRef;
         Button btnMonMorn, btnTueMorn, btnWedMorn, btnThuMorn, btnFriMorn, btnSatMorn, btnSunMorn,
             btnMonAft, btnTueAft, btnWedAft, btnThuAft, btnFriAft, btnSatAft, btnSunAft,
             btnMonEve, btnTueEve, btnWedEve, btnThuEve, btnFriEve, btnSatEve, btnSunEve,
             btnMonNigh, btnTueNigh, btnWedNigh, btnThuNigh, btnFriNigh, btnSatNigh, btnSunNigh;
         int count = 0;
+        private const int PICK_IMAGE_REQUSET = 71;
         FloatingActionButton btnSignup;
         TextView btnLogin;
+        private Button btnUpload, btnChoose;
+        private ImageView imgView;
 
+        private Android.Net.Uri filePath;
         EditText input_name, input_email, input_password, input_age,
             input_phone, input_address, input_city, input_eircode;
         RelativeLayout Babysitter_reg;
 
+        ProgressBar progressBar;
         private List<BabySitter> list_babysitters = new List<BabySitter>();
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
         FirebaseAuth auth;
@@ -49,6 +60,9 @@ namespace HelpingHand
 
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
+            storage = FirebaseStorage.Instance;
+            storageRef = storage.GetReferenceFromUrl("gs://th-year-project-37928.appspot.com");
+            StorageReference userImage = storageRef.Child("user/vetted document/");
 
             //Views
             btnSignup = FindViewById<FloatingActionButton>(Resource.Id.signup_btn_Babysitter);
@@ -78,6 +92,21 @@ namespace HelpingHand
             input_city = FindViewById<EditText>(Resource.Id.signup_city);
 
             Babysitter_reg = FindViewById<RelativeLayout>(Resource.Id.activity_Babysitter_reg);
+            btnChoose = FindViewById<Button>(Resource.Id.btnChoose);
+            btnUpload = FindViewById<Button>(Resource.Id.btnUpload);
+            imgView = FindViewById<ImageView>(Resource.Id.imgView);
+            progressBar = FindViewById<ProgressBar>(Resource.Id.progressbar);
+            progressBar.Visibility = ViewStates.Invisible;
+
+            //Events  
+            btnChoose.Click += delegate
+            {
+                ChooseFile();
+            };
+            btnUpload.Click += delegate
+            {
+                UploadFile();
+            };
 
             btnLogin.SetOnClickListener(this);
             btnSignup.SetOnClickListener(this);
@@ -537,18 +566,37 @@ namespace HelpingHand
             else
             if (v.Id == Resource.Id.signup_btn_Babysitter)
             {
-                CreateUser();
                 SignUpUser(input_email.Text, input_password.Text);
             }
+        }
+        private void UploadFile()
+        {
+            if (filePath != null)
+
+                progressBar.Visibility = ViewStates.Visible;
+            var images = storageRef.Child("Garda Vetted Document/" + Guid.NewGuid().ToString());
+            images.PutFile(filePath)
+                .AddOnProgressListener(this)
+                .AddOnSuccessListener(this)
+                .AddOnFailureListener(this);
+        }
+        private void ChooseFile()
+        {
+            Intent intent = new Intent();
+            intent.SetType("image/*");
+            intent.SetAction(Intent.ActionGetContent);
+            StartActivityForResult(Intent.CreateChooser(intent, "Select Picture"), PICK_IMAGE_REQUSET);
         }
 
         private void SignUpUser(string email, string password)
         {
             auth.CreateUserWithEmailAndPassword(email, password).AddOnCompleteListener(this, this);
+            CreateUser();
         }
 
         private async void CreateUser()
         {
+            var id = auth.CurrentUser.Uid;
             string[] _days = values;
             StringBuilder strTime = new StringBuilder();
             foreach (var i in _days)
@@ -566,7 +614,7 @@ namespace HelpingHand
             CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
 
             BabySitter babysitter = new BabySitter();
-            babysitter.id = string.Empty;
+            babysitter.id = id;
             babysitter.name = input_name.Text;
             babysitter.email = input_email.Text;
             babysitter.age = Convert.ToInt32(input_age.Text);
@@ -592,6 +640,43 @@ namespace HelpingHand
             else
             {
                 Toast.MakeText(this, "Register Failed", ToastLength.Short).Show();
+            }
+        }
+
+        public void OnProgress(Java.Lang.Object snapshot)
+        {
+            var taskSnapShot = (UploadTask.TaskSnapshot)snapshot;
+            double progress = (100.0 * taskSnapShot.BytesTransferred / taskSnapShot.TotalByteCount);
+        }
+        public void OnSuccess(Java.Lang.Object result)
+        {
+            progressBar.Visibility = ViewStates.Invisible;
+            Toast.MakeText(this, "Upload Successful", ToastLength.Short).Show();
+        }
+        public void OnFailure(Java.Lang.Exception e)
+        {
+            progressBar.Visibility = ViewStates.Invisible;
+            Toast.MakeText(this, "" + e.Message, ToastLength.Short).Show();
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            if (requestCode == PICK_IMAGE_REQUSET &&
+                resultCode == Result.Ok &&
+                data != null &&
+                data.Data != null)
+            {
+                filePath = data.Data;
+                try
+                {
+                    Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, filePath);
+                    imgView.SetImageBitmap(bitmap);
+                }
+                catch (IOException ex)
+                {
+                    Console.WriteLine(ex);
+                }
             }
         }
     }

@@ -84,8 +84,6 @@ namespace XamarinFirebaseAuth
             string city, string email, string eircode)
         {
             var firebase = new FirebaseClient(FirebaseURL);
-            var id = auth.CurrentUser.Uid;
-
             var spinner = FindViewById<Spinner>(Resource.Id.spinnerCount);
             spinner.ItemSelected += (s, e) =>
             {

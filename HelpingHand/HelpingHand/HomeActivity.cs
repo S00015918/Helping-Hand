@@ -32,7 +32,7 @@ namespace HelpingHand
 
         int[] imageId = {
             Resource.Drawable.dashboard , Resource.Drawable.messages,
-            Resource.Drawable.user_icon, Resource.Drawable.calendar,
+            Resource.Drawable.user, Resource.Drawable.calendar,
             Resource.Drawable.faviourtes, Resource.Drawable.map,
             Resource.Drawable.info, Resource.Drawable.logout
         };

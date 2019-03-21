@@ -88,7 +88,7 @@ namespace HelpingHand
 
                 int newrating = Convert.ToInt32(ratingbar.Rating.ToString());
 
-                UpdateUser(userSitter.id, newrating);
+                UpdateUser(newrating);
             };
         }
 
@@ -96,7 +96,6 @@ namespace HelpingHand
         void CreateAppointment(object sender, EventArgs e)
         {
             string babysitter = this.Intent.GetStringExtra("KEY");
-
             BabySitter userSitter = JsonConvert.DeserializeObject<BabySitter>(babysitter);
 
             userName.Text = userSitter.name;
@@ -143,12 +142,15 @@ namespace HelpingHand
             return base.OnOptionsItemSelected(item);
         }
 
-        private async void UpdateUser(string uid, int rating)
+        private async void UpdateUser(int rating)
         {
             var firebase = new FirebaseClient(FirebaseURL);
+            string babysitter = this.Intent.GetStringExtra("KEY");
+            BabySitter userSitter = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+            string id = userSitter.id;
 
-            await firebase.Child("babysitter").Child(uid).Child("id").PutAsync(uid);
-            await firebase.Child("babysitter").Child(uid).Child("rating").PutAsync(rating);
+            await firebase.Child("babysitter").Child(id).Child("id").PutAsync(id);
+            await firebase.Child("babysitter").Child(id).Child("rating").PutAsync(rating);
 
             Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
         }

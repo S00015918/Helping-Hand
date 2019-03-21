@@ -16,6 +16,7 @@ using Firebase.Auth;
 using Firebase.Storage;
 using Firebase.Xamarin.Database;
 using Firebase.Xamarin.Database.Query;
+using HelpingHand.Adapter;
 using HelpingHand.Model;
 using XamarinFirebaseAuth;
 
@@ -25,7 +26,7 @@ namespace HelpingHand
     public class userProfile : AppCompatActivity, IOnProgressListener, IOnSuccessListener, IOnFailureListener
     {
         EditText input_new_email, input_new_name,
-            input_new_address, input_new_phone, input_new_city, input_new_eircode;
+            input_new_address, input_new_phone, input_new_city, input_new_eircode, input_new_age;
         ImageView input_image, upload_image;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
@@ -34,9 +35,11 @@ namespace HelpingHand
         FirebaseStorage storage;
         StorageReference storageRef;
         private List<Parent> list_parents = new List<Parent>();
+        private List<BabySitter> list_babysitters = new List<BabySitter>();
 
         private Android.Net.Uri filePath;
         private ParentViewAdapter adapter;
+        private BabysitterViewAdapter sitteradapter;
 
         RelativeLayout activity_userProfile, activity_Rlayout;
         FirebaseAuth auth;
@@ -67,7 +70,8 @@ namespace HelpingHand
             input_new_email = FindViewById<EditText>(Resource.Id.email);
             //input_new_password = FindViewById<EditText>(Resource.Id.signup_password);
             input_new_phone = FindViewById<EditText>(Resource.Id.phone);
-            input_new_address = FindViewById<EditText>(Resource.Id.age);
+            input_new_address = FindViewById<EditText>(Resource.Id.address);
+            input_new_age = FindViewById<EditText>(Resource.Id.age);
             input_new_city = FindViewById<EditText>(Resource.Id.city);
             input_new_eircode = FindViewById<EditText>(Resource.Id.eircode);
             progressBar = FindViewById<ProgressBar>(Resource.Id.progressbar);
@@ -120,23 +124,125 @@ namespace HelpingHand
             }
             adapter = new ParentViewAdapter(this, list_parents);
             adapter.NotifyDataSetChanged();
+
+            var sitters = await firebase
+                .Child("babysitter")
+                .OnceAsync<BabySitter>();
+            list_babysitters.Clear();
+            adapter = null;
+            foreach (var item in sitters)
+            {
+                BabySitter account = new BabySitter();
+                account.id = item.Key;
+                account.name = item.Object.name;
+                account.phone = item.Object.phone;
+                account.city = item.Object.city;
+                account.address = item.Object.address;
+                account.email = item.Object.email;
+                string email = account.email;
+                account.eircode = item.Object.eircode;
+                account.age = item.Object.age;
+                account.ImageUrl = item.Object.ImageUrl;
+
+                if (userLogin == email)
+                {
+                    input_new_email.Text = account.email;
+                    input_new_name.Text = account.name;
+                    input_new_city.Text = account.city;
+                    input_new_phone.Text = account.phone;
+                    input_new_age.Text = account.age.ToString();
+                    input_new_address.Text = account.address;
+                    input_new_eircode.Text = account.eircode;
+                }
+            }
+            sitteradapter = new BabysitterViewAdapter(this, list_babysitters);
+            sitteradapter.NotifyDataSetChanged();
         }
 
         private async void UpdateUser(string uid, string newName, string newPhone, string newAddress, 
-            string newCity, string newEmail, string newEircode)
+            string newCity, string newEmail, string newAge, string newEircode)
         {
+            //string uid = auth.CurrentUser.Uid;
             var firebase = new FirebaseClient(FirebaseURL);
-            var id = auth.CurrentUser.Uid;
-            StorageReference userImage = storageRef.Child("user/profile pic/");
+            string userLogin = auth.CurrentUser.Email;
+            var items = await firebase
+                .Child("parent")
+                //.WithAuth(auth.CurrentUser.Uid)
+                .OnceAsync<Parent>();
+            list_parents.Clear();
+            adapter = null;
+            foreach (var item in items)
+            {
+                Parent account = new Parent();
+                account.id = item.Key;
+                account.name = item.Object.name;
+                account.phone = item.Object.phone;
+                account.city = item.Object.city;
+                account.address = item.Object.address;
+                account.noOfKids = item.Object.noOfKids;
+                account.email = item.Object.email;
+                string email = account.email;
+                account.eircode = item.Object.eircode;
+                account.ImageUrl = item.Object.ImageUrl;
 
-            await firebase.Child("parent").Child(uid).Child("id").PutAsync(id);
-            await firebase.Child("parent").Child(uid).Child("name").PutAsync(newName);
-            await firebase.Child("parent").Child(uid).Child("phone").PutAsync(newPhone);
-            await firebase.Child("parent").Child(uid).Child("address").PutAsync(newAddress);
-            await firebase.Child("parent").Child(uid).Child("city").PutAsync(newCity);
-            //await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
-            await firebase.Child("parent").Child(uid).Child("email").PutAsync(newEmail);
-            await firebase.Child("parent").Child(uid).Child("eircode").PutAsync(newEircode);
+                if (userLogin == email)
+                {
+                    int kidCount = account.noOfKids;
+                    StorageReference userImage = storageRef.Child("user/profile pic/");
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("id").PutAsync(auth.CurrentUser.Uid);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("name").PutAsync(newName);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("phone").PutAsync(newPhone);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("address").PutAsync(newAddress);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("city").PutAsync(newCity);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("noOfKids").PutAsync(kidCount);
+                    //await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("email").PutAsync(newEmail);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(newEircode);
+                }
+            }
+
+            var sitters = await firebase
+                .Child("babysitter")
+                .OnceAsync<BabySitter>();
+            list_babysitters.Clear();
+            adapter = null;
+            foreach (var item in sitters)
+            {
+                BabySitter account = new BabySitter();
+                account.id = item.Key;
+                account.name = item.Object.name;
+                account.age = item.Object.age;
+                account.phone = item.Object.phone;
+                account.city = item.Object.city;
+                account.address = item.Object.address;
+                account.gardaVetted = item.Object.gardaVetted;
+                account.email = item.Object.email;
+                string email = account.email;
+                account.eircode = item.Object.eircode;
+                account.ImageUrl = item.Object.ImageUrl;
+                account.availability = item.Object.availability;
+                account.rating = item.Object.rating;
+
+                if (userLogin == email)
+                {
+                    bool vetted = account.gardaVetted;
+                    string availabilty = account.availability;
+                    int rating = account.rating;
+                    StorageReference userImage = storageRef.Child("user/profile pic/");
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("id").PutAsync(auth.CurrentUser.Uid);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("name").PutAsync(newName);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("phone").PutAsync(newPhone);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("address").PutAsync(newAddress);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("city").PutAsync(newCity);
+                    //await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("email").PutAsync(newEmail);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("age").PutAsync(newAge);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("availability").PutAsync(availabilty);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(newEircode);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("gardaVetted").PutAsync(vetted);
+                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("rating").PutAsync(rating);
+                }
+            }
 
             LoadData();
             Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
@@ -159,7 +265,7 @@ namespace HelpingHand
             else if (id == Resource.Id.menu_save) // Update users details
             {
                 UpdateUser(auth.CurrentUser.Uid, input_new_name.Text, input_new_phone.Text, input_new_address.Text,
-                    input_new_city.Text, input_new_email.Text, input_new_eircode.Text);
+                    input_new_city.Text, input_new_email.Text, input_new_age.Text, input_new_eircode.Text);
             }
 
             return base.OnOptionsItemSelected(item);
@@ -175,10 +281,11 @@ namespace HelpingHand
         private void UploadImage()
         {
             FirebaseUser user = auth.CurrentUser;
+            string userEmail = user.Email;
             if (filePath != null)
 
                 progressBar.Visibility = ViewStates.Visible;
-            var images = storageRef.Child(user.Uid + "/profile pic/" + user.DisplayName);
+            var images = storageRef.Child("Images/" + userEmail + "/profile pic/" + user.DisplayName);
             images.PutFile(filePath)
                 .AddOnProgressListener(this)
                 .AddOnSuccessListener(this)

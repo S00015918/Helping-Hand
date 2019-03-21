@@ -108,20 +108,8 @@ namespace XamarinFirebaseAuth
                 list_parents.Add(account);
             }
 
-            //list_data.ItemClick += (s, e) =>
-            //{
-            //    Parent selectedParent = list_parents[e.Position];
-
-            //    var parentJson = JsonConvert.SerializeObject(selectedParent);
-
-            //    var viewSelectedUser = new Intent(this, typeof(viewUser));
-            //    viewSelectedUser.PutExtra("KEY", parentJson);
-            //    StartActivity(viewSelectedUser);
-            //};
-
             if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
             {
-
                 // You are a parent
 
                 var items = await firebase.Child("babysitter").OnceAsync<object>();

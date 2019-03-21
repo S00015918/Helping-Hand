@@ -90,6 +90,7 @@
     <Compile Include="Activity\CreateAppointment.cs" />
     <Compile Include="Activity\DashBoard.cs" />
     <Compile Include="Activity\ForgetPassword.cs" />
+    <Compile Include="Adapter\BabysitterViewAdapter.cs" />
     <Compile Include="Adapter\CustomGridViewAdapter.cs" />
     <Compile Include="Adapter\ListViewAdapter.cs" />
     <Compile Include="Activity\MainActivity.cs" />

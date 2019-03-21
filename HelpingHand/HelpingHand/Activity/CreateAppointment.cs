@@ -30,14 +30,14 @@ namespace HelpingHand
         DatePicker datePicker;
         FloatingActionButton btnCreateApointment;
         string selectedStartTime, selectedEndTime;
-        string selectedDate;
+        string selectedDate, timeOfDay;
         private const int StartTimeDialog = 1;
         private const int EndTimeDialog = 2;
         private int hour = 7;
         private int minutes = 0;
         public string strStart, strEnd;
         public int selection;
-        string[] values = new string[28];
+        List<Appointment> list_appointments = new List<Appointment>();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -82,6 +82,24 @@ namespace HelpingHand
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             btnCreateApointment.SetOnClickListener(this);
         }
+
+        public async void getAppointments()
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
+            var appointments = await firebase
+                    .Child("appointment")
+                    .OnceAsync<Appointment>();
+
+            foreach (var item in appointments)
+            {
+                Appointment session = new Appointment();
+                session.Date = item.Object.Date;
+                session.startTime = item.Object.startTime;
+                session.endTime = item.Object.endTime;
+                list_appointments.Add(session);
+            }
+        }
+
         protected override Dialog OnCreateDialog(int id)
         {
             switch (id)
@@ -186,12 +204,41 @@ namespace HelpingHand
             }
         }
 
-        public void getAvailabilty()
+        public async void getAvailabilty()
         {
+            DateTime dateSelected = Convert.ToDateTime(selectedDate);
+            DateTime start = Convert.ToDateTime(selectedStartTime);
+            DateTime end = Convert.ToDateTime(selectedEndTime);
+
             string babysitter = this.Intent.GetStringExtra("KEY");
             BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
-            FirebaseUser user = auth.CurrentUser;
 
+            var firebase = new FirebaseClient(FirebaseURL);
+            var appointments = await firebase
+                    .Child("appointment")
+                    .OnceAsync<Appointment>();
+
+            foreach (var item in appointments)
+            {
+                Appointment session = new Appointment();
+                session.Babysitter = item.Object.Babysitter;
+                session.Date = item.Object.Date;
+                session.startTime = item.Object.startTime;
+                session.endTime = item.Object.endTime;
+                list_appointments.Add(session);
+
+                if (session.Babysitter == userAppointment.name)
+                {
+                    if (session.Date == dateSelected)
+                    {
+                        if (Convert.ToDateTime(session.startTime) >= start && Convert.ToDateTime(session.startTime) >= end)
+                        {
+                            // Cannot book appointment because babysitter already has booking
+                            Toast.MakeText(this, "Babysitter Unavailable", ToastLength.Short).Show();
+                        }
+                    }
+                }
+            }
             string availabilty = userAppointment.availability; // compare availabilty to book schedule
             var days = availabilty.Split(',');
             if (days == null)
@@ -200,14 +247,30 @@ namespace HelpingHand
             }
 
             string[] schedule = days;
-            DateTime dateSelected = Convert.ToDateTime(selectedDate);
-            DateTime start = Convert.ToDateTime(selectedStartTime);
+
+            var startHour = start.Hour.ToString();
+            int _hour = int.Parse(startHour);
+
+            if (_hour >= 8 && _hour < 12)
+            {
+                timeOfDay = "Morning";
+            }
+            else if (_hour >= 12 && _hour < 16)
+            { timeOfDay = "Afternoon";  }
+
+            else if (_hour >= 16 && _hour < 20)
+            { timeOfDay = "Afternoon"; }
+
+            else if (_hour >= 20 && _hour < 23)
+            { timeOfDay = "Afternoon"; }
 
             var today = dateSelected.DayOfWeek.ToString().TrimEnd();
+            string todaysTime = today + " " + timeOfDay.ToString();
 
             foreach (var item in schedule)
             {
-                if (item.Contains(today))
+                //if (item.Contains(today))
+                if (item.Contains(todaysTime))
                 {
                     CreateNewAppointment();
                 }
