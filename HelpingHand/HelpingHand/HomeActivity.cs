@@ -26,14 +26,14 @@ namespace HelpingHand
         string[] gridViewString = {
             "Dashboard", "Messages",
             "Profile", "Calendar",
-            "Faviourites", "Map",
+            "Favourites", "Map",
             "About us", "Logout"
         };
 
         int[] imageId = {
             Resource.Drawable.dashboard , Resource.Drawable.messages,
             Resource.Drawable.user, Resource.Drawable.calendar,
-            Resource.Drawable.faviourtes, Resource.Drawable.map,
+            Resource.Drawable.favourites, Resource.Drawable.map,
             Resource.Drawable.info, Resource.Drawable.logout
         };
 

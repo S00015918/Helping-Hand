@@ -35,9 +35,6 @@ namespace XamarinFirebaseAuth
 
         private ListViewAdapter babysitterAdapter;
         private ParentViewAdapter parentAdapter;
-        //Parent selectedParent;
-        //BabySitter selectedBabysitter;
-
         RelativeLayout activity_dashboard;
         FirebaseAuth auth;
 

@@ -92,6 +92,7 @@
     <Compile Include="Activity\ForgetPassword.cs" />
     <Compile Include="Adapter\BabysitterViewAdapter.cs" />
     <Compile Include="Adapter\CustomGridViewAdapter.cs" />
+    <Compile Include="Adapter\FavouriteBabysitterAdapter.cs" />
     <Compile Include="Adapter\ListViewAdapter.cs" />
     <Compile Include="Activity\MainActivity.cs" />
     <Compile Include="Activity\MakePayment.cs" />
@@ -451,11 +452,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Home.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\payment_form.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -492,7 +488,15 @@
     <AndroidResource Include="Resources\layout\activity_main.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\faviourtes.png" />
+    <AndroidResource Include="Resources\layout\list_favourites.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\favourites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\star.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -18,12 +18,17 @@ namespace HelpingHand
     [Activity(Label = "View User Profile", Theme = "@style/AppTheme")]
     public class viewUser : AppCompatActivity
     {
+        Button btnMonMorn, btnTueMorn, btnWedMorn, btnThuMorn, btnFriMorn, btnSatMorn, btnSunMorn,
+            btnMonAft, btnTueAft, btnWedAft, btnThuAft, btnFriAft, btnSatAft, btnSunAft,
+            btnMonEve, btnTueEve, btnWedEve, btnThuEve, btnFriEve, btnSatEve, btnSunEve,
+            btnMonNigh, btnTueNigh, btnWedNigh, btnThuNigh, btnFriNigh, btnSatNigh, btnSunNigh;
         Button btnCreateAppointment;
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
         FirebaseAuth auth;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
+        string[] values = new string[28];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -62,8 +67,23 @@ namespace HelpingHand
                 userCity.Text = userSitter.city;
                 userPhone.Text = userSitter.phone;
                 userEircode.Text = userSitter.eircode;
-                //userAvailabilty = userSitter.availability;
+                string userAvailabilty = userSitter.availability;
                 //userImage.ImageMatrix = user.ImageUrl;
+                string[] availabilty = userAvailabilty.Split(',');
+                foreach (var item in availabilty)
+                {
+                    string dayTime = item;
+                    if (dayTime == "Monday Morning")
+                    {
+                        btnMonMorn = FindViewById<Button>(Resource.Id.btnMonMorn);
+                        btnMonMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime == "Tuesday Morning")
+                    {
+                        btnMonMorn = FindViewById<Button>(Resource.Id.btnMonMorn);
+                        btnMonMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                }
 
             }
             else
