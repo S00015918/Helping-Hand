@@ -45,14 +45,16 @@ namespace HelpingHand
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             inflater = (LayoutInflater)activity.BaseContext.GetSystemService(Context.LayoutInflaterService);
-            View view = inflater.Inflate(Resource.Layout.list_Item, null);
+            View view = inflater.Inflate(Resource.Layout.list_appointments, null);
 
-            var city = view.FindViewById<TextView>(Resource.Id.list_city);
+            var babysitter = view.FindViewById<TextView>(Resource.Id.list_city);
+            //var date = view.FindViewById<TextView>(Resource.Id.list_date);
+            //var start = view.FindViewById<TextView>(Resource.Id.list_start);
+            //var end = view.FindViewById<TextView>(Resource.Id.list_end);
 
             if (lstAppointments.Count > 0)
             {
-                city.Text = lstAppointments[position].City;
-                
+                babysitter.Text = lstAppointments[position].City;                
             }
 
             return view;
@@ -61,10 +63,7 @@ namespace HelpingHand
         //Fill in cound here, currently 0
         public override int Count
         {
-            get
-            {
-                return 0;
-            }
+            get { return lstAppointments.Count; }
         }
 
         internal class AppointmentFilter : Filter

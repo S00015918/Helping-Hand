@@ -27,14 +27,14 @@ namespace HelpingHand
             "Dashboard", "Messages",
             "Profile", "Calendar",
             "Favourites", "Map",
-            "About us", "Logout"
+            "Cancel Appointment", "Logout"
         };
 
         int[] imageId = {
             Resource.Drawable.dashboard , Resource.Drawable.messages,
             Resource.Drawable.user, Resource.Drawable.calendar,
             Resource.Drawable.favourites, Resource.Drawable.map,
-            Resource.Drawable.info, Resource.Drawable.logout
+            Resource.Drawable.cancel, Resource.Drawable.logout
         };
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -83,6 +83,11 @@ namespace HelpingHand
                 else if (clicked == 5)
                 {
                     StartActivity(new Android.Content.Intent(this, typeof(MapActivity)));
+                    Finish();
+                }
+                else if (clicked == 6)
+                {
+                    StartActivity(new Android.Content.Intent(this, typeof(CancelAppointment)));
                     Finish();
                 }
                 else if (clicked == 7)

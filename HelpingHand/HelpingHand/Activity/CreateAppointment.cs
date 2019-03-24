@@ -279,7 +279,6 @@ namespace HelpingHand
                     //Toast.MakeText(this, "Please change appointment, Babysitter not available for selected date", ToastLength.Long).Show();
                 }
             }
-
         }
 
         private async void CreateNewAppointment()

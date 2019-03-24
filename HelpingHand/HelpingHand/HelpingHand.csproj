@@ -99,6 +99,7 @@
     <Compile Include="Activity\MapWithMarkersActivity.cs" />
     <Compile Include="Activity\MessageActivity.cs" />
     <Compile Include="Adapter\MessageAdapter.cs" />
+    <Compile Include="CancelAppointment.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="Model\Appointment.cs" />
@@ -497,6 +498,19 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\cancel_appointment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\list_appointments.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

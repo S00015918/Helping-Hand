@@ -28,7 +28,6 @@ namespace HelpingHand
         FirebaseAuth auth;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
-        string[] values = new string[28];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -73,15 +72,145 @@ namespace HelpingHand
                 foreach (var item in availabilty)
                 {
                     string dayTime = item;
-                    if (dayTime == "Monday Morning")
+                    if (dayTime.Contains("Monday Morning"))
                     {
                         btnMonMorn = FindViewById<Button>(Resource.Id.btnMonMorn);
                         btnMonMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
                     }
-                    if (dayTime == "Tuesday Morning")
+                    if (dayTime.Contains("Tuesday Morning"))
                     {
-                        btnMonMorn = FindViewById<Button>(Resource.Id.btnMonMorn);
-                        btnMonMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                        btnTueMorn = FindViewById<Button>(Resource.Id.btnTueMorn);
+                        btnTueMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Wednesday Morning"))
+                    {
+                        btnWedMorn = FindViewById<Button>(Resource.Id.btnWedMorn);
+                        btnWedMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Thursday Morning"))
+                    {
+                        btnThuMorn = FindViewById<Button>(Resource.Id.btnThuMorn);
+                        btnThuMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Friday Morning"))
+                    {
+                        btnFriMorn = FindViewById<Button>(Resource.Id.btnFriMorn);
+                        btnFriMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Saturday Morning"))
+                    {
+                        btnSatMorn = FindViewById<Button>(Resource.Id.btnSatMorn);
+                        btnSatMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Sunday Morning"))
+                    {
+                        btnSunMorn = FindViewById<Button>(Resource.Id.btnSunMorn);
+                        btnSunMorn.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Monday Afternoon"))
+                    {
+                        btnMonAft = FindViewById<Button>(Resource.Id.btnMonAfter);
+                        btnMonAft.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Tuesday Afternoon"))
+                    {
+                        btnTueAft = FindViewById<Button>(Resource.Id.btnTueAfter);
+                        btnTueAft.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Wednesday Afternoon"))
+                    {
+                        btnWedAft = FindViewById<Button>(Resource.Id.btnWedAfter);
+                        btnWedAft.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Thursday Afternoon"))
+                    {
+                        btnThuAft = FindViewById<Button>(Resource.Id.btnThuAfter);
+                        btnThuAft.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Friday Afternoon"))
+                    {
+                        btnFriAft = FindViewById<Button>(Resource.Id.btnFriAfter);
+                        btnFriAft.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Saturday Afternoon"))
+                    {
+                        btnSatAft = FindViewById<Button>(Resource.Id.btnSatAfter);
+                        btnSatAft.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Sunday Afternoon"))
+                    {
+                        btnSunAft = FindViewById<Button>(Resource.Id.btnSunAfter);
+                        btnSunAft.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Monday Evening"))
+                    {
+                        btnMonEve = FindViewById<Button>(Resource.Id.btnMonEve);
+                        btnMonEve.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Tuesday Evening"))
+                    {
+                        btnTueEve = FindViewById<Button>(Resource.Id.btnTueEve);
+                        btnTueEve.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Wednesday Evening"))
+                    {
+                        btnWedEve = FindViewById<Button>(Resource.Id.btnWedEve);
+                        btnWedEve.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Thursday Evening"))
+                    {
+                        btnThuEve = FindViewById<Button>(Resource.Id.btnThuEve);
+                        btnThuEve.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Friday Evening"))
+                    {
+                        btnFriEve = FindViewById<Button>(Resource.Id.btnFriEve);
+                        btnFriEve.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Saturday Evening"))
+                    {
+                        btnSatEve = FindViewById<Button>(Resource.Id.btnSatEve);
+                        btnSatEve.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Sunday Evening"))
+                    {
+                        btnSunEve = FindViewById<Button>(Resource.Id.btnSunEve);
+                        btnSunEve.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Monday Night"))
+                    {
+                        btnMonNigh = FindViewById<Button>(Resource.Id.btnMonNight);
+                        btnMonNigh.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Tuesday Night"))
+                    {
+                        btnTueNigh = FindViewById<Button>(Resource.Id.btnTueNight);
+                        btnTueNigh.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Wednesday Night"))
+                    {
+                        btnWedNigh = FindViewById<Button>(Resource.Id.btnWedNight);
+                        btnWedNigh.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Thursday Night"))
+                    {
+                        btnThuNigh = FindViewById<Button>(Resource.Id.btnThuNight);
+                        btnThuNigh.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Friday Night"))
+                    {
+                        btnFriNigh = FindViewById<Button>(Resource.Id.btnFriNight);
+                        btnFriNigh.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Saturday Night"))
+                    {
+                        btnSatNigh = FindViewById<Button>(Resource.Id.btnSatNight);
+                        btnSatNigh.SetBackgroundColor(Android.Graphics.Color.LightBlue);
+                    }
+                    if (dayTime.Contains("Sunday Night"))
+                    {
+                        btnSunNigh = FindViewById<Button>(Resource.Id.btnSunNight);
+                        btnSunNigh.SetBackgroundColor(Android.Graphics.Color.LightBlue);
                     }
                 }
 

@@ -227,6 +227,9 @@ C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\De
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\list_favourites.xml
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\favourites.png
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\star.png
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\cancel.png
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\cancel_appointment.xml
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\list_appointments.xml
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\bin\Debug\Syncfusion.SfCalendar.Android.dll
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb

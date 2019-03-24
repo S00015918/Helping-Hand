@@ -19,6 +19,7 @@ using static Android.Content.ClipData;
 using Newtonsoft.Json;
 using System.Reflection;
 using System.Linq;
+using HelpingHand.Adapter;
 
 namespace XamarinFirebaseAuth
 {
@@ -33,7 +34,7 @@ namespace XamarinFirebaseAuth
         List<BabySitter> list_babySitters = new List<BabySitter>();
         BabySitter babySitter;
 
-        private ListViewAdapter babysitterAdapter;
+        private BabysitterViewAdapter babysitterAdapter;
         private ParentViewAdapter parentAdapter;
         RelativeLayout activity_dashboard;
         FirebaseAuth auth;
@@ -143,7 +144,7 @@ namespace XamarinFirebaseAuth
                     StartActivity(viewSelectedUser);
                 };
 
-                babysitterAdapter = new ListViewAdapter(this, list_babySitters);
+                babysitterAdapter = new BabysitterViewAdapter(this, list_babySitters);
                 babysitterAdapter.NotifyDataSetChanged();
                 list_data.Adapter = babysitterAdapter;
 
