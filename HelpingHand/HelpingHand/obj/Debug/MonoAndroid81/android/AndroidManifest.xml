@@ -27,13 +27,14 @@
     </activity>
     <activity android:label="MapWithMarkersActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MapWithMarkersActivity" />
     <activity android:label="Messages" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MessageActivity" />
-    <activity android:label="CancelAppointment" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.CancelAppointment" />
-    <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.HomeActivity" />
+    <activity android:label="Cancel Appointment" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.CancelAppointment" />
+    <activity android:label="Home" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.HomeActivity" />
     <activity android:label="MapActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MapActivity" />
+    <activity android:label="PaymentActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.PaymentActivity" />
     <activity android:label="SignUp" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.SignUpBabysitter" />
     <activity android:label="Favourites" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userFavourites" />
     <activity android:label="Profile" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userProfile" />
-    <activity android:label="Schedule" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userSchedule" />
+    <activity android:label="Appointments Schedule" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userSchedule" />
     <activity android:label="View User Profile" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.viewUser" />
     <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.BatteryBroadcastReceiver" />

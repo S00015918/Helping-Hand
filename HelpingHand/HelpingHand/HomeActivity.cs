@@ -16,7 +16,7 @@ using XamarinFirebaseAuth;
 
 namespace HelpingHand
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
+    [Activity(Label = "Home", Theme = "@style/AppTheme")]
     public class HomeActivity : AppCompatActivity
     {
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";

@@ -85,6 +85,7 @@
 		android:layout_below="@+id/login_layout_or"
         android:id="@+id/login_btn_Babysitter_reg"
         android:text="Babysitter Sign Up"
+		android:layout_marginLeft="30dp"
         android:textStyle="bold"
         android:clickable="true"
         android:layout_centerHorizontal="true"

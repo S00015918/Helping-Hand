@@ -9,11 +9,24 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Firebase.Auth;
 using Stripe;
 
 namespace HelpingHand
 {
-    [Activity(Label = "Make Payment", Theme = "@style/AppTheme")]
+    [Activity(Label = "PaymentActivity")]
+    public class PaymentActivity : Activity
+    {
+        FirebaseAuth auth;
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            SetContentView(Resource.Layout.payment_form);
+            auth = FirebaseAuth.GetInstance(MainActivity.app);
+        }
+    }
+
     public class MakePayment
     {
         public string CreateToken(string cardNumber, string cardExpMonth, string cardExpYear, string cardCVC)
@@ -43,7 +56,7 @@ namespace HelpingHand
     {
         public StripeTokenService()
         {
-            
+
         }
 
         internal object Create(StripeTokenCreateOptions stripeTokenCreateOptions)

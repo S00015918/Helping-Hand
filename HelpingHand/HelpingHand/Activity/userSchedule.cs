@@ -21,7 +21,7 @@ using Newtonsoft.Json;
 
 namespace HelpingHand
 {
-    [Activity(Label = "Schedule", Theme = "@style/AppTheme")]
+    [Activity(Label = "Appointments Schedule", Theme = "@style/AppTheme")]
     public class userSchedule : AppCompatActivity
     {
         //RelativeLayout activity_schedule;
@@ -35,15 +35,15 @@ namespace HelpingHand
         {
             base.OnCreate(savedInstanceState);
 
-            //SetContentView(Resource.Layout.calendar);
-            //SfCalendar sfCalendar = FindViewById<SfCalendar>(Resource.Id.calendar);
-            SfCalendar calendar = new SfCalendar(this);
+            SetContentView(Resource.Layout.calendar);
+            //calendar = FindViewById<SfCalendar>(Resource.Id.calendar);
+            SfCalendar calendar = (SfCalendar)FindViewById(Resource.Id.sfCalendar);
+            //SfCalendar calendar = new SfCalendar(this);
             Calendar minCalendar = Calendar.Instance;
             minCalendar.Set(2018, 12, 12);
-            calendar.MinDate = minCalendar;
-            //SfCalendar calendar = (SfCalendar)FindViewById(Resource.Id.calendar);
+            calendar.MinDate = minCalendar;           
             calendar.ViewMode = ViewMode.MonthView;
-            SetContentView(calendar);
+            //SetContentView(calendar);
 
             calendar.TransitionMode = TransitionMode.Card;
             calendar.ShowEventsInline = true;
@@ -202,7 +202,7 @@ namespace HelpingHand
             int id = item.ItemId;
             if (id == Resource.Id.menu_home)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
                 Finish();
             }
             return base.OnOptionsItemSelected(item);

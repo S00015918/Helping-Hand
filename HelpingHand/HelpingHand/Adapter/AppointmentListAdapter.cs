@@ -47,14 +47,19 @@ namespace HelpingHand
             inflater = (LayoutInflater)activity.BaseContext.GetSystemService(Context.LayoutInflaterService);
             View view = inflater.Inflate(Resource.Layout.list_appointments, null);
 
-            var babysitter = view.FindViewById<TextView>(Resource.Id.list_city);
-            //var date = view.FindViewById<TextView>(Resource.Id.list_date);
-            //var start = view.FindViewById<TextView>(Resource.Id.list_start);
-            //var end = view.FindViewById<TextView>(Resource.Id.list_end);
+            var babysitter = view.FindViewById<TextView>(Resource.Id.list_babysitter);
+            var dateList = view.FindViewById<TextView>(Resource.Id.list_date);
+            var start = view.FindViewById<TextView>(Resource.Id.list_start);
+            var end = view.FindViewById<TextView>(Resource.Id.list_end);
 
             if (lstAppointments.Count > 0)
             {
-                babysitter.Text = lstAppointments[position].City;                
+                babysitter.Text = lstAppointments[position].Babysitter;
+                var datetime = lstAppointments[position].Date.ToString().Split(' ');
+                string date = datetime[0]; 
+                dateList.Text = date.ToString();
+                start.Text = "Start: " + lstAppointments[position].startTime.ToString();
+                end.Text = "End: " + lstAppointments[position].endTime.ToString();
             }
 
             return view;
@@ -87,7 +92,7 @@ namespace HelpingHand
                 {
                     results.AddRange(
                         appointmentAdapter.originalData.Where(
-                            user => user.City.Contains(constraint.ToString())));
+                            user => user.Babysitter.Contains(constraint.ToString())));
                 }
                 returnObj.Values = FromArray(results.Select(r => r.ToJavaObject()).ToArray());
                 returnObj.Count = results.Count;

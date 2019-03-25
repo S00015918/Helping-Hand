@@ -38,6 +38,7 @@ namespace HelpingHand
         public string strStart, strEnd;
         public int selection;
         List<Appointment> list_appointments = new List<Appointment>();
+        bool refresh;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -226,59 +227,79 @@ namespace HelpingHand
                 session.startTime = item.Object.startTime;
                 session.endTime = item.Object.endTime;
                 list_appointments.Add(session);
+                string BabysitterName = session.Babysitter.ToString().ToLower();
 
-                if (session.Babysitter == userAppointment.name)
+                if (BabysitterName == userAppointment.name)
                 {
                     if (session.Date == dateSelected)
                     {
-                        if (Convert.ToDateTime(session.startTime) >= start && Convert.ToDateTime(session.startTime) >= end)
+                        if (start >= Convert.ToDateTime(session.startTime) && start <= Convert.ToDateTime(session.endTime) 
+                            || (end >= Convert.ToDateTime(session.startTime) && end <= Convert.ToDateTime(session.endTime)))
                         {
                             // Cannot book appointment because babysitter already has booking
                             Toast.MakeText(this, "Babysitter Unavailable", ToastLength.Short).Show();
+                            refresh = true;
                         }
                     }
                 }
             }
-            string availabilty = userAppointment.availability; // compare availabilty to book schedule
-            var days = availabilty.Split(',');
-            if (days == null)
+            if (refresh == true)
             {
-                string y = Convert.ToString(days + "");
+                refreshActivity();
             }
-
-            string[] schedule = days;
-
-            var startHour = start.Hour.ToString();
-            int _hour = int.Parse(startHour);
-
-            if (_hour >= 8 && _hour < 12)
+            else
             {
-                timeOfDay = "Morning";
-            }
-            else if (_hour >= 12 && _hour < 16)
-            { timeOfDay = "Afternoon";  }
-
-            else if (_hour >= 16 && _hour < 20)
-            { timeOfDay = "Afternoon"; }
-
-            else if (_hour >= 20 && _hour < 23)
-            { timeOfDay = "Afternoon"; }
-
-            var today = dateSelected.DayOfWeek.ToString().TrimEnd();
-            string todaysTime = today + " " + timeOfDay.ToString();
-
-            foreach (var item in schedule)
-            {
-                //if (item.Contains(today))
-                if (item.Contains(todaysTime))
+                string availabilty = userAppointment.availability; // compare availabilty to book schedule
+                var days = availabilty.Split(',');
+                if (days == null)
                 {
-                    CreateNewAppointment();
+                    string y = Convert.ToString(days + "");
                 }
-                else
+
+                string[] schedule = days;
+
+                var startHour = start.Hour.ToString();
+                int _hour = int.Parse(startHour);
+
+                if (_hour >= 8 && _hour < 12)
                 {
-                    //Toast.MakeText(this, "Please change appointment, Babysitter not available for selected date", ToastLength.Long).Show();
+                    timeOfDay = "Morning";
+                }
+                else if (_hour >= 12 && _hour < 16)
+                { timeOfDay = "Afternoon"; }
+
+                else if (_hour >= 16 && _hour < 20)
+                { timeOfDay = "Afternoon"; }
+
+                else if (_hour >= 20 && _hour < 23)
+                { timeOfDay = "Afternoon"; }
+
+                var today = dateSelected.DayOfWeek.ToString().TrimEnd();
+                string todaysTime = today + " " + timeOfDay.ToString();
+
+                foreach (var item in schedule)
+                {
+                    //if (item.Contains(today))
+                    if (item.Contains(todaysTime))
+                    {
+                        CreateNewAppointment();
+                    }
+                    else { //Toast.MakeText(this, "Please change appointment, Babysitter not available for selected date", ToastLength.Long).Show(); 
+                        //refresh = true;
+                    }
+                }
+                if (refresh == true)
+                {
+                    refreshActivity();
                 }
             }
+        }
+
+        private void refreshActivity()
+        {
+            this.Recreate();
+            //StartActivity(new Android.Content.Intent(this, typeof(CreateAppointment)));
+            Finish();
         }
 
         private async void CreateNewAppointment()

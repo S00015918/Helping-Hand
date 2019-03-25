@@ -95,7 +95,6 @@
     <Compile Include="Adapter\FavouriteBabysitterAdapter.cs" />
     <Compile Include="Adapter\ListViewAdapter.cs" />
     <Compile Include="Activity\MainActivity.cs" />
-    <Compile Include="Activity\MakePayment.cs" />
     <Compile Include="Activity\MapWithMarkersActivity.cs" />
     <Compile Include="Activity\MessageActivity.cs" />
     <Compile Include="Adapter\MessageAdapter.cs" />
@@ -112,6 +111,7 @@
     <Compile Include="Model\Rating.cs" />
     <Compile Include="Model\StripeServices.cs" />
     <Compile Include="Adapter\ParentViewAdapter.cs" />
+    <Compile Include="PaymentActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activity\SignUp.cs" />
