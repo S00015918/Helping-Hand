@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="Project.HelpingHand" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <!-- Necessary for apps that target Android 9.0 or higher -->
+  <uses-library android:name="org.apache.http.legacy" android:required="false" />
+  <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true">
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAklI00kENS74HDfcier8-mRuEy7LBUTO4" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:label="DashBoard" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.DashBoard" />
+    <activity android:label="ForgetPasswordcs" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.ForgetPassword" />
+    <activity android:label="SignUp" android:theme="@style/AppTheme" android:name="md5135a0bb181cb5fd3845bf60927a458f3.SignUp" />
+    <activity android:label="Create Booking" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.CreateAppointment" />
+    <activity android:label="XamarinFirebaseAuth" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="MapWithMarkersActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MapWithMarkersActivity" />
+    <activity android:label="Messages" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MessageActivity" />
+    <activity android:label="Cancel Appointment" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.CancelAppointment" />
+    <activity android:label="Home" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.HomeActivity" />
+    <activity android:label="MapActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MapActivity" />
+    <activity android:label="PaymentActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.PaymentActivity" />
+    <activity android:label="SignUp" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.SignUpBabysitter" />
+    <activity android:label="Favourites" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userFavourites" />
+    <activity android:label="Profile" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userProfile" />
+    <activity android:label="Appointments Schedule" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.userSchedule" />
+    <activity android:label="View User Profile" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.viewUser" />
+    <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.BatteryBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.EnergySaverBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.ConnectivityBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Project.HelpingHand.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.Project.HelpingHand" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

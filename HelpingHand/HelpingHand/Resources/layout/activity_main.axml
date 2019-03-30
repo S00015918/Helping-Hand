@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
 	<RelativeLayout android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:padding="16dp">
+		android:layout_marginTop="50dp"
+		android:padding="10dp">
 		<GridView
-			android:id="@+id/gridView_image_text"
+			android:id="@+id/gridView_image"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:columnWidth="110dp"
 			android:gravity="center"
-			android:padding="6dp"
+            android:padding="10dp"
 			android:numColumns="auto_fit"/>
 	</RelativeLayout>
 </RelativeLayout>

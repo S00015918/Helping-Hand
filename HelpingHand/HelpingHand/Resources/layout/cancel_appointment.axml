@@ -26,7 +26,8 @@
 			android:id="@+id/list_appointments"
 			android:minWidth="25px" 
 			android:minHeight="500px"
-			android:layout_below="@+id/searchview"  
+			android:theme="@style/MyListViewTheme"
+			android:layout_below="@+id/searchview"	
 			android:layout_width="match_parent"  
 			android:layout_height="300dp"/>
 

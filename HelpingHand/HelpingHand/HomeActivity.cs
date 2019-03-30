@@ -40,15 +40,22 @@ namespace HelpingHand
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.activity_main);
 
-            //var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            //SetSupportActionBar(toolbar);
-            //SupportActionBar.Title = "Grid View";
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.Title = "Home";
 
             CustomGridViewAdapter adapter = new CustomGridViewAdapter(this, gridViewString, imageId);
-            gridView = FindViewById<GridView>(Resource.Id.gridView_image_text);
+            gridView = FindViewById<GridView>(Resource.Id.gridView_image);
+            //gridView.Adapter = new ImageAdapter(this);
+            //gridView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+            //{
+            //    Toast.MakeText(this, args.Position.ToString(), ToastLength.Short).Show();
+            //};
+
+            gridView.SetVerticalSpacing(1);
+            gridView.SetHorizontalSpacing(1);
             gridView.Adapter = adapter;
             gridView.ItemClick += (s, e) =>
             {
@@ -57,7 +64,7 @@ namespace HelpingHand
 
                 if (clicked == 0)
                 {
-                    StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                    StartActivity(new Android.Content.Intent(this, typeof(PaymentActivity)));
                     Finish();
                 }
                 else if (clicked == 1)

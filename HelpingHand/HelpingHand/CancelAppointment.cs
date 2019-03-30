@@ -19,7 +19,7 @@ using XamarinFirebaseAuth;
 
 namespace HelpingHand
 {
-    [Activity(Label = "Cancel Appointment")]
+    [Activity(Label = "Cancel Appointment", Theme = "@style/AppTheme")]
     public class CancelAppointment : AppCompatActivity
     {
         private ListView list_data;
@@ -28,8 +28,9 @@ namespace HelpingHand
         List<Appointment> list_appointments = new List<Appointment>();
         private AppointmentListAdapter AppointmentAdapter;
         Appointment selectedAppointment;
-        string selectedUser;
+        string selectedUser, babysitterEmail;
         Button btnCancelAppointment;
+        DateTime selectedDate;
 
         protected async override void OnCreate(Bundle savedInstanceState)
         {
@@ -114,37 +115,53 @@ namespace HelpingHand
             {
                 selectedAppointment = list_appointments[e.Position];
                 selectedUser = list_appointments[e.Position].babysitterEmail;
+                selectedDate = list_appointments[e.Position].Date;
+                string selectedBabysitter = list_appointments[e.Position].Babysitter;
 
-                DeleteAppointment();
+                //list_data.SetBackgroundColor(Android.Graphics.Color.Beige); 
 
+                Toast.MakeText(this, selectedBabysitter + " Selected", ToastLength.Short).Show();
             };
+
+            //btnCancelAppointment.ItemClick += MListView_ItemClick;
 
             btnCancelAppointment = FindViewById<Button>(Resource.Id.btnDelete);
             btnCancelAppointment.Click += delegate
             {
-                //DeleteAppointment();
+                DeleteAppointment();
             };
         }
 
         private async void DeleteAppointment()
         {
+            string appointmentDate = selectedDate.ToString();
+            string[] getDate = appointmentDate.Split(' ');
+            string date = getDate[0];
+
             var firebase = new FirebaseClient(FirebaseURL);
-            var toDeleteAppointment = (await firebase
-              .Child("appointment")
-              .OnceAsync<Appointment>()).Where(a => a.Object.babysitterEmail== selectedUser).FirstOrDefault();
+            var babysittters = await firebase
+                    .Child("babysitter")
+                    .OnceAsync<BabySitter>();
 
-            await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
-        }
+            foreach (var item in babysittters)
+            {
+                BabySitter sitter = new BabySitter();
+                sitter.email = item.Object.email;
+                babysitterEmail = sitter.email;
 
-        public async void DeleteAppointment(string email)
-        {
-            var firebase = new FirebaseClient(FirebaseURL);
-            var toDeleteAppointment = (await firebase
-              .Child("appointment")
-              .OnceAsync<Appointment>()).Where(a => a.Object.userEmail == email).FirstOrDefault();
 
-            await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
+                if (babysitterEmail == selectedUser)
+                {
+                    var toDeleteAppointment = (await firebase
+                      .Child("appointment")
+                      .OnceAsync<Appointment>()).Where(a => a.Object.Date == selectedDate).FirstOrDefault();
 
+                    await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
+                }
+                else { }
+            }
+            AppointmentAdapter.NotifyDataSetChanged();
+            list_data.Adapter = AppointmentAdapter;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

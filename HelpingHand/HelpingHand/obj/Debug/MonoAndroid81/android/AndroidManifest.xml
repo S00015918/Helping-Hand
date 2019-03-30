@@ -27,7 +27,7 @@
     </activity>
     <activity android:label="MapWithMarkersActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MapWithMarkersActivity" />
     <activity android:label="Messages" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MessageActivity" />
-    <activity android:label="Cancel Appointment" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.CancelAppointment" />
+    <activity android:label="Cancel Appointment" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.CancelAppointment" />
     <activity android:label="Home" android:theme="@style/AppTheme" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.HomeActivity" />
     <activity android:label="MapActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.MapActivity" />
     <activity android:label="PaymentActivity" android:name="md50f0e548c1279eef0ff184f39bbb5a3f4.PaymentActivity" />

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Gms.Wallet;
+using Android.Gms.Wallet.Fragment;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -18,12 +20,182 @@ namespace HelpingHand
     public class PaymentActivity : Activity
     {
         FirebaseAuth auth;
+        EditText creditCardNumber, cardExpiryMonth, cardExpiryYear, cardCVV;
+        Button AcceptPayment;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.payment_form);
             auth = FirebaseAuth.GetInstance(MainActivity.app);
+
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            //SetSupportActionBar(toolbar);
+            //SupportActionBar.Title = "Home";
+
+            creditCardNumber = FindViewById<EditText>(Resource.Id.txtCreditCardNumber);
+            cardExpiryMonth = FindViewById<EditText>(Resource.Id.txtExpiryMonth);
+            cardExpiryYear = FindViewById<EditText>(Resource.Id.txtExpiryYear);
+            cardCVV = FindViewById<EditText>(Resource.Id.txtCVV);
+            AcceptPayment = FindViewById<Button>(Resource.Id.btnAccept);
+
+            // Set your secret key: remember to change this to your live secret key in production
+            // See your keys here: https://dashboard.stripe.com/account/apikeys
+            StripeConfiguration.SetApiKey("sk_test_LMuAkBgF8zxl2ha3G66Yygdq00s09S6uzP");
+
+            var options = new ChargeCreateOptions
+            {
+                Amount = 999,
+                Currency = "eur",
+                SourceId = "tok_visa",
+                ReceiptEmail = "jenny.rosen@example.com",
+            };
+            var service = new ChargeService();
+            Charge charge = service.Create(options);
+
+            string cNo = creditCardNumber.ToString();
+            string ExpM = cardExpiryMonth.ToString();
+            string ExpY = cardExpiryYear.ToString();
+            string cvc = cardCVV.ToString();
+
+            //ChargeCard();
+            MakeStripePayment(cNo, ExpM, ExpY, cvc);
+        }
+
+        //public async void ChargeCard()
+        //{
+        //    try
+        //    {
+        //        // Set your secret key: remember to change this to your live secret key in production
+        //        // See your keys here: https://dashboard.stripe.com/account/apikeys //call stripe to process the charge
+        //        StripeConfiguration.SetApiKey("TESTKEYHERE");
+        //        // var card = new Card { h}
+
+        //        var options = new ChargeCreateOptions
+        //        {
+        //            Amount = Convert.ToInt32(AMOUNTTOCHARGE * 100),//for cents
+        //            Currency = "eur",//charge in euro
+        //            SourceId = "tok_visa",
+
+        //            ReceiptEmail = "",
+        //            Description = "Purchase amount " + CartPrice
+        //        };
+        //        var service = new ChargeService();
+        //        Charge charge = service.Create(options);
+
+        //        await DisplayAlert("Alert", "Payment of €" + CartPrice.ToString("0.00") + " Successful! Thank You", "Ok");
+        //    }
+        //    catch (StripeException ex)
+        //    {
+        //        switch (ex.StripeError.ErrorType)
+        //        {
+        //            case "card_error":
+        //                await DisplayAlert("Error", "Payment Declined!!!! " + ex.StripeError.Message, "Ok");
+        //                System.Diagnostics.Debug.WriteLine("   Code: " + ex.StripeError.Code);
+        //                System.Diagnostics.Debug.WriteLine("Message: " + ex.StripeError.Message);
+        //                break;
+        //            case "api_connection_error":
+        //                System.Diagnostics.Debug.WriteLine(" apic  Code: " + ex.StripeError.Code);
+        //                System.Diagnostics.Debug.WriteLine("apic Message: " + ex.StripeError.Message);
+        //                break;
+        //            case "api_error":
+        //                System.Diagnostics.Debug.WriteLine("api   Code: " + ex.StripeError.Code);
+        //                System.Diagnostics.Debug.WriteLine("api Message: " + ex.StripeError.Message);
+        //                break;
+        //            case "authentication_error":
+        //                System.Diagnostics.Debug.WriteLine(" auth  Code: " + ex.StripeError.Code);
+        //                System.Diagnostics.Debug.WriteLine("auth Message: " + ex.StripeError.Message);
+        //                break;
+        //            case "invalid_request_error":
+        //                System.Diagnostics.Debug.WriteLine(" invreq  Code: " + ex.StripeError.Code);
+        //                System.Diagnostics.Debug.WriteLine("invreq Message: " + ex.StripeError.Message);
+        //                break;
+        //            case "rate_limit_error":
+        //                System.Diagnostics.Debug.WriteLine("  rl Code: " + ex.StripeError.Code);
+        //                System.Diagnostics.Debug.WriteLine("rl Message: " + ex.StripeError.Message);
+        //                break;
+        //            case "validation_error":
+        //                System.Diagnostics.Debug.WriteLine(" val  Code: " + ex.StripeError.Code);
+        //                System.Diagnostics.Debug.WriteLine("val Message: " + ex.StripeError.Message);
+        //                break;
+        //            default:
+        //                // Unknown Error Type
+        //                break;
+        //        }
+        //    }
+        //}
+
+        public string MakeStripePayment(string cardNumber, string cardExpMonth, string cardExpYear, string cardCVC)
+        {
+            Token
+                stripeToken = null;
+            try
+            {
+                StripeConfiguration.SetApiKey("sk_test_LMuAkBgF8zxl2ha3G66Yygdq00s09S6uzP");
+
+                var tokenOptions = new StripeTokenCreateOptions()
+                {
+                    Card = new StripeCreditCardOptions()
+                    {
+                        Number = cardNumber,
+                        ExpirationYear = cardExpYear,
+                        ExpirationMonth = cardExpMonth,
+                        Cvc = cardCVC
+                    }
+                };
+
+            }
+            catch (Exception exception)
+            {
+                StripeException
+                    stripeException = exception.InnerException as StripeException;
+
+                if (stripeException != null)
+                {
+                    Dictionary<String, Int32>
+                        stripeErrorDictionary = new Dictionary<string, int>() {
+                    // Error messages from stripe.com/docs/api#errors
+                    { "invalid_number", 1 },
+                    { "invalid_expiry_month", 2 },
+                    { "invalid_expiry_year", 3 },
+                    { "invalid_cvc", 4 },
+                    { "invalid_swipe_data", 5 },
+                    { "incorrect_number", 6 },
+                    { "expired_card", 7 },
+                    { "incorrect_cvc", 8 },
+                    { "incorrect_zip", 9 },
+                    { "card_declined", 10 },
+                    { "missing", 11 },
+                    { "processing_error", 12 },
+                        };
+
+                    String
+                        errorMessage = "";
+
+                    if (stripeErrorDictionary.ContainsKey(stripeException.StripeError.Code))
+                    {
+                        string errorNumber = stripeErrorDictionary[stripeException.StripeError.Code].ToString();
+                        errorMessage = errorNumber;
+                    }
+                    else
+                    {
+                        errorMessage = "An unknown error occurred.";
+                    }
+
+                    // Show error
+                    return null;
+                }
+            }
+
+            if (stripeToken == null)
+            {
+                // Show error.
+                return null;
+            }
+
+            // Use 'stripeToken.Id' as the token to make your payments
+            return stripeToken.Id;
         }
     }
 
@@ -31,7 +203,7 @@ namespace HelpingHand
     {
         public string CreateToken(string cardNumber, string cardExpMonth, string cardExpYear, string cardCVC)
         {
-            StripeConfiguration.SetApiKey("pk_test_xxxxxxxxxxxxxxxxx");
+            StripeConfiguration.SetApiKey("sk_test_LMuAkBgF8zxl2ha3G66Yygdq00s09S6uzP");
 
             var tokenOptions = new StripeTokenCreateOptions()
             {
@@ -45,10 +217,10 @@ namespace HelpingHand
             };
 
             var tokenService = new StripeTokenService();
-            //StripeToken stripeToken = tokenService.Create(tokenOptions);
-
-            //return stripeToken.Id; // This is the token
-            return null;
+            //Token stripeToken = tokenService.Create(tokenOptions);
+            var stripeToken = tokenService.Create(tokenOptions);
+            return stripeToken.ToString(); // This is the token
+            //return null;
         }
     }
 
@@ -64,4 +236,5 @@ namespace HelpingHand
             throw new NotImplementedException();
         }
     }
+    
 }
