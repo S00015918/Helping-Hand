@@ -24,8 +24,8 @@ namespace HelpingHand
     public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
     {
         FirebaseAuth auth;
-        Marker myMarker;
-        GoogleMap mMap;
+        //Marker myMarker;
+        //GoogleMap mMap;
         MarkerOptions newMarker = new MarkerOptions();
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -150,8 +150,8 @@ namespace HelpingHand
                     LatLng moveTo = new LatLng(lat, lon);
                     CameraUpdate locationView = CameraUpdateFactory.NewLatLngZoom(
                         moveTo, 15);
-                    mMap.AnimateCamera(locationView);
-                    myMarker = null;
+                    //mMap.AnimateCamera(locationView);
+                    //myMarker = null;
                 }
                 else
                 {

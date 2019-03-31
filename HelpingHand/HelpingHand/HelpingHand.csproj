@@ -99,6 +99,7 @@
     <Compile Include="Activity\MessageActivity.cs" />
     <Compile Include="Adapter\MessageAdapter.cs" />
     <Compile Include="CancelAppointment.cs" />
+    <Compile Include="CreditCardFormatter.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="ImageAdapter.cs" />
     <Compile Include="MapActivity.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Model\MessageContent.cs" />
     <Compile Include="Model\ObjectExtensions.cs" />
     <Compile Include="Model\Parent.cs" />
+    <Compile Include="Model\PaymentModel.cs" />
     <Compile Include="Model\Rating.cs" />
     <Compile Include="Model\StripeServices.cs" />
     <Compile Include="Adapter\ParentViewAdapter.cs" />
@@ -214,9 +216,6 @@
     <AndroidResource Include="Resources\layout\BabysitterReg.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\member.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\menu_main.axml">
@@ -520,6 +519,51 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_card_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_card_number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_card_cvc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_card_number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_card_cvc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_card_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_card_number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_card_cvc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_card_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_card_number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_card_cvc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_card_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_card_number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_card_cvc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_card_date.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -66,16 +66,12 @@ namespace HelpingHand
             btnChangeTime.Click += delegate
             {
                 selection = 1;
-                ShowDialog(StartTimeDialog);
-                //txtStartTime.Text = getStartTime();
             };
             //timePicker.SetIs24HourView(Java.Lang.Boolean.True);
 
             btnChangeEndTime.Click += (s, e) =>
             {
                 selection = 2;
-                ShowDialog(EndTimeDialog);
-                //txtEndTime.Text = getEndTime();
             };
             //endTimePicker.SetIs24HourView(Java.Lang.Boolean.True);
 
@@ -99,27 +95,6 @@ namespace HelpingHand
                 session.endTime = item.Object.endTime;
                 list_appointments.Add(session);
             }
-        }
-
-        protected override Dialog OnCreateDialog(int id)
-        {
-            switch (id)
-            {
-                case StartTimeDialog:
-                    {
-                        TimePickerDialog startTime = new TimePickerDialog(this, this, hour, minutes, true);
-                        return startTime;
-                    }
-                case EndTimeDialog:
-                    {
-                        TimePickerDialog EndTime = new TimePickerDialog(this, this, hour, minutes, true);
-                        return EndTime;
-                        //return new TimePickerDialog(this, this, hour, minutes, true);
-                    }
-                default:
-                    break;
-            }
-            return null;
         }
 
         public void OnTimeSet(Android.Widget.TimePicker view, int hourOfDay, int minutesInHour)

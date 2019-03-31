@@ -19,7 +19,7 @@ namespace HelpingHand
     public class MapActivity : AppCompatActivity, IOnMapReadyCallback
     { 
 
-        Marker myMarker;
+        //Marker myMarker;
 
         public void OnMapReady(GoogleMap googleMap)
         {

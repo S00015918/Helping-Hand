@@ -12,6 +12,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using HelpingHand.Model;
 using Stripe;
 
 namespace HelpingHand
@@ -29,38 +30,43 @@ namespace HelpingHand
 
             SetContentView(Resource.Layout.payment_form);
             auth = FirebaseAuth.GetInstance(MainActivity.app);
+            AcceptPayment = FindViewById<Button>(Resource.Id.btnAccept);
+            creditCardNumber = FindViewById<EditText>(Resource.Id.txtCreditCardNumber);
+
+            creditCardNumber.AddTextChangedListener(new CreditCardFormatter(creditCardNumber));
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             //SetSupportActionBar(toolbar);
             //SupportActionBar.Title = "Home";
 
-            creditCardNumber = FindViewById<EditText>(Resource.Id.txtCreditCardNumber);
-            cardExpiryMonth = FindViewById<EditText>(Resource.Id.txtExpiryMonth);
-            cardExpiryYear = FindViewById<EditText>(Resource.Id.txtExpiryYear);
-            cardCVV = FindViewById<EditText>(Resource.Id.txtCVV);
-            AcceptPayment = FindViewById<Button>(Resource.Id.btnAccept);
+            //ChargeCard();
+            AcceptPayment.Click += delegate
+            {
+                ChargeCard();
+                MakeStripePayment();
+            };
+        }
 
+        public void ChargeCard()
+        {
             // Set your secret key: remember to change this to your live secret key in production
             // See your keys here: https://dashboard.stripe.com/account/apikeys
             StripeConfiguration.SetApiKey("sk_test_LMuAkBgF8zxl2ha3G66Yygdq00s09S6uzP");
 
+            PaymentModel payment = new PaymentModel();
+            var token = payment.Token;
+            var amountCharged = payment.Amount;
+
             var options = new ChargeCreateOptions
             {
-                Amount = 999,
+                Amount = 999, //Convert.ToInt32(amountCharged * 100), //for cents
                 Currency = "eur",
-                SourceId = "tok_visa",
-                ReceiptEmail = "jenny.rosen@example.com",
+                SourceId = "tok_visa", // token
+                Description = "Babysitter Hired",
+                ReceiptEmail = auth.CurrentUser.Email,
             };
             var service = new ChargeService();
             Charge charge = service.Create(options);
-
-            string cNo = creditCardNumber.ToString();
-            string ExpM = cardExpiryMonth.ToString();
-            string ExpY = cardExpiryYear.ToString();
-            string cvc = cardCVV.ToString();
-
-            //ChargeCard();
-            MakeStripePayment(cNo, ExpM, ExpY, cvc);
         }
 
         //public async void ChargeCard()
@@ -126,10 +132,21 @@ namespace HelpingHand
         //    }
         //}
 
-        public string MakeStripePayment(string cardNumber, string cardExpMonth, string cardExpYear, string cardCVC)
+        public string MakeStripePayment()
         {
+            creditCardNumber = FindViewById<EditText>(Resource.Id.txtCreditCardNumber);
+            cardExpiryMonth = FindViewById<EditText>(Resource.Id.txtExpiryMonth);
+            cardExpiryYear = FindViewById<EditText>(Resource.Id.txtExpiryYear);
+            cardCVV = FindViewById<EditText>(Resource.Id.txtCVV);
+
+            string cardNumber = creditCardNumber.Text;
+            string cardExpMonth = cardExpiryMonth.Text;
+            string cardExpYear = cardExpiryYear.Text;
+            string cardCVC = cardCVV.Text;
+
+            PaymentModel payment = new PaymentModel();
             Token
-                stripeToken = null;
+                stripeToken = new Token();
             try
             {
                 StripeConfiguration.SetApiKey("sk_test_LMuAkBgF8zxl2ha3G66Yygdq00s09S6uzP");
@@ -144,7 +161,6 @@ namespace HelpingHand
                         Cvc = cardCVC
                     }
                 };
-
             }
             catch (Exception exception)
             {
@@ -178,22 +194,16 @@ namespace HelpingHand
                         string errorNumber = stripeErrorDictionary[stripeException.StripeError.Code].ToString();
                         errorMessage = errorNumber;
                     }
-                    else
-                    {
-                        errorMessage = "An unknown error occurred.";
-                    }
-
+                    else { errorMessage = "An unknown error occurred."; }
                     // Show error
-                    return null;
+                    return stripeToken.ToString();
                 }
             }
-
             if (stripeToken == null)
             {
                 // Show error.
                 return null;
             }
-
             // Use 'stripeToken.Id' as the token to make your payments
             return stripeToken.Id;
         }
