@@ -5,7 +5,8 @@ public class MessageActivity
 	extends android.support.v7.app.AppCompatActivity
 	implements
 		mono.android.IGCUserPeer,
-		com.google.firebase.database.ValueEventListener
+		com.google.firebase.database.ValueEventListener,
+		android.widget.AdapterView.OnItemSelectedListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -17,6 +18,8 @@ public class MessageActivity
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onCancelled:(Lcom/google/firebase/database/DatabaseError;)V:GetOnCancelled_Lcom_google_firebase_database_DatabaseError_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
 			"n_onDataChange:(Lcom/google/firebase/database/DataSnapshot;)V:GetOnDataChange_Lcom_google_firebase_database_DataSnapshot_Handler:Firebase.Database.IValueEventListenerInvoker, Xamarin.Firebase.Database\n" +
+			"n_onItemSelected:(Landroid/widget/AdapterView;Landroid/view/View;IJ)V:GetOnItemSelected_Landroid_widget_AdapterView_Landroid_view_View_IJHandler:Android.Widget.AdapterView/IOnItemSelectedListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
+			"n_onNothingSelected:(Landroid/widget/AdapterView;)V:GetOnNothingSelected_Landroid_widget_AdapterView_Handler:Android.Widget.AdapterView/IOnItemSelectedListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("HelpingHand.MessageActivity, HelpingHand", MessageActivity.class, __md_methods);
 	}
@@ -76,6 +79,22 @@ public class MessageActivity
 	}
 
 	private native void n_onDataChange (com.google.firebase.database.DataSnapshot p0);
+
+
+	public void onItemSelected (android.widget.AdapterView p0, android.view.View p1, int p2, long p3)
+	{
+		n_onItemSelected (p0, p1, p2, p3);
+	}
+
+	private native void n_onItemSelected (android.widget.AdapterView p0, android.view.View p1, int p2, long p3);
+
+
+	public void onNothingSelected (android.widget.AdapterView p0)
+	{
+		n_onNothingSelected (p0);
+	}
+
+	private native void n_onNothingSelected (android.widget.AdapterView p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

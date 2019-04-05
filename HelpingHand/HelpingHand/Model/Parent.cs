@@ -23,7 +23,7 @@ namespace HelpingHand.Model
         public string city { get; set; }
         public string eircode { get; set; }
         public int noOfKids { get; set; }
-        public string ImageUrl { get; set; }
+        public string image { get; set; }
         
     }
 }

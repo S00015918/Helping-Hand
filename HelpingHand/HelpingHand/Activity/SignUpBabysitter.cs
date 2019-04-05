@@ -42,7 +42,7 @@ namespace HelpingHand
 
         private Android.Net.Uri filePath;
         EditText input_name, input_email, input_password, input_age,
-            input_phone, input_address, input_city, input_eircode;
+            input_phone, input_address, input_city, input_eircode, input_rate;
         RelativeLayout Babysitter_reg;
 
         ProgressBar progressBar;
@@ -90,6 +90,7 @@ namespace HelpingHand
             input_eircode = FindViewById<EditText>(Resource.Id.signup_eircode);
             input_address = FindViewById<EditText>(Resource.Id.signup_address);
             input_city = FindViewById<EditText>(Resource.Id.signup_city);
+            input_rate = FindViewById<EditText>(Resource.Id.signup_rate);
 
             Babysitter_reg = FindViewById<RelativeLayout>(Resource.Id.activity_Babysitter_reg);
             btnChoose = FindViewById<Button>(Resource.Id.btnChoose);
@@ -610,6 +611,7 @@ namespace HelpingHand
                 }
             }
             string availableTime = strTime.ToString();
+            decimal payRate = decimal.Parse(input_rate.Text);
 
             CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
 
@@ -618,6 +620,7 @@ namespace HelpingHand
             babysitter.name = input_name.Text;
             babysitter.email = input_email.Text;
             babysitter.age = Convert.ToInt32(input_age.Text);
+            babysitter.rate = payRate;
             babysitter.phone = input_phone.Text;
             babysitter.address = input_address.Text;
             babysitter.city = input_city.Text;

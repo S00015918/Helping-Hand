@@ -26,5 +26,6 @@ namespace HelpingHand.Model
         public string Address { get; set; }
         public string Eircode { get; set; }
         public string City { get; set; }
+        public decimal cost { get; set; }
     }
 }

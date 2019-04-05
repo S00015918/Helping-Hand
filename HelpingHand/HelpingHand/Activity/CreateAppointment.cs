@@ -66,18 +66,41 @@ namespace HelpingHand
             btnChangeTime.Click += delegate
             {
                 selection = 1;
+                ShowDialog(StartTimeDialog);
             };
             //timePicker.SetIs24HourView(Java.Lang.Boolean.True);
 
             btnChangeEndTime.Click += (s, e) =>
             {
                 selection = 2;
+                ShowDialog(EndTimeDialog);
             };
             //endTimePicker.SetIs24HourView(Java.Lang.Boolean.True);
 
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             btnCreateApointment.SetOnClickListener(this);
+        }
+
+        protected override Dialog OnCreateDialog(int id)
+        {
+            switch (id)
+            {
+                case StartTimeDialog:
+                    {
+                        TimePickerDialog startTime = new TimePickerDialog(this, this, hour, minutes, true);
+                        return startTime;
+                    }
+                case EndTimeDialog:
+                    {
+                        TimePickerDialog EndTime = new TimePickerDialog(this, this, hour, minutes, true);
+                        return EndTime;
+                        //return new TimePickerDialog(this, this, hour, minutes, true);
+                    }
+                default:
+                    break;
+            }
+            return null;
         }
 
         public async void getAppointments()
@@ -282,12 +305,22 @@ namespace HelpingHand
             string babysitter = this.Intent.GetStringExtra("KEY");
 
             BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+            decimal payRate = userAppointment.rate;
 
             FirebaseUser user = auth.CurrentUser;
             string name = userAppointment.name;
             string city = userAppointment.city;
             string eircode = userAppointment.eircode;
             string address = userAppointment.address;
+
+            DateTime validDate = Convert.ToDateTime(selectedDate);
+            DateTime start = Convert.ToDateTime(selectedStartTime);
+            DateTime end = Convert.ToDateTime(selectedEndTime);
+
+            int startHour = start.Hour;
+            int endHour = end.Hour;
+            int totalHours = endHour - startHour;
+            decimal amountDue = totalHours * payRate;
 
             Appointment appointment = new Appointment();
             appointment.Parent = user.DisplayName;
@@ -300,10 +333,7 @@ namespace HelpingHand
             appointment.City = city;
             appointment.Address = address;
             appointment.Eircode = eircode;
-
-            DateTime validDate = Convert.ToDateTime(selectedDate);
-            DateTime start = Convert.ToDateTime(selectedStartTime);
-            DateTime end = Convert.ToDateTime(selectedEndTime);
+            appointment.cost = amountDue;
 
             if (end < start)
             {

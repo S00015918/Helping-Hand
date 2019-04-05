@@ -2,6 +2,61 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v8.1": {
+      "Karamunting.Android.Square.OkHttp/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "Karamunting.Android.Square.Okio": "1.15.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android",
+          "System",
+          "System.Core",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/monoandroid81/Square.OkHttp3.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid81/Square.OkHttp3.dll": {}
+        }
+      },
+      "Karamunting.Android.Square.Okio/1.15.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android",
+          "System",
+          "System.Core",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/monoandroid81/Square.OkIO.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid81/Square.OkIO.dll": {}
+        }
+      },
+      "Karamunting.Android.Square.Picasso/2.71828.0": {
+        "type": "package",
+        "dependencies": {
+          "Karamunting.Android.Square.OkHttp": "3.11.0",
+          "Xamarin.Android.Support.Exif": "27.0.2.1"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android",
+          "System",
+          "System.Core",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/monoandroid81/Square.Picasso.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid81/Square.Picasso.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.1": {
         "type": "package",
         "compile": {
@@ -9,6 +64,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SearchableSpinner/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/monoandroid81/EDMTBinding.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid81/EDMTBinding.dll": {}
         }
       },
       "Stripe.net/22.8.1": {
@@ -199,6 +263,21 @@
           "build/MonoAndroid81/Xamarin.Android.Support.Design.targets": {}
         }
       },
+      "Xamarin.Android.Support.Exif/27.0.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[27.0.2.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid81/Xamarin.Android.Support.Exif.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid81/Xamarin.Android.Support.Exif.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid81/Xamarin.Android.Support.Exif.targets": {}
+        }
+      },
       "Xamarin.Android.Support.Fragment/27.0.2.1": {
         "type": "package",
         "dependencies": {
@@ -269,6 +348,21 @@
         },
         "build": {
           "build/MonoAndroid81/Xamarin.Android.Support.v7.AppCompat.targets": {}
+        }
+      },
+      "Xamarin.Android.Support.v7.CardView/28.0.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[28.0.0.1]"
+        },
+        "compile": {
+          "lib/monoandroid81/Xamarin.Android.Support.v7.CardView.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid81/Xamarin.Android.Support.v7.CardView.dll": {}
+        },
+        "build": {
+          "build/monoandroid81/Xamarin.Android.Support.v7.CardView.targets": {}
         }
       },
       "Xamarin.Android.Support.v7.RecyclerView/27.0.2.1": {
@@ -534,6 +628,39 @@
     }
   },
   "libraries": {
+    "Karamunting.Android.Square.OkHttp/3.11.0": {
+      "sha512": "ZAAuwi0M0IC9gaFwqqpb8nSUwNfPu2qEdm6amFcR1qgXgRxggLJXXCMueXT0VKtTuOW+KY/DX4WhrXc5RoqQ+g==",
+      "type": "package",
+      "path": "karamunting.android.square.okhttp/3.11.0",
+      "files": [
+        ".signature.p7s",
+        "karamunting.android.square.okhttp.3.11.0.nupkg.sha512",
+        "karamunting.android.square.okhttp.nuspec",
+        "lib/monoandroid81/Square.OkHttp3.dll"
+      ]
+    },
+    "Karamunting.Android.Square.Okio/1.15.0": {
+      "sha512": "+8Noo22Ch18JwBU7dpRqHEH5U5nIPTBQuM13AruzZ3Kzs51q5+8IUhpW6pNBgsrGpi6O9e3rG/0KqHmvJ3jlxg==",
+      "type": "package",
+      "path": "karamunting.android.square.okio/1.15.0",
+      "files": [
+        ".signature.p7s",
+        "karamunting.android.square.okio.1.15.0.nupkg.sha512",
+        "karamunting.android.square.okio.nuspec",
+        "lib/monoandroid81/Square.OkIO.dll"
+      ]
+    },
+    "Karamunting.Android.Square.Picasso/2.71828.0": {
+      "sha512": "Z+YnbzEZGhwkHPDCYaOvqCNAYzwWpEf/pF3ReTi6J47+70Wfv+jjdM6Pbo1BO4HJZoZFMFjlNbi+HK2cCYqPBw==",
+      "type": "package",
+      "path": "karamunting.android.square.picasso/2.71828.0",
+      "files": [
+        ".signature.p7s",
+        "karamunting.android.square.picasso.2.71828.0.nupkg.sha512",
+        "karamunting.android.square.picasso.nuspec",
+        "lib/monoandroid81/Square.Picasso.dll"
+      ]
+    },
     "Newtonsoft.Json/12.0.1": {
       "sha512": "jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
       "type": "package",
@@ -570,6 +697,17 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "SearchableSpinner/3.0.0": {
+      "sha512": "3MiSP85/nqOBcd+5xvs0cE5v6Qctt990JdhPSey6Rfcl5BCKNfekk+YbOnqr+nq4cYrKC0ZxMUiXNVJCNeqlWw==",
+      "type": "package",
+      "path": "searchablespinner/3.0.0",
+      "files": [
+        ".signature.p7s",
+        "lib/monoandroid81/EDMTBinding.dll",
+        "searchablespinner.3.0.0.nupkg.sha512",
+        "searchablespinner.nuspec"
       ]
     },
     "Stripe.net/22.8.1": {
@@ -793,6 +931,19 @@
         "xamarin.android.support.design.nuspec"
       ]
     },
+    "Xamarin.Android.Support.Exif/27.0.2.1": {
+      "sha512": "M92BebX+TU3pPh2RnM988YnZU7jh/uohm8KE5+85d33zMqsTimPTOeHRIYXK7dLV6e2PotMa1P8K9gL5rjG2pw==",
+      "type": "package",
+      "path": "xamarin.android.support.exif/27.0.2.1",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/MonoAndroid81/Xamarin.Android.Support.Exif.targets",
+        "lib/MonoAndroid81/Xamarin.Android.Support.Exif.dll",
+        "xamarin.android.support.exif.27.0.2.1.nupkg.sha512",
+        "xamarin.android.support.exif.nuspec"
+      ]
+    },
     "Xamarin.Android.Support.Fragment/27.0.2.1": {
       "sha512": "spNksIV4hpziYc2gerlw5iesdSm0NdgilLxAJLbwa9y1Y26kDRBCoMjzpKfptF1vdN6/ZYjS81DNsqG1qPloLA==",
       "type": "package",
@@ -845,6 +996,26 @@
         "lib/MonoAndroid81/Xamarin.Android.Support.v7.AppCompat.dll",
         "xamarin.android.support.v7.appcompat.27.0.2.1.nupkg.sha512",
         "xamarin.android.support.v7.appcompat.nuspec"
+      ]
+    },
+    "Xamarin.Android.Support.v7.CardView/28.0.0.1": {
+      "sha512": "cQxnwu8OWrGRz0Z300TA3NPr7ofsQ4I7tMw1NLFdKbfgPscLmPmiJiJsMcchCL/T9SVz4/3eRoUh6V1fg8iAqA==",
+      "type": "package",
+      "path": "xamarin.android.support.v7.cardview/28.0.0.1",
+      "files": [
+        ".signature.p7s",
+        "build/monoandroid71/Xamarin.Android.Support.v7.CardView.targets",
+        "build/monoandroid80/Xamarin.Android.Support.v7.CardView.targets",
+        "build/monoandroid81/Xamarin.Android.Support.v7.CardView.targets",
+        "build/monoandroid90/Xamarin.Android.Support.v7.CardView.targets",
+        "lib/monoandroid60/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid70/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid71/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid80/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid81/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid90/Xamarin.Android.Support.v7.CardView.dll",
+        "xamarin.android.support.v7.cardview.28.0.0.1.nupkg.sha512",
+        "xamarin.android.support.v7.cardview.nuspec"
       ]
     },
     "Xamarin.Android.Support.v7.RecyclerView/27.0.2.1": {
@@ -1074,11 +1245,15 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
+      "Karamunting.Android.Square.Picasso >= 2.71828.0",
       "Newtonsoft.Json >= 12.0.1",
+      "SearchableSpinner >= 3.0.0",
       "Stripe.net >= 22.8.1",
+      "Xamarin.Android.Support.Annotations >= 27.0.2.1",
       "Xamarin.Android.Support.Compat >= 27.0.2.1",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
+      "Xamarin.Android.Support.v7.CardView >= 28.0.0.1",
       "Xamarin.Essentials >= 1.0.1",
       "Xamarin.Firebase.Auth >= 60.1142.1",
       "Xamarin.Firebase.Database >= 60.1142.1",
@@ -1122,13 +1297,25 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
+          "Karamunting.Android.Square.Picasso": {
+            "target": "Package",
+            "version": "[2.71828.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.1, )"
           },
+          "SearchableSpinner": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
           "Stripe.net": {
             "target": "Package",
             "version": "[22.8.1, )"
+          },
+          "Xamarin.Android.Support.Annotations": {
+            "target": "Package",
+            "version": "[27.0.2.1, )"
           },
           "Xamarin.Android.Support.Compat": {
             "target": "Package",
@@ -1141,6 +1328,10 @@
           "Xamarin.Android.Support.v7.AppCompat": {
             "target": "Package",
             "version": "[27.0.2.1, )"
+          },
+          "Xamarin.Android.Support.v7.CardView": {
+            "target": "Package",
+            "version": "[28.0.0.1, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
@@ -1177,5 +1368,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Android.Support.Annotations from 28.0.0.1 to 27.0.2.1. Reference the package directly from the project to select a different version. \r\n HelpingHand -> Xamarin.Android.Support.v7.CardView 28.0.0.1 -> Xamarin.Android.Support.Annotations (= 28.0.0.1) \r\n HelpingHand -> Xamarin.Android.Support.Annotations (>= 27.0.2.1)",
+      "libraryId": "Xamarin.Android.Support.Annotations",
+      "targetGraphs": [
+        "MonoAndroid,Version=v8.1"
+      ]
+    }
+  ]
 }

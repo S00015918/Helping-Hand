@@ -1,7 +1,11 @@
 crypto
+EDMTBinding
 Firebase.Xamarin
 JWT
 Newtonsoft.Json
+Square.OkHttp3
+Square.OkIO
+Square.Picasso
 Stripe.net
 Syncfusion.SfCalendar.Android
 System.Collections.Immutable
@@ -20,10 +24,12 @@ Xamarin.Android.Support.Core.UI
 Xamarin.Android.Support.Core.Utils
 Xamarin.Android.Support.CustomTabs
 Xamarin.Android.Support.Design
+Xamarin.Android.Support.Exif
 Xamarin.Android.Support.Fragment
 Xamarin.Android.Support.Media.Compat
 Xamarin.Android.Support.Transition
 Xamarin.Android.Support.v7.AppCompat
+Xamarin.Android.Support.v7.CardView
 Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
 Xamarin.Essentials
