@@ -9,9 +9,8 @@
 		<com.toptoche.searchablespinnerlibrary.SearchableSpinner
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="60dp"
+			android:layout_marginTop="50dp"
 			style="@style/Widget.AppCompat.Spinner.Underlined"
-			android:theme="@style/Spinner"
 			android:id="@+id/searchable_spinner" />
 		<android.support.design.widget.FloatingActionButton 
 			android:layout_width="wrap_content" 
@@ -25,7 +24,7 @@
 		<EditText android:layout_toLeftOf="@+id/fab" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_width="match_parent"
 			android:layout_height="wrap_content" android:hint="Your message" android:id="@+id/input" />
 		<ListView
-			android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/fab" android:layout_below="@id/icon"
+			android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/fab" android:layout_below="@+id/searchable_spinner"
 			android:layout_alignParentTop="true" android:layout_alignParentStart="true" android:divider="@android:color/transparent"
 			android:dividerHeight="16dp" android:layout_marginTop="130dp" android:id="@+id/list_of_messages" />	
 	</RelativeLayout>

@@ -21,6 +21,7 @@ using Com.Toptoche.Searchablespinnerlibrary;
 using HelpingHand.Interface;
 using static Android.Widget.AdapterView;
 using HelpingHand.Adapter;
+using Newtonsoft.Json;
 
 namespace HelpingHand
 {
@@ -29,16 +30,20 @@ namespace HelpingHand
     {
         SearchableSpinner searchableSpinner;
         IFirebaseLoadDone firebaseLoadDone;
-        List<Model.BabySitter> babySitters = new List<Model.BabySitter>();
+        List<Parent> list_parents = new List<Parent>();
+        List<BabySitter> list_babySitters = new List<BabySitter>();
         FirebaseClient firebaseClient;
         private List<MessageContent> lstMessage = new List<MessageContent>();
         private ListView lstChat;
         private EditText edtChat;
         private FloatingActionButton send;
         FirebaseAuth auth;
+        BabySitter babySitter;
 
+        MessageContent filterMessages = new MessageContent();
         private BabysitterViewAdapter babysitterAdapter;
-        public string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm"), selectedBabysitter;
+        private ParentViewAdapter parentAdapter;
+        public string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm"), selectedUser, currentUserName;
         BottomSheetDialog bottomSheetDialog;
         TextView babysitter_name, babysitter_email;
         FloatingActionButton btn_fav;
@@ -82,11 +87,12 @@ namespace HelpingHand
             babysitter_email = bottom_sheet_view.FindViewById<TextView>(Resource.Id.babysitter_email);
             btn_fav = bottom_sheet_view.FindViewById<FloatingActionButton>(Resource.Id.btn_fav);
 
-            //searchableSpinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(searchableSpinner_ItemSelected);
+            //searchableSpinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(SearchableSpinner_ItemSelected);
             searchableSpinner.Adapter = babysitterAdapter;
 
             btn_fav.Click += delegate
-            {;
+            {
+                ;
                 bottomSheetDialog.Dismiss();
             };
 
@@ -97,31 +103,40 @@ namespace HelpingHand
             send.Click += delegate { PostMessage(); };
         }
 
-        private void searchableSpinner_ItemSelected(object sender, ItemSelectedEventArgs e)
-        {
-            SearchableSpinner spinner = (SearchableSpinner)sender;
-
-            string toast = string.Format("The babysitter is {0}", spinner.GetItemAtPosition(e.Position));
-            Toast.MakeText(this, toast, ToastLength.Long).Show();
-
-            var selected = spinner.GetItemAtPosition(e.Position);
-        }
-
         private async void PostMessage()
         {
             var firebase = new FirebaseClient(FirebaseURL);
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             FirebaseUser user = auth.CurrentUser;
-            string name = user.DisplayName;
-            string email = user.Email;
+            string currentUserEmail = user.Email;
             string message = edtChat.Text;
 
+            var parents = await firebaseClient
+                   .Child("parent")
+                   .OnceAsync<Parent>();
+            list_babySitters.Clear();
+            babysitterAdapter = null;
+            foreach (var item in parents)
+            {
+                Parent account = new Parent();
+                account.id = item.Key;
+                account.email = item.Object.email;
+                string parent_email = account.email;
+
+                if (currentUserEmail == parent_email)
+                {
+                    // current user is a parent - 
+                    account.name = item.Object.name;
+                    currentUserName = account.name.ToString();
+                }
+            }
             MessageContent messages = new MessageContent();
-            messages.Recipient = auth.CurrentUser.DisplayName;
-            messages.Email = auth.CurrentUser.Email;
+            messages.recieversEmail = babysitter_email.Text;
+            messages.sendersEmail = auth.CurrentUser.Email;
             messages.Message = edtChat.Text;
             messages.Time = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
-            messages.Recipient = selectedBabysitter;
+            messages.Recipient = babysitter_name.Text;
+            messages.Sender = currentUserName;
 
             var items = await firebaseClient.Child("messages").
                 PostAsync<MessageContent>(messages);
@@ -129,33 +144,58 @@ namespace HelpingHand
         }
         public void OnCancelled(DatabaseError error)
         {
-            
+            firebaseLoadDone.OnFirebaseLoadFailed(error.Message);
         }
 
         public void OnDataChange(DataSnapshot snapshot)
         {
             DisplayChatMessage();
-            DisplayBabySitters();
+            DisplaySpinnerUsers();
         }
 
-        private async void DisplayBabySitters()
+        public async void DisplaySpinnerUsers()
         {
-            List<BabySitter> local = new List<BabySitter>();
-            var firebase = new FirebaseClient(FirebaseURL);
-            var babysitters = await firebase
-                    .Child("babysitter")
-                    .OnceAsync<BabySitter>();
-            babySitters.Clear();
+            auth = FirebaseAuth.GetInstance(MainActivity.app);
+            var parents = await firebaseClient
+                   .Child("parent")
+                   .OnceAsync<Parent>();
+            list_babySitters.Clear();
             babysitterAdapter = null;
-            foreach (var item in babysitters)
+            foreach (var item in parents)
             {
-                BabySitter babysitter = new BabySitter();
-                babysitter.name = item.Object.name;
-                babysitter.email = item.Object.email;
-                local.Add(babysitter);
+                Parent account = new Parent();
+                account.id = item.Key;
+                account.name = item.Object.name;
+                account.email = item.Object.email;
+                list_parents.Add(account);
             }
 
-            firebaseLoadDone.OnFirebaseLoadSuccess(local);
+            if (parents.Any((_) => _.Key == auth.CurrentUser.Uid))
+            {
+                // You are a parent
+
+                var firebase = new FirebaseClient(FirebaseURL);
+                var babysitters = await firebase
+                        .Child("babysitter")
+                        .OnceAsync<BabySitter>();
+                list_babySitters.Clear();
+                babysitterAdapter = null;
+                foreach (var item in babysitters)
+                {
+                    BabySitter babysitter = new BabySitter();
+                    babysitter.name = item.Object.name;
+                    babysitter.email = item.Object.email;
+                    list_babySitters.Add(babysitter);
+                }
+                firebaseLoadDone.OnFirebaseLoadSuccess(list_babySitters);
+            }
+            else
+            {
+                // you are a babysitter
+                parentAdapter = new ParentViewAdapter(this, list_parents);
+                parentAdapter.NotifyDataSetChanged();
+                searchableSpinner.Adapter = parentAdapter;
+            }
         }
 
         private async void DisplayChatMessage()
@@ -189,7 +229,7 @@ namespace HelpingHand
 
         public void OnFirebaseLoadSuccess(List<BabySitter> babySitters)
         {
-            this.babySitters = babySitters;
+            this.list_babySitters = babySitters;
             //get All name
             List<string> babysitter_list = new List<string>();
             foreach (var babysitter in babySitters)
@@ -211,16 +251,19 @@ namespace HelpingHand
             // Fix Error first selected (Always fire this event when app starts)
             if (!isFirstTime)
             {
-                BabySitter babysitter = babySitters[position];
+                BabySitter babysitter = list_babySitters[position];
                 babysitter_name.Text = babysitter.name;
                 babysitter_email.Text = babysitter.email;
 
-                selectedBabysitter = babysitter.name.ToString();
+                selectedUser = babysitter.name.ToString();
                 bottomSheetDialog.Show();
-                Toast.MakeText(this, "Message Babysitter - " + selectedBabysitter, ToastLength.Long).Show();
+                Toast.MakeText(this, "Message Babysitter - " + selectedUser, ToastLength.Long).Show();
 
-                MessageContent filterMessages = new MessageContent();
-                filterMessages.Recipient = selectedBabysitter;
+                //babysitterEmail = babySitter.name;
+                //babysitterName = babysitter.email;
+
+                //filterMessages.Recipient = babysitterName;
+                //filterMessages.recieversEmail = babysitterEmail;
             }
             else { isFirstTime = false; }
 

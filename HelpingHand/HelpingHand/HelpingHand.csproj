@@ -109,7 +109,6 @@
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\CreditCard.cs" />
     <Compile Include="Model\IStripeServices.cs" />
-    <Compile Include="Model\Message.cs" />
     <Compile Include="Model\MessageContent.cs" />
     <Compile Include="Model\ObjectExtensions.cs" />
     <Compile Include="Model\Parent.cs" />

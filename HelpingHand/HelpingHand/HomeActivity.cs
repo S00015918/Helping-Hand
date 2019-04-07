@@ -64,7 +64,7 @@ namespace HelpingHand
 
                 if (clicked == 0)
                 {
-                    StartActivity(new Android.Content.Intent(this, typeof(PaymentActivity)));
+                    StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
                     Finish();
                 }
                 else if (clicked == 1)

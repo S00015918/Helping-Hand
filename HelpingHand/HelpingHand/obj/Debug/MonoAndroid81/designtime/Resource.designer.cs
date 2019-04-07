@@ -4396,7 +4396,7 @@ namespace HelpingHand
 			public const int message_time = 2130837792;
 			
 			// aapt resource value: 0x7F020119
-			public const int message_user = 2130837785;
+			public const int message_userName = 2130837785;
 			
 			// aapt resource value: 0x7F0C0045
 			public const int mini = 2131492933;

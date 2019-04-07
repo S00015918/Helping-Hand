@@ -44,12 +44,12 @@ namespace HelpingHand
         {
             LayoutInflater inflater = (LayoutInflater)messageActivity.BaseContext.GetSystemService(Context.LayoutInflaterService);
             View ItemView = inflater.Inflate(Resource.Layout.message_list, null);
-            TextView message_user, message_time, message_content;
-            message_user = ItemView.FindViewById<TextView>(Resource.Id.message_user);
+            TextView message_userName, message_time, message_content;
+            message_userName = ItemView.FindViewById<TextView>(Resource.Id.message_userName);
             message_time = ItemView.FindViewById<TextView>(Resource.Id.message_time);
             message_content = ItemView.FindViewById<TextView>(Resource.Id.message_text);
 
-            message_user.Text = lstMessage[position].Email;
+            message_userName.Text = lstMessage[position].Sender;
             message_time.Text = lstMessage[position].Time;
             message_content.Text = lstMessage[position].Message;
 

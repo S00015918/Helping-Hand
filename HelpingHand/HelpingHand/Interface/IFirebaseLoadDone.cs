@@ -15,7 +15,7 @@ namespace HelpingHand.Interface
 {
     public interface IFirebaseLoadDone
     {
-        void OnFirebaseLoadSuccess(List<Model.BabySitter> babySitters);
+        void OnFirebaseLoadSuccess(List<BabySitter> babySitters);
         void OnFirebaseLoadFailed(string message);
     }
 }

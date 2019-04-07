@@ -1149,7 +1149,7 @@ int id menu_user 0x7f0c017a
 int id message 0x7f0c0170
 int id message_text 0x7f0c0139
 int id message_time 0x7f0c0138
-int id message_user 0x7f0c0137
+int id message_userName 0x7f0c0137
 int id middle 0x7f0c0057
 int id mini 0x7f0c0078
 int id monochrome 0x7f0c003a

@@ -3974,7 +3974,7 @@ containing a value of this type.
         public static int message=0x7f0c0170;
         public static int message_text=0x7f0c0139;
         public static int message_time=0x7f0c0138;
-        public static int message_user=0x7f0c0137;
+        public static int message_userName=0x7f0c0137;
         public static int middle=0x7f0c0057;
         public static int mini=0x7f0c0078;
         public static int monochrome=0x7f0c003a;
@@ -4490,7 +4490,7 @@ containing a value of this type.
         public static int EditTextWhite=0x7f09018b;
         /** ListView
          */
-        public static int MyListViewTheme=0x7f09018c;
+        public static int MyListViewTheme=0x7f09018d;
         /** Login & Registration
          */
         public static int MyTheme_Login=0x7f09018a;
@@ -4522,6 +4522,7 @@ containing a value of this type.
         public static int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f09003e;
         public static int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f09003f;
         public static int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f090040;
+        public static int Spinner=0x7f09018c;
         public static int TextAppearance_AppCompat=0x7f0900cf;
         public static int TextAppearance_AppCompat_Body1=0x7f0900d0;
         public static int TextAppearance_AppCompat_Body2=0x7f0900d1;

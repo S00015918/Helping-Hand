@@ -3974,7 +3974,7 @@ containing a value of this type.
         public static final int message=0x7f0c0170;
         public static final int message_text=0x7f0c0139;
         public static final int message_time=0x7f0c0138;
-        public static final int message_user=0x7f0c0137;
+        public static final int message_userName=0x7f0c0137;
         public static final int middle=0x7f0c0057;
         public static final int mini=0x7f0c0078;
         public static final int monochrome=0x7f0c003a;

@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Support.Design.Widget;
 using Android.Support.V7.App;
-using Android.Views;
-using Android.Widget;
-using Com.Toptoche.Searchablespinnerlibrary;
 using Firebase.Database;
 using HelpingHand.Interface;
-using HelpingHand.Model;
 using static Android.Widget.AdapterView;
+using Android.Runtime;
+using Android.Widget;
+using Com.Toptoche.Searchablespinnerlibrary;
+using System.Collections.Generic;
+using System.Linq;
+using Android.Support.Design.Widget;
+using Android.Views;
+using Square.PicassoLib;
+using Android.OS;
 
 namespace HelpingHand
 {
@@ -25,11 +22,11 @@ namespace HelpingHand
         SearchableSpinner searchableSpinner;
         DatabaseReference movieRef;
         IFirebaseLoadDone firebaseLoadDone;
-        List<Model.BabySitter> babySitters = new List<Model.BabySitter>();
+        List<Model.BabySitter> list_babysitters= new List<Model.BabySitter>();
         BottomSheetDialog bottomSheetDialog;
 
         //Dialog view
-        TextView babysitter_name, babysitter_email;
+        TextView baby_name, baby_email;
         FloatingActionButton btn_fav;
         bool isFirstTime = true;
 
@@ -40,13 +37,14 @@ namespace HelpingHand
 
         public void OnDataChange(DataSnapshot snapshot)
         {
-            List<BabySitter> local = new List<BabySitter>();
-            foreach (DataSnapshot dataSnapShot in snapshot.Children.ToEnumerable())
+            List<Model.BabySitter> local = new List<Model.BabySitter>();
+            foreach (DataSnapshot movieSnapShot in snapshot.Children.ToEnumerable())
             {
-                BabySitter babysitter = new BabySitter();
-                babysitter.name = dataSnapShot.Child("name").GetValue(true).ToString();
-                babysitter.email = dataSnapShot.Child("email").GetValue(true).ToString();
-                local.Add(babysitter);
+                Model.BabySitter baby = new Model.BabySitter();
+                baby.name = movieSnapShot.Child("name").GetValue(true).ToString();
+                baby.email = movieSnapShot.Child("email").GetValue(true).ToString();
+
+                local.Add(baby);
             }
             firebaseLoadDone.OnFirebaseLoadSuccess(local);
         }
@@ -56,18 +54,32 @@ namespace HelpingHand
             Toast.MakeText(this, message, ToastLength.Short).Show();
         }
 
-        public void OnFirebaseLoadSuccess(List<Model.BabySitter> babySitters)
+        public void OnFirebaseLoadSuccess(List<Model.BabySitter> sitters)
         {
-            this.babySitters = babySitters;
+            this.list_babysitters = sitters;
             //get All name
-            List<string> babysitter_list = new List<string>();
-            foreach (var babysitter in babySitters)
+            List<string> _list = new List<string>();
+            foreach (var babysitters in sitters)
             {
-                babysitter_list.Add(babysitter.name);
+                _list.Add(babysitters.name);
             }
             // Create Adapter
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, babysitter_list);
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _list);
             searchableSpinner.Adapter = adapter;
+        }
+
+        public void OnItemClick(AdapterView parent, View view, int position, long id)
+        {
+            // Fix Error first selected (Always fire this event when app starts)
+            if (!isFirstTime)
+            {
+                Model.BabySitter baby = list_babysitters[position];
+                baby_email.Text = baby.email;
+                baby_name.Text = baby.name;
+
+                bottomSheetDialog.Show();
+            }
+            else { isFirstTime = false; }
         }
 
         public void OnItemSelected(AdapterView parent, View view, int position, long id)
@@ -75,9 +87,9 @@ namespace HelpingHand
             // Fix Error first selected (Always fire this event when app starts)
             if (!isFirstTime)
             {
-                Model.BabySitter babysitter = babySitters[position];
-                babysitter_name.Text = babysitter.name;
-                babysitter_email.Text = babysitter.email;
+                Model.BabySitter baby = list_babysitters[position];
+                baby_email.Text = baby.email;
+                baby_name.Text = baby.name;
 
                 bottomSheetDialog.Show();
             }
@@ -108,8 +120,8 @@ namespace HelpingHand
             bottomSheetDialog.SetContentView(bottom_sheet_view);
             //bottomSheetDialog.Show();
 
-            babysitter_name = bottom_sheet_view.FindViewById<TextView>(Resource.Id.babysitter_name);
-            babysitter_email = bottom_sheet_view.FindViewById<TextView>(Resource.Id.babysitter_email);
+            baby_name = bottom_sheet_view.FindViewById<TextView>(Resource.Id.babysitter_name);
+            baby_email = bottom_sheet_view.FindViewById<TextView>(Resource.Id.babysitter_email);
             btn_fav = bottom_sheet_view.FindViewById<FloatingActionButton>(Resource.Id.btn_fav);
             btn_fav.Click += delegate
             {

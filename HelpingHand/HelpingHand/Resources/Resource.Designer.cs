@@ -3640,7 +3640,7 @@ namespace HelpingHand
 			public const int message_time = 2131493176;
 			
 			// aapt resource value: 0x7f0c0137
-			public const int message_user = 2131493175;
+			public const int message_userName = 2131493175;
 			
 			// aapt resource value: 0x7f0c0057
 			public const int middle = 2131492951;
