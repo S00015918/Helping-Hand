@@ -8,6 +8,7 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
@@ -22,7 +23,7 @@ using static Android.Views.View;
 namespace HelpingHand
 {
     [Activity(Label = "Create Booking", Theme = "@style/AppTheme")]
-    public class CreateAppointment : Activity, IOnClickListener, IOnTimeSetListener
+    public class CreateAppointment : AppCompatActivity, IOnClickListener, IOnTimeSetListener
     {
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
         FirebaseAuth auth;
@@ -56,6 +57,11 @@ namespace HelpingHand
             var btnChangeTime = FindViewById<Button>(Resource.Id.btnChange_time);
             var btnChangeEndTime = FindViewById<Button>(Resource.Id.btnChange_Endtime);
             var txtDate = FindViewById<TextView>(Resource.Id.textViewDate);
+
+            //Add Toolbar
+            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            //SupportActionBar.Title = "Cancel";
 
             txtDate.Text = (getDate());
             btnChangeDate.Click += (s, e) =>
@@ -267,10 +273,10 @@ namespace HelpingHand
                 { timeOfDay = "Afternoon"; }
 
                 else if (_hour >= 16 && _hour < 20)
-                { timeOfDay = "Afternoon"; }
+                { timeOfDay = "Evening"; }
 
                 else if (_hour >= 20 && _hour < 23)
-                { timeOfDay = "Afternoon"; }
+                { timeOfDay = "Night"; }
 
                 var today = dateSelected.DayOfWeek.ToString().TrimEnd();
                 string todaysTime = today + " " + timeOfDay.ToString();
@@ -323,7 +329,6 @@ namespace HelpingHand
             decimal amountDue = totalHours * payRate;
 
             Appointment appointment = new Appointment();
-            appointment.Parent = user.DisplayName;
             appointment.Date = Convert.ToDateTime(selectedDate);
             appointment.startTime = selectedStartTime;
             appointment.endTime = selectedEndTime;
@@ -343,11 +348,32 @@ namespace HelpingHand
             {
                 var firebase = new FirebaseClient(FirebaseURL);
                 ////Add Item
-                var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
-                StartActivity(new Android.Content.Intent(this, typeof(userSchedule)));
+                var appointmentJson = JsonConvert.SerializeObject(appointment);
+
+                var viewPaymentForm = new Intent(this, typeof(PaymentActivity));
+                viewPaymentForm.PutExtra("KEY", appointmentJson);
+                StartActivity(viewPaymentForm);
+
+                //var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
+                //StartActivity(new Android.Content.Intent(this, typeof(PaymentActivity)));
+                //Finish();
+            }
+        }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+            if (id == Resource.Id.menu_home)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
                 Finish();
             }
-
+            return base.OnOptionsItemSelected(item);
         }
     }
 }

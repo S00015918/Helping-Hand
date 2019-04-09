@@ -19,7 +19,7 @@ namespace HelpingHand
 
         public void AfterTextChanged(IEditable s)
         {
-            if (_lock || s.Length() > 19)
+            if (_lock || s.Length() > 18)
                 {
                     return;
                 }

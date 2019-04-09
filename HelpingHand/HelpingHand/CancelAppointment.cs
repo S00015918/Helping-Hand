@@ -53,7 +53,6 @@ namespace HelpingHand
             foreach (var item in items)
             {
                 Appointment account = new Appointment();
-                account.Parent = item.Object.Parent;
                 account.Babysitter = item.Object.Babysitter;
                 account.Date = item.Object.Date;
                 string dateTime = account.Date.ToString();
@@ -148,7 +147,6 @@ namespace HelpingHand
                 BabySitter sitter = new BabySitter();
                 sitter.email = item.Object.email;
                 babysitterEmail = sitter.email;
-
 
                 if (babysitterEmail == selectedUser)
                 {

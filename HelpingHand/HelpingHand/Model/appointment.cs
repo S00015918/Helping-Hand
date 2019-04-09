@@ -16,7 +16,6 @@ namespace HelpingHand.Model
 {
     public class Appointment
     {
-        public string Parent { get; set; }
         public DateTime Date { get; set; }
         public string startTime { get; set; }
         public string endTime { get; set; }

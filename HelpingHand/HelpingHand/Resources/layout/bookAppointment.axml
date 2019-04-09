@@ -4,30 +4,29 @@
 		xmlns:tools="http://schemas.android.com/tools"
 	  android:layout_width="match_parent"
       android:layout_height="match_parent">
-<RelativeLayout
-    android:id="@+id/activity_book_appointment"
-    android:padding="6dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-		<FrameLayout android:id="@+id/layout_top" android:layout_width="match_parent" android:layout_height="wrap_content">  
+	<RelativeLayout android:id="@+id/activity_book_appointment" android:layout_width="match_parent" android:layout_height="match_parent">
+		<include
+			android:id="@+id/toolbar"
+			layout="@layout/toolbar"/>
+		<FrameLayout android:id="@+id/layout_top" android:layout_below="@+id/activity_book_appointment" android:layout_marginTop="60dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingLeft="5dp" >  
 			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="5dp">  
 				<DatePicker	android:id="@+id/datePicker" android:layout_width="wrap_content" android:layout_height="match_parent"/>
 				<Button android:id="@+id/btnChange_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Change Date" android:textSize="18sp"/>
 				<TextView android:id="@+id/textViewDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Display Date" android:textSize="16sp"/>
 			</LinearLayout>  
-        </FrameLayout> 
-		<FrameLayout android:id="@+id/layout_middle" android:layout_below="@+id/layout_top" android:layout_width="190dp" android:layout_height="wrap_content">  
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="1dp">  
+		</FrameLayout> 
+		<FrameLayout android:id="@+id/layout_middle" android:layout_below="@+id/layout_top" android:layout_width="190dp" android:layout_height="wrap_content" android:paddingLeft="5dp" >  
+			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="1dp">  
 				<Button android:id="@+id/btnChange_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select Start Time" android:textSize="16sp"/>
 				<TextView android:id="@+id/textViewTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Appointment Start Time" android:textSize="16sp"/>
 			</LinearLayout>  
-        </FrameLayout>
-		<FrameLayout android:id="@+id/layout_middle2" android:layout_toRightOf="@+id/layout_middle" android:layout_below="@+id/layout_top" android:layout_width="190dp" android:layout_height="wrap_content">  
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="1dp">  
+		</FrameLayout>
+		<FrameLayout android:id="@+id/layout_middle2" android:layout_toRightOf="@+id/layout_middle" android:layout_below="@+id/layout_top" android:layout_width="190dp" android:layout_height="wrap_content" android:paddingLeft="5dp" >  
+			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="1dp">  
 				<Button android:id="@+id/btnChange_Endtime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select End Time" android:textSize="16sp"/>
 				<TextView android:id="@+id/textViewEndTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Appointment Ends" android:textSize="16sp"/>
 			</LinearLayout>  
-        </FrameLayout>
+		</FrameLayout>
 		<FrameLayout android:id="@+id/layout_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_below="@+id/layout_middle2">  
             
 			<android.support.design.widget.FloatingActionButton 
@@ -40,6 +39,5 @@
 				app:srcCompat="@drawable/ic_right_arrow" />
 
 		</FrameLayout>
-</RelativeLayout>
-
+	</RelativeLayout>
 </ScrollView>

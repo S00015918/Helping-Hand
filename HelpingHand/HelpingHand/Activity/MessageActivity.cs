@@ -119,7 +119,6 @@ namespace HelpingHand
             foreach (var item in parents)
             {
                 Parent account = new Parent();
-                account.id = item.Key;
                 account.email = item.Object.email;
                 string parent_email = account.email;
 
@@ -128,6 +127,20 @@ namespace HelpingHand
                     // current user is a parent - 
                     account.name = item.Object.name;
                     currentUserName = account.name.ToString();
+                }
+                else
+                {
+                    var Babysitters = await firebase
+                        .Child("babysitter")
+                        .OnceAsync<BabySitter>();
+                    list_babySitters.Clear();
+                    parentAdapter = null;
+                    foreach (var sitters in Babysitters)
+                    {
+                        BabySitter _account = new BabySitter();
+                        _account.name = item.Object.name;
+                        currentUserName = _account.name.ToString();
+                    }
                 }
             }
             MessageContent messages = new MessageContent();
@@ -200,13 +213,23 @@ namespace HelpingHand
 
         private async void DisplayChatMessage()
         {
+            auth = FirebaseAuth.GetInstance(MainActivity.app);
+            FirebaseUser user = auth.CurrentUser;
+
             lstMessage.Clear();
             var items = await firebaseClient.Child("messages")
                 .OnceAsync<MessageContent>();
             foreach (var item in items)
+            {
                 lstMessage.Add(item.Object);
-            MessageAdapter adapter = new MessageAdapter(this, lstMessage);
-            lstChat.Adapter = adapter;
+                string recieverEmail = item.Object.recieversEmail;
+                string senderEmail = item.Object.sendersEmail;
+                if (senderEmail == auth.CurrentUser.Email || recieverEmail == auth.CurrentUser.Email)
+                {
+                    MessageAdapter adapter = new MessageAdapter(this, lstMessage);
+                    lstChat.Adapter = adapter;
+                }
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -220,7 +243,7 @@ namespace HelpingHand
             int id = item.ItemId;
             if (id == Resource.Id.menu_home)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
                 Finish();
             }
 
@@ -258,12 +281,6 @@ namespace HelpingHand
                 selectedUser = babysitter.name.ToString();
                 bottomSheetDialog.Show();
                 Toast.MakeText(this, "Message Babysitter - " + selectedUser, ToastLength.Long).Show();
-
-                //babysitterEmail = babySitter.name;
-                //babysitterName = babysitter.email;
-
-                //filterMessages.Recipient = babysitterName;
-                //filterMessages.recieversEmail = babysitterEmail;
             }
             else { isFirstTime = false; }
 

@@ -108,6 +108,7 @@
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\CreditCard.cs" />
+    <Compile Include="Model\Dialogclass.cs" />
     <Compile Include="Model\IStripeServices.cs" />
     <Compile Include="Model\MessageContent.cs" />
     <Compile Include="Model\ObjectExtensions.cs" />
@@ -581,6 +582,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\layout_babysitters.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\confirmPayment_popup.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

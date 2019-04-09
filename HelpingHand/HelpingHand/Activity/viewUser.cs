@@ -59,11 +59,20 @@ namespace HelpingHand
             btnMonMorn = FindViewById<Button>(Resource.Id.btnMonMorn); btnMonMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnTueMorn = FindViewById<Button>(Resource.Id.btnTueMorn); btnTueMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed);
             btnWedMorn = FindViewById<Button>(Resource.Id.btnWedMorn); btnWedMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnThuMorn = FindViewById<Button>(Resource.Id.btnThuMorn); btnThuMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed);
             btnFriMorn = FindViewById<Button>(Resource.Id.btnFriMorn); btnFriMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnSatMorn = FindViewById<Button>(Resource.Id.btnSatMorn); btnSatMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed);
-            btnSunMorn = FindViewById<Button>(Resource.Id.btnSunMorn); btnSunMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnMonAft = FindViewById<Button>(Resource.Id.btnMonAfter); btnMonAft.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnSunMorn = FindViewById<Button>(Resource.Id.btnSunMorn); btnSunMorn.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnMonAft = FindViewById<Button>(Resource.Id.btnMonAfter); btnMonAft.SetBackgroundColor(Android.Graphics.Color.IndianRed);
             btnTueAft = FindViewById<Button>(Resource.Id.btnTueAfter); btnTueAft.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnWedAft = FindViewById<Button>(Resource.Id.btnWedAfter); btnWedAft.SetBackgroundColor(Android.Graphics.Color.IndianRed);
             btnThuAft = FindViewById<Button>(Resource.Id.btnThuAfter); btnThuAft.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnFriAft = FindViewById<Button>(Resource.Id.btnFriAfter); btnFriAft.SetBackgroundColor(Android.Graphics.Color.IndianRed);
-            btnSatEve = FindViewById<Button>(Resource.Id.btnSatEve);
-            btnSatEve.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnSatAft = FindViewById<Button>(Resource.Id.btnSatAfter); btnSatAft.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnSunAft = FindViewById<Button>(Resource.Id.btnSunAfter); btnSunAft.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnMonEve = FindViewById<Button>(Resource.Id.btnMonEve); btnMonEve.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnTueEve = FindViewById<Button>(Resource.Id.btnTueEve); btnTueEve.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnWedEve = FindViewById<Button>(Resource.Id.btnWedEve);  btnWedEve.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnThuEve = FindViewById<Button>(Resource.Id.btnThuEve); btnThuEve.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnFriEve = FindViewById<Button>(Resource.Id.btnFriEve); btnFriEve.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnSatEve = FindViewById<Button>(Resource.Id.btnSatEve); btnSatEve.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnSunEve = FindViewById<Button>(Resource.Id.btnSunEve); btnSunEve.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnMonNigh = FindViewById<Button>(Resource.Id.btnMonNight); btnMonNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnTueNigh = FindViewById<Button>(Resource.Id.btnTueNight); btnTueNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnWedNigh = FindViewById<Button>(Resource.Id.btnWedNight); btnWedNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnThuNigh = FindViewById<Button>(Resource.Id.btnThuNight);  btnThuNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnFriNigh = FindViewById<Button>(Resource.Id.btnFriNight); btnFriNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed); btnSatNigh = FindViewById<Button>(Resource.Id.btnSatNight); btnSatNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed);
+            btnSunNigh = FindViewById<Button>(Resource.Id.btnSunNight);
+            btnSunNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed);
 
             if (userSitter.id != auth.CurrentUser.Uid)
             {
@@ -282,7 +291,7 @@ namespace HelpingHand
             int id = item.ItemId;
             if (id == Resource.Id.menu_home)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
                 Finish();
             }
             else if (id == Resource.Id.menu_message) // message user

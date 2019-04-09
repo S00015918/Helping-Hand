@@ -9,20 +9,27 @@ using Android.Gms.Wallet;
 using Android.Gms.Wallet.Fragment;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using Firebase.Xamarin.Database;
 using HelpingHand.Model;
+using Newtonsoft.Json;
 using Stripe;
 
 namespace HelpingHand
 {
-    [Activity(Label = "PaymentActivity")]
-    public class PaymentActivity : Activity
+    [Activity(Label = "Make Payment")]
+    public class PaymentActivity : AppCompatActivity
     {
+        private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
         FirebaseAuth auth;
         EditText creditCardNumber, cardExpiryMonth, cardExpiryYear, cardCVV;
         Button AcceptPayment;
+        string startTime, endTime, userEmail, babysitterEmail, Babysitter, City, Address, Eircode, dateNotTime, _date;
+        DateTime Date;
+        decimal Cost;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,30 +43,70 @@ namespace HelpingHand
             creditCardNumber.AddTextChangedListener(new CreditCardFormatter(creditCardNumber));
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            //SetSupportActionBar(toolbar);
-            //SupportActionBar.Title = "Home";
+            SetSupportActionBar(toolbar);
+            //SupportActionBar.Title = "Cancel";
+
+            string appointment = this.Intent.GetStringExtra("KEY");
+            Appointment newAppointment = JsonConvert.DeserializeObject<Appointment>(appointment);
+            Date = newAppointment.Date;
+            _date = Date.ToString();
+            dateNotTime = _date.TrimStart();
+
+            startTime = newAppointment.startTime;
+            endTime = newAppointment.endTime;
+            userEmail = auth.CurrentUser.Email;
+            babysitterEmail = newAppointment.babysitterEmail;
+            Babysitter = newAppointment.Babysitter;
+            City = newAppointment.City;
+            Address = newAppointment.Address;
+            Eircode = newAppointment.Eircode;
+            Cost = newAppointment.cost;
 
             //ChargeCard();
-            AcceptPayment.Click += delegate
+            AcceptPayment.Click += (object sender, EventArgs args) =>
             {
-                ChargeCard();
-                MakeStripePayment();
+                FragmentTransaction transcation = FragmentManager.BeginTransaction();
+                Dialogclass signup = new Dialogclass();
+                signup.Show(transcation, "Dialog Fragment");
             };
         }
-
-        public void ChargeCard()
+        public override bool OnCreateOptionsMenu(IMenu menu)
         {
+            MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+            if (id == Resource.Id.menu_home)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
+                Finish();
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+
+        public async void ChargeCard()
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
             // Set your secret key: remember to change this to your live secret key in production
             // See your keys here: https://dashboard.stripe.com/account/apikeys
             StripeConfiguration.SetApiKey("sk_test_LMuAkBgF8zxl2ha3G66Yygdq00s09S6uzP");
 
             PaymentModel payment = new PaymentModel();
             var token = payment.Token;
-            var amountCharged = payment.Amount;
+            //var amountCharged = payment.Amount;
+
+            decimal AppFee = Cost * 10 / 100;
+            decimal appointmentCharge = AppFee + Cost;
+
+            string amountCharged = appointmentCharge.ToString();
+            long convertCharge = Convert.ToInt64(amountCharged);
 
             var options = new ChargeCreateOptions
             {
-                Amount = 999, //Convert.ToInt32(amountCharged * 100), //for cents
+                Amount = convertCharge, //Convert.ToInt32(amountCharged * 100), //for cents
                 Currency = "eur",
                 SourceId = "tok_visa", // token
                 Description = "Babysitter Hired",
@@ -67,6 +114,21 @@ namespace HelpingHand
             };
             var service = new ChargeService();
             Charge charge = service.Create(options);
+
+            Appointment appointment = new Appointment();
+            appointment.Date = Date;
+            appointment.startTime = startTime;
+            appointment.endTime = endTime;
+            appointment.userEmail = auth.CurrentUser.Email;
+            appointment.babysitterEmail = userEmail;
+            appointment.Babysitter = Babysitter;
+            appointment.City = City;
+            appointment.Address = Address;
+            appointment.Eircode = Eircode;
+            appointment.cost = Cost;
+
+            Toast.MakeText(this, "Payment Made", ToastLength.Short).Show();
+            var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
         }
 
         //public async void ChargeCard()
@@ -245,6 +307,5 @@ namespace HelpingHand
         {
             throw new NotImplementedException();
         }
-    }
-    
+    }    
 }

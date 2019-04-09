@@ -279,7 +279,7 @@ namespace HelpingHand
             int id = item.ItemId;
             if (id == Resource.Id.menu_home)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
                 Finish();
             }
             else if (id == Resource.Id.menu_save) // Update users details

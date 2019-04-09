@@ -94,7 +94,7 @@
 
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hourly Rate" android:textColor="@color/headings" android:textSize="13sp" />
                 <EditText android:id="@+id/payRate" android:layout_width="150dp" android:layout_height="wrap_content" android:fontFamily="sans-serif-light"
-                    android:text="Rate per Hour" android:textColor="#000000" android:textSize="18sp" android:inputType="number" android:maxLength="4" />
+                    android:text="Rate per Hour" android:textColor="#000000" android:textSize="18sp" android:inputType="number" android:maxLength="4" android:digits="01234 56789." />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
 
             </LinearLayout>
