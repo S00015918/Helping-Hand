@@ -16,6 +16,9 @@
   <color name="followersBg">#65DCE5</color>
   <color name="followingBg">#49BEFF</color>
   <color name="grey">#E5E5E5</color>
+  
+  <color name="btncancelPayment">#ef9296</color>
+  <color name="btnmakePayment">#7deda6</color>
 
   <color name="ListViewSelected">#96BCE3</color>
   <color name="ListViewHighlighted">#E39696</color>

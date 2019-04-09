@@ -2,34 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
     android:orientation="vertical"  
     android:layout_width="match_parent"  
-    android:layout_height="match_parent"  
-    android:background="@android:color/background_light">  
+    android:layout_height="wrap_content"
+	android:padding="5dp"
+    android:background="@drawable/abc_ab_share_pack_mtrl_alpha">  
     <Button  
         android:text="Confirm payment"  
         android:layout_width="match_parent"  
-        android:layout_height="0dp"  
+        android:layout_height="150dp"  
         android:id="@+id/btnConfirmPayment"  
-        android:layout_weight="1" 
 		android:padding="5dp"
-        android:textSize="30sp"  
-        android:background="@android:color/holo_blue_light" />  
-    <TextView  
-        android:text="OR"  
-        android:textAppearance="?android:attr/textAppearanceLarge"  
-        android:layout_width="match_parent"  
-        android:layout_height="0dp"  
-        android:id="@+id/txtOr"  
-        android:layout_weight="1"  
-        android:background="@android:color/darker_gray"  
-        android:textSize="25sp"  
-        android:textColor="@android:color/background_light"  
-        android:gravity="center" />  
-    <Button  
-        android:text="Cancel payment"  
-        android:layout_width="match_parent"  
-        android:layout_height="0dp"  
-        android:id="@+id/btnCancelPayment"  
-        android:layout_weight="1"  
-        android:textSize="25sp"
-	android:background="@android:color/holo_red_light" />  
+        android:textSize="30sp"
+		android:background="#7deda6"/>
+
+	<RelativeLayout android:layout_width="wrap_content" android:id="@+id/layoutTop"  
+		android:layout_height="70dp" android:padding="5dp">
+		<TextView  
+			android:text="OR"
+			android:layout_below="@+id/btnConfirmPayment"
+			android:textAppearance="?android:attr/textAppearanceLarge"  
+			android:layout_width="match_parent"  
+			android:layout_height="70dp"  
+			android:id="@+id/txtOr"  
+			android:background="@android:color/darker_gray"  
+			android:textSize="25sp"  
+			android:textColor="@android:color/background_light"  
+			android:gravity="center" /> 
+	</RelativeLayout>
+
+	<RelativeLayout android:layout_width="match_parent" android:layout_below="@+id/layoutTop"
+		android:layout_height="match_parent">
+		<Button  
+			android:text="Cancel payment"  
+			android:layout_width="match_parent"
+			android:layout_below="@+id/txtOr"
+			android:layout_height="120dp"
+			android:id="@+id/btnCancelPayment"  
+			android:textSize="30sp"
+			android:background="#ef9296" />
+	</RelativeLayout>
 </LinearLayout> 

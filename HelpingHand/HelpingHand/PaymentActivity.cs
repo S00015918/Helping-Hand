@@ -68,8 +68,16 @@ namespace HelpingHand
                 FragmentTransaction transcation = FragmentManager.BeginTransaction();
                 Dialogclass signup = new Dialogclass();
                 signup.Show(transcation, "Dialog Fragment");
+                signup.onPaymentComplete += Signup_onPaymentComplete;
             };
         }
+
+        private void Signup_onPaymentComplete(object sender, PaymentConfirmed e)
+        {
+            MakeStripePayment();
+            ChargeCard();
+        }
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
@@ -96,17 +104,16 @@ namespace HelpingHand
 
             PaymentModel payment = new PaymentModel();
             var token = payment.Token;
-            //var amountCharged = payment.Amount;
 
             decimal AppFee = Cost * 10 / 100;
             decimal appointmentCharge = AppFee + Cost;
-
-            string amountCharged = appointmentCharge.ToString();
-            long convertCharge = Convert.ToInt64(amountCharged);
+            long amountCharged = Convert.ToInt32(appointmentCharge);
+            string convertCost = amountCharged.ToString();
+            decimal finalCost = decimal.Parse(convertCost);
 
             var options = new ChargeCreateOptions
             {
-                Amount = convertCharge, //Convert.ToInt32(amountCharged * 100), //for cents
+                Amount = Convert.ToInt32(amountCharged * 100), //for cents
                 Currency = "eur",
                 SourceId = "tok_visa", // token
                 Description = "Babysitter Hired",
@@ -125,10 +132,10 @@ namespace HelpingHand
             appointment.City = City;
             appointment.Address = Address;
             appointment.Eircode = Eircode;
-            appointment.cost = Cost;
+            appointment.cost = finalCost;
 
-            Toast.MakeText(this, "Payment Made", ToastLength.Short).Show();
             var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
+            Toast.MakeText(this, "Payment Made", ToastLength.Short).Show();
         }
 
         //public async void ChargeCard()
