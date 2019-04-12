@@ -105,6 +105,7 @@
     <Compile Include="ImageAdapter.cs" />
     <Compile Include="Interface\IFirebaseLoadDone.cs" />
     <Compile Include="MapActivity.cs" />
+    <Compile Include="MinMaxInputFilter.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\CreditCard.cs" />

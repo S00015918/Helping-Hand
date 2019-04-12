@@ -10,6 +10,7 @@ using Android.Gms.Wallet.Fragment;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
+using Android.Text;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
@@ -39,8 +40,12 @@ namespace HelpingHand
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             AcceptPayment = FindViewById<Button>(Resource.Id.btnAccept);
             creditCardNumber = FindViewById<EditText>(Resource.Id.txtCreditCardNumber);
+            cardExpiryMonth = FindViewById<EditText>(Resource.Id.txtExpiryMonth);
+            cardExpiryYear = FindViewById<EditText>(Resource.Id.txtExpiryYear);
 
             creditCardNumber.AddTextChangedListener(new CreditCardFormatter(creditCardNumber));
+            cardExpiryMonth.SetFilters(new Android.Text.IInputFilter[]{ new MinMaxInputFilter(1, 12) });
+            cardExpiryYear.SetFilters(new Android.Text.IInputFilter[] { new MinMaxInputFilter(19, 29) });
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);

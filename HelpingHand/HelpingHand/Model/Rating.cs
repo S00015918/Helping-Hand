@@ -14,8 +14,8 @@ namespace HelpingHand.Model
 {
     public class Rating
     {
-        public string id { get; set; }
-        public string userID { get; set; }
+        public string ratedByEmail { get; set; }
+        public string userRatedEmail { get; set; }
         public int rating { get; set; }
 
     }
