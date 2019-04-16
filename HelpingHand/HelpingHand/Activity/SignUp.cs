@@ -83,32 +83,45 @@ namespace XamarinFirebaseAuth
         private async void CreateUser(string uid, string name, string password, string phone, string address,
             string city, string email, string eircode)
         {
-            var firebase = new FirebaseClient(FirebaseURL);
-            var spinner = FindViewById<Spinner>(Resource.Id.spinnerCount);
-            spinner.ItemSelected += (s, e) =>
+            if (name == "" || password == "" || phone == "" || address == ""
+                || city == "" || email == "")
             {
-                string firstItem = spinner.SelectedItem.ToString();
-                if (firstItem.Equals(spinner.SelectedItem.ToString()))
+                Toast.MakeText(this, "Please enter all fields !", ToastLength.Short).Show();
+                btnSignup.Enabled = false;
+                return;
+            }
+            else
+            {
+                var firebase = new FirebaseClient(FirebaseURL);
+                var spinner = FindViewById<Spinner>(Resource.Id.spinnerCount);
+                spinner.ItemSelected += (s, e) =>
                 {
-                    // To do when first item is selected
-                }
-                else
-                {
-                    Toast.MakeText(this, "You have selected " + e.Parent.GetItemIdAtPosition(e.Position).ToString(),
-                        ToastLength.Short).Show();
-                }
-            };
-            int input_childCount = int.Parse(spinner.SelectedItem.ToString());
+                    string firstItem = spinner.SelectedItem.ToString();
+                    if (firstItem.Equals(spinner.SelectedItem.ToString()))
+                    {
+                        // To do when first item is selected
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "You have selected " + e.Parent.GetItemIdAtPosition(e.Position).ToString(),
+                            ToastLength.Short).Show();
+                    }
+                };
+                string trimName = name.TrimStart();
 
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("id").PutAsync(auth.CurrentUser.Uid);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("name").PutAsync(name);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("password").PutAsync(password);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("phone").PutAsync(phone);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("address").PutAsync(address);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("city").PutAsync(city);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("email").PutAsync(email);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(eircode);
-            await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("noOfKids").PutAsync(input_childCount);
+                int input_childCount = int.Parse(spinner.SelectedItem.ToString());
+
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("id").PutAsync(auth.CurrentUser.Uid);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("name").PutAsync(trimName);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("password").PutAsync(password);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("phone").PutAsync(phone);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("address").PutAsync(address);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("city").PutAsync(city);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("email").PutAsync(email);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(eircode);
+                await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("noOfKids").PutAsync(input_childCount);
+            }
+            
         }
 
         public void OnComplete(Task task)

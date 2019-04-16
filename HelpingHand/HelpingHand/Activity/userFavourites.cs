@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
 using Firebase.Xamarin.Database;
+using Firebase.Xamarin.Database.Query;
 using HelpingHand.Adapter;
 using HelpingHand.Model;
 using Newtonsoft.Json;
@@ -24,10 +25,13 @@ namespace HelpingHand
     {
         private ListView list_data;
         List<Parent> list_parents = new List<Parent>();
-        List<BabySitter> list_babySitters = new List<BabySitter>();
+        List<Rating> list_ratings = new List<Rating>();
+        List<BabySitter> list_babysitters = new List<BabySitter>();
         FirebaseAuth auth;
-        private FavouriteBabysitterAdapter babysitterAdapter;
+        Rating selectedUser;
+        private FavouriteBabysitterAdapter ratedUserAdapter;
         private ParentViewAdapter parentAdapter;
+        string ratedByEmail;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
@@ -46,37 +50,40 @@ namespace HelpingHand
             list_data.Visibility = ViewStates.Invisible;
 
             var users = await firebase
-                    .Child("parent")
-                    .OnceAsync<Parent>();
-            list_babySitters.Clear();
-            babysitterAdapter = null;
+                    .Child("rating").Child(auth.CurrentUser.Uid)
+                    .OnceAsync<Rating>();
+            list_ratings.Clear();
+
             foreach (var item in users)
             {
-                Parent account = new Parent();
-                account.id = item.Key;
+                Rating account = new Rating();
+                account.ratedByEmail = item.Object.ratedByEmail;
+                ratedByEmail = account.ratedByEmail;
             }
 
-            if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
+            if (ratedByEmail == auth.CurrentUser.Email)
             {
-                // You are a parent
-                var sitters = await firebase
-                    .Child("babysitter")
-                    .OnceAsync<BabySitter>();
-                list_babySitters.Clear();
-                babysitterAdapter = null;
-                foreach (var item in sitters)
-                {
-                    BabySitter account = new BabySitter();
-                    account.name = item.Object.name;
-                    account.rating = item.Object.rating;
+                // Current user is a parent
+                var ratings = await firebase
+                    .Child("rating").Child(auth.CurrentUser.Uid)
+                    .OnceAsync<Rating>();
+                list_ratings.Clear();
 
-                    int rating = account.rating;
+                foreach (var item in ratings)
+                {
+                    Rating accountRated = new Rating();
+                    accountRated.ratedByEmail = item.Object.ratedByEmail;
+                    accountRated.ratedUsersName = item.Object.ratedUsersName;
+                    accountRated.rating = item.Object.rating;
+                    accountRated.userRatedEmail = item.Object.userRatedEmail;
+
+                    int rating = accountRated.rating;
                     if (rating == 5)
                     {
-                        list_babySitters.Add(account);
-                        babysitterAdapter = new FavouriteBabysitterAdapter(this, list_babySitters);
-                        babysitterAdapter.NotifyDataSetChanged();
-                        list_data.Adapter = babysitterAdapter;
+                        list_ratings.Add(accountRated);
+                        ratedUserAdapter = new FavouriteBabysitterAdapter(this, list_ratings);
+                        ratedUserAdapter.NotifyDataSetChanged();
+                        list_data.Adapter = ratedUserAdapter;
                     }
                 }
             }
@@ -86,8 +93,8 @@ namespace HelpingHand
                 var parents = await firebase
                     .Child("parent")
                     .OnceAsync<Parent>();
-                list_babySitters.Clear();
-                babysitterAdapter = null;
+                list_ratings.Clear();
+                ratedUserAdapter = null;
                 foreach (var item in parents)
                 {
                     Parent account = new Parent();
@@ -102,11 +109,52 @@ namespace HelpingHand
             }
 
             list_data.Visibility = ViewStates.Visible;
+            list_data.ItemClick += (s, e) =>
+            {
+                selectedUser = list_ratings[e.Position];
+                GetUsers();
+            };
+        }
+
+        public async void GetUsers()
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
+            var sitters = await firebase
+                .Child("babysitter")
+                .OnceAsync<BabySitter>();
+            list_babysitters.Clear();
+            foreach (var item in sitters)
+            {
+                BabySitter account = new BabySitter();
+                account.email = item.Object.email;
+                string email = account.email;
+
+                if (selectedUser.userRatedEmail == email)
+                {
+                    BabySitter ratedAccount = new BabySitter();
+                    ratedAccount.id = item.Object.id;
+                    ratedAccount.name = item.Object.name;
+                    ratedAccount.phone = item.Object.phone;
+                    ratedAccount.city = item.Object.city;
+                    ratedAccount.address = item.Object.address;
+                    ratedAccount.email = item.Object.email;
+                    ratedAccount.eircode = item.Object.eircode;
+                    ratedAccount.age = item.Object.age;
+                    ratedAccount.rate = item.Object.rate;
+                    ratedAccount.availability = item.Object.availability;
+
+                    var userJson = JsonConvert.SerializeObject(ratedAccount);
+
+                    var viewSelectedUser = new Intent(this, typeof(viewUser));
+                    viewSelectedUser.PutExtra("KEY", userJson);
+                    StartActivity(viewSelectedUser);
+                }
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.menu_profile, menu);
+            MenuInflater.Inflate(Resource.Menu.menu_messages, menu);
             return base.OnCreateOptionsMenu(menu);
         }
 
@@ -115,46 +163,11 @@ namespace HelpingHand
             int id = item.ItemId;
             if (id == Resource.Id.menu_home)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
                 Finish();
             }
-            //else if (id == Resource.Id.menu_save) // Update users details
-            //{
-            //    UpdateUser();
-            //}
 
             return base.OnOptionsItemSelected(item);
-        }
-
-        public void getFavourites()
-        {
-
-            string babysitter = this.Intent.GetStringExtra("KEY");
-            BabySitter userSitter = JsonConvert.DeserializeObject<BabySitter>(babysitter);
-
-            if (userSitter.id != auth.CurrentUser.Uid)
-            {
-                string user = userSitter.name;
-                int rating = userSitter.rating;
-                list_babySitters.Add(userSitter);
-
-                babysitterAdapter = new FavouriteBabysitterAdapter(this, list_babySitters);
-                babysitterAdapter.NotifyDataSetChanged();
-                list_data.Adapter = babysitterAdapter;
-            }
-            else
-            {
-                string _parent = this.Intent.GetStringExtra("KEY");
-                Parent userParent = JsonConvert.DeserializeObject<Parent>(_parent);
-                list_parents.Add(userParent);
-            }
-        }
-
-        private void UpdateUser()
-        {
-            var firebase = new FirebaseClient(FirebaseURL);
-
-            Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
         }
     }
 }

@@ -17,9 +17,9 @@
 				<EditText android:id="@+id/signup_email" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Email" android:theme="@style/EditTextWhite" android:inputType="textEmailAddress" android:drawableLeft="@drawable/ic_person" />  
                 <EditText android:id="@+id/signup_password" android:maxLines="1" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Password" android:theme="@style/EditTextWhite" android:inputType="textPassword" android:drawableLeft="@drawable/ic_key" />
 				<EditText android:id="@+id/signup_phone" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Phone Number" android:theme="@style/EditTextWhite" android:inputType="number" android:drawableLeft="@drawable/ic_person" />
-				<EditText android:id="@+id/signup_age" android:layout_width="200dp" android:inputType="number" android:maxLength="3" android:maxLines="1" android:layout_height="wrap_content" android:hint="Age" android:theme="@style/EditTextWhite" android:drawableLeft="@drawable/ic_person" />
-				<EditText android:id="@+id/signup_rate" android:layout_width="150dp" android:maxLines="1" android:layout_height="wrap_content" android:maxLength="4" android:hint="Rate Perhour" android:theme="@style/EditTextWhite" android:inputType="number" android:drawableLeft="@drawable/ic_person" />
-				<EditText android:id="@+id/signup_address" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Address" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_person" />
+				<EditText android:id="@+id/signup_age" android:layout_width="200dp" android:inputType="number" android:maxLength="2" android:maxLines="1" android:layout_height="wrap_content" android:hint="Age" android:theme="@style/EditTextWhite" android:drawableLeft="@drawable/ic_person" />
+				<EditText android:id="@+id/signup_rate" android:layout_width="150dp" android:maxLines="1" android:layout_height="wrap_content" android:maxLength="5" android:digits="01234 56789." android:hint="Rate Perhour" android:theme="@style/EditTextWhite" android:inputType="number" android:drawableLeft="@drawable/ic_person" />
+				<EditText android:id="@+id/signup_address" android:layout_width="match_parent" android:maxLines="2" android:layout_height="wrap_content" android:hint="Address" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_person" />
 				<EditText android:id="@+id/signup_city" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="City" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_person" />
 				<EditText android:id="@+id/signup_eircode" android:layout_width="match_parent" android:maxLines="1" android:layout_height="wrap_content" android:hint="Eircode" android:theme="@style/EditTextWhite" android:inputType="text" android:drawableLeft="@drawable/ic_person" />
 				<TextView android:padding="5dp" android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" />
@@ -97,7 +97,7 @@
 		  <TextView
 			  android:layout_below="@+id/layout_bottom"
 			  android:id="@+id/signup_btn_login"
-			  android:text="Already Account ? Login"
+			  android:text="Already own Account? Login"
 			  android:textStyle="bold"
 			  android:clickable="true"
 			  android:layout_centerHorizontal="true"

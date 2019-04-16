@@ -67,23 +67,15 @@ namespace HelpingHand
             string city = getLocation[4];
             string street = getLocation[3];
             string address = street + city + postcode;
-            //Appointment userAddress = JsonConvert.DeserializeObject<Appointment>(_locations);
-            //var address = userAddress.Address + userAddress.City + userAddress.Eircode;
 
             map.MapType = GoogleMap.MapTypeNormal;
             map.UiSettings.ZoomControlsEnabled = true;
             map.UiSettings.CompassEnabled = true;
 
-            newMarker.SetPosition(new LatLng(53.270962, -9.062691));
-
-            //MarkerOptions markerOpt = new MarkerOptions();
-            //var marker = markerOpt.SetPosition(new LatLng(54.1553, -8.6065));
-            //markerOpt.SetTitle("Sligo Airport");
+            //newMarker.SetPosition(new LatLng(53.270962, -9.062691));
 
             try
             {
-                //var address = "ITSligo Knocknarea Arena Ballytivnan Sligo";
-                //var address = "Microsoft Building 25 Redmond WA USA";
                 var locations = await Geocoding.GetLocationsAsync(address);
 
                 var location = locations?.FirstOrDefault().ToString();
@@ -117,9 +109,6 @@ namespace HelpingHand
                 // Handle exception that may have occurred in geocoding
                 Toast.MakeText(this, "Handle exception that may have occurred in geocoding", ToastLength.Long).Show();
             }
-
-            //map.AddMarker(newMarker);
-            //map.AddMarker(markerOpt);
         }
 
         public async void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickEventArgs)
@@ -129,8 +118,13 @@ namespace HelpingHand
             var marker = markerClickEventArgs.Marker;
             if (marker.Id.Equals(newMarker))
             {
-                var address = "ITSligo Knocknarea Arena Ballytivnan Sligo";
-                //var address = "Microsoft Building 25 Redmond WA USA";
+                string _locations = this.Intent.GetStringExtra("KEY");
+
+                var getLocation = _locations.Split(',');
+                string postcode = getLocation[5];
+                string city = getLocation[4];
+                string street = getLocation[3];
+                string address = street + city + postcode;
                 var locations = await Geocoding.GetLocationsAsync(address);
 
                 var location = locations?.FirstOrDefault().ToString();

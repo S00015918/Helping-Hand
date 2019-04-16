@@ -28,7 +28,8 @@ namespace HelpingHand
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
         ImageView userImage;
         FirebaseAuth auth;
-        int userRating, returnRating; string userRated, ratedBabysitter, RatersEmail;
+        RatingBar ratingbar;
+        int userRating, returnRating; string userRated, ratedBabysitter, RatersEmail, userRatedName;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
@@ -53,7 +54,7 @@ namespace HelpingHand
             userEircode = FindViewById<TextView>(Resource.Id.eircode);
             userImage = FindViewById<ImageView>(Resource.Id.imgUser);
 
-            RatingBar ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
+            ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
 
             btnCreateAppointment = FindViewById<Button>(Resource.Id.btnCreate_appointment);
             btnCreateAppointment.Click += CreateAppointment;
@@ -90,6 +91,7 @@ namespace HelpingHand
                 userEircode.Text = userSitter.eircode;
                 string userAvailabilty = userSitter.availability;
                 userRated = userEmail.Text;
+                userRatedName = userName.Text;
                 //userImage.ImageMatrix = user.ImageUrl;
                 string[] availabilty = userAvailabilty.Split(',');
                 foreach (var item in availabilty)
@@ -258,11 +260,9 @@ namespace HelpingHand
 
             ratingbar.RatingBarChange += (o, e) => {
 
-                Toast.MakeText(this, "New Rating: " + ratingbar.Rating.ToString(), ToastLength.Short).Show();
-
                 userRating = Convert.ToInt32(ratingbar.Rating.ToString());
 
-                UpdateUserRating(userRated, userRating);
+                UpdateUserRating(userRated, userRating, userRatedName);
             };
         }
 
@@ -270,13 +270,14 @@ namespace HelpingHand
         {
             var firebase = new FirebaseClient(FirebaseURL);
             var Ratings = await firebase
-                        .Child("rating")
+                        .Child("rating").Child(auth.CurrentUser.Uid)
                         .OnceAsync<Rating>();
             foreach (var rating in Ratings)
             {
                 Rating account = new Rating();
                 account.userRatedEmail = rating.Object.userRatedEmail;
                 account.rating = rating.Object.rating;
+                account.ratedByEmail = rating.Object.ratedByEmail;
 
                 returnRating = account.rating;
                 ratedBabysitter = account.userRatedEmail;
@@ -284,10 +285,10 @@ namespace HelpingHand
                 string babysitter = this.Intent.GetStringExtra("KEY");
                 BabySitter userSitter = JsonConvert.DeserializeObject<BabySitter>(babysitter);
 
-                if (userSitter.email == ratedBabysitter)
+                if (userSitter.email == ratedBabysitter && account.ratedByEmail == auth.CurrentUser.Email)
                 {
                     RatingBar ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
-                    //ratingbar.NumStars = returnRating;
+                    ratingbar.Rating = returnRating;
                 }
             }
         }
@@ -341,7 +342,7 @@ namespace HelpingHand
             return base.OnOptionsItemSelected(item);
         }
 
-        private async void UpdateUserRating(string userRated, int rating)
+        private async void UpdateUserRating(string userRated, int rating, string ratedName)
         {
             var babysitterEmailList = new List<string>();
             var parentEmailList = new List<string>();
@@ -352,6 +353,7 @@ namespace HelpingHand
             _rating.ratedByEmail = auth.CurrentUser.Email;
             _rating.rating = rating;
             _rating.userRatedEmail = userRated;
+            _rating.ratedUsersName = ratedName;
             string ratedByEmail = _rating.ratedByEmail;
 
             //Add Item
@@ -371,9 +373,11 @@ namespace HelpingHand
                 ratedBabysitter = account.userRatedEmail;
                 babysitterEmailList.Add(account.userRatedEmail);
                 parentEmailList.Add(account.ratedByEmail);
-            }
 
-            if (parentEmailList.Contains(ratedByEmail)) // Has the parent rated before
+            }
+            var ratedByEmailList = new HashSet<string>(parentEmailList).ToList();
+
+            if (ratedByEmailList.Contains(ratedByEmail)) // Has the parent rated before
             {
                 if (babysitterEmailList.Contains(userRated)) // Has the babysitter been rated before
                 {
@@ -391,27 +395,27 @@ namespace HelpingHand
                                   .Child("rating")
                                   .Child(auth.CurrentUser.Uid)
                                   .Child(toUpdateRating.Key)
-                                  .PutAsync(new Rating() { ratedByEmail = ratedByEmail, rating = rating, userRatedEmail = userRated });
+                                  .PutAsync(new Rating() { ratedByEmail = ratedByEmail, rating = rating, userRatedEmail = userRated, ratedUsersName = ratedName });
 
-                                Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
+                                Toast.MakeText(this, "Rating: " + ratingbar.Rating.ToString() + " Stars", ToastLength.Short).Show();
                             }
                             else { } // No update or add needed
                         }
                     }
                     else { } // No update or add needed
                 }
-                else { AddRating(ratedByEmail, rating, userRated); }
+                else { AddRating(ratedByEmail, rating, userRated, ratedName); }
             }
-            else { AddRating(ratedByEmail, rating, userRated); }
+            else { AddRating(ratedByEmail, rating, userRated, ratedName); }
         }
 
-        public async void AddRating(string _ratedByEmail, int userRating, string _userRatedEmail)
+        public async void AddRating(string _ratedByEmail, int userRating, string _userRatedEmail, string _userRatedName)
         {
             var firebase = new FirebaseClient(FirebaseURL);
             await firebase
               .Child("rating").Child(auth.CurrentUser.Uid)
-              .PostAsync(new Rating() { ratedByEmail = _ratedByEmail, rating = userRating, userRatedEmail = _userRatedEmail });
-            Toast.MakeText(this, "Rating Added.", ToastLength.Short).Show();
+              .PostAsync(new Rating() { ratedByEmail = _ratedByEmail, rating = userRating, userRatedEmail = _userRatedEmail, ratedUsersName = _userRatedName });
+            Toast.MakeText(this, "Rating: " + ratingbar.Rating.ToString() + " Stars", ToastLength.Short).Show();
         }
     }
 }

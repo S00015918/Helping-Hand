@@ -11,6 +11,7 @@ public class MapActivity
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onRequestPermissionsResult:(I[Ljava/lang/String;[I)V:GetOnRequestPermissionsResult_IarrayLjava_lang_String_arrayIHandler\n" +
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onMapReady:(Lcom/google/android/gms/maps/GoogleMap;)V:GetOnMapReady_Lcom_google_android_gms_maps_GoogleMap_Handler:Android.Gms.Maps.IOnMapReadyCallbackInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"";
@@ -24,6 +25,14 @@ public class MapActivity
 		if (getClass () == MapActivity.class)
 			mono.android.TypeManager.Activate ("HelpingHand.MapActivity, HelpingHand", "", this, new java.lang.Object[] {  });
 	}
+
+
+	public void onRequestPermissionsResult (int p0, java.lang.String[] p1, int[] p2)
+	{
+		n_onRequestPermissionsResult (p0, p1, p2);
+	}
+
+	private native void n_onRequestPermissionsResult (int p0, java.lang.String[] p1, int[] p2);
 
 
 	public void onCreate (android.os.Bundle p0)

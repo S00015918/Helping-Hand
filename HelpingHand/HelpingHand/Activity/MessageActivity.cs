@@ -38,7 +38,6 @@ namespace HelpingHand
         private EditText edtChat;
         private FloatingActionButton send;
         FirebaseAuth auth;
-        BabySitter babySitter;
 
         MessageContent filterMessages = new MessageContent();
         private BabysitterViewAdapter babysitterAdapter;

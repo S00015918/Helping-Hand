@@ -17,21 +17,21 @@ namespace HelpingHand.Adapter
     class FavouriteBabysitterAdapter : BaseAdapter
     {
         Activity activity;
-        public List<BabySitter> originalData;
-        public List<BabySitter> lstBabysitters;
+        public List<Rating> originalData;
+        public List<Rating> lstRatings;
         LayoutInflater inflater;
 
-        public FavouriteBabysitterAdapter(Activity activity, List<BabySitter> lstbabySitters)
+        public FavouriteBabysitterAdapter(Activity activity, List<Rating> lst_ratings)
         {
             this.activity = activity;
-            this.lstBabysitters = lstbabySitters;
+            this.lstRatings = lst_ratings;
 
             Filter = new FavouriteBabysitterFilter(this);
         }
 
         public override int Count
         {
-            get { return lstBabysitters.Count; }
+            get { return lstRatings.Count; }
         }
 
         public Filter Filter
@@ -55,10 +55,10 @@ namespace HelpingHand.Adapter
             var name = itemView.FindViewById<TextView>(Resource.Id.list_name);
             var rating = itemView.FindViewById<TextView>(Resource.Id.list_rating);
 
-            if (lstBabysitters.Count > 0)
+            if (lstRatings.Count > 0)
             {
-                name.Text = lstBabysitters[position].name;
-                rating.Text = lstBabysitters[position].rating.ToString() + " Stars";
+                name.Text = lstRatings[position].ratedUsersName;
+                rating.Text = lstRatings[position].rating.ToString() + " Stars";
             }
 
             return itemView;
@@ -76,9 +76,9 @@ namespace HelpingHand.Adapter
         protected override FilterResults PerformFiltering(ICharSequence constraint)
         {
             var returnObj = new FilterResults();
-            var results = new List<BabySitter>();
+            var results = new List<Rating>();
             if (favouriteAdapter.originalData == null)
-                favouriteAdapter.originalData = favouriteAdapter.lstBabysitters;
+                favouriteAdapter.originalData = favouriteAdapter.lstRatings;
 
             if (constraint == null) return returnObj;
 
@@ -86,7 +86,7 @@ namespace HelpingHand.Adapter
             {
                 results.AddRange(
                     favouriteAdapter.originalData.Where(
-                        user => user.name.Contains(constraint.ToString())));
+                        user => user.ratedUsersName.Contains(constraint.ToString())));
             }
             returnObj.Values = FromArray(results.Select(r => r.ToJavaObject()).ToArray());
             returnObj.Count = results.Count;
@@ -100,8 +100,8 @@ namespace HelpingHand.Adapter
         {
             using (var values = results.Values)
             {
-                favouriteAdapter.lstBabysitters = values.ToArray<Java.Lang.Object>()
-                    .Select(r => r.ToNetObject<BabySitter>()).ToList();
+                favouriteAdapter.lstRatings = values.ToArray<Java.Lang.Object>()
+                    .Select(r => r.ToNetObject<Rating>()).ToList();
 
                 constraint.Dispose();
                 results.Dispose();

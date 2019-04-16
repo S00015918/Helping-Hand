@@ -597,40 +597,62 @@ namespace HelpingHand
 
         private async void CreateUser()
         {
-            var id = auth.CurrentUser.Uid;
-            string[] _days = values;
-            StringBuilder strTime = new StringBuilder();
-            foreach (var i in _days)
+            string userName = input_name.Text.ToString();
+            string userPassword = input_password.Text.ToString();
+            string userPhone = input_phone.Text.ToString();
+            string userAddress = input_address.Text.ToString();
+            string userCity = input_city.Text.ToString();
+            string userEmail = input_email.Text.ToString();
+            string userRate = input_rate.Text.ToString();
+
+            if ( userName == "" || userPassword == "" || userPhone == "" ||  userAddress == ""
+                || userCity == "" || userEmail == "" || userRate == "")
             {
-                string s = i;
-                if (s != null)
-                {
-
-                    string availableDays = s + ", ";
-                    strTime.Append(availableDays);
-                }
+                Toast.MakeText(this, "Please enter all fields !", ToastLength.Short).Show();
+                btnSignup.Enabled = false;
+                return;
             }
-            string availableTime = strTime.ToString();
-            decimal payRate = decimal.Parse(input_rate.Text);
+            else
+            {
+                var id = auth.CurrentUser.Uid;
+                string[] _days = values;
+                StringBuilder strTime = new StringBuilder();
+                foreach (var i in _days)
+                {
+                    string s = i;
+                    if (s != null)
+                    {
 
-            CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
+                        string availableDays = s + ", ";
+                        strTime.Append(availableDays);
+                    }
+                }
+                string availableTime = strTime.ToString();
+                decimal payRate = decimal.Parse(input_rate.Text);
 
-            BabySitter babysitter = new BabySitter();
-            babysitter.id = id;
-            babysitter.name = input_name.Text;
-            babysitter.email = input_email.Text;
-            babysitter.age = Convert.ToInt32(input_age.Text);
-            babysitter.rate = payRate;
-            babysitter.phone = input_phone.Text;
-            babysitter.address = input_address.Text;
-            babysitter.city = input_city.Text;
-            babysitter.eircode = input_eircode.Text;
-            babysitter.gardaVetted = vetted.Checked;
-            babysitter.availability = availableTime;
+                CheckBox vetted = FindViewById<CheckBox>(Resource.Id.signup_vetted_yes);
 
-            var firebase = new FirebaseClient(FirebaseURL);
-            //Add Item
-            var item = await firebase.Child("babysitter").PostAsync<BabySitter>(babysitter);
+                BabySitter babysitter = new BabySitter();
+                babysitter.id = id;
+                string babysitterName = input_name.Text;
+                string[] splitName = babysitterName.Split(' ');
+                string name = splitName[0];
+
+                babysitter.name = name;
+                babysitter.email = input_email.Text;
+                babysitter.age = Convert.ToInt32(input_age.Text);
+                babysitter.rate = payRate;
+                babysitter.phone = input_phone.Text;
+                babysitter.address = input_address.Text;
+                babysitter.city = input_city.Text;
+                babysitter.eircode = input_eircode.Text;
+                babysitter.gardaVetted = vetted.Checked;
+                babysitter.availability = availableTime;
+
+                var firebase = new FirebaseClient(FirebaseURL);
+                //Add Item
+                var item = await firebase.Child("babysitter").PostAsync<BabySitter>(babysitter);
+            }
         }
 
         public void OnComplete(Task task)

@@ -121,7 +121,7 @@ namespace HelpingHand
                 account.eircode = item.Object.eircode;
                 account.image = item.Object.image;
 
-                if (userLogin == email)
+                if (userLogin == email) // a parent has logged into their profile - 
                 {
                     input_new_email.Text = account.email;
                     input_new_name.Text = account.name;
@@ -154,7 +154,7 @@ namespace HelpingHand
                 account.image = item.Object.image;
                 account.rate = item.Object.rate;
 
-                if (sitters.Any((_) => _.Object.id == auth.CurrentUser.Uid))
+                if (sitters.Any((_) => _.Object.id == auth.CurrentUser.Uid)) // a babysitter has logged into their profile, display according to type - 
                 {
                     input_new_age.Visibility = ViewStates.Visible;
                     payRateLayout.Visibility = ViewStates.Visible;
