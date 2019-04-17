@@ -103,11 +103,15 @@ namespace HelpingHand
                         list_appointments.Add(account);
                         AppointmentAdapter = new AppointmentListAdapter(this, list_appointments);
                     }
+                    else
+                    {
+                        list_data.Visibility = ViewStates.Invisible;
+                    }
                 }
             }
 
             list_data.Visibility = ViewStates.Visible;
-            AppointmentAdapter.NotifyDataSetChanged();
+            //AppointmentAdapter.NotifyDataSetChanged();
             list_data.Adapter = AppointmentAdapter;
 
             list_data.ItemClick += (s, e) =>

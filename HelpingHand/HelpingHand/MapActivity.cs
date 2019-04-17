@@ -109,7 +109,7 @@ namespace HelpingHand
                         BabySitter _account = new BabySitter();
                         _account.email = i.Object.email;
 
-                        if (userLogin == _account.email) // a parent has logged into their profile - 
+                        if (userLogin == _account.email) // babysitter vewing their map-
                         {
                             var users = await firebase
                                 .Child("parent")

@@ -17,7 +17,7 @@ using Android.OS;
 namespace HelpingHand
 {
     [Activity(Label = "Messages")]
-    public class Activity_messages : AppCompatActivity, IFirebaseLoadDone, IValueEventListener, IOnItemSelectedListener
+    public class Activity_messages : AppCompatActivity, IValueEventListener, IOnItemSelectedListener
     {
         SearchableSpinner searchableSpinner;
         DatabaseReference movieRef;
@@ -46,7 +46,7 @@ namespace HelpingHand
 
                 local.Add(baby);
             }
-            firebaseLoadDone.OnFirebaseLoadSuccess(local);
+            //firebaseLoadDone.OnFirebaseLoadSuccess(local);
         }
 
         public void OnFirebaseLoadFailed(string message)
@@ -112,7 +112,7 @@ namespace HelpingHand
             movieRef.AddListenerForSingleValueEvent(this);
 
             //Init interface
-            firebaseLoadDone = this;
+            //firebaseLoadDone = this;
 
             //Init Dialog
             bottomSheetDialog = new BottomSheetDialog(this);

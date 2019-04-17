@@ -176,47 +176,12 @@ namespace HelpingHand
             sitteradapter.NotifyDataSetChanged();
         }
 
-        private async void UpdateUser(string uid, string newName, string newPhone, string newAddress, 
+        private async void UpdateBabysitter(string uid, string newName, string newPhone, string newAddress, 
             string newCity, string newEmail, string newAge, string newEircode, decimal newRate)
         {
             //string uid = auth.CurrentUser.Uid;
             var firebase = new FirebaseClient(FirebaseURL);
             string userLogin = auth.CurrentUser.Email;
-            var items = await firebase
-                .Child("parent")
-                //.WithAuth(auth.CurrentUser.Uid)
-                .OnceAsync<Parent>();
-            list_parents.Clear();
-            adapter = null;
-            foreach (var item in items)
-            {
-                Parent account = new Parent();
-                account.id = item.Key;
-                account.name = item.Object.name;
-                account.phone = item.Object.phone;
-                account.city = item.Object.city;
-                account.address = item.Object.address;
-                account.noOfKids = item.Object.noOfKids;
-                account.email = item.Object.email;
-                string email = account.email;
-                account.eircode = item.Object.eircode;
-                account.image = item.Object.image;
-
-                if (userLogin == email)
-                {
-                    int kidCount = account.noOfKids;
-                    StorageReference userImage = storageRef.Child("user/profile pic/");
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("id").PutAsync(auth.CurrentUser.Uid);
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("name").PutAsync(newName);
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("phone").PutAsync(newPhone);
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("address").PutAsync(newAddress);
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("city").PutAsync(newCity);
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("noOfKids").PutAsync(kidCount);
-                    //await firebase.Child("parent").Child(userEmail).Child("name").PutAsync(newPassword);
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("email").PutAsync(newEmail);
-                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(newEircode);
-                }
-            }
 
             var sitters = await firebase
                 .Child("babysitter")
@@ -263,7 +228,6 @@ namespace HelpingHand
                     await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("rating").PutAsync(rating);
                 }
             }
-
             LoadData();
             Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
         }
@@ -284,11 +248,92 @@ namespace HelpingHand
             }
             else if (id == Resource.Id.menu_save) // Update users details
             {
-                UpdateUser(auth.CurrentUser.Uid, input_new_name.Text, input_new_phone.Text, input_new_address.Text,
-                    input_new_city.Text, input_new_email.Text, input_new_age.Text, input_new_eircode.Text, decimal.Parse(input_new_rate.Text));
+                getUserType();
+              
             }
 
             return base.OnOptionsItemSelected(item);
+        }
+
+        public async void getUserType()
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
+            string userLogin = auth.CurrentUser.Email;
+
+            var items = await firebase
+                .Child("parent")
+                //.WithAuth(auth.CurrentUser.Uid)
+                .OnceAsync<Parent>();
+            list_parents.Clear();
+            foreach (var item in items)
+            {
+                Parent account = new Parent();
+                account.email = item.Object.email;
+                string parentEmail = account.email;
+
+                if (userLogin == parentEmail) //  parent viewing their map - 
+                {
+                    UpdateParent(auth.CurrentUser.Uid, input_new_name.Text, input_new_phone.Text, input_new_address.Text,
+                        input_new_city.Text, input_new_email.Text, input_new_eircode.Text);
+                }         
+            }
+            var users = await firebase
+                        .Child("babysitter")
+                        .OnceAsync<BabySitter>();
+            foreach (var sitter in users)
+            {
+                BabySitter getAccount = new BabySitter();
+                getAccount.email = sitter.Object.email;
+
+                if (userLogin == getAccount.email)
+                {
+                    UpdateBabysitter(auth.CurrentUser.Uid, input_new_name.Text, input_new_phone.Text, input_new_address.Text,
+                        input_new_city.Text, input_new_email.Text, input_new_age.Text, input_new_eircode.Text, decimal.Parse(input_new_rate.Text));
+                }
+            }
+        }
+        private async void UpdateParent(string uid, string newName, string newPhone, string newAddress,
+            string newCity, string newEmail, string newEircode)
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
+
+            string userLogin = auth.CurrentUser.Email;
+            var items = await firebase
+                .Child("parent")
+                //.WithAuth(auth.CurrentUser.Uid)
+                .OnceAsync<Parent>();
+            list_parents.Clear();
+            adapter = null;
+            foreach (var item in items)
+            {
+                Parent account = new Parent();
+                account.id = item.Key;
+                account.name = item.Object.name;
+                account.phone = item.Object.phone;
+                account.city = item.Object.city;
+                account.address = item.Object.address;
+                account.noOfKids = item.Object.noOfKids;
+                account.email = item.Object.email;
+                string email = account.email;
+                account.eircode = item.Object.eircode;
+                account.image = item.Object.image;
+
+                if (userLogin == email)
+                {
+                    int kidCount = account.noOfKids;
+                    StorageReference userImage = storageRef.Child("user/profile pic/");
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("id").PutAsync(auth.CurrentUser.Uid);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("name").PutAsync(newName);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("phone").PutAsync(newPhone);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("address").PutAsync(newAddress);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("city").PutAsync(newCity);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("noOfKids").PutAsync(kidCount);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("email").PutAsync(newEmail);
+                    await firebase.Child("parent").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(newEircode);
+                }
+            }
+            LoadData();
+            Toast.MakeText(this, "Details Updated.", ToastLength.Short).Show();
         }
 
         private void ChooseImage()
