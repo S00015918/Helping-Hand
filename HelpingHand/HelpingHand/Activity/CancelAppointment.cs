@@ -28,7 +28,7 @@ namespace HelpingHand
         List<Appointment> list_appointments = new List<Appointment>();
         private AppointmentListAdapter AppointmentAdapter;
         Appointment selectedAppointment;
-        string selectedUser, babysitterEmail;
+        string selectedUser, babysitterEmail, parentEmail, appointmentCreator;
         Button btnCancelAppointment;
         DateTime selectedDate;
 
@@ -118,6 +118,7 @@ namespace HelpingHand
             {
                 selectedAppointment = list_appointments[e.Position];
                 selectedUser = list_appointments[e.Position].babysitterEmail;
+                appointmentCreator = list_appointments[e.Position].userEmail;
                 selectedDate = list_appointments[e.Position].Date;
                 string selectedBabysitter = list_appointments[e.Position].Babysitter;
 
@@ -162,6 +163,28 @@ namespace HelpingHand
                 }
                 else { }
             }
+
+            var parents = await firebase
+                    .Child("parent")
+                    .OnceAsync<Parent>();
+
+            foreach (var item in parents)
+            {
+                Parent _parent = new Parent();
+                _parent.email = item.Object.email;
+                parentEmail = _parent.email;
+
+                if (parentEmail == appointmentCreator)
+                {
+                    var toDeleteAppointment = (await firebase
+                      .Child("appointment")
+                      .OnceAsync<Appointment>()).Where(a => a.Object.Date == selectedDate).FirstOrDefault();
+
+                    await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
+                }
+                else { }
+            }
+
             AppointmentAdapter.NotifyDataSetChanged();
             list_data.Adapter = AppointmentAdapter;
         }

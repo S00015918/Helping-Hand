@@ -91,12 +91,21 @@ namespace HelpingHand
                     var markerY = lonx.Split(':');
                     string longitude = markerY[1];
                     double lon = Convert.ToDouble(longitude);
-                    //Toast.MakeText(this, $"Latitude: {location.Latitude}, Longitude: {location.Longitude}", ToastLength.Long).Show();
 
-                    //MarkerOptions markerOpt = new MarkerOptions();
                     var Nmarker = newMarker.SetPosition(new LatLng(lat, lon));
+                    LatLng zoomTo = new LatLng(lat, lon);
 
                     map.AddMarker(Nmarker);
+
+                    CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
+                    builder.Target(zoomTo);
+                    builder.Zoom(10);
+
+                    CameraPosition cameraPosition = builder.Build();
+
+                    CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
+
+                    map.MoveCamera(cameraUpdate);
                 }
             }
             catch (FeatureNotSupportedException)

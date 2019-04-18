@@ -45,7 +45,7 @@ namespace HelpingHand
 
             creditCardNumber.AddTextChangedListener(new CreditCardFormatter(creditCardNumber));
             cardExpiryMonth.SetFilters(new Android.Text.IInputFilter[]{ new MinMaxInputFilter(1, 12) });
-            cardExpiryYear.SetFilters(new Android.Text.IInputFilter[] { new MinMaxInputFilter(19, 29) });
+            cardExpiryYear.SetFilters(new Android.Text.IInputFilter[] { new MinMaxInputFilter(1, 29) });
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -132,7 +132,7 @@ namespace HelpingHand
             appointment.startTime = startTime;
             appointment.endTime = endTime;
             appointment.userEmail = auth.CurrentUser.Email;
-            appointment.babysitterEmail = userEmail;
+            appointment.babysitterEmail = babysitterEmail;
             appointment.Babysitter = Babysitter;
             appointment.City = City;
             appointment.Address = Address;

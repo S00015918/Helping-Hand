@@ -5097,10 +5097,13 @@ namespace HelpingHand
 			public const int cast_tracks_chooser_dialog_row_layout = 1;
 			
 			// aapt resource value: 0x7F030007
-			public const int confirmPayment_popup = 2130903047;
+			public const int ConfirmAppointment_fragment = 2130903047;
 			
 			// aapt resource value: 0x7F030008
-			public const int DashBoard = 2130903048;
+			public const int confirmPayment_popup = 2130903048;
+			
+			// aapt resource value: 0x7F030009
+			public const int DashBoard = 2130903049;
 			
 			// aapt resource value: 0x7F0F001B
 			public const int design_bottom_navigation_item = 2131689499;
@@ -5144,14 +5147,14 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0F0028
 			public const int design_text_input_password_icon = 2131689512;
 			
-			// aapt resource value: 0x7F030009
-			public const int ForgetPassword = 2130903049;
-			
 			// aapt resource value: 0x7F030010
-			public const int gridview_layout = 2130903056;
+			public const int ForgetPassword = 2130903056;
 			
 			// aapt resource value: 0x7F030011
-			public const int layout_babysitters = 2130903057;
+			public const int gridview_layout = 2130903057;
+			
+			// aapt resource value: 0x7F030012
+			public const int layout_babysitters = 2130903058;
 			
 			// aapt resource value: 0x1
 			public const int libraries_social_licenses_license = 1;
@@ -5165,29 +5168,29 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int license_menu_activity_no_licenses = 1;
 			
-			// aapt resource value: 0x7F030012
-			public const int list_appointments = 2130903058;
-			
 			// aapt resource value: 0x7F030013
-			public const int list_favourites = 2130903059;
+			public const int list_appointments = 2130903059;
 			
 			// aapt resource value: 0x7F030014
-			public const int list_Item = 2130903060;
+			public const int list_favourites = 2130903060;
 			
 			// aapt resource value: 0x7F030015
-			public const int Main = 2130903061;
+			public const int list_Item = 2130903061;
 			
 			// aapt resource value: 0x7F030016
-			public const int map_view = 2130903062;
+			public const int Main = 2130903062;
 			
 			// aapt resource value: 0x7F030017
-			public const int messages_main = 2130903063;
+			public const int map_view = 2130903063;
 			
 			// aapt resource value: 0x7F030018
-			public const int message_list = 2130903064;
+			public const int messages_main = 2130903064;
 			
 			// aapt resource value: 0x7F030019
-			public const int myFavourites = 2130903065;
+			public const int message_list = 2130903065;
+			
+			// aapt resource value: 0x7F030020
+			public const int myFavourites = 2130903072;
 			
 			// aapt resource value: 0x7F0F0001
 			public const int notification_action = 2131689473;
@@ -5234,8 +5237,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0F0006
 			public const int notification_template_part_time = 2131689478;
 			
-			// aapt resource value: 0x7F030020
-			public const int payment_form = 2130903072;
+			// aapt resource value: 0x7F030021
+			public const int payment_form = 2130903073;
 			
 			// aapt resource value: 0x1
 			public const int place_autocomplete_fragment = 1;
@@ -5249,11 +5252,11 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int place_autocomplete_progress = 1;
 			
-			// aapt resource value: 0x7F030021
-			public const int profilePage = 2130903073;
-			
 			// aapt resource value: 0x7F030022
-			public const int schedule_view = 2130903074;
+			public const int profilePage = 2130903074;
+			
+			// aapt resource value: 0x7F030023
+			public const int schedule_view = 2130903075;
 			
 			// aapt resource value: 0x7F020000
 			public const int searchable_list_dialog = 2130837504;
@@ -5267,20 +5270,20 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0F003A
 			public const int select_dialog_singlechoice_material = 2131689530;
 			
-			// aapt resource value: 0x7F030023
-			public const int SignUp = 2130903075;
+			// aapt resource value: 0x7F030024
+			public const int SignUp = 2130903076;
 			
 			// aapt resource value: 0x7F0F003B
 			public const int support_simple_spinner_dropdown_item = 2131689531;
 			
-			// aapt resource value: 0x7F030024
-			public const int toolbar = 2130903076;
+			// aapt resource value: 0x7F030025
+			public const int toolbar = 2130903077;
 			
 			// aapt resource value: 0x7F0F003C
 			public const int tooltip = 2131689532;
 			
-			// aapt resource value: 0x7F030025
-			public const int user_view = 2130903077;
+			// aapt resource value: 0x7F030026
+			public const int user_view = 2130903078;
 			
 			// aapt resource value: 0x1
 			public const int wallet_test_layout = 1;

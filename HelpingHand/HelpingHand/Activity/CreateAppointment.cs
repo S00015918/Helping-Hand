@@ -306,7 +306,7 @@ namespace HelpingHand
             Finish();
         }
 
-        private async void CreateNewAppointment()
+        private void CreateNewAppointment()
         {
             string babysitter = this.Intent.GetStringExtra("KEY");
 

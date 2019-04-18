@@ -87,8 +87,20 @@ namespace HelpingHand
                                 string longitude = markerY[1];
                                 double lon = Convert.ToDouble(longitude);
                                 var Nmarker = newMarker.SetPosition(new LatLng(lat, lon));
+                                Nmarker.SetTitle(fullAddress);
 
                                 googleMap.AddMarker(Nmarker);
+
+                                LatLng zoomTo = new LatLng(53.1424, -6.266155);
+                                CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
+                                builder.Target(zoomTo);
+                                builder.Zoom(10);
+
+                                CameraPosition cameraPosition = builder.Build();
+
+                                CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
+
+                                googleMap.MoveCamera(cameraUpdate);
                             }
                         }
                         catch (FeatureNotSupportedException)
@@ -141,8 +153,20 @@ namespace HelpingHand
                                         string longitude = markerY[1];
                                         double lon = Convert.ToDouble(longitude);
                                         var Nmarker = newMarker.SetPosition(new LatLng(lat, lon));
+                                        Nmarker.SetTitle(fullAddress);
 
                                         googleMap.AddMarker(Nmarker);
+
+                                        LatLng zoomTo = new LatLng(53.1424, -6.266155);
+                                        CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
+                                        builder.Target(zoomTo);
+                                        builder.Zoom(10);
+
+                                        CameraPosition cameraPosition = builder.Build();
+
+                                        CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
+
+                                        googleMap.MoveCamera(cameraUpdate);
                                     }
                                 }
                                 catch (FeatureNotSupportedException)
@@ -170,7 +194,7 @@ namespace HelpingHand
 
             GoogleMapOptions mapOptions = new GoogleMapOptions()
                 .InvokeMapType(GoogleMap.MapTypeNormal)
-                .InvokeZoomControlsEnabled(false)
+                .InvokeZoomControlsEnabled(true)
                 .InvokeCompassEnabled(true);
         }
     }
