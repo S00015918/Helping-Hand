@@ -6,7 +6,12 @@
 	<include
 		android:id="@+id/toolbar"
 		layout="@layout/toolbar"/>
-	<FrameLayout android:id="@+id/layout_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/login_top" android:padding="10dp" >  
+	<FrameLayout android:id="@+id/layout_top" android:layout_width="match_parent" android:layout_height="100dp" android:background="@drawable/login_top" android:padding="10dp" >
+		<TextView android:id="@+id/txtviewCost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_marginTop="15sp" android:fontFamily="sans-serif" android:textAllCaps="true" android:text="Cost" android:textColor="@color/white" android:textSize="20sp" />
+        <TextView android:id="@+id/txtviewDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:fontFamily="sans-serif" android:text="Date" android:textAllCaps="true" android:layout_marginTop="40dp" android:textColor="@color/white" android:textSize="20sp" />
+	</FrameLayout>
+
+	<FrameLayout android:id="@+id/layout_middle" android:layout_width="match_parent" android:layout_height="360dp" android:layout_below="@+id/layout_top" android:background="@drawable/login_top" android:padding="10dp" >  
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="30dp">  
 				<EditText android:id="@+id/txtCreditCardNumber" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="19" android:hint="Enter Card Number" android:digits="01234 56789-" android:theme="@style/EditTextWhite" android:drawableRight="@drawable/ic_card_number" />
                 <EditText android:id="@+id/txtExpiryMonth" android:maxLength="2" android:inputType="number" android:layout_marginTop="20dp" android:layout_width="200dp" android:layout_height="wrap_content" android:hint="Expiry Month - MM" android:theme="@style/EditTextWhite" android:drawableRight="@drawable/ic_card_date" />
@@ -15,7 +20,7 @@
 			</LinearLayout>  
         </FrameLayout>
 
-	 <FrameLayout android:id="@+id/layout_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top" android:background="@drawable/login_bottom" android:paddingLeft="10dp" >  
+	 <FrameLayout android:id="@+id/layout_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_middle" android:background="@drawable/login_bottom" android:paddingLeft="10dp" >  
             <Button android:id="@+id/btnAccept" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="Accept Payment" android:paddingLeft="10dp" android:textSize="16sp"/>
 	 </FrameLayout>
 </LinearLayout>

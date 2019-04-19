@@ -3060,13 +3060,10 @@ namespace HelpingHand
 			public const int avd_show_password = 2131296341;
 			
 			// aapt resource value: 0x7F010002
-			public const int bg = 2130771970;
+			public const int calendar = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int calendar = 2130771971;
-			
-			// aapt resource value: 0x7F010004
-			public const int cancel = 2130771972;
+			public const int cancel = 2130771971;
 			
 			// aapt resource value: 0x1
 			public const int cast_abc_scrubber_control_off_mtrl_alpha = 1;
@@ -3230,71 +3227,71 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int cast_skip_ad_label_border = 1;
 			
+			// aapt resource value: 0x7F010004
+			public const int circle = 2130771972;
+			
 			// aapt resource value: 0x7F010005
-			public const int circle = 2130771973;
-			
-			// aapt resource value: 0x7F010006
-			public const int circle_border = 2130771974;
-			
-			// aapt resource value: 0x7F010160
-			public const int common_full_open_on_phone = 2130772320;
-			
-			// aapt resource value: 0x7F010146
-			public const int common_google_signin_btn_icon_dark = 2130772294;
-			
-			// aapt resource value: 0x7F010147
-			public const int common_google_signin_btn_icon_dark_focused = 2130772295;
-			
-			// aapt resource value: 0x7F010148
-			public const int common_google_signin_btn_icon_dark_normal = 2130772296;
-			
-			// aapt resource value: 0x7F010161
-			public const int common_google_signin_btn_icon_dark_normal_background = 2130772321;
-			
-			// aapt resource value: 0x7F010149
-			public const int common_google_signin_btn_icon_disabled = 2130772297;
-			
-			// aapt resource value: 0x7F010150
-			public const int common_google_signin_btn_icon_light = 2130772304;
-			
-			// aapt resource value: 0x7F010151
-			public const int common_google_signin_btn_icon_light_focused = 2130772305;
-			
-			// aapt resource value: 0x7F010152
-			public const int common_google_signin_btn_icon_light_normal = 2130772306;
-			
-			// aapt resource value: 0x7F010162
-			public const int common_google_signin_btn_icon_light_normal_background = 2130772322;
-			
-			// aapt resource value: 0x7F010153
-			public const int common_google_signin_btn_text_dark = 2130772307;
-			
-			// aapt resource value: 0x7F010154
-			public const int common_google_signin_btn_text_dark_focused = 2130772308;
-			
-			// aapt resource value: 0x7F010155
-			public const int common_google_signin_btn_text_dark_normal = 2130772309;
-			
-			// aapt resource value: 0x7F010163
-			public const int common_google_signin_btn_text_dark_normal_background = 2130772323;
-			
-			// aapt resource value: 0x7F010156
-			public const int common_google_signin_btn_text_disabled = 2130772310;
-			
-			// aapt resource value: 0x7F010157
-			public const int common_google_signin_btn_text_light = 2130772311;
-			
-			// aapt resource value: 0x7F010158
-			public const int common_google_signin_btn_text_light_focused = 2130772312;
+			public const int circle_border = 2130771973;
 			
 			// aapt resource value: 0x7F010159
-			public const int common_google_signin_btn_text_light_normal = 2130772313;
+			public const int common_full_open_on_phone = 2130772313;
 			
-			// aapt resource value: 0x7F010164
-			public const int common_google_signin_btn_text_light_normal_background = 2130772324;
+			// aapt resource value: 0x7F010145
+			public const int common_google_signin_btn_icon_dark = 2130772293;
 			
-			// aapt resource value: 0x7F010007
-			public const int dashboard = 2130771975;
+			// aapt resource value: 0x7F010146
+			public const int common_google_signin_btn_icon_dark_focused = 2130772294;
+			
+			// aapt resource value: 0x7F010147
+			public const int common_google_signin_btn_icon_dark_normal = 2130772295;
+			
+			// aapt resource value: 0x7F010160
+			public const int common_google_signin_btn_icon_dark_normal_background = 2130772320;
+			
+			// aapt resource value: 0x7F010148
+			public const int common_google_signin_btn_icon_disabled = 2130772296;
+			
+			// aapt resource value: 0x7F010149
+			public const int common_google_signin_btn_icon_light = 2130772297;
+			
+			// aapt resource value: 0x7F010150
+			public const int common_google_signin_btn_icon_light_focused = 2130772304;
+			
+			// aapt resource value: 0x7F010151
+			public const int common_google_signin_btn_icon_light_normal = 2130772305;
+			
+			// aapt resource value: 0x7F010161
+			public const int common_google_signin_btn_icon_light_normal_background = 2130772321;
+			
+			// aapt resource value: 0x7F010152
+			public const int common_google_signin_btn_text_dark = 2130772306;
+			
+			// aapt resource value: 0x7F010153
+			public const int common_google_signin_btn_text_dark_focused = 2130772307;
+			
+			// aapt resource value: 0x7F010154
+			public const int common_google_signin_btn_text_dark_normal = 2130772308;
+			
+			// aapt resource value: 0x7F010162
+			public const int common_google_signin_btn_text_dark_normal_background = 2130772322;
+			
+			// aapt resource value: 0x7F010155
+			public const int common_google_signin_btn_text_disabled = 2130772309;
+			
+			// aapt resource value: 0x7F010156
+			public const int common_google_signin_btn_text_light = 2130772310;
+			
+			// aapt resource value: 0x7F010157
+			public const int common_google_signin_btn_text_light_focused = 2130772311;
+			
+			// aapt resource value: 0x7F010158
+			public const int common_google_signin_btn_text_light_normal = 2130772312;
+			
+			// aapt resource value: 0x7F010163
+			public const int common_google_signin_btn_text_light_normal_background = 2130772323;
+			
+			// aapt resource value: 0x7F010006
+			public const int dashboard = 2130771974;
 			
 			// aapt resource value: 0x7F090056
 			public const int design_bottom_navigation_item_background = 2131296342;
@@ -3314,50 +3311,50 @@ namespace HelpingHand
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010008
-			public const int favourites = 2130771976;
+			// aapt resource value: 0x7F010007
+			public const int favourites = 2130771975;
 			
-			// aapt resource value: 0x7F010009
-			public const int goBack_icon = 2130771977;
+			// aapt resource value: 0x7F010008
+			public const int goBack_icon = 2130771976;
+			
+			// aapt resource value: 0x7F010164
+			public const int googleg_disabled_color_18 = 2130772324;
 			
 			// aapt resource value: 0x7F010165
-			public const int googleg_disabled_color_18 = 2130772325;
+			public const int googleg_standard_color_18 = 2130772325;
 			
-			// aapt resource value: 0x7F010166
-			public const int googleg_standard_color_18 = 2130772326;
+			// aapt resource value: 0x7F010009
+			public const int grad = 2130771977;
 			
 			// aapt resource value: 0x7F010010
-			public const int grad = 2130771984;
+			public const int home_icon = 2130771984;
 			
-			// aapt resource value: 0x7F010011
-			public const int home_icon = 2130771985;
+			// aapt resource value: 0x7F010027
+			public const int ic_arrow_back = 2130772007;
 			
 			// aapt resource value: 0x7F010028
-			public const int ic_arrow_back = 2130772008;
+			public const int ic_card_cvc = 2130772008;
 			
 			// aapt resource value: 0x7F010029
-			public const int ic_card_cvc = 2130772009;
+			public const int ic_card_date = 2130772009;
 			
 			// aapt resource value: 0x7F010030
-			public const int ic_card_date = 2130772016;
+			public const int ic_card_number = 2130772016;
 			
 			// aapt resource value: 0x7F010031
-			public const int ic_card_number = 2130772017;
+			public const int ic_chevron_left = 2130772017;
 			
 			// aapt resource value: 0x7F010032
-			public const int ic_chevron_left = 2130772018;
+			public const int ic_key = 2130772018;
+			
+			// aapt resource value: 0x7F010011
+			public const int ic_launcher_background = 2130771985;
 			
 			// aapt resource value: 0x7F010033
-			public const int ic_key = 2130772019;
-			
-			// aapt resource value: 0x7F010012
-			public const int ic_launcher_background = 2130771986;
+			public const int ic_lock = 2130772019;
 			
 			// aapt resource value: 0x7F010034
-			public const int ic_lock = 2130772020;
-			
-			// aapt resource value: 0x7F010035
-			public const int ic_person = 2130772021;
+			public const int ic_person = 2130772020;
 			
 			// aapt resource value: 0x1
 			public const int ic_plusone_medium_off_client = 1;
@@ -3371,47 +3368,41 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int ic_plusone_tall_off_client = 1;
 			
-			// aapt resource value: 0x7F010036
-			public const int ic_right_arrow = 2130772022;
+			// aapt resource value: 0x7F010035
+			public const int ic_right_arrow = 2130772021;
+			
+			// aapt resource value: 0x7F010012
+			public const int ic_settings = 2130771986;
 			
 			// aapt resource value: 0x7F010013
-			public const int ic_settings = 2130771987;
+			public const int ic_user = 2130771987;
 			
 			// aapt resource value: 0x7F010014
-			public const int ic_user = 2130771988;
+			public const int image_border = 2130771988;
 			
 			// aapt resource value: 0x7F010015
-			public const int image_border = 2130771989;
+			public const int info = 2130771989;
 			
-			// aapt resource value: 0x7F010016
-			public const int info = 2130771990;
+			// aapt resource value: 0x7F010036
+			public const int login_bottom = 2130772022;
 			
 			// aapt resource value: 0x7F010037
-			public const int login_bottom = 2130772023;
+			public const int login_top = 2130772023;
+			
+			// aapt resource value: 0x7F010016
+			public const int logout = 2130771990;
 			
 			// aapt resource value: 0x7F010038
-			public const int login_top = 2130772024;
+			public const int main_bg = 2130772024;
 			
 			// aapt resource value: 0x7F010017
-			public const int logout = 2130771991;
-			
-			// aapt resource value: 0x7F010039
-			public const int main_bg = 2130772025;
+			public const int map = 2130771991;
 			
 			// aapt resource value: 0x7F010018
-			public const int map = 2130771992;
-			
-			// aapt resource value: 0x7F010019
-			public const int message = 2130771993;
-			
-			// aapt resource value: 0x7F010020
-			public const int messages = 2130772000;
+			public const int messages = 2130771992;
 			
 			// aapt resource value: 0x7F09005C
 			public const int navigation_empty_icon = 2131296348;
-			
-			// aapt resource value: 0x7F010021
-			public const int notification = 2130772001;
 			
 			// aapt resource value: 0x7F090001
 			public const int notification_action_background = 2131296257;
@@ -3584,14 +3575,20 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int quantum_ic_volume_up_white_36 = 1;
 			
+			// aapt resource value: 0x7F010019
+			public const int Save_icon = 2130771993;
+			
+			// aapt resource value: 0x7F010020
+			public const int send = 2130772000;
+			
+			// aapt resource value: 0x7F010021
+			public const int SignInCustomButton = 2130772001;
+			
 			// aapt resource value: 0x7F010022
-			public const int Save_icon = 2130772002;
+			public const int SignUpCustomButton = 2130772002;
 			
 			// aapt resource value: 0x7F010023
-			public const int send = 2130772003;
-			
-			// aapt resource value: 0x7F010024
-			public const int star = 2130772004;
+			public const int star = 2130772003;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -3599,14 +3596,14 @@ namespace HelpingHand
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
+			// aapt resource value: 0x7F010024
+			public const int upload_icon = 2130772004;
+			
 			// aapt resource value: 0x7F010025
-			public const int upload_icon = 2130772005;
+			public const int user = 2130772005;
 			
 			// aapt resource value: 0x7F010026
-			public const int user = 2130772006;
-			
-			// aapt resource value: 0x7F010027
-			public const int user_icon = 2130772007;
+			public const int user_icon = 2130772006;
 			
 			static Drawable()
 			{
@@ -3687,41 +3684,41 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0014
 			public const int activity_chooser_view_content = 2131492884;
 			
-			// aapt resource value: 0x7F020086
-			public const int activity_dashboard = 2130837638;
-			
-			// aapt resource value: 0x7F020126
-			public const int activity_favourites = 2130837798;
-			
-			// aapt resource value: 0x7F020089
-			public const int activity_forget = 2130837641;
-			
-			// aapt resource value: 0x7F020110
-			public const int activity_main = 2130837776;
-			
-			// aapt resource value: 0x7F020147
-			public const int activity_schedule = 2130837831;
-			
-			// aapt resource value: 0x7F020149
-			public const int activity_sign_up = 2130837833;
+			// aapt resource value: 0x7F020092
+			public const int activity_dashboard = 2130837650;
 			
 			// aapt resource value: 0x7F020132
-			public const int activity_userProfile = 2130837810;
+			public const int activity_favourites = 2130837810;
 			
-			// aapt resource value: 0x7F020154
-			public const int activity_viewUser = 2130837844;
+			// aapt resource value: 0x7F020095
+			public const int activity_forget = 2130837653;
+			
+			// aapt resource value: 0x7F020116
+			public const int activity_main = 2130837782;
+			
+			// aapt resource value: 0x7F020155
+			public const int activity_schedule = 2130837845;
+			
+			// aapt resource value: 0x7F020157
+			public const int activity_sign_up = 2130837847;
+			
+			// aapt resource value: 0x7F020140
+			public const int activity_userProfile = 2130837824;
+			
+			// aapt resource value: 0x7F020162
+			public const int activity_viewUser = 2130837858;
 			
 			// aapt resource value: 0x7F0C0015
 			public const int add = 2131492885;
 			
-			// aapt resource value: 0x7F020141
-			public const int address = 2130837825;
+			// aapt resource value: 0x7F020149
+			public const int address = 2130837833;
 			
-			// aapt resource value: 0x7F020319
-			public const int adjust_height = 2130838297;
+			// aapt resource value: 0x7F020327
+			public const int adjust_height = 2130838311;
 			
-			// aapt resource value: 0x7F020318
-			public const int adjust_width = 2130838296;
+			// aapt resource value: 0x7F020326
+			public const int adjust_width = 2130838310;
 			
 			// aapt resource value: 0x1
 			public const int ad_container = 1;
@@ -3735,11 +3732,11 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int ad_label = 1;
 			
-			// aapt resource value: 0x7F020137
-			public const int age = 2130837815;
+			// aapt resource value: 0x7F020145
+			public const int age = 2130837829;
 			
-			// aapt resource value: 0x7F020169
-			public const int agenda = 2130837865;
+			// aapt resource value: 0x7F020177
+			public const int agenda = 2130837879;
 			
 			// aapt resource value: 0x7F0C0016
 			public const int alertTitle = 2131492886;
@@ -3756,8 +3753,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int android_pay_light_with_border = 1;
 			
-			// aapt resource value: 0x7F020317
-			public const int app_name = 2130838295;
+			// aapt resource value: 0x7F020325
+			public const int app_name = 2130838309;
 			
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
@@ -3768,11 +3765,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0018
 			public const int auto = 2131492888;
 			
-			// aapt resource value: 0x7F020100
-			public const int babysitter_email = 2130837760;
+			// aapt resource value: 0x7F020106
+			public const int babysitter_email = 2130837766;
 			
-			// aapt resource value: 0x7F020098
-			public const int babysitter_name = 2130837656;
+			// aapt resource value: 0x7F020104
+			public const int babysitter_name = 2130837764;
 			
 			// aapt resource value: 0x1
 			public const int background_image_view = 1;
@@ -3792,11 +3789,14 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C001A
 			public const int bottom = 2131492890;
 			
-			// aapt resource value: 0x7F020131
-			public const int btnAccept = 2130837809;
+			// aapt resource value: 0x7F020139
+			public const int btnAccept = 2130837817;
 			
-			// aapt resource value: 0x7F020085
-			public const int btnCancelPayment = 2130837637;
+			// aapt resource value: 0x7F020091
+			public const int btnCancelPayment = 2130837649;
+			
+			// aapt resource value: 0x7F020087
+			public const int btnCancel_Appointment = 2130837639;
 			
 			// aapt resource value: 0x7F020069
 			public const int btnChange_date = 2130837609;
@@ -3810,14 +3810,17 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020019
 			public const int btnChoose = 2130837529;
 			
-			// aapt resource value: 0x7F020082
-			public const int btnConfirmPayment = 2130837634;
+			// aapt resource value: 0x7F020088
+			public const int btnConfirmPayment = 2130837640;
+			
+			// aapt resource value: 0x7F020086
+			public const int btnConfirm_Appointment = 2130837638;
 			
 			// aapt resource value: 0x7F020076
 			public const int btnCreateAppointment = 2130837622;
 			
-			// aapt resource value: 0x7F020157
-			public const int btnCreate_appointment = 2130837847;
+			// aapt resource value: 0x7F020165
+			public const int btnCreate_appointment = 2130837861;
 			
 			// aapt resource value: 0x7F020081
 			public const int btnDelete = 2130837633;
@@ -3909,8 +3912,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020059
 			public const int btnWedNight = 2130837593;
 			
-			// aapt resource value: 0x7F020101
-			public const int btn_fav = 2130837761;
+			// aapt resource value: 0x7F020107
+			public const int btn_fav = 2130837767;
 			
 			// aapt resource value: 0x1
 			public const int button = 1;
@@ -3945,8 +3948,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int buy_with_google = 1;
 			
-			// aapt resource value: 0x7F020148
-			public const int calendar = 2130837832;
+			// aapt resource value: 0x7F020156
+			public const int calendar = 2130837846;
 			
 			// aapt resource value: 0x7F020078
 			public const int cancelAppointment = 2130837624;
@@ -3954,8 +3957,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C001C
 			public const int cancel_action = 2131492892;
 			
-			// aapt resource value: 0x7F020099
-			public const int card_view = 2130837657;
+			// aapt resource value: 0x7F020105
+			public const int card_view = 2130837765;
 			
 			// aapt resource value: 0x1
 			public const int cast_button_type_closed_caption = 1;
@@ -4005,8 +4008,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0008
 			public const int chronometer = 2131492872;
 			
-			// aapt resource value: 0x7F020142
-			public const int city = 2130837826;
+			// aapt resource value: 0x7F020150
+			public const int city = 2130837840;
 			
 			// aapt resource value: 0x1
 			public const int classic = 1;
@@ -4041,8 +4044,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0024
 			public const int customPanel = 2131492900;
 			
-			// aapt resource value: 0x7F020323
-			public const int dark = 2130838307;
+			// aapt resource value: 0x7F020331
+			public const int dark = 2130838321;
 			
 			// aapt resource value: 0x1
 			public const int date = 1;
@@ -4086,11 +4089,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C002C
 			public const int edit_query = 2131492908;
 			
-			// aapt resource value: 0x7F020143
-			public const int eircode = 2130837827;
+			// aapt resource value: 0x7F020151
+			public const int eircode = 2130837841;
 			
-			// aapt resource value: 0x7F020139
-			public const int email = 2130837817;
+			// aapt resource value: 0x7F020147
+			public const int email = 2130837831;
 			
 			// aapt resource value: 0x7F0C002D
 			public const int end = 2131492909;
@@ -4110,11 +4113,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C002F
 			public const int expand_activities_button = 2131492911;
 			
-			// aapt resource value: 0x7F020120
-			public const int fab = 2130837792;
+			// aapt resource value: 0x7F020126
+			public const int fab = 2130837798;
 			
-			// aapt resource value: 0x7F020144
-			public const int facebook = 2130837828;
+			// aapt resource value: 0x7F020152
+			public const int facebook = 2130837842;
 			
 			// aapt resource value: 0x7F0C0031
 			public const int fill = 2131492913;
@@ -4125,20 +4128,20 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0009
 			public const int forever = 2131492873;
 			
-			// aapt resource value: 0x7F020094
-			public const int forget_btn_back = 2130837652;
+			// aapt resource value: 0x7F020100
+			public const int forget_btn_back = 2130837760;
 			
-			// aapt resource value: 0x7F020093
-			public const int forget_btn_reset = 2130837651;
+			// aapt resource value: 0x7F020099
+			public const int forget_btn_reset = 2130837657;
 			
-			// aapt resource value: 0x7F020092
-			public const int forget_email = 2130837650;
+			// aapt resource value: 0x7F020098
+			public const int forget_email = 2130837656;
 			
-			// aapt resource value: 0x7F020091
-			public const int forget_input_email = 2130837649;
+			// aapt resource value: 0x7F020097
+			public const int forget_input_email = 2130837655;
 			
-			// aapt resource value: 0x7F020090
-			public const int forget_message = 2130837648;
+			// aapt resource value: 0x7F020096
+			public const int forget_message = 2130837654;
 			
 			// aapt resource value: 0x7F0C0034
 			public const int ghost_view = 2131492916;
@@ -4179,14 +4182,14 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int hybrid = 1;
 			
-			// aapt resource value: 0x7F020087
-			public const int icon = 2130837639;
+			// aapt resource value: 0x7F020093
+			public const int icon = 2130837651;
 			
 			// aapt resource value: 0x7F0C000B
 			public const int icon_group = 2131492875;
 			
-			// aapt resource value: 0x7F020322
-			public const int icon_only = 2130838306;
+			// aapt resource value: 0x7F020330
+			public const int icon_only = 2130838320;
 			
 			// aapt resource value: 0x1
 			public const int icon_uri = 1;
@@ -4197,11 +4200,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0038
 			public const int image = 2131492920;
 			
-			// aapt resource value: 0x7F020095
-			public const int imageView = 2130837653;
+			// aapt resource value: 0x7F020101
+			public const int imageView = 2130837761;
 			
-			// aapt resource value: 0x7F020135
-			public const int imgUser = 2130837813;
+			// aapt resource value: 0x7F020143
+			public const int imgUser = 2130837827;
 			
 			// aapt resource value: 0x7F020018
 			public const int imgView = 2130837528;
@@ -4212,11 +4215,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C000C
 			public const int info = 2131492876;
 			
-			// aapt resource value: 0x7F020168
-			public const int inline = 2130837864;
+			// aapt resource value: 0x7F020176
+			public const int inline = 2130837878;
 			
-			// aapt resource value: 0x7F020121
-			public const int input = 2130837793;
+			// aapt resource value: 0x7F020127
+			public const int input = 2130837799;
 			
 			// aapt resource value: 0x1
 			public const int instant_message = 1;
@@ -4248,14 +4251,14 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int large_icon_uri = 1;
 			
-			// aapt resource value: 0x7F020145
-			public const int layoutRate = 2130837829;
+			// aapt resource value: 0x7F020153
+			public const int layoutRate = 2130837843;
 			
-			// aapt resource value: 0x7F020083
-			public const int layoutTop = 2130837635;
+			// aapt resource value: 0x7F020089
+			public const int layoutTop = 2130837641;
 			
-			// aapt resource value: 0x7F020156
-			public const int layout_availabilty = 2130837846;
+			// aapt resource value: 0x7F020164
+			public const int layout_availabilty = 2130837860;
 			
 			// aapt resource value: 0x7F020064
 			public const int layout_bottom = 2130837604;
@@ -4284,8 +4287,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int license_list = 1;
 			
-			// aapt resource value: 0x7F020324
-			public const int light = 2130838308;
+			// aapt resource value: 0x7F020332
+			public const int light = 2130838322;
 			
 			// aapt resource value: 0x7F0C000E
 			public const int line1 = 2131492878;
@@ -4293,8 +4296,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C000F
 			public const int line3 = 2131492879;
 			
-			// aapt resource value: 0x7F020097
-			public const int linearLayoutTop = 2130837655;
+			// aapt resource value: 0x7F020103
+			public const int linearLayoutTop = 2130837763;
 			
 			// aapt resource value: 0x7F040001
 			public const int listItems = 2130968577;
@@ -4305,38 +4308,38 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020080
 			public const int list_appointments = 2130837632;
 			
-			// aapt resource value: 0x7F020102
-			public const int list_babysitter = 2130837762;
+			// aapt resource value: 0x7F020108
+			public const int list_babysitter = 2130837768;
+			
+			// aapt resource value: 0x7F020115
+			public const int list_city = 2130837781;
+			
+			// aapt resource value: 0x7F020094
+			public const int list_data = 2130837652;
 			
 			// aapt resource value: 0x7F020109
-			public const int list_city = 2130837769;
+			public const int list_date = 2130837769;
 			
-			// aapt resource value: 0x7F020088
-			public const int list_data = 2130837640;
+			// aapt resource value: 0x7F020111
+			public const int list_end = 2130837777;
 			
-			// aapt resource value: 0x7F020103
-			public const int list_date = 2130837763;
-			
-			// aapt resource value: 0x7F020105
-			public const int list_end = 2130837765;
-			
-			// aapt resource value: 0x7F020106
-			public const int list_img = 2130837766;
+			// aapt resource value: 0x7F020112
+			public const int list_img = 2130837778;
 			
 			// aapt resource value: 0x7F0C0041
 			public const int list_item = 2131492929;
 			
-			// aapt resource value: 0x7F020107
-			public const int list_name = 2130837767;
+			// aapt resource value: 0x7F020113
+			public const int list_name = 2130837779;
 			
-			// aapt resource value: 0x7F020122
-			public const int list_of_messages = 2130837794;
+			// aapt resource value: 0x7F020128
+			public const int list_of_messages = 2130837800;
 			
-			// aapt resource value: 0x7F020108
-			public const int list_rating = 2130837768;
+			// aapt resource value: 0x7F020114
+			public const int list_rating = 2130837780;
 			
-			// aapt resource value: 0x7F020104
-			public const int list_start = 2130837764;
+			// aapt resource value: 0x7F020110
+			public const int list_start = 2130837776;
 			
 			// aapt resource value: 0x1
 			public const int live_stream_indicator = 1;
@@ -4347,32 +4350,32 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int loading_indicator = 1;
 			
+			// aapt resource value: 0x7F020123
+			public const int login_btn_Babysitter_reg = 2130837795;
+			
+			// aapt resource value: 0x7F020120
+			public const int login_btn_forget_password = 2130837792;
+			
+			// aapt resource value: 0x7F020119
+			public const int login_btn_login = 2130837785;
+			
+			// aapt resource value: 0x7F020122
+			public const int login_btn_sign_up = 2130837794;
+			
 			// aapt resource value: 0x7F020117
-			public const int login_btn_Babysitter_reg = 2130837783;
+			public const int login_email = 2130837783;
 			
-			// aapt resource value: 0x7F020114
-			public const int login_btn_forget_password = 2130837780;
+			// aapt resource value: 0x7F020121
+			public const int login_layout_or = 2130837793;
 			
-			// aapt resource value: 0x7F020113
-			public const int login_btn_login = 2130837779;
-			
-			// aapt resource value: 0x7F020116
-			public const int login_btn_sign_up = 2130837782;
-			
-			// aapt resource value: 0x7F020111
-			public const int login_email = 2130837777;
-			
-			// aapt resource value: 0x7F020115
-			public const int login_layout_or = 2130837781;
-			
-			// aapt resource value: 0x7F020112
-			public const int login_password = 2130837778;
+			// aapt resource value: 0x7F020118
+			public const int login_password = 2130837784;
 			
 			// aapt resource value: 0x1
 			public const int logo_only = 1;
 			
-			// aapt resource value: 0x7F020118
-			public const int map = 2130837784;
+			// aapt resource value: 0x7F020124
+			public const int map = 2130837796;
 			
 			// aapt resource value: 0x7F0C0042
 			public const int masked = 2131492930;
@@ -4386,35 +4389,35 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0043
 			public const int media_actions = 2131492931;
 			
-			// aapt resource value: 0x7F020158
-			public const int menu_calendar = 2130837848;
+			// aapt resource value: 0x7F020166
+			public const int menu_calendar = 2130837862;
 			
-			// aapt resource value: 0x7F020162
-			public const int menu_home = 2130837858;
+			// aapt resource value: 0x7F020170
+			public const int menu_home = 2130837872;
 			
-			// aapt resource value: 0x7F020159
-			public const int menu_message = 2130837849;
+			// aapt resource value: 0x7F020167
+			public const int menu_message = 2130837863;
 			
-			// aapt resource value: 0x7F020163
-			public const int menu_save = 2130837859;
+			// aapt resource value: 0x7F020171
+			public const int menu_save = 2130837873;
 			
-			// aapt resource value: 0x7F020160
-			public const int menu_star = 2130837856;
+			// aapt resource value: 0x7F020168
+			public const int menu_star = 2130837864;
 			
-			// aapt resource value: 0x7F020161
-			public const int menu_user = 2130837857;
+			// aapt resource value: 0x7F020169
+			public const int menu_user = 2130837865;
 			
 			// aapt resource value: 0x7F0C0044
 			public const int message = 2131492932;
 			
-			// aapt resource value: 0x7F020125
-			public const int message_text = 2130837797;
+			// aapt resource value: 0x7F020131
+			public const int message_text = 2130837809;
 			
-			// aapt resource value: 0x7F020124
-			public const int message_time = 2130837796;
+			// aapt resource value: 0x7F020130
+			public const int message_time = 2130837808;
 			
-			// aapt resource value: 0x7F020123
-			public const int message_userName = 2130837795;
+			// aapt resource value: 0x7F020129
+			public const int message_userName = 2130837801;
 			
 			// aapt resource value: 0x7F0C0045
 			public const int mini = 2131492933;
@@ -4422,20 +4425,20 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int monochrome = 1;
 			
-			// aapt resource value: 0x7F020166
-			public const int monthView = 2130837862;
+			// aapt resource value: 0x7F020174
+			public const int monthView = 2130837876;
 			
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
 			
-			// aapt resource value: 0x7F020173
-			public const int multiRangeSelection = 2130837875;
+			// aapt resource value: 0x7F020181
+			public const int multiRangeSelection = 2130837889;
 			
-			// aapt resource value: 0x7F020171
-			public const int multiSelection = 2130837873;
+			// aapt resource value: 0x7F020179
+			public const int multiSelection = 2130837881;
 			
-			// aapt resource value: 0x7F020136
-			public const int name = 2130837814;
+			// aapt resource value: 0x7F020144
+			public const int name = 2130837828;
 			
 			// aapt resource value: 0x7F0C0047
 			public const int navigation_header_container = 2131492935;
@@ -4473,11 +4476,11 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C004F
 			public const int parent_matrix = 2131492943;
 			
-			// aapt resource value: 0x7F020146
-			public const int payRate = 2130837830;
+			// aapt resource value: 0x7F020154
+			public const int payRate = 2130837844;
 			
-			// aapt resource value: 0x7F020140
-			public const int phone = 2130837824;
+			// aapt resource value: 0x7F020148
+			public const int phone = 2130837832;
 			
 			// aapt resource value: 0x7F0C0050
 			public const int pin = 2131492944;
@@ -4524,14 +4527,14 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
 			
-			// aapt resource value: 0x7F020172
-			public const int rangeSelection = 2130837874;
+			// aapt resource value: 0x7F020180
+			public const int rangeSelection = 2130837888;
 			
-			// aapt resource value: 0x7F020155
-			public const int ratingbar = 2130837845;
+			// aapt resource value: 0x7F020163
+			public const int ratingbar = 2130837859;
 			
-			// aapt resource value: 0x7F020133
-			public const int rellay1 = 2130837811;
+			// aapt resource value: 0x7F020141
+			public const int rellay1 = 2130837825;
 			
 			// aapt resource value: 0x1
 			public const int rfc822 = 1;
@@ -4545,8 +4548,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0015
 			public const int right_side = 2131492885;
 			
-			// aapt resource value: 0x7F020134
-			public const int Rlayout = 2130837812;
+			// aapt resource value: 0x7F020142
+			public const int Rlayout = 2130837826;
 			
 			// aapt resource value: 0x1
 			public const int sandbox = 1;
@@ -4581,8 +4584,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F040000
 			public const int search = 2130968576;
 			
-			// aapt resource value: 0x7F020119
-			public const int searchable_spinner = 2130837785;
+			// aapt resource value: 0x7F020125
+			public const int searchable_spinner = 2130837797;
 			
 			// aapt resource value: 0x7F020079
 			public const int searchview = 2130837625;
@@ -4647,8 +4650,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020066
 			public const int signup_btn_login = 2130837606;
 			
-			// aapt resource value: 0x7F020151
-			public const int signup_btn_register = 2130837841;
+			// aapt resource value: 0x7F020159
+			public const int signup_btn_register = 2130837849;
 			
 			// aapt resource value: 0x7F020014
 			public const int signup_city = 2130837524;
@@ -4677,8 +4680,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F020016
 			public const int signup_vetted_yes = 2130837526;
 			
-			// aapt resource value: 0x7F020170
-			public const int singleSelection = 2130837872;
+			// aapt resource value: 0x7F020178
+			public const int singleSelection = 2130837880;
 			
 			// aapt resource value: 0x1
 			public const int slide = 1;
@@ -4695,8 +4698,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C006E
 			public const int spacer = 2131492974;
 			
-			// aapt resource value: 0x7F020150
-			public const int spinnerCount = 2130837840;
+			// aapt resource value: 0x7F020158
+			public const int spinnerCount = 2130837848;
 			
 			// aapt resource value: 0x7F0C006F
 			public const int split_action_bar = 2131492975;
@@ -4710,8 +4713,8 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C0072
 			public const int src_over = 2131492978;
 			
-			// aapt resource value: 0x7F020320
-			public const int standard = 2130838304;
+			// aapt resource value: 0x7F020328
+			public const int standard = 2130838312;
 			
 			// aapt resource value: 0x7F0C0073
 			public const int start = 2131492979;
@@ -4776,8 +4779,8 @@ namespace HelpingHand
 			// aapt resource value: 0x1
 			public const int textTitle = 1;
 			
-			// aapt resource value: 0x7F020096
-			public const int textView = 2130837654;
+			// aapt resource value: 0x7F020102
+			public const int textView = 2130837762;
 			
 			// aapt resource value: 0x7F020024
 			public const int textView1 = 2130837540;
@@ -4875,20 +4878,38 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C008B
 			public const int transition_transform = 2131493003;
 			
-			// aapt resource value: 0x7F020127
-			public const int txtCreditCardNumber = 2130837799;
+			// aapt resource value: 0x7F020083
+			public const int txtCost = 2130837635;
 			
-			// aapt resource value: 0x7F020130
-			public const int txtCVV = 2130837808;
+			// aapt resource value: 0x7F020082
+			public const int txtCostHeading = 2130837634;
 			
-			// aapt resource value: 0x7F020128
-			public const int txtExpiryMonth = 2130837800;
+			// aapt resource value: 0x7F020135
+			public const int txtCreditCardNumber = 2130837813;
 			
-			// aapt resource value: 0x7F020129
-			public const int txtExpiryYear = 2130837801;
+			// aapt resource value: 0x7F020138
+			public const int txtCVV = 2130837816;
+			
+			// aapt resource value: 0x7F020085
+			public const int txtDate = 2130837637;
 			
 			// aapt resource value: 0x7F020084
-			public const int txtOr = 2130837636;
+			public const int txtDateHeading = 2130837636;
+			
+			// aapt resource value: 0x7F020136
+			public const int txtExpiryMonth = 2130837814;
+			
+			// aapt resource value: 0x7F020137
+			public const int txtExpiryYear = 2130837815;
+			
+			// aapt resource value: 0x7F020090
+			public const int txtOr = 2130837648;
+			
+			// aapt resource value: 0x7F020133
+			public const int txtviewCost = 2130837811;
+			
+			// aapt resource value: 0x7F020134
+			public const int txtviewDate = 2130837812;
 			
 			// aapt resource value: 0x7F0C008C
 			public const int uniform = 2131493004;
@@ -4896,17 +4917,17 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C008D
 			public const int up = 2131493005;
 			
-			// aapt resource value: 0x7F020138
-			public const int uploadImage = 2130837816;
+			// aapt resource value: 0x7F020146
+			public const int uploadImage = 2130837830;
 			
 			// aapt resource value: 0x1
 			public const int url = 1;
 			
-			// aapt resource value: 0x7F020152
-			public const int view1 = 2130837842;
+			// aapt resource value: 0x7F020160
+			public const int view1 = 2130837856;
 			
-			// aapt resource value: 0x7F020153
-			public const int view2 = 2130837843;
+			// aapt resource value: 0x7F020161
+			public const int view2 = 2130837857;
 			
 			// aapt resource value: 0x7F0C008E
 			public const int view_offset_helper = 2131493006;
@@ -4914,14 +4935,14 @@ namespace HelpingHand
 			// aapt resource value: 0x7F0C008F
 			public const int visible = 2131493007;
 			
-			// aapt resource value: 0x7F020321
-			public const int wide = 2130838305;
+			// aapt resource value: 0x7F020329
+			public const int wide = 2130838313;
 			
 			// aapt resource value: 0x7F0C0090
 			public const int wrap_content = 2131493008;
 			
-			// aapt resource value: 0x7F020167
-			public const int yearView = 2130837863;
+			// aapt resource value: 0x7F020175
+			public const int yearView = 2130837877;
 			
 			static Id()
 			{

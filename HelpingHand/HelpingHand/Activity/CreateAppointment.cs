@@ -61,7 +61,6 @@ namespace HelpingHand
             //Add Toolbar
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            //SupportActionBar.Title = "Cancel";
 
             txtDate.Text = (getDate());
             btnChangeDate.Click += (s, e) =>
@@ -86,6 +85,19 @@ namespace HelpingHand
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             btnCreateApointment.SetOnClickListener(this);
+
+            //btnCreateApointment.Click += (object sender, EventArgs args) =>
+            //{
+            //    FragmentTransaction transcation = FragmentManager.BeginTransaction();
+            //    AppointmentDialog confirmAppointment = new AppointmentDialog();
+            //    confirmAppointment.Show(transcation, "Dialog Fragment");
+            //    confirmAppointment.onComplete += ConfirmAppointment_onComplete;
+            //};
+        }
+
+        private void ConfirmAppointment_onComplete(object sender, AppointmentConfirmed e)
+        {
+            getAvailabilty();
         }
 
         protected override Dialog OnCreateDialog(int id)

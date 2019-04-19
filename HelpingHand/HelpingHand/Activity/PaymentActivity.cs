@@ -27,8 +27,9 @@ namespace HelpingHand
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
         FirebaseAuth auth;
         EditText creditCardNumber, cardExpiryMonth, cardExpiryYear, cardCVV;
+        TextView appointmentCost, appointmentDate;
         Button AcceptPayment;
-        string startTime, endTime, userEmail, babysitterEmail, Babysitter, City, Address, Eircode, dateNotTime, _date;
+        string startTime, endTime, userEmail, babysitterEmail, Babysitter, City, Address, Eircode, _date;
         DateTime Date;
         decimal Cost;
 
@@ -51,11 +52,15 @@ namespace HelpingHand
             SetSupportActionBar(toolbar);
             //SupportActionBar.Title = "Cancel";
 
+            appointmentCost = FindViewById<TextView>(Resource.Id.txtviewCost);
+            appointmentDate = FindViewById<TextView>(Resource.Id.txtviewDate);
+
             string appointment = this.Intent.GetStringExtra("KEY");
             Appointment newAppointment = JsonConvert.DeserializeObject<Appointment>(appointment);
             Date = newAppointment.Date;
             _date = Date.ToString();
-            dateNotTime = _date.TrimStart();
+            string[] dateNotTime = _date.Split(' ');
+            string justDate = dateNotTime[0];
 
             startTime = newAppointment.startTime;
             endTime = newAppointment.endTime;
@@ -67,13 +72,16 @@ namespace HelpingHand
             Eircode = newAppointment.Eircode;
             Cost = newAppointment.cost;
 
+            appointmentCost.Text = "Appointment Cost: " + Cost.ToString();
+            appointmentDate.Text = "Appointment Date: " + justDate.ToString();
+
             //ChargeCard();
             AcceptPayment.Click += (object sender, EventArgs args) =>
             {
                 FragmentTransaction transcation = FragmentManager.BeginTransaction();
-                Dialogclass signup = new Dialogclass();
-                signup.Show(transcation, "Dialog Fragment");
-                signup.onPaymentComplete += Signup_onPaymentComplete;
+                Dialogclass payment = new Dialogclass();
+                payment.Show(transcation, "Dialog Fragment");
+                payment.onPaymentComplete += Signup_onPaymentComplete;
             };
         }
 

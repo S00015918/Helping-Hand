@@ -107,6 +107,7 @@
     <Compile Include="MapActivity.cs" />
     <Compile Include="MinMaxInputFilter.cs" />
     <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\AppointmentDialog.cs" />
     <Compile Include="Model\BabySitter.cs" />
     <Compile Include="Model\CreditCard.cs" />
     <Compile Include="Model\Dialogclass.cs" />
@@ -239,13 +240,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\message.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\notification.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\messages_main.axml">
@@ -534,9 +529,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_card_date.png" />
   </ItemGroup>
   <ItemGroup>
@@ -595,6 +587,12 @@
     <AndroidResource Include="Resources\layout\ConfirmAppointment_fragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SignInCustomButton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SignUpCustomButton.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

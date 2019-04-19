@@ -9,7 +9,7 @@
   
   <item android:id="@+id/menu_message"
         android:title="Message"
-        android:icon="@drawable/notification"
+        android:icon="@drawable/messages"
         app:showAsAction="always"/>
   
   <item android:id="@+id/menu_star"

@@ -49,24 +49,26 @@ namespace HelpingHand
             list_data = FindViewById<ListView>(Resource.Id.list_data);
             list_data.Visibility = ViewStates.Invisible;
 
-            var users = await firebase
+            var babysitterEmailList = new List<string>();
+            var parentEmailList = new List<string>();
+
+            var ratings = await firebase
                     .Child("rating").Child(auth.CurrentUser.Uid)
                     .OnceAsync<Rating>();
             list_ratings.Clear();
 
-            foreach (var item in users)
+            foreach (var item in ratings)
             {
                 Rating account = new Rating();
                 account.ratedByEmail = item.Object.ratedByEmail;
                 ratedByEmail = account.ratedByEmail;
+                parentEmailList.Add(ratedByEmail);
+                babysitterEmailList.Add(account.userRatedEmail);
             }
 
-            if (ratedByEmail == auth.CurrentUser.Email)
+            if (parentEmailList.Contains(auth.CurrentUser.Email))
             {
                 // Current user is a parent
-                var ratings = await firebase
-                    .Child("rating").Child(auth.CurrentUser.Uid)
-                    .OnceAsync<Rating>();
                 list_ratings.Clear();
 
                 foreach (var item in ratings)
@@ -87,9 +89,9 @@ namespace HelpingHand
                     }
                 }
             }
-            else
+            if (babysitterEmailList.Contains(auth.CurrentUser.Email))
             {
-                // you are a babysitter
+                // current user is a babysitter
                 var parents = await firebase
                     .Child("parent")
                     .OnceAsync<Parent>();
