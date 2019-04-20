@@ -35,8 +35,7 @@ namespace HelpingHand
             btnMonNigh, btnTueNigh, btnWedNigh, btnThuNigh, btnFriNigh, btnSatNigh, btnSunNigh;
         int count = 0;
         private const int PICK_IMAGE_REQUSET = 71;
-        FloatingActionButton btnSignup;
-        TextView btnLogin;
+        Button btnSignup, btnLogin;
         private Button btnUpload, btnChoose;
         private ImageView imgView;
 
@@ -65,8 +64,8 @@ namespace HelpingHand
             StorageReference userImage = storageRef.Child("user/vetted document/");
 
             //Views
-            btnSignup = FindViewById<FloatingActionButton>(Resource.Id.signup_btn_Babysitter);
-            btnLogin = FindViewById<TextView>(Resource.Id.signup_btn_login);
+            btnSignup = FindViewById<Button>(Resource.Id.signup_btn_Babysitter);
+            btnLogin = FindViewById<Button>(Resource.Id.signup_btn_login);
 
             //this.FindViewById<Button>(Resource.Id.btnMonAfter).Click += this.Button_Click;
             btnMonMorn = FindViewById<Button>(Resource.Id.btnMonMorn); btnTueMorn = FindViewById<Button>(Resource.Id.btnTueMorn); btnWedMorn = FindViewById<Button>(Resource.Id.btnWedMorn);

@@ -27,51 +27,25 @@
         </FrameLayout> 
 
         <FrameLayout android:id="@+id/layout_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top" android:background="@drawable/login_bottom">  
-            
-			<android.support.design.widget.FloatingActionButton 
-				android:id="@+id/signup_btn_register" 
-				android:layout_width="wrap_content" 
-				android:layout_below="@+id/signup_eircode" 
-				android:layout_height="wrap_content" 
-				android:layout_gravity="top" 
-				android:layout_marginStart="40dp" 
-				app:backgroundTint="#003157" 
-				app:srcCompat="@drawable/ic_right_arrow" />
+			<Button
+				android:id="@+id/signup_btn_parent"
+				android:layout_below="@+id/signup_eircode"
+				android:background="@drawable/signincustombutton"
+				android:layout_width="200dp"
+				android:layout_marginTop="60dp"
+				android:layout_gravity="center_horizontal"
+				android:layout_height="wrap_content"  
+				android:text="Sign Up" />		
+			<Button  
+				android:id="@+id/signup_btn_login"	
+				android:layout_width="200dp"  
+				android:layout_height="wrap_content"
+				android:layout_marginTop="120dp"
+				android:layout_gravity="center_horizontal"
+				android:background="@drawable/signupcustombutton"
+				android:text="Sign In" />  
 
 		</FrameLayout>
-
-			<View
-				android:id="@+id/view1"
-				android:layout_below="@+id/layout_bottom"
-				android:layout_width="200dp"
-				android:layout_height="1dp"
-				android:background="#C4C8C9"
-				android:layout_margin="5dp" />
-			<TextView
-				android:layout_below="@+id/view1"
-				android:padding="5dp"
-				android:text="OR"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" />
-			<View
-				android:id="@+id/view2"
-				android:layout_width="200dp"
-				android:layout_height="1dp"
-				android:background="#C4C8C9"
-				android:layout_margin="5dp" />
-
-		  <TextView
-			  android:layout_below="@+id/layout_bottom"
-			  android:id="@+id/signup_btn_login"
-			  android:text="Already own Account? Login"
-			  android:textStyle="bold"
-			  android:clickable="true"
-			  android:layout_centerHorizontal="true"
-			  android:layout_width="wrap_content"
-			  android:layout_height="wrap_content"
-			  style="@style/Widget.AppCompat.Button.Borderless"
-			  android:textColor="@color/colorPrimaryDark" />
-  
 </RelativeLayout>
 
 </ScrollView>

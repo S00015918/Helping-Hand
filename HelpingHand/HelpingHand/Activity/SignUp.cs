@@ -19,8 +19,7 @@ namespace XamarinFirebaseAuth
     [Activity(Label = "SignUp", Theme ="@style/AppTheme")]
     public class SignUp : Activity, IOnClickListener, IOnCompleteListener
     {
-        FloatingActionButton btnSignup;
-        TextView btnLogin;
+        Button btnSignup, btnLogin;
         EditText input_name, input_email, input_password, input_city, input_phone, input_address, input_eircode;
         RelativeLayout activity_sign_up;
 
@@ -37,7 +36,7 @@ namespace XamarinFirebaseAuth
                 Finish();
             }
             else
-            if (v.Id == Resource.Id.signup_btn_register)
+            if (v.Id == Resource.Id.signup_btn_parent)
             {
                 SignUpUser(input_email.Text, input_password.Text);
             }
@@ -63,8 +62,8 @@ namespace XamarinFirebaseAuth
             auth = FirebaseAuth.GetInstance(MainActivity.app);
 
             //Views
-            btnSignup = FindViewById<FloatingActionButton>(Resource.Id.signup_btn_register);
-            btnLogin = FindViewById<TextView>(Resource.Id.signup_btn_login);
+            btnSignup = FindViewById<Button>(Resource.Id.signup_btn_parent);
+            btnLogin = FindViewById<Button>(Resource.Id.signup_btn_login);
             //btnForgetPass = FindViewById<TextView>(Resource.Id.signup_btn_forget_password);
             input_name = FindViewById<EditText>(Resource.Id.signup_name);
             input_email = FindViewById<EditText>(Resource.Id.signup_email);

@@ -99,6 +99,62 @@
 
             </LinearLayout>
 
+			<LinearLayout android:layout_width="match_parent" android:id="@+id/layoutRate" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
+
+                <Button android:id="@+id/show_Availability" android:background="@drawable/signincustombutton" 
+					android:layout_width="200dp" android:layout_marginTop="60dp" android:layout_height="wrap_content" android:text="Create New Availability" />
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
+
+            </LinearLayout>
+
+		<FrameLayout android:id="@+id/layout_middle" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top">
+		<TextView android:layout_width="wrap_content" android:textStyle="bold" android:textSize="24sp" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Update Availability"/>
+			<HorizontalScrollView android:id="@+id/horizontalscrollView" android:layout_below="@+id/layout_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<GridLayout android:id="@+id/gridAvailability" android:layout_below="@+id/signup_vetted_yes" android:layout_marginTop="40dp" android:minWidth="200px" android:minHeight="200px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="8" android:rowCount="6" >
+					<TextView android:text="" android:width="80dp" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView1" />
+					<TextView android:text="Mon" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView2" />
+					<TextView android:text="Tue" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView3" />
+					<TextView android:text="Wed" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView4" />
+					<TextView android:text="Thu" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView5" />
+					<TextView android:text="Fri" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView6" />
+					<TextView android:text="Sat" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView7" />
+					<TextView android:text="Sun" android:width="40dp" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView8" />
+					<TextView android:text="Morning" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView9"/>
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/MonMorn" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/TueMorn" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/WedMorn" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/ThuMorn" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/FriMorn" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/SatMorn" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:layout_height="wrap_content" android:padding="5dp" android:id="@+id/SunMorn" />
+					<TextView android:text="Afternoon" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView10"/>
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/MonAfter" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/TueAfter" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/WedAfter" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/ThuAfter" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/FriAfter" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/SatAfter" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/SunAfter" android:layout_height="wrap_content" />
+					<TextView android:text="Evening" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView11"/>
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/MonEve" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/TueEve" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/WedEve" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/ThuEve" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/FriEve" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/SatEve" android:layout_height="wrap_content" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:id="@+id/SunEve" android:layout_height="wrap_content" />
+					<TextView android:text="Night" android:width="80dp" android:padding="5dp" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView12"/>
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/MonNight" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/TueNight" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/WedNight" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/ThuNight" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/FriNight" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/SatNight" />
+					<Button android:text="" android:layout_margin="5dp" android:layout_width="40dp" android:padding="5dp" android:layout_height="wrap_content" android:id="@+id/SunNight" />
+				</GridLayout>
+			</HorizontalScrollView>
+		</FrameLayout>
+
         </LinearLayout>
 
     </RelativeLayout>

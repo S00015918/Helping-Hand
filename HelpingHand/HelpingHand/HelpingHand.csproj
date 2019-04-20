@@ -101,6 +101,7 @@
     <Compile Include="Adapter\MessageAdapter.cs" />
     <Compile Include="Activity\CancelAppointment.cs" />
     <Compile Include="Activity\CreditCardFormatter.cs" />
+    <Compile Include="AppointmentRecieptActivity.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="ImageAdapter.cs" />
     <Compile Include="Interface\IFirebaseLoadDone.cs" />
@@ -593,6 +594,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SignUpCustomButton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Appointment_Confirmed.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -88,8 +88,17 @@ namespace HelpingHand
 
             //btnCreateApointment.Click += (object sender, EventArgs args) =>
             //{
+            //    string babysitter = this.Intent.GetStringExtra("KEY");
+            //    BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+            //    decimal rate = userAppointment.rate;
+            //    string cost = Convert.ToString(rate);
+
+            //    Bundle passData = new Bundle();
+            //    passData.PutString("Cost", cost);
+
             //    FragmentTransaction transcation = FragmentManager.BeginTransaction();
             //    AppointmentDialog confirmAppointment = new AppointmentDialog();
+            //    confirmAppointment.setArguments(passData);
             //    confirmAppointment.Show(transcation, "Dialog Fragment");
             //    confirmAppointment.onComplete += ConfirmAppointment_onComplete;
             //};

@@ -62,12 +62,10 @@ namespace XamarinFirebaseAuth
         {
             if (task.IsSuccessful == false)
             {
-                Snackbar snackbar = Snackbar.Make(activity_forget, "Reset Password Failed!", Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Reset Password Failed!", ToastLength.Short).Show();
             }else
             {
-                Snackbar snackbar = Snackbar.Make(activity_forget, "Reset Password link send to email : " + input_email.Text, Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Reset Password link send to email : " + input_email.Text, ToastLength.Short).Show();
             }
         }
     }

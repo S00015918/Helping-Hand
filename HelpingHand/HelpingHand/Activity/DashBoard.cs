@@ -26,7 +26,7 @@ namespace XamarinFirebaseAuth
     [Activity(Label = "DashBoard", Theme = "@style/AppTheme")]
     public class DashBoard : AppCompatActivity, IOnCompleteListener
     {
-        //EditText input_new_password, input_name, input_email;
+        TextView txtviewBabysitter, txtviewParent;
         private ListView list_data;
         //private ArrayList filteredUsers;
 
@@ -77,6 +77,8 @@ namespace XamarinFirebaseAuth
 
             //View
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
+            txtviewBabysitter = FindViewById<TextView>(Resource.Id.txtBabysitter);
+            txtviewParent = FindViewById<TextView>(Resource.Id.txtParent);
 
             activity_dashboard = FindViewById<RelativeLayout>(Resource.Id.activity_dashboard);
 
@@ -85,6 +87,8 @@ namespace XamarinFirebaseAuth
             search.SetQueryHint("Search");
             list_data = FindViewById<ListView>(Resource.Id.list_data);
 
+            txtviewBabysitter.Visibility = ViewStates.Invisible;
+            txtviewParent.Visibility = ViewStates.Invisible;
             list_data.Visibility = ViewStates.Invisible;
 
             var users = await firebase
@@ -110,6 +114,7 @@ namespace XamarinFirebaseAuth
             {
                 // You are a parent
 
+                txtviewBabysitter.Visibility = ViewStates.Visible;
                 var items = await firebase.Child("babysitter").OnceAsync<object>();
                 list_babySitters.Clear();
                 babysitterAdapter = null;
@@ -153,6 +158,7 @@ namespace XamarinFirebaseAuth
             {
                 // you are a babysitter
 
+                txtviewParent.Visibility = ViewStates.Visible;
                 parentAdapter = new ParentViewAdapter(this, list_parents);
                 parentAdapter.NotifyDataSetChanged();
                 list_data.Adapter = parentAdapter;

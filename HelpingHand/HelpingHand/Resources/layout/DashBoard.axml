@@ -10,7 +10,8 @@
 	<RelativeLayout android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:padding="10dp">
-		<TextView android:layout_width="wrap_content" android:textSize="16dp" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="All Babysitters"/>
+		<TextView android:id="@+id/txtBabysitter" android:layout_width="wrap_content" android:textStyle="bold" android:textSize="16sp" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="All Babysitters"/>
+		<TextView android:id="@+id/txtParent" android:layout_width="wrap_content" android:textStyle="bold" android:textSize="16sp" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="All Parents"/>
 		<ImageView
 			android:id="@+id/icon"
 			android:layout_alignParentTop="true"
