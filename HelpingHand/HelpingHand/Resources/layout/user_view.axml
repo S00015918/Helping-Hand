@@ -75,8 +75,8 @@
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
             </LinearLayout>
 
-		<FrameLayout android:id="@+id/layout_availabilty" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/facebook">
-		<TextView android:layout_width="wrap_content" android:textStyle="bold" android:textSize="24sp" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Availability"/>
+		<TextView android:id="@+id/txtviewAvailabiity" android:layout_width="wrap_content" android:textStyle="bold" android:textSize="24sp" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Availability"/>
+		<FrameLayout android:id="@+id/layout_availabilty" android:layout_marginTop="20dp" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/facebook">
 			<HorizontalScrollView android:id="@+id/horizontalscrollView" android:layout_below="@+id/facebook" android:layout_width="wrap_content" android:layout_height="wrap_content">
 				<GridLayout android:layout_below="@+id/facebook" android:minWidth="200px" android:minHeight="200px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="8" android:rowCount="6" android:id="@+id/gridSchedule" >
 					<TextView android:text="" android:width="80dp" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/textView1" />

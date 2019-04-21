@@ -149,6 +149,12 @@ namespace HelpingHand
 
             var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
             Toast.MakeText(this, "Payment Made", ToastLength.Short).Show();
+
+            var appointmentJson = JsonConvert.SerializeObject(appointment);
+
+            var viewReciept = new Intent(this, typeof(AppointmentRecieptActivity));
+            viewReciept.PutExtra("KEY", appointmentJson);
+            StartActivity(viewReciept);
         }
 
         //public async void ChargeCard()

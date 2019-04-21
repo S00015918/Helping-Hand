@@ -91,10 +91,10 @@ namespace HelpingHand
 
                                 googleMap.AddMarker(Nmarker);
 
-                                LatLng zoomTo = new LatLng(53.1424, -6.266155);
+                                LatLng zoomTo = new LatLng(53.27194, -9.04889);
                                 CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
                                 builder.Target(zoomTo);
-                                builder.Zoom(10);
+                                builder.Zoom(6);
 
                                 CameraPosition cameraPosition = builder.Build();
 
@@ -157,10 +157,10 @@ namespace HelpingHand
 
                                         googleMap.AddMarker(Nmarker);
 
-                                        LatLng zoomTo = new LatLng(53.1424, -6.266155);
+                                        LatLng zoomTo = new LatLng(53.27194, -9.04889);
                                         CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
                                         builder.Target(zoomTo);
-                                        builder.Zoom(10);
+                                        builder.Zoom(6);
 
                                         CameraPosition cameraPosition = builder.Build();
 

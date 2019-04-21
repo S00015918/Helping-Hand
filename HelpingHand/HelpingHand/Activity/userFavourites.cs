@@ -29,6 +29,7 @@ namespace HelpingHand
         List<BabySitter> list_babysitters = new List<BabySitter>();
         FirebaseAuth auth;
         Rating selectedUser;
+        TextView favouriteBabysitters, favouriteParents;
         private FavouriteBabysitterAdapter ratedUserAdapter;
         private ParentViewAdapter parentAdapter;
         string ratedByEmail;
@@ -47,7 +48,12 @@ namespace HelpingHand
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             list_data = FindViewById<ListView>(Resource.Id.list_data);
+            favouriteBabysitters = FindViewById<TextView>(Resource.Id.txtFavouriteBabysitter);
+            favouriteParents = FindViewById<TextView>(Resource.Id.txtFavouriteParent);
+
             list_data.Visibility = ViewStates.Invisible;
+            favouriteParents.Visibility = ViewStates.Invisible;
+            favouriteBabysitters.Visibility = ViewStates.Invisible;
 
             var babysitterEmailList = new List<string>();
             var parentEmailList = new List<string>();
@@ -69,6 +75,7 @@ namespace HelpingHand
             if (parentEmailList.Contains(auth.CurrentUser.Email))
             {
                 // Current user is a parent
+                favouriteBabysitters.Visibility = ViewStates.Visible;
                 list_ratings.Clear();
 
                 foreach (var item in ratings)
@@ -92,6 +99,7 @@ namespace HelpingHand
             if (babysitterEmailList.Contains(auth.CurrentUser.Email))
             {
                 // current user is a babysitter
+                favouriteParents.Visibility = ViewStates.Visible;
                 var parents = await firebase
                     .Child("parent")
                     .OnceAsync<Parent>();

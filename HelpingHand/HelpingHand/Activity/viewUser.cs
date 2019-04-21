@@ -25,10 +25,12 @@ namespace HelpingHand
             btnMonEve, btnTueEve, btnWedEve, btnThuEve, btnFriEve, btnSatEve, btnSunEve,
             btnMonNigh, btnTueNigh, btnWedNigh, btnThuNigh, btnFriNigh, btnSatNigh, btnSunNigh;
         Button btnCreateAppointment;
-        TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode;
+        TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode, txtAvailability;
         ImageView userImage;
         FirebaseAuth auth;
         RatingBar ratingbar;
+        FrameLayout layoutAvailability;
+
         int userRating, returnRating; string userRated, ratedBabysitter, RatersEmail, userRatedName;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
@@ -78,6 +80,9 @@ namespace HelpingHand
             btnSunNigh = FindViewById<Button>(Resource.Id.btnSunNight);
             btnSunNigh.SetBackgroundColor(Android.Graphics.Color.IndianRed);
 
+            txtAvailability = FindViewById<TextView>(Resource.Id.txtviewAvailabiity);
+            layoutAvailability = FindViewById<FrameLayout>(Resource.Id.layout_availabilty);
+
             var items = await firebase
                 .Child("parent")
                 .OnceAsync<Parent>();
@@ -104,6 +109,8 @@ namespace HelpingHand
 
                 btnCreateAppointment.Visibility = ViewStates.Invisible;
                 ratingbar.Visibility = ViewStates.Invisible;
+                txtAvailability.Visibility = ViewStates.Invisible;
+                layoutAvailability.Visibility = ViewStates.Invisible;
             }
             else
             {
@@ -268,22 +275,6 @@ namespace HelpingHand
 
                     ratingbar.NumStars = userRating;
                 }
-
-
-                //else
-                //{
-                //    string _parent = this.Intent.GetStringExtra("KEY");
-                //    Parent userParent = JsonConvert.DeserializeObject<Parent>(_parent);
-
-                //    userName.Text = userParent.name;
-                //    userEmail.Text = userParent.email;
-                //    userAddress.Text = userParent.address;
-                //    userCity.Text = userParent.city;
-                //    userPhone.Text = userParent.phone;
-                //    userEircode.Text = userParent.eircode;
-
-                //    btnCreateAppointment.Visibility = ViewStates.Invisible;
-                //}
 
                 getRatings();
 

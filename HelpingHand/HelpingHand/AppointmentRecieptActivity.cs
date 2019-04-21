@@ -21,7 +21,7 @@ namespace HelpingHand
     [Activity(Label = "Appointment Reciept", Theme = "@style/AppTheme")]
     public class AppointmentRecieptActivity : AppCompatActivity, IOnClickListener, IOnCompleteListener
     {
-        TextView appDate, appStart, appEnd, appCost, appBabysitter;
+        TextView appDate, appStart, appEnd, appCost, appBabysitter, appAddress;
         DateTime Date;
         string startTime, endTime, babysitter, Address, _date, parentEmail;
         decimal Cost;
@@ -42,6 +42,7 @@ namespace HelpingHand
             appStart = FindViewById<TextView>(Resource.Id.appStart);
             appEnd = FindViewById<TextView>(Resource.Id.appEnd);
             appCost = FindViewById<TextView>(Resource.Id.appCost);
+            appAddress = FindViewById<TextView>(Resource.Id.appAddress);
             appBabysitter = FindViewById<TextView>(Resource.Id.appBabysitter);
             resendReciept = FindViewById<Button>(Resource.Id.resend_reciept);
 
@@ -60,11 +61,12 @@ namespace HelpingHand
             Cost = newAppointment.cost;
             parentEmail = newAppointment.userEmail;
 
-            appDate.Text = justDate;
-            appStart.Text = startTime;
-            appEnd.Text = endTime;
-            appBabysitter.Text = babysitter;
-            appCost.Text = Cost.ToString();
+            appDate.Text = "Appointment date: " + justDate;
+            appStart.Text = "Appointment starts: " + startTime;
+            appEnd.Text = "Appointment ends: " + endTime;
+            appBabysitter.Text = "Baysitter name: " + babysitter;
+            appAddress.Text = "Appointment location: " + Address;
+            appCost.Text = "Appointment cost: " + Cost.ToString();
 
             resendReciept.SetOnClickListener(this);
         }

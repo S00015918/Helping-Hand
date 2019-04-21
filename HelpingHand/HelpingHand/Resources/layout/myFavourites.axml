@@ -9,7 +9,8 @@
         layout="@layout/toolbar"/>
 	<RelativeLayout android:layout_width="wrap_content"
     android:layout_height="wrap_content" android:padding="10dp" >
-		<TextView android:layout_width="wrap_content" android:textSize="16sp" android:textStyle="bold" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="Your Favourite Babysitters"/>
+		<TextView android:id="@+id/txtFavouriteBabysitter" android:layout_width="wrap_content" android:textSize="16sp" android:textStyle="bold" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="Your Favourite Babysitters"/>
+		<TextView android:id="@+id/txtFavouriteParent" android:layout_width="wrap_content" android:textSize="16sp" android:textStyle="bold" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="Your Favourite Parents"/>
 		<ImageView
 			android:id="@+id/icon"
 			android:layout_alignParentTop="true"
