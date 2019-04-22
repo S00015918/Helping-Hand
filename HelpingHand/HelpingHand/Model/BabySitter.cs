@@ -26,7 +26,6 @@ namespace HelpingHand.Model
         public decimal rate { get; set; }
         public bool gardaVetted { get; set; }
         public string image { get; set; }
-        public int rating { get; set; }
         public string availability { get; set; }
     }
 }

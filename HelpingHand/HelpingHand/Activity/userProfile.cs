@@ -157,6 +157,7 @@ namespace HelpingHand
                     {
                         MonMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[0] = null;
                     }
                     break;
                 case Resource.Id.btnTueMorn:
@@ -172,6 +173,7 @@ namespace HelpingHand
                     {
                         TueMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[1] = null;
                     }
                     break;
                 case Resource.Id.btnWedMorn:
@@ -187,6 +189,7 @@ namespace HelpingHand
                     {
                         WedMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[2] = null;
                     }
                     break;
                 case Resource.Id.btnThuMorn:
@@ -202,6 +205,7 @@ namespace HelpingHand
                     {
                         ThuMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[3] = null;
                     }
                     break;
                 case Resource.Id.btnFriMorn:
@@ -217,6 +221,7 @@ namespace HelpingHand
                     {
                         FriMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[4] = null;
                     }
                     break;
                 case Resource.Id.btnSatMorn:
@@ -232,6 +237,7 @@ namespace HelpingHand
                     {
                         SatMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[5] = null;
                     }
                     break;
                 case Resource.Id.btnSunMorn:
@@ -247,6 +253,7 @@ namespace HelpingHand
                     {
                         SunMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[6] = null;
                     }
                     break;
                 case Resource.Id.btnMonAfter:
@@ -262,6 +269,7 @@ namespace HelpingHand
                     {
                         MonAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[7] = null;
                     }
                     break;
                 case Resource.Id.btnTueAfter:
@@ -277,6 +285,7 @@ namespace HelpingHand
                     {
                         TueAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[8] = null;
                     }
                     break;
                 case Resource.Id.btnWedAfter:
@@ -292,6 +301,7 @@ namespace HelpingHand
                     {
                         WedAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[9] = null;
                     }
                     break;
                 case Resource.Id.btnThuAfter:
@@ -307,6 +317,7 @@ namespace HelpingHand
                     {
                         ThuAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[10] = null;
                     }
                     break;
                 case Resource.Id.btnFriAfter:
@@ -322,6 +333,7 @@ namespace HelpingHand
                     {
                         FriAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[11] = null;
                     }
                     break;
                 case Resource.Id.btnSatAfter:
@@ -337,6 +349,7 @@ namespace HelpingHand
                     {
                         SatAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[12] = null;
                     }
                     break;
                 case Resource.Id.btnSunAfter:
@@ -352,6 +365,7 @@ namespace HelpingHand
                     {
                         SunAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[13] = null;
                     }
                     break;
                 case Resource.Id.btnMonEve:
@@ -367,6 +381,7 @@ namespace HelpingHand
                     {
                         MonEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[14] = null;
                     }
                     break;
                 case Resource.Id.btnTueEve:
@@ -382,6 +397,7 @@ namespace HelpingHand
                     {
                         TueEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[15] = null;
                     }
                     break;
                 case Resource.Id.btnWedEve:
@@ -397,6 +413,7 @@ namespace HelpingHand
                     {
                         WedEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[16] = null;
                     }
                     break;
                 case Resource.Id.btnThuEve:
@@ -412,6 +429,7 @@ namespace HelpingHand
                     {
                         ThuEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[17] = null;
                     }
                     break;
                 case Resource.Id.btnFriEve:
@@ -427,6 +445,7 @@ namespace HelpingHand
                     {
                         FriEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[18] = null;
                     }
                     break;
                 case Resource.Id.btnSatEve:
@@ -442,6 +461,7 @@ namespace HelpingHand
                     {
                         SatEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[19] = null;
                     }
                     break;
                 case Resource.Id.btnSunEve:
@@ -457,6 +477,7 @@ namespace HelpingHand
                     {
                         SunEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[20] = null;
                     }
                     break;
                 case Resource.Id.btnMonNight:
@@ -472,6 +493,7 @@ namespace HelpingHand
                     {
                         MonNight.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[21] = null;
                     }
                     break;
                 case Resource.Id.btnTueNight:
@@ -487,6 +509,7 @@ namespace HelpingHand
                     {
                         TueNight.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[22] = null;
                     }
                     break;
                 case Resource.Id.btnWedNight:
@@ -502,6 +525,7 @@ namespace HelpingHand
                     {
                         WedNight.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[23] = null;
                     }
                     break;
                 case Resource.Id.btnThuNight:
@@ -517,6 +541,7 @@ namespace HelpingHand
                     {
                         ThuNight.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[24] = null;
                     }
                     break;
                 case Resource.Id.btnFriNight:
@@ -532,6 +557,7 @@ namespace HelpingHand
                     {
                         FriNight.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[25] = null;
                     }
                     break;
                 case Resource.Id.btnSatNight:
@@ -547,6 +573,7 @@ namespace HelpingHand
                     {
                         SatNight.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[26] = null;
                     }
                     break;
                 case Resource.Id.btnSunNight:
@@ -562,6 +589,7 @@ namespace HelpingHand
                     {
                         SunNight.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[27] = null;
                     }
                     break;
             }
@@ -688,14 +716,12 @@ namespace HelpingHand
                 account.eircode = item.Object.eircode;
                 account.image = item.Object.image;
                 account.availability = item.Object.availability;
-                account.rating = item.Object.rating;
                 account.rate = item.Object.rate;
 
                 if (userLogin == email)
                 {
                     bool vetted = account.gardaVetted;
                     string availabilty = account.availability;
-                    int rating = account.rating;
 
                     if (showAvailabiltyGrid == true)
                     {
@@ -715,7 +741,6 @@ namespace HelpingHand
                     await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("availability").PutAsync(availabilty);
                     await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("eircode").PutAsync(newEircode);
                     await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("gardaVetted").PutAsync(vetted);
-                    await firebase.Child("babysitter").Child(auth.CurrentUser.Uid).Child("rating").PutAsync(rating);
                 }
             }
             LoadData();

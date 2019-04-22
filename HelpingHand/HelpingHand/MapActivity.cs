@@ -27,6 +27,7 @@ namespace HelpingHand
         private List<BabySitter> list_babysitters = new List<BabySitter>();
         private List<Parent> list_parents = new List<Parent>();
         FirebaseAuth auth;
+        Button goBack;
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -94,7 +95,7 @@ namespace HelpingHand
                                 LatLng zoomTo = new LatLng(53.27194, -9.04889);
                                 CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
                                 builder.Target(zoomTo);
-                                builder.Zoom(6);
+                                builder.Zoom(7);
 
                                 CameraPosition cameraPosition = builder.Build();
 
@@ -160,7 +161,7 @@ namespace HelpingHand
                                         LatLng zoomTo = new LatLng(53.27194, -9.04889);
                                         CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
                                         builder.Target(zoomTo);
-                                        builder.Zoom(6);
+                                        builder.Zoom(7);
 
                                         CameraPosition cameraPosition = builder.Build();
 
@@ -188,6 +189,7 @@ namespace HelpingHand
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.map_view);
+            goBack = FindViewById<Button>(Resource.Id.btnBack);
 
             var mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.map);
             mapFragment.GetMapAsync(this);
@@ -196,6 +198,14 @@ namespace HelpingHand
                 .InvokeMapType(GoogleMap.MapTypeNormal)
                 .InvokeZoomControlsEnabled(true)
                 .InvokeCompassEnabled(true);
+
+            goBack.Click += GoBack_Click;
+        }
+
+        private void GoBack_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
+            Finish();
         }
     }
 }

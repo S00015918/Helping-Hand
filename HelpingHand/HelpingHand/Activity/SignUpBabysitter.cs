@@ -33,6 +33,8 @@ namespace HelpingHand
             btnMonAft, btnTueAft, btnWedAft, btnThuAft, btnFriAft, btnSatAft, btnSunAft,
             btnMonEve, btnTueEve, btnWedEve, btnThuEve, btnFriEve, btnSatEve, btnSunEve,
             btnMonNigh, btnTueNigh, btnWedNigh, btnThuNigh, btnFriNigh, btnSatNigh, btnSunNigh;
+        bool mondayMorn, tuesdayMorn, wednesdayMorn, thursdayMorn, fridayMorn, saturdayMorn, sundayMorn;
+
         int count = 0;
         private const int PICK_IMAGE_REQUSET = 71;
         Button btnSignup, btnLogin;
@@ -128,116 +130,206 @@ namespace HelpingHand
             {
                 case Resource.Id.btnMonMorn:
                     //button mon Morn was clicked
-                    if (count == 0)
-                    {
-                        Toast.MakeText(this, "Monday Morning selected", ToastLength.Short).Show();
-                        btnMonMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
-                        count++;
-                        //string day = "monday";
-                        values[0] = "Monday Morning";
-                    }
-                    else if (count >= 1)
+                    if (mondayMorn == true)
                     {
                         btnMonMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        mondayMorn = false;
                         count = 0;
+                        values[0] = null;
                     }
+                    else
+                    {
+                        if (count == 0)
+                        {
+                            Toast.MakeText(this, "Monday Morning selected", ToastLength.Short).Show();
+                            btnMonMorn.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+                            count++;
+                            mondayMorn = true;
+                            values[0] = "Monday Morning";
+                        }
+                        else if (count >= 1)
+                        {
+                            btnMonMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                            count = 0;
+                            values[0] = null;
+                        }
+                    }
+
                     break;
                 case Resource.Id.btnTueMorn:
                     //button tueMorn was clicked
-                    if (count == 0)
-                    {
-                        Toast.MakeText(this, "Tuesday Morning selected", ToastLength.Short).Show();
-                        btnTueMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
-                        count++;
-                        values[1] = "Tuesday Morning";
-                    }
-                    else if (count >= 1)
+                    if (tuesdayMorn == true)
                     {
                         btnTueMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        tuesdayMorn = false;
                         count = 0;
+                        values[1] = null;
                     }
+                    else
+                    {
+                        if (count == 0)
+                        {
+                            Toast.MakeText(this, "Tuesday Morning selected", ToastLength.Short).Show();
+                            btnTueMorn.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+                            count++;
+                            tuesdayMorn = true;
+                            values[1] = "Tuesday Morning";
+                        }
+                        else if (count >= 1)
+                        {
+                            btnTueMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                            count = 0;
+                            values[1] = null;
+                        }
+                    }
+
                     break;
                 case Resource.Id.btnWedMorn:
                     //button wedMorn was clicked
-                    if (count == 0)
-                    {
-                        Toast.MakeText(this, "Wednesday Morning selected", ToastLength.Short).Show();
-                        btnWedMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
-                        count++;
-                        values[2] = "Wednesday Morning";
-                    }
-                    else if (count >= 1)
+                    if (wednesdayMorn == true)
                     {
                         btnWedMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        wednesdayMorn = false;
                         count = 0;
+                        values[2] = null;
                     }
+                    else
+                    {
+                        if (count == 0)
+                        {
+                            Toast.MakeText(this, "Wednesday Morning selected", ToastLength.Short).Show();
+                            btnWedMorn.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+                            wednesdayMorn = true;
+                            count++;
+                            values[2] = "Wednesday Morning";
+                        }
+                        else if (count >= 1)
+                        {
+                            btnWedMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                            count = 0;
+                            values[2] = null;
+                        }
+                    }
+
                     break;
                 case Resource.Id.btnThuMorn:
                     //button thuMorn was clicked
-                    if (count == 0)
-                    {
-                        Toast.MakeText(this, "Thursday Morning selected", ToastLength.Short).Show();
-                        btnThuMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
-                        count++;
-                        values[3] = "Thursday Morning";
-                    }
-                    else if (count >= 1)
+                    if (thursdayMorn == true)
                     {
                         btnThuMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        thursdayMorn = false;
                         count = 0;
+                        values[3] = null;
                     }
+                    else
+                    {
+                        if (count == 0)
+                        {
+                            Toast.MakeText(this, "Thursday Morning selected", ToastLength.Short).Show();
+                            btnThuMorn.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+                            thursdayMorn = true;
+                            count++;
+                            values[3] = "Thursday Morning";
+                        }
+                        else if (count >= 1)
+                        {
+                            btnThuMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                            count = 0;
+                            values[3] = null;
+                        }
+                    }
+
                     break;
                 case Resource.Id.btnFriMorn:
                     //button friMorn was clicked
-                    if (count == 0)
-                    {
-                        Toast.MakeText(this, "Friday Morning selected", ToastLength.Short).Show();
-                        btnFriMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
-                        count++;
-                        values[4] = "Friday Morning";
-                    }
-                    else if (count >= 1)
+                    if (fridayMorn == true)
                     {
                         btnFriMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        fridayMorn = false;
                         count = 0;
+                        values[4] = null;
                     }
+                    else
+                    {
+                        if (count == 0)
+                        {
+                            Toast.MakeText(this, "Friday Morning selected", ToastLength.Short).Show();
+                            btnFriMorn.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+                            fridayMorn = true;
+                            count++;
+                            values[4] = "Friday Morning";
+                        }
+                        else if (count >= 1)
+                        {
+                            btnFriMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                            count = 0;
+                            values[4] = null;
+                        }
+                    }
+
                     break;
                 case Resource.Id.btnSatMorn:
                     //button satMorn was clicked
-                    if (count == 0)
-                    {
-                        Toast.MakeText(this, "Saturday Morning selected", ToastLength.Short).Show();
-                        btnSatMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
-                        count++;
-                        values[5] = "Saturday Morning";
-                    }
-                    else if (count >= 1)
+                    if (saturdayMorn == true)
                     {
                         btnSatMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        saturdayMorn = false;
                         count = 0;
+                        values[5] = null;
                     }
+                    else
+                    {
+                        if (count == 0)
+                        {
+                            Toast.MakeText(this, "Saturday Morning selected", ToastLength.Short).Show();
+                            btnSatMorn.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+                            saturdayMorn = true;
+                            count++;
+                            values[5] = "Saturday Morning";
+                        }
+                        else if (count >= 1)
+                        {
+                            btnSatMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                            count = 0;
+                            values[5] = null;
+                        }
+                    }
+
                     break;
                 case Resource.Id.btnSunMorn:
                     //button satMorn was clicked
-                    if (count == 0)
-                    {
-                        Toast.MakeText(this, "Sunday Morning selected", ToastLength.Short).Show();
-                        btnSunMorn.SetBackgroundColor(Android.Graphics.Color.Beige);
-                        count++;
-                        values[6] = "Sunday Morning";
-                    }
-                    else if (count >= 1)
+                    if (sundayMorn == true)
                     {
                         btnSunMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        sundayMorn = false;
                         count = 0;
+                        values[6] = null;
                     }
+                    else
+                    {
+                        if (count == 0)
+                        {
+                            Toast.MakeText(this, "Sunday Morning selected", ToastLength.Short).Show();
+                            btnSunMorn.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+                            sundayMorn = true;
+                            count++;
+                            values[6] = "Sunday Morning";
+                        }
+                        else if (count >= 1)
+                        {
+                            btnSunMorn.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                            count = 0;
+                            values[6] = null;
+                        }
+                    }
+
                     break;
                 case Resource.Id.btnMonAfter:
                     //button monAfter was clicked
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Monday Afternoon selected", ToastLength.Short).Show();
-                        btnMonAft.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnMonAft.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[7] = "Monday Afternoon";
                     }
@@ -245,6 +337,7 @@ namespace HelpingHand
                     {
                         btnMonAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[7] = null;
                     }
                     break;
                 case Resource.Id.btnTueAfter:
@@ -252,7 +345,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Tuesday Afternoon selected", ToastLength.Short).Show();
-                        btnTueAft.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnTueAft.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[8] = "Tuesday Afternoon";
                     }
@@ -260,6 +353,7 @@ namespace HelpingHand
                     {
                         btnTueAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[8] = null;
                     }
                     break;
                 case Resource.Id.btnWedAfter:
@@ -267,7 +361,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Wednesday Afternoon selected", ToastLength.Short).Show();
-                        btnWedAft.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnWedAft.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[9] = "Wednesday Afternoon";
                     }
@@ -275,6 +369,7 @@ namespace HelpingHand
                     {
                         btnWedAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[9] = null;
                     }
                     break;
                 case Resource.Id.btnThuAfter:
@@ -282,7 +377,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Thursday Afternoon selected", ToastLength.Short).Show();
-                        btnThuAft.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnThuAft.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[10] = "Thursday Afternoon";
                     }
@@ -290,6 +385,7 @@ namespace HelpingHand
                     {
                         btnThuAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[10] = null;
                     }
                     break;
                 case Resource.Id.btnFriAfter:
@@ -297,7 +393,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Friday Afternoon selected", ToastLength.Short).Show();
-                        btnFriAft.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnFriAft.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[11] = "Friday Afternoon";
                     }
@@ -305,6 +401,7 @@ namespace HelpingHand
                     {
                         btnFriAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[11] = null;
                     }
                     break;
                 case Resource.Id.btnSatAfter:
@@ -312,7 +409,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Saturday Afternoon selected", ToastLength.Short).Show();
-                        btnSatAft.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnSatAft.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[12] = "Saturday Afternoon";
                     }
@@ -320,6 +417,7 @@ namespace HelpingHand
                     {
                         btnSatAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[12] = null;
                     }
                     break;
                 case Resource.Id.btnSunAfter:
@@ -327,7 +425,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Sunday Afternoon selected", ToastLength.Short).Show();
-                        btnSunAft.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnSunAft.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[13] = "Sunday Afternoon";
                     }
@@ -335,6 +433,7 @@ namespace HelpingHand
                     {
                         btnSunAft.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[13] = null;
                     }
                     break;
                 case Resource.Id.btnMonEve:
@@ -342,7 +441,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Monday Evening selected", ToastLength.Short).Show();
-                        btnMonEve.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnMonEve.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[14] = "Monday Evening";
                     }
@@ -350,6 +449,7 @@ namespace HelpingHand
                     {
                         btnMonEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[14] = null;
                     }
                     break;
                 case Resource.Id.btnTueEve:
@@ -357,7 +457,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Tuesday Evening selected", ToastLength.Short).Show();
-                        btnTueEve.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnTueEve.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[15] = "Tuesday Evening";
                     }
@@ -365,6 +465,7 @@ namespace HelpingHand
                     {
                         btnTueEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[15] = null;
                     }
                     break;
                 case Resource.Id.btnWedEve:
@@ -372,7 +473,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Wednesday Evening selected", ToastLength.Short).Show();
-                        btnWedEve.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnWedEve.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[16] = "Wednesday Evening";
                     }
@@ -380,6 +481,7 @@ namespace HelpingHand
                     {
                         btnWedEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[16] = null;
                     }
                     break;
                 case Resource.Id.btnThuEve:
@@ -387,7 +489,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Thursday Evening selected", ToastLength.Short).Show();
-                        btnThuEve.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnThuEve.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[17] = "Thursday Evening";
                     }
@@ -395,6 +497,7 @@ namespace HelpingHand
                     {
                         btnThuEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[17] = null;
                     }
                     break;
                 case Resource.Id.btnFriEve:
@@ -402,7 +505,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Friday Evening selected", ToastLength.Short).Show();
-                        btnFriEve.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnFriEve.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[18] = "Friday Evening";
                     }
@@ -410,6 +513,7 @@ namespace HelpingHand
                     {
                         btnFriEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[18] = null;
                     }
                     break;
                 case Resource.Id.btnSatEve:
@@ -417,7 +521,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Saturday Evening selected", ToastLength.Short).Show();
-                        btnSatEve.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnSatEve.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[19] = "Saturday Evening";
                     }
@@ -425,6 +529,7 @@ namespace HelpingHand
                     {
                         btnSatEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[19] = null;
                     }
                     break;
                 case Resource.Id.btnSunEve:
@@ -432,7 +537,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Sunday Evening selected", ToastLength.Short).Show();
-                        btnSunEve.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnSunEve.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[20] = "Sunday Evening";
                     }
@@ -440,6 +545,7 @@ namespace HelpingHand
                     {
                         btnSunEve.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[20] = null;
                     }
                     break;
                 case Resource.Id.btnMonNight:
@@ -447,7 +553,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Monday Night selected", ToastLength.Short).Show();
-                        btnMonNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnMonNigh.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[21] = "Monday Night";
                     }
@@ -455,6 +561,7 @@ namespace HelpingHand
                     {
                         btnMonNigh.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[21] = null;
                     }
                     break;
                 case Resource.Id.btnTueNight:
@@ -462,7 +569,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Tuesday Night selected", ToastLength.Short).Show();
-                        btnTueNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnTueNigh.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[22] = "Tuesday Night";
                     }
@@ -470,6 +577,7 @@ namespace HelpingHand
                     {
                         btnTueNigh.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[22] = null;
                     }
                     break;
                 case Resource.Id.btnWedNight:
@@ -477,7 +585,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Wednesday Night selected", ToastLength.Short).Show();
-                        btnWedNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnWedNigh.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[23] = "Wednesday Night";
                     }
@@ -485,6 +593,7 @@ namespace HelpingHand
                     {
                         btnWedNigh.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[23] = null;
                     }
                     break;
                 case Resource.Id.btnThuNight:
@@ -492,7 +601,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Thursday Night selected", ToastLength.Short).Show();
-                        btnThuNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnThuNigh.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[24] = "Thursday Night";
                     }
@@ -500,6 +609,7 @@ namespace HelpingHand
                     {
                         btnThuNigh.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[24] = null;
                     }
                     break;
                 case Resource.Id.btnFriNight:
@@ -507,7 +617,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Friday Night selected", ToastLength.Short).Show();
-                        btnFriNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnFriNigh.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[25] = "Friday Night";
                     }
@@ -515,6 +625,7 @@ namespace HelpingHand
                     {
                         btnFriNigh.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[25] = null;
                     }
                     break;
                 case Resource.Id.btnSatNight:
@@ -522,7 +633,7 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Saturday Night selected", ToastLength.Short).Show();
-                        btnSatNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnSatNigh.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[26] = "Saturday Night";
                     }
@@ -530,6 +641,7 @@ namespace HelpingHand
                     {
                         btnSatNigh.SetBackgroundColor(Android.Graphics.Color.LightGray);
                         count = 0;
+                        values[26] = null;
                     }
                     break;
                 case Resource.Id.btnSunNight:
@@ -537,13 +649,14 @@ namespace HelpingHand
                     if (count == 0)
                     {
                         Toast.MakeText(this, "Sunday Night selected", ToastLength.Short).Show();
-                        btnSunNigh.SetBackgroundColor(Android.Graphics.Color.Beige);
+                        btnSunNigh.SetBackgroundColor(Android.Graphics.Color.LightGreen);
                         count++;
                         values[27] = "Sunday Night";
                     }
                     else if (count >= 1)
                     {
                         btnSunNigh.SetBackgroundColor(Android.Graphics.Color.LightGray);
+                        values[27] = null;
                         count = 0;
                     }
                     break;

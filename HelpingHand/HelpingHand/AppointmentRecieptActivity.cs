@@ -104,6 +104,7 @@ namespace HelpingHand
 
         private void ResendConfirmation(string parentEmail)
         {
+            Toast.MakeText(this, "Confirmation sent to: "+ parentEmail, ToastLength.Short).Show();
             auth.SendPasswordResetEmail(parentEmail).AddOnCompleteListener(this, this);
         }
     }

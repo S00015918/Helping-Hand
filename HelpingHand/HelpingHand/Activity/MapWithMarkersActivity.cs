@@ -17,6 +17,7 @@ using System.Collections;
 using Firebase.Auth;
 using HelpingHand.Model;
 using Newtonsoft.Json;
+using Android.Views;
 
 namespace HelpingHand
 {
@@ -24,8 +25,7 @@ namespace HelpingHand
     public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
     {
         FirebaseAuth auth;
-        //Marker myMarker;
-        //GoogleMap mMap;
+        Button goBack;
         MarkerOptions newMarker = new MarkerOptions();
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -43,6 +43,7 @@ namespace HelpingHand
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.map_view);
+            goBack = FindViewById<Button>(Resource.Id.btnBack);
 
             var mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.map);
             mapFragment.GetMapAsync(this);
@@ -56,6 +57,12 @@ namespace HelpingHand
             //fragTx.Add(Resource.Id.map, mapFragment, "map");
             //fragTx.Commit();
             //GetLocationFromAddress();
+            goBack.Click += GoBack_Click;
+        }
+        private void GoBack_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(HomeActivity)));
+            Finish();
         }
 
         public async void OnMapReady(GoogleMap map)
