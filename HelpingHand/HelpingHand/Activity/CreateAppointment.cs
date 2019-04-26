@@ -30,16 +30,17 @@ namespace HelpingHand
         RelativeLayout activity_book_appointment;
         DatePicker datePicker;
         FloatingActionButton btnCreateApointment;
-        string selectedStartTime, selectedEndTime;
+        string selectedStartTime, selectedEndTime, strStart, strEnd;
         string selectedDate, timeOfDay;
         private const int StartTimeDialog = 1;
         private const int EndTimeDialog = 2;
         private int hour = 7;
         private int minutes = 0;
-        public string strStart, strEnd;
         public int selection;
+        decimal amountDue;
+        DateTime validDate;
         List<Appointment> list_appointments = new List<Appointment>();
-        bool refresh;
+        bool refresh, confirmed;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -65,11 +66,13 @@ namespace HelpingHand
             txtDate.Text = (getDate());
             btnChangeDate.Click += (s, e) =>
             {
+                btnCreateApointment.Enabled = true;
                 txtDate.Text = getDate();
             };
 
             btnChangeTime.Click += delegate
             {
+                btnCreateApointment.Enabled = true;
                 selection = 1;
                 ShowDialog(StartTimeDialog);
             };
@@ -77,6 +80,7 @@ namespace HelpingHand
 
             btnChangeEndTime.Click += (s, e) =>
             {
+                btnCreateApointment.Enabled = true;
                 selection = 2;
                 ShowDialog(EndTimeDialog);
             };
@@ -85,28 +89,31 @@ namespace HelpingHand
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             btnCreateApointment.SetOnClickListener(this);
+        }
 
-            //btnCreateApointment.Click += (object sender, EventArgs args) =>
-            //{
-            //    string babysitter = this.Intent.GetStringExtra("KEY");
-            //    BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
-            //    decimal rate = userAppointment.rate;
-            //    string cost = Convert.ToString(rate);
+        private void Appointment_Confirm(decimal cost, DateTime date)
+        {
+            decimal fees = cost * 10 / 100;
+            decimal totalAmount = fees + cost;
+            string _amountDue = totalAmount.ToString();
+            string _appointmentDate = date.ToString();
 
-            //    Bundle passData = new Bundle();
-            //    passData.PutString("Cost", cost);
+            Bundle passCost = new Bundle();
+            Bundle passDate = new Bundle();
+            passCost.PutString("Cost", _amountDue);
+            passDate.PutString("Date", _appointmentDate);
 
-            //    FragmentTransaction transcation = FragmentManager.BeginTransaction();
-            //    AppointmentDialog confirmAppointment = new AppointmentDialog();
-            //    confirmAppointment.setArguments(passData);
-            //    confirmAppointment.Show(transcation, "Dialog Fragment");
-            //    confirmAppointment.onComplete += ConfirmAppointment_onComplete;
-            //};
+            FragmentTransaction transcation = FragmentManager.BeginTransaction();
+            AppointmentDialog confirmAppointment = new AppointmentDialog();
+            confirmAppointment.setCost(passCost);
+            confirmAppointment.setDate(passDate);
+            confirmAppointment.Show(transcation, "Dialog Fragment");
+            confirmAppointment.onComplete += ConfirmAppointment_onComplete;
         }
 
         private void ConfirmAppointment_onComplete(object sender, AppointmentConfirmed e)
         {
-            getAvailabilty();
+            confirmed = e.confirmed;
         }
 
         protected override Dialog OnCreateDialog(int id)
@@ -302,17 +309,28 @@ namespace HelpingHand
                 var today = dateSelected.DayOfWeek.ToString().TrimEnd();
                 string todaysTime = today + " " + timeOfDay.ToString();
 
+                int itemCount = 0;
                 foreach (var item in schedule)
                 {
                     //if (item.Contains(today))
                     if (item.Contains(todaysTime))
                     {
+                        itemCount = 0;
                         CreateNewAppointment();
                     }
-                    else { //Toast.MakeText(this, "Please change appointment, Babysitter not available for selected date", ToastLength.Long).Show(); 
+                    else {
+                        itemCount++;                       
                         //refresh = true;
                     }
                 }
+                if (itemCount >=1)
+                {
+                    btnCreateApointment.Enabled = false;
+                    Toast.MakeText(this, "Please change appointment, Babysitter not available for selected time", ToastLength.Long).Show();
+                    itemCount = 0;
+                }
+                else
+                { btnCreateApointment.Enabled = true; }
                 if (refresh == true)
                 {
                     refreshActivity();
@@ -340,14 +358,14 @@ namespace HelpingHand
             string eircode = userAppointment.eircode;
             string address = userAppointment.address;
 
-            DateTime validDate = Convert.ToDateTime(selectedDate);
+            validDate = Convert.ToDateTime(selectedDate);
             DateTime start = Convert.ToDateTime(selectedStartTime);
             DateTime end = Convert.ToDateTime(selectedEndTime);
 
             int startHour = start.Hour;
             int endHour = end.Hour;
             int totalHours = endHour - startHour;
-            decimal amountDue = totalHours * payRate;
+            amountDue = totalHours * payRate;
 
             Appointment appointment = new Appointment();
             appointment.Date = Convert.ToDateTime(selectedDate);
@@ -361,23 +379,27 @@ namespace HelpingHand
             appointment.Eircode = eircode;
             appointment.cost = amountDue;
 
-            if (end < start)
+            Appointment_Confirm(amountDue, validDate);
+
+            if (confirmed == true)
             {
-                Toast.MakeText(this, "Please change Appointment end time.", ToastLength.Short).Show();
+                if (end < start)
+                {
+                    Toast.MakeText(this, "Please change Appointment end time.", ToastLength.Short).Show();
+                }
+                else
+                {
+                    var firebase = new FirebaseClient(FirebaseURL);
+                    ////Add Item
+                    var appointmentJson = JsonConvert.SerializeObject(appointment);
+
+                    var viewPaymentForm = new Intent(this, typeof(PaymentActivity));
+                    viewPaymentForm.PutExtra("KEY", appointmentJson);
+                    StartActivity(viewPaymentForm);
+                }
             }
             else
-            {
-                var firebase = new FirebaseClient(FirebaseURL);
-                ////Add Item
-                var appointmentJson = JsonConvert.SerializeObject(appointment);
-
-                var viewPaymentForm = new Intent(this, typeof(PaymentActivity));
-                viewPaymentForm.PutExtra("KEY", appointmentJson);
-                StartActivity(viewPaymentForm);
-
-                //var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
-                //StartActivity(new Android.Content.Intent(this, typeof(PaymentActivity)));
-                //Finish();
+            { // please confirm appointment to progress
             }
         }
         public override bool OnCreateOptionsMenu(IMenu menu)

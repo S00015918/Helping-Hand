@@ -14,11 +14,11 @@ namespace HelpingHand.Model
 {
     internal class MessageContent
     {
-        public string Sender { get; set; }
-        public string Recipient { get; set; }
-        public string sendersEmail { get; set; }
-        public string recieversEmail { get; set; }
         public string Message { get; set; }
+        public string Recipient { get; set; }
+        public string Sender { get; set; }
         public string Time { get; set; }
+        public string recieversEmail { get; set; }
+        public string sendersEmail { get; set; }
     }
 }

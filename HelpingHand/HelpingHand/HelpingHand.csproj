@@ -86,7 +86,6 @@
     <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity\Activity_Messages.cs" />
     <Compile Include="Adapter\AppointmentListAdapter.cs" />
     <Compile Include="Activity\CreateAppointment.cs" />
     <Compile Include="Activity\DashBoard.cs" />
@@ -599,6 +598,24 @@
     <AndroidResource Include="Resources\layout\Appointment_Confirmed.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\app_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -14,7 +14,7 @@ using Firebase.Xamarin.Database.Query;
 
 namespace HelpingHand
 {
-    [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/AppTheme")]
+    [Activity(Label = "HelpingHand", MainLauncher = true, Theme = "@style/AppTheme", Icon = "@drawable/app_icon")]
     public class MainActivity : Activity, IOnClickListener, IOnCompleteListener
     {
         FloatingActionButton btnLogin;

@@ -36,6 +36,7 @@ namespace HelpingHand.Model
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
         FirebaseAuth auth;
         bool confirmed;
+        string cost, date;
         Button confirmAppointment, cancelAppointment;
         TextView appointment_date, appointment_cost;
 
@@ -52,11 +53,23 @@ namespace HelpingHand.Model
             appointment_cost = view.FindViewById<TextView>(Resource.Id.txtCost);
             appointment_date = view.FindViewById<TextView>(Resource.Id.txtDate);
 
+            // This code below will trim down the cost and date of an appointment to its core values that i want to display
+            string[] _Cost = cost.Split('{');
+            string[] _Date = date.Split('{');
+            string appCost = _Cost[1];
+            string appDate = _Date[1];
+            string[] getCost = appCost.Split('}');
+            string[] getDate = appDate.Split(' ');
+            string appointmentCost = getCost[0];
+            string appointmentDate = getDate[0];
+
+            appointment_cost.Text = appointmentCost;
+            appointment_date.Text = appointmentDate;
+
             confirmAppointment.Click += ConfirmAppointment_Click;
             cancelAppointment.Click += CancelAppointment_Click;
 
             return view;
-
         }
 
         private async void showData()
@@ -89,9 +102,14 @@ namespace HelpingHand.Model
             this.Dismiss();
         }
 
-        internal void setArguments(Bundle passData)
+        internal void setCost(Bundle passCost)
         {
-            string cost = passData.ToString();
+            cost = passCost.ToString();
+
+        }
+        internal void setDate(Bundle passDate)
+        {
+            date = passDate.ToString();
         }
     }
 }

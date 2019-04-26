@@ -64,6 +64,10 @@ namespace HelpingHand
             auth = FirebaseAuth.GetInstance(MainActivity.app);
 
             //Init View
+            send = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            edtChat = FindViewById<EditText>(Resource.Id.input);
+            lstChat = FindViewById<ListView>(Resource.Id.list_of_messages);
+
             searchableSpinner = FindViewById<SearchableSpinner>(Resource.Id.searchable_spinner);
             searchableSpinner.OnItemSelectedListener = this;
 
@@ -120,10 +124,6 @@ namespace HelpingHand
                 ;
                 bottomSheetDialog.Dismiss();
             };
-
-            send = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            edtChat = FindViewById<EditText>(Resource.Id.input);
-            lstChat = FindViewById<ListView>(Resource.Id.list_of_messages);
 
             send.Click += delegate { PostMessage(); };
         }
