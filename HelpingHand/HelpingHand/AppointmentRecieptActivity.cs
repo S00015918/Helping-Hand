@@ -14,6 +14,7 @@ using Android.Widget;
 using Firebase.Auth;
 using HelpingHand.Model;
 using Newtonsoft.Json;
+using Xamarin.Essentials;
 using static Android.Views.View;
 
 namespace HelpingHand
@@ -105,7 +106,40 @@ namespace HelpingHand
         private void ResendConfirmation(string parentEmail)
         {
             Toast.MakeText(this, "Confirmation sent to: "+ parentEmail, ToastLength.Short).Show();
-            auth.SendPasswordResetEmail(parentEmail).AddOnCompleteListener(this, this);
+            string Subject = "HelpingHand Appointment Reciept";
+            string Body = "Appointment Details: " + startTime + ", " + endTime + ", " + babysitter + ", " + Address + ", " + Cost;
+            var EmailList = new List<string>();
+            EmailList.Add(auth.CurrentUser.Email);
+
+            SendEmail(Subject, Body, EmailList);
+            //auth.SendPasswordResetEmail(parentEmail).AddOnCompleteListener(this, this);
+        }
+
+        public async void SendEmail(string subject, string body, List<string> recipients)
+        {
+            try
+            {
+                var message = new EmailMessage
+                {
+                    Subject = subject,
+                    Body = body,
+                    To = recipients,
+                    //Cc = ccRecipients,
+                    //Bcc = bccRecipients
+                };
+                await Email.ComposeAsync(message);
+            }
+            catch (FeatureNotSupportedException fbsEx)
+            {
+                fbsEx.Message.ToString();
+                // Email is not supported on this device
+
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                // Some other exception occurred
+            }
         }
     }
 }

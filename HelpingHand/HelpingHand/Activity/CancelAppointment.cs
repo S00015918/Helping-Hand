@@ -15,6 +15,7 @@ using Firebase.Xamarin.Database;
 using Firebase.Xamarin.Database.Query;
 using HelpingHand.Model;
 using Newtonsoft.Json;
+using Xamarin.Essentials;
 using XamarinFirebaseAuth;
 
 namespace HelpingHand
@@ -28,7 +29,7 @@ namespace HelpingHand
         List<Appointment> list_appointments = new List<Appointment>();
         private AppointmentListAdapter AppointmentAdapter;
         Appointment selectedAppointment;
-        string selectedUser, babysitterEmail, parentEmail, appointmentCreator;
+        string selectedUser, appointmentCreator;
         Button btnCancelAppointment;
         DateTime selectedDate;
 
@@ -65,43 +66,34 @@ namespace HelpingHand
 
                 if (auth.CurrentUser.Email == parentEmail )
                 {
-                    string day = account.Date.Day.ToString();
-                    string month = account.Date.Month.ToString();
-                    string year = account.Date.Year.ToString();
-                    string _date = year + month + day;
-                    int date = int.Parse(_date);
-                    string todaysDay = DateTime.Today.Day.ToString();
-                    string todaysMonth = DateTime.Today.Month.ToString();
-                    string todaysYear = DateTime.Today.Year.ToString();
-                    string _todaysDate = todaysYear + todaysMonth + todaysDay;
-                    int todaysDate = int.Parse(_todaysDate);
-                    if (date > todaysDate)
+                    if (account.Date > DateTime.Now)
                     {
                         list_appointments.Add(account);
                         AppointmentAdapter = new AppointmentListAdapter(this, list_appointments);
                     }
-                    if (date < todaysDate -1)
+                    if (account.Date.Year == DateTime.Now.Year)
                     {
-                        // Delete appointments more than a month old
+                        if (account.Date.Month < DateTime.Now.Month - 1)
+                        {
+                            // Delete appointments more than a month old
+                        }
                     }
+                    else { list_data.Visibility = ViewStates.Invisible; }
 
                 }
                 if(auth.CurrentUser.Email == babysitterEmail)
                 {
-                    string day = account.Date.Day.ToString();
-                    string month = account.Date.Month.ToString();
-                    string year = account.Date.Year.ToString();
-                    string _date = year + month + day;
-                    int date = int.Parse(_date);
-                    string todaysDay = DateTime.Today.Day.ToString();
-                    string todaysMonth = DateTime.Today.Month.ToString();
-                    string todaysYear = DateTime.Today.Year.ToString();
-                    string _todaysDate = todaysYear + todaysMonth + todaysDay;
-                    int todaysDate = int.Parse(_todaysDate);
-                    if (date > todaysDate)
+                    if (account.Date > DateTime.Now)
                     {
                         list_appointments.Add(account);
                         AppointmentAdapter = new AppointmentListAdapter(this, list_appointments);
+                    }
+                    if (account.Date.Year == DateTime.Now.Year)
+                    {
+                        if (account.Date.Month < DateTime.Now.Month - 1)
+                        {
+                            // Delete appointments more than a month old
+                        }
                     }
                     else
                     {
@@ -147,46 +139,71 @@ namespace HelpingHand
                     .Child("babysitter")
                     .OnceAsync<BabySitter>();
 
-            foreach (var item in babysittters)
+            if (selectedUser == auth.CurrentUser.Email)
             {
-                BabySitter sitter = new BabySitter();
-                sitter.email = item.Object.email;
-                babysitterEmail = sitter.email;
+                var toDeleteAppointment = (await firebase
+                    .Child("appointment")
+                    .OnceAsync<Appointment>()).Where(a => a.Object.Date == selectedDate).FirstOrDefault();
 
-                if (babysitterEmail == selectedUser)
-                {
-                    var toDeleteAppointment = (await firebase
-                      .Child("appointment")
-                      .OnceAsync<Appointment>()).Where(a => a.Object.Date == selectedDate).FirstOrDefault();
+                await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
 
-                    await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
-                }
-                else { }
+                string Subject = "HelpingHand Appointment Cancellation";
+                string Body = "The date of cancelled appointment: " + date;
+                var EmailList = new List<string>();
+                EmailList.Add(auth.CurrentUser.Email);
+                EmailList.Add(selectedUser);
+
+                SendEmail(Subject, Body, EmailList);
             }
+            else { }
 
-            var parents = await firebase
-                    .Child("parent")
-                    .OnceAsync<Parent>();
-
-            foreach (var item in parents)
+            if (appointmentCreator == auth.CurrentUser.Email)
             {
-                Parent _parent = new Parent();
-                _parent.email = item.Object.email;
-                parentEmail = _parent.email;
+                var toDeleteAppointment = (await firebase
+                    .Child("appointment")
+                    .OnceAsync<Appointment>()).Where(a => a.Object.Date == selectedDate).FirstOrDefault();
 
-                if (parentEmail == appointmentCreator)
-                {
-                    var toDeleteAppointment = (await firebase
-                      .Child("appointment")
-                      .OnceAsync<Appointment>()).Where(a => a.Object.Date == selectedDate).FirstOrDefault();
+                await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
 
-                    await firebase.Child("appointment").Child(toDeleteAppointment.Key).DeleteAsync();
-                }
-                else { }
+                string Subject = "HelpingHand Appointment Cancellation";
+                string Body = "The date of cancelled appointment: " + date;
+                var EmailList = new List<string>();
+                EmailList.Add(auth.CurrentUser.Email);
+                EmailList.Add(selectedUser);
+
+                SendEmail(Subject, Body, EmailList);
             }
+            else { }
 
             AppointmentAdapter.NotifyDataSetChanged();
             list_data.Adapter = AppointmentAdapter;
+        }
+
+        public async void SendEmail(string subject, string body, List<string> recipients)
+        {
+            try
+            {
+                var message = new EmailMessage
+                {
+                    Subject = subject,
+                    Body = body,
+                    To = recipients,
+                    //Cc = ccRecipients,
+                    //Bcc = bccRecipients
+                };
+                await Email.ComposeAsync(message);
+            }
+            catch (FeatureNotSupportedException fbsEx)
+            {
+                fbsEx.Message.ToString();
+                // Email is not supported on this device
+
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                // Some other exception occurred
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

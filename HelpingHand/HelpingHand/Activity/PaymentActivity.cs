@@ -71,8 +71,10 @@ namespace HelpingHand
             Address = newAppointment.Address;
             Eircode = newAppointment.Eircode;
             Cost = newAppointment.cost;
+            decimal AppFee = Cost * 10 / 100;
+            decimal appointmentCharge = AppFee + Cost;
 
-            appointmentCost.Text = "Appointment Cost: " + Cost.ToString();
+            appointmentCost.Text = "Appointment Cost + 10% fee: " + appointmentCharge.ToString();
             appointmentDate.Text = "Appointment Date: " + justDate.ToString();
 
             //ChargeCard();
