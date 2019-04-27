@@ -18,6 +18,7 @@ using Firebase.Xamarin.Database;
 using HelpingHand.Model;
 using Newtonsoft.Json;
 using Stripe;
+using Xamarin.Essentials;
 
 namespace HelpingHand
 {
@@ -152,6 +153,14 @@ namespace HelpingHand
             var item = await firebase.Child("appointment").PostAsync<Appointment>(appointment);
             Toast.MakeText(this, "Payment Made", ToastLength.Short).Show();
 
+            string Subject = "HelpingHand New Appointment";
+            string Body = "The date and address of appointment: " + Date + ", " + Address;
+            var EmailList = new List<string>();
+            EmailList.Add(auth.CurrentUser.Email);
+            EmailList.Add(babysitterEmail);
+
+            SendEmail(Subject, Body, EmailList);
+
             var appointmentJson = JsonConvert.SerializeObject(appointment);
 
             var viewReciept = new Intent(this, typeof(AppointmentRecieptActivity));
@@ -159,68 +168,32 @@ namespace HelpingHand
             StartActivity(viewReciept);
         }
 
-        //public async void ChargeCard()
-        //{
-        //    try
-        //    {
-        //        // Set your secret key: remember to change this to your live secret key in production
-        //        // See your keys here: https://dashboard.stripe.com/account/apikeys //call stripe to process the charge
-        //        StripeConfiguration.SetApiKey("TESTKEYHERE");
-        //        // var card = new Card { h}
+        public async void SendEmail(string subject, string body, List<string> recipients)
+        {
+            try
+            {
+                var message = new EmailMessage
+                {
+                    Subject = subject,
+                    Body = body,
+                    To = recipients,
+                    //Cc = ccRecipients,
+                    //Bcc = bccRecipients
+                };
+                await Email.ComposeAsync(message);
+            }
+            catch (FeatureNotSupportedException fbsEx)
+            {
+                fbsEx.Message.ToString();
+                // Email is not supported on this device
 
-        //        var options = new ChargeCreateOptions
-        //        {
-        //            Amount = Convert.ToInt32(AMOUNTTOCHARGE * 100),//for cents
-        //            Currency = "eur",//charge in euro
-        //            SourceId = "tok_visa",
-
-        //            ReceiptEmail = "",
-        //            Description = "Purchase amount " + CartPrice
-        //        };
-        //        var service = new ChargeService();
-        //        Charge charge = service.Create(options);
-
-        //        await DisplayAlert("Alert", "Payment of €" + CartPrice.ToString("0.00") + " Successful! Thank You", "Ok");
-        //    }
-        //    catch (StripeException ex)
-        //    {
-        //        switch (ex.StripeError.ErrorType)
-        //        {
-        //            case "card_error":
-        //                await DisplayAlert("Error", "Payment Declined!!!! " + ex.StripeError.Message, "Ok");
-        //                System.Diagnostics.Debug.WriteLine("   Code: " + ex.StripeError.Code);
-        //                System.Diagnostics.Debug.WriteLine("Message: " + ex.StripeError.Message);
-        //                break;
-        //            case "api_connection_error":
-        //                System.Diagnostics.Debug.WriteLine(" apic  Code: " + ex.StripeError.Code);
-        //                System.Diagnostics.Debug.WriteLine("apic Message: " + ex.StripeError.Message);
-        //                break;
-        //            case "api_error":
-        //                System.Diagnostics.Debug.WriteLine("api   Code: " + ex.StripeError.Code);
-        //                System.Diagnostics.Debug.WriteLine("api Message: " + ex.StripeError.Message);
-        //                break;
-        //            case "authentication_error":
-        //                System.Diagnostics.Debug.WriteLine(" auth  Code: " + ex.StripeError.Code);
-        //                System.Diagnostics.Debug.WriteLine("auth Message: " + ex.StripeError.Message);
-        //                break;
-        //            case "invalid_request_error":
-        //                System.Diagnostics.Debug.WriteLine(" invreq  Code: " + ex.StripeError.Code);
-        //                System.Diagnostics.Debug.WriteLine("invreq Message: " + ex.StripeError.Message);
-        //                break;
-        //            case "rate_limit_error":
-        //                System.Diagnostics.Debug.WriteLine("  rl Code: " + ex.StripeError.Code);
-        //                System.Diagnostics.Debug.WriteLine("rl Message: " + ex.StripeError.Message);
-        //                break;
-        //            case "validation_error":
-        //                System.Diagnostics.Debug.WriteLine(" val  Code: " + ex.StripeError.Code);
-        //                System.Diagnostics.Debug.WriteLine("val Message: " + ex.StripeError.Message);
-        //                break;
-        //            default:
-        //                // Unknown Error Type
-        //                break;
-        //        }
-        //    }
-        //}
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                // Some other exception occurred
+            }
+        }
 
         public string MakeStripePayment()
         {

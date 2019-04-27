@@ -256,5 +256,3 @@ C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\De
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\app_icon.png
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\app_icon.png
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\bin\Debug\Syncfusion.SfCalendar.Android.dll
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb

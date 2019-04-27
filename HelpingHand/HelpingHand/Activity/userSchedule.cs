@@ -24,9 +24,8 @@ namespace HelpingHand
     [Activity(Label = "Appointments Schedule", Theme = "@style/AppTheme")]
     public class userSchedule : AppCompatActivity
     {
-        //RelativeLayout activity_schedule;
         FirebaseAuth auth;
-        //private ListView list_data;
+        bool userBabysitter = true;
         List<Appointment> list_appointments = new List<Appointment>();
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
@@ -87,6 +86,7 @@ namespace HelpingHand
                 if (appointment.userEmail == auth.CurrentUser.Email)
                 {
                     // You are logged in as parent
+                    userBabysitter = false;
                     CalendarInlineEvent _event = new CalendarInlineEvent();
                     DateTime start = appointment.Date;
                     int year = start.Year;
@@ -122,6 +122,7 @@ namespace HelpingHand
                 if (appointment.babysitterEmail == auth.CurrentUser.Email)
                 {
                     // you are logged in as babysitter
+                    userBabysitter = true;
                     CalendarInlineEvent _event = new CalendarInlineEvent();
                     DateTime start = appointment.Date;
                     int year = start.Year;
@@ -163,8 +164,12 @@ namespace HelpingHand
 
             calendar.AddDatesInPast();
 
-            //calendar.InlineItemLoaded += Calendar_InlineItemLoaded;
-            calendar.InlineItemTapped += Calendar_InlineItemTapped;
+            if (userBabysitter == true)
+            {
+                calendar.InlineItemTapped += Calendar_InlineItemTapped;
+            }
+            else { }
+            
         }
 
         private void Calendar_InlineItemTapped(object sender, InlineItemTappedEventArgs e)
