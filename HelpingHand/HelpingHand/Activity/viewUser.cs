@@ -4,21 +4,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Gms.Tasks;
+using Android.Graphics;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using Firebase.Storage;
 using Firebase.Xamarin.Database;
 using Firebase.Xamarin.Database.Query;
 using HelpingHand.Model;
+using Java.Lang;
 using Newtonsoft.Json;
 using XamarinFirebaseAuth;
 
 namespace HelpingHand
 {
     [Activity(Label = "View User Profile", Theme = "@style/AppTheme")]
-    public class viewUser : AppCompatActivity
+    public class viewUser : AppCompatActivity, IOnProgressListener, IOnSuccessListener, IOnFailureListener
     {
         Button btnMonMorn, btnTueMorn, btnWedMorn, btnThuMorn, btnFriMorn, btnSatMorn, btnSunMorn,
             btnMonAft, btnTueAft, btnWedAft, btnThuAft, btnFriAft, btnSatAft, btnSunAft,
@@ -28,6 +32,11 @@ namespace HelpingHand
         TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode, txtAvailability;
         ImageView userImage;
         FirebaseAuth auth;
+
+        ProgressBar progressBar;
+        FirebaseStorage storage;
+        StorageReference storageRef;
+
         RatingBar ratingbar;
         FrameLayout layoutAvailability;
 
@@ -47,6 +56,8 @@ namespace HelpingHand
             //Init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             var firebase = new FirebaseClient(FirebaseURL);
+            storage = FirebaseStorage.Instance;
+            storageRef = storage.GetReferenceFromUrl("gs://th-year-project-37928.appspot.com");
 
             userName = FindViewById<TextView>(Resource.Id.name);
             userAge = FindViewById<TextView>(Resource.Id.age);
@@ -97,6 +108,7 @@ namespace HelpingHand
 
             string babysitter = this.Intent.GetStringExtra("KEY");
             BabySitter user = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+            DownloadImage();
 
             if (parentIDList.Contains(user.id))
             {
@@ -368,6 +380,8 @@ namespace HelpingHand
         {
             var babysitterEmailList = new List<string>();
             var parentEmailList = new List<string>();
+            babysitterEmailList.Clear();
+            parentEmailList.Clear();
 
             var firebase = new FirebaseClient(FirebaseURL);
             // Get rating details- who rated, rating score and who is being rated
@@ -431,6 +445,21 @@ namespace HelpingHand
             else { AddRating(ratedByEmail, rating, userRated, ratedName); }
         }
 
+        private void DownloadImage()
+        {
+            string babysitter = this.Intent.GetStringExtra("KEY");
+            BabySitter userSitter = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+            string viewUserEmail = userSitter.email;
+
+            var images = storageRef.Child("Images/" + viewUserEmail + "/profile pic/");
+
+            Java.IO.File file = new Java.IO.File(GetExternalFilesDir(null), "Profile" + ".jpg");
+            images.GetFile(file)
+                    .AddOnProgressListener(this)
+                    .AddOnSuccessListener(this)
+                    .AddOnFailureListener(this);
+        }
+
         public async void AddRating(string _ratedByEmail, int userRating, string _userRatedEmail, string _userRatedName)
         {
             var firebase = new FirebaseClient(FirebaseURL);
@@ -438,6 +467,31 @@ namespace HelpingHand
               .Child("rating").Child(auth.CurrentUser.Uid)
               .PostAsync(new Rating() { ratedByEmail = _ratedByEmail, rating = userRating, userRatedEmail = _userRatedEmail, ratedUsersName = _userRatedName });
             Toast.MakeText(this, "Rating: " + ratingbar.Rating.ToString() + " Stars", ToastLength.Short).Show();
+        }
+
+        public void OnProgress(Java.Lang.Object snapshot)
+        {
+            var taskSnapShot = (FileDownloadTask.TaskSnapshot)snapshot;
+            double progress = (100.0 * taskSnapShot.BytesTransferred / taskSnapShot.TotalByteCount);
+        }
+
+        public void OnFailure(Java.Lang.Exception e)
+        {
+            progressBar.Visibility = ViewStates.Invisible;
+            Toast.MakeText(this, "" + e.Message, ToastLength.Short).Show();
+        }
+
+        public void OnSuccess(Java.Lang.Object result)
+        {
+            Toast.MakeText(this, "Image Ready", ToastLength.Short).Show();
+
+            Java.IO.File file = new Java.IO.File(GetExternalFilesDir(null), "Profile" + ".jpg");
+
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.InPreferredConfig = Bitmap.Config.Argb8888;
+            Bitmap bitmap = BitmapFactory.DecodeFile(file.Path, options);
+
+            userImage.SetImageBitmap(bitmap);
         }
     }
 }

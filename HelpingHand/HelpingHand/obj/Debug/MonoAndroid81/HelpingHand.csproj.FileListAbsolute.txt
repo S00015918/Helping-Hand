@@ -9,6 +9,7 @@ C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\bin\De
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Interfaces.dll
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.Linq.dll
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csprojAssemblyReference.cache
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
@@ -176,6 +177,12 @@ C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\De
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\signincustombutton.xml
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\signupcustombutton.xml
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\layout\appointment_confirmed.xml
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\app_icon.png
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\app_icon.png
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\app_icon.png
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\app_icon.png
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\app_icon.png
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\app_icon.png
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\R.txt
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\uploadflags.txt
@@ -248,11 +255,6 @@ C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\De
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\HelpingHand.csprojAssemblyReference.cache
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-hdpi\app_icon.png
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-mdpi\app_icon.png
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xhdpi\app_icon.png
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxxhdpi\app_icon.png
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\mipmap-xxhdpi\app_icon.png
-C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\res\drawable\app_icon.png
 C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\bin\Debug\Syncfusion.SfCalendar.Android.dll
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\HelpingHand.pdb
+C:\Users\Ana\Source\Repos\Helping-Hand\Project401\HelpingHand\HelpingHand\obj\Debug\MonoAndroid81\linksrc\Xamarin.Essentials.dll.mdb

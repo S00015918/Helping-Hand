@@ -17,28 +17,28 @@
 				android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:layout_marginTop="120dp" android:orientation="vertical">
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
-                <TextView android:id="@+id/appDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date" android:textColor="#263238" android:textSize="30sp" />
+                <TextView android:id="@+id/appDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date" android:textColor="#263238" android:textSize="20sp" />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
             </LinearLayout>
 
 			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
-                <TextView android:id="@+id/appAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address" android:textColor="#263238" android:textSize="30sp" />
+                <TextView android:id="@+id/appAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address" android:textColor="#263238" android:textSize="20sp" />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
             </LinearLayout>
 
 			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
-                <TextView android:id="@+id/appStart" android:layout_width="200dp" android:layout_height="wrap_content" android:text="Start" android:textColor="#263238" android:textSize="30sp" />
-				<TextView android:id="@+id/appEnd" android:layout_width="200dp" android:layout_height="wrap_content" android:text="End" android:textColor="#263238" android:textSize="30sp" android:gravity="right" />
+                <TextView android:id="@+id/appStart" android:layout_width="200dp" android:layout_height="wrap_content" android:text="Start" android:textColor="#263238" android:textSize="20sp" />
+				<TextView android:id="@+id/appEnd" android:layout_width="200dp" android:layout_height="wrap_content" android:text="End" android:textColor="#263238" android:textSize="20sp" android:gravity="right" />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
             </LinearLayout>
 
 			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
-                <TextView android:id="@+id/appBabysitter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Babysitter" android:textColor="#263238" android:textSize="30sp" />
+                <TextView android:id="@+id/appBabysitter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Babysitter" android:textColor="#263238" android:textSize="20sp" />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
             </LinearLayout>
 
 			<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
-                <TextView android:id="@+id/appCost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cost" android:textColor="#263238" android:textSize="30sp" />
+                <TextView android:id="@+id/appCost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cost" android:textColor="#263238" android:textSize="20sp" />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
 			</LinearLayout>
 

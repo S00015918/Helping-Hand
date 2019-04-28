@@ -4,7 +4,10 @@ package md50f0e548c1279eef0ff184f39bbb5a3f4;
 public class viewUser
 	extends android.support.v7.app.AppCompatActivity
 	implements
-		mono.android.IGCUserPeer
+		mono.android.IGCUserPeer,
+		com.google.firebase.storage.OnProgressListener,
+		com.google.android.gms.tasks.OnSuccessListener,
+		com.google.android.gms.tasks.OnFailureListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -13,6 +16,9 @@ public class viewUser
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onCreateOptionsMenu:(Landroid/view/Menu;)Z:GetOnCreateOptionsMenu_Landroid_view_Menu_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
+			"n_onProgress:(Ljava/lang/Object;)V:GetOnProgress_Ljava_lang_Object_Handler:Firebase.Storage.IOnProgressListenerInvoker, Xamarin.Firebase.Storage\n" +
+			"n_onSuccess:(Ljava/lang/Object;)V:GetOnSuccess_Ljava_lang_Object_Handler:Android.Gms.Tasks.IOnSuccessListenerInvoker, Xamarin.GooglePlayServices.Tasks\n" +
+			"n_onFailure:(Ljava/lang/Exception;)V:GetOnFailure_Ljava_lang_Exception_Handler:Android.Gms.Tasks.IOnFailureListenerInvoker, Xamarin.GooglePlayServices.Tasks\n" +
 			"";
 		mono.android.Runtime.register ("HelpingHand.viewUser, HelpingHand", viewUser.class, __md_methods);
 	}
@@ -48,6 +54,30 @@ public class viewUser
 	}
 
 	private native boolean n_onOptionsItemSelected (android.view.MenuItem p0);
+
+
+	public void onProgress (java.lang.Object p0)
+	{
+		n_onProgress (p0);
+	}
+
+	private native void n_onProgress (java.lang.Object p0);
+
+
+	public void onSuccess (java.lang.Object p0)
+	{
+		n_onSuccess (p0);
+	}
+
+	private native void n_onSuccess (java.lang.Object p0);
+
+
+	public void onFailure (java.lang.Exception p0)
+	{
+		n_onFailure (p0);
+	}
+
+	private native void n_onFailure (java.lang.Exception p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

@@ -16,8 +16,8 @@
 		<ProgressBar android:id="@+id/progressbar" style="?android:attr/progressBarStyleHorizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" 
 			android:indeterminate="true" android:max="100" android:backgroundTint="@color/white" android:layout_below="@+id/framelauout" android:indeterminateTint="#1a09d6" android:layout_marginTop="-7dp"/>
 
-        <RelativeLayout android:id="@+id/Rlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_marginTop="20dp" android:background="@drawable/circle_border">
-			<ImageView android:id="@+id/imgUser" android:layout_width="120dp" android:layout_height="120dp" android:layout_margin="9dp" android:adjustViewBounds="true" android:background="@drawable/circle" android:padding="3dp" android:scaleType="centerInside" />
+        <RelativeLayout android:id="@+id/Rlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_marginTop="20dp" android:background="@android:drawable/alert_dark_frame" >
+			<ImageView android:id="@+id/imgUser" android:layout_width="160dp" android:layout_height="100dp" android:layout_margin="9dp" android:adjustViewBounds="true" android:background="@color/cardview_light_background" android:padding="3dp" android:scaleType="centerInside" />
         </RelativeLayout>
 
         <EditText android:id="@+id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/Rlayout" 
@@ -102,12 +102,12 @@
 			<LinearLayout android:layout_width="match_parent" android:id="@+id/layoutRate" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
 
                 <Button android:id="@+id/show_Availability" android:background="@drawable/signincustombutton" 
-					android:layout_width="200dp" android:layout_marginTop="60dp" android:layout_height="wrap_content" android:text="Create New Availability" />
+					android:layout_width="200dp" android:layout_marginTop="20dp" android:layout_height="wrap_content" android:text="Create New Availability" />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
 
             </LinearLayout>
 
-		<FrameLayout android:id="@+id/layout_middle" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top">
+		<FrameLayout android:id="@+id/layout_bottom" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/layout_top">
 		<TextView android:layout_width="wrap_content" android:textStyle="bold" android:textSize="24sp" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Update Availability"/>
 			<HorizontalScrollView android:id="@+id/horizontalscrollView" android:layout_below="@+id/layout_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
 				<GridLayout android:id="@+id/gridAvailability" android:layout_below="@+id/signup_vetted_yes" android:layout_marginTop="40dp" android:minWidth="200px" android:minHeight="200px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="8" android:rowCount="6" >

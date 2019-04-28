@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Gms.Tasks;
@@ -30,7 +31,7 @@ namespace HelpingHand
             input_new_address, input_new_phone, input_new_city, input_new_eircode, input_new_age;
         ImageView input_image, upload_image;
         LinearLayout payRateLayout;
-        GridLayout gridAvailability;
+        FrameLayout availability_frame;
         Button MonMorn, TueMorn, WedMorn, ThuMorn, FriMorn, SatMorn, SunMorn,
             MonAft, TueAft, WedAft, ThuAft, FriAft, SatAft, SunAft,
             MonEve, TueEve, WedEve, ThuEve, FriEve, SatEve, SunEve,
@@ -38,7 +39,7 @@ namespace HelpingHand
         Button showAvailability;
 
         string[] values = new string[28];
-        int count = 0;
+        int count = 0, TASK = 0, UPLOAD = 1, DOWNLOAD = 2;
         bool showAvailabiltyGrid = false;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
@@ -65,7 +66,13 @@ namespace HelpingHand
             auth = FirebaseAuth.GetInstance(MainActivity.app);
             storage = FirebaseStorage.Instance;
             storageRef = storage.GetReferenceFromUrl("gs://th-year-project-37928.appspot.com");
-            StorageReference userImage = storageRef.Child("user/profile pic/");
+            //StorageReference userImage = storageRef.Child("user/profile pic/");
+            StorageReference ImageFolder = storageRef.Child("Images");
+            StorageReference UserFolder = ImageFolder.Child(auth.CurrentUser.Email);
+            StorageReference UserImage = UserFolder.Child("profile pic");
+
+            var image = UserImage.DownloadUrl;
+            DownloadImage();
 
             //Add Toolbar
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
@@ -102,13 +109,14 @@ namespace HelpingHand
             input_new_city = FindViewById<EditText>(Resource.Id.city);
             input_new_eircode = FindViewById<EditText>(Resource.Id.eircode);
             progressBar = FindViewById<ProgressBar>(Resource.Id.progressbar);
-            gridAvailability = FindViewById<GridLayout>(Resource.Id.gridAvailability);
+            availability_frame = FindViewById<FrameLayout>(Resource.Id.layout_bottom);
             showAvailability = FindViewById<Button>(Resource.Id.show_Availability);
 
             input_new_age.Visibility = ViewStates.Invisible;
             payRateLayout.Visibility = ViewStates.Invisible;
             progressBar.Visibility = ViewStates.Invisible;
-            gridAvailability.Visibility = ViewStates.Invisible;
+            availability_frame.Visibility = ViewStates.Invisible;
+            showAvailability.Visibility = ViewStates.Invisible;
 
             MonMorn.Click += Button_Click; TueMorn.Click += Button_Click; WedMorn.Click += Button_Click; ThuMorn.Click += Button_Click; FriMorn.Click += Button_Click;
             SatMorn.Click += Button_Click; SunMorn.Click += Button_Click;
@@ -119,6 +127,7 @@ namespace HelpingHand
             MonNight.Click += Button_Click; TueNight.Click += Button_Click; WedNight.Click += Button_Click; ThuNight.Click += Button_Click; FriNight.Click += Button_Click;
             SatNight.Click += Button_Click; SunNight.Click += Button_Click;
 
+            LoadData();
             showAvailability.Click += ShowAvailability_Click;
 
             activity_Rlayout.Click += delegate
@@ -129,8 +138,19 @@ namespace HelpingHand
             {
                 UploadImage();
             };
+        }
 
-            LoadData();
+        private void DownloadImage()
+        {
+            TASK = DOWNLOAD;
+
+            var images = storageRef.Child("Images/" + auth.CurrentUser.Email + "/profile pic/");
+
+            Java.IO.File file = new Java.IO.File(GetExternalFilesDir(null), "Profile" + ".jpg");
+            images.GetFile(file)
+                    .AddOnProgressListener(this)
+                    .AddOnSuccessListener(this)
+                    .AddOnFailureListener(this);
         }
 
         private void ShowAvailability_Click(object sender, EventArgs e)
@@ -656,6 +676,7 @@ namespace HelpingHand
 
                 if (sitters.Any((_) => _.Object.id == auth.CurrentUser.Uid)) // a babysitter has logged into their profile, display according to type - 
                 {
+                    availability_frame.Visibility = ViewStates.Visible;
                     input_new_age.Visibility = ViewStates.Visible;
                     payRateLayout.Visibility = ViewStates.Visible;
                 }
@@ -689,7 +710,6 @@ namespace HelpingHand
                 string s = i;
                 if (s != null)
                 {
-
                     string availableDays = s + ", ";
                     strTime.Append(availableDays);
                 }
@@ -860,12 +880,13 @@ namespace HelpingHand
         }
         private void UploadImage()
         {
+            TASK = UPLOAD;
             FirebaseUser user = auth.CurrentUser;
             string userEmail = user.Email;
             if (filePath != null)
 
                 progressBar.Visibility = ViewStates.Visible;
-            var images = storageRef.Child("Images/" + userEmail + "/profile pic/" + user.DisplayName);
+            var images = storageRef.Child("Images/" + userEmail + "/profile pic/");
             images.PutFile(filePath)
                 .AddOnProgressListener(this)
                 .AddOnSuccessListener(this)
@@ -884,6 +905,7 @@ namespace HelpingHand
                 {
                     Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, filePath);
                     input_image.SetImageBitmap(bitmap);
+                    TASK = 0;
                 }
                 catch (IOException ex)
                 {
@@ -894,13 +916,48 @@ namespace HelpingHand
 
         public void OnProgress(Java.Lang.Object snapshot)
         {
-            var taskSnapShot = (UploadTask.TaskSnapshot)snapshot;
-            double progress = (100.0 * taskSnapShot.BytesTransferred / taskSnapShot.TotalByteCount);
+            if (TASK == UPLOAD)
+            {
+                var taskSnapShot = (UploadTask.TaskSnapshot)snapshot;
+                double progress = (100.0 * taskSnapShot.BytesTransferred / taskSnapShot.TotalByteCount);
+            }
+            if (TASK == DOWNLOAD)
+            {
+                var taskSnapShot = (FileDownloadTask.TaskSnapshot)snapshot;
+                double progress = (100.0 * taskSnapShot.BytesTransferred / taskSnapShot.TotalByteCount);
+                //string imgUrl = taskSnapShot..DownloadUrl.Scheme + ":" + taskSnapShot.DownloadUrl.SchemeSpecificPart;
+            }
+
         }
+
+        //void IOnSuccessListener.OnSuccess(Java.Lang.Object result)
+        //{
+        //    var snapShot = (UploadTask.TaskSnapshot)result;
+        //    string imgUrl = snapShot.DownloadUrl.Scheme
+        //    + ":"
+        //    + snapShot.DownloadUrl.SchemeSpecificPart;
+        //}
+
         public void OnSuccess(Java.Lang.Object result)
         {
-            progressBar.Visibility = ViewStates.Invisible;
-            Toast.MakeText(this, "Upload Successful", ToastLength.Short).Show();
+            if (TASK == UPLOAD)
+            {
+                progressBar.Visibility = ViewStates.Invisible;
+                Toast.MakeText(this, "Upload Successful", ToastLength.Short).Show();
+            }
+            if (TASK == DOWNLOAD)
+            {
+                progressBar.Visibility = ViewStates.Invisible;
+                Toast.MakeText(this, "Image Ready", ToastLength.Short).Show();
+
+                Java.IO.File file = new Java.IO.File(GetExternalFilesDir(null), "Profile" + ".jpg");
+
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                options.InPreferredConfig = Bitmap.Config.Argb8888;
+                Bitmap bitmap = BitmapFactory.DecodeFile(file.Path, options);
+
+                input_image.SetImageBitmap(bitmap);
+            }
         }
         public void OnFailure(Java.Lang.Exception e)
         {
