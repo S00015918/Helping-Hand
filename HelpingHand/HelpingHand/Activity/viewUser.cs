@@ -29,16 +29,15 @@ namespace HelpingHand
             btnMonEve, btnTueEve, btnWedEve, btnThuEve, btnFriEve, btnSatEve, btnSunEve,
             btnMonNigh, btnTueNigh, btnWedNigh, btnThuNigh, btnFriNigh, btnSatNigh, btnSunNigh;
         Button btnCreateAppointment;
-        TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode, txtAvailability;
+        TextView userName, userAge, userEmail, userAddress, userCity, userPhone, userEircode, txtAvailability, gardaVetted;
         ImageView userImage;
         FirebaseAuth auth;
-
-        ProgressBar progressBar;
         FirebaseStorage storage;
         StorageReference storageRef;
 
         RatingBar ratingbar;
         FrameLayout layoutAvailability;
+        LinearLayout layoutVetted;
 
         int userRating, returnRating; string userRated, ratedBabysitter, RatersEmail, userRatedName;
 
@@ -67,8 +66,10 @@ namespace HelpingHand
             userPhone = FindViewById<TextView>(Resource.Id.phone);
             userEircode = FindViewById<TextView>(Resource.Id.eircode);
             userImage = FindViewById<ImageView>(Resource.Id.imgUser);
+            gardaVetted = FindViewById<TextView>(Resource.Id.vetted);
 
             ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
+            layoutVetted = FindViewById<LinearLayout>(Resource.Id.layout_vetted);
 
             btnCreateAppointment = FindViewById<Button>(Resource.Id.btnCreate_appointment);
             btnCreateAppointment.Click += CreateAppointment;
@@ -123,6 +124,8 @@ namespace HelpingHand
                 ratingbar.Visibility = ViewStates.Invisible;
                 txtAvailability.Visibility = ViewStates.Invisible;
                 layoutAvailability.Visibility = ViewStates.Invisible;
+                layoutVetted.Visibility = ViewStates.Invisible;
+
             }
             else
             {
@@ -135,6 +138,7 @@ namespace HelpingHand
                     userCity.Text = user.city;
                     userPhone.Text = user.phone;
                     userEircode.Text = user.eircode;
+                    gardaVetted.Text = user.gardaVetted.ToString();
                     string userAvailabilty = user.availability;
                     userRated = userEmail.Text;
                     userRatedName = userName.Text;
@@ -477,7 +481,6 @@ namespace HelpingHand
 
         public void OnFailure(Java.Lang.Exception e)
         {
-            progressBar.Visibility = ViewStates.Invisible;
             Toast.MakeText(this, "" + e.Message, ToastLength.Short).Show();
         }
 

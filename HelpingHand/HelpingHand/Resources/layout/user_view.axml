@@ -70,12 +70,12 @@
 
             </LinearLayout>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
-                <TextView android:id="@+id/facebook" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-light" android:text="facebook.com/joeytrib" android:textColor="#000000" android:textSize="18sp" />
+            <LinearLayout android:id="@+id/layout_vetted" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:orientation="vertical">
+                <TextView android:id="@+id/vetted" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-light" android:text="Garda Vetted?" android:textColor="#000000" android:textSize="18sp" />
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp" android:background="@color/grey" />
             </LinearLayout>
 
-		<TextView android:id="@+id/txtviewAvailabiity" android:layout_width="wrap_content" android:textStyle="bold" android:textSize="24sp" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Availability"/>
+		<TextView android:id="@+id/txtviewAvailabiity" android:layout_width="wrap_content" android:layout_marginTop="20dp" android:textStyle="bold" android:textSize="24sp" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Availability"/>
 		<FrameLayout android:id="@+id/layout_availabilty" android:layout_marginTop="20dp" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/facebook">
 			<HorizontalScrollView android:id="@+id/horizontalscrollView" android:layout_below="@+id/facebook" android:layout_width="wrap_content" android:layout_height="wrap_content">
 				<GridLayout android:layout_below="@+id/facebook" android:minWidth="200px" android:minHeight="200px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="8" android:rowCount="6" android:id="@+id/gridSchedule" >

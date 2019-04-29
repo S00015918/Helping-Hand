@@ -114,6 +114,49 @@ namespace HelpingHand
         private void ConfirmAppointment_onComplete(object sender, AppointmentConfirmed e)
         {
             confirmed = e.confirmed;
+            if (confirmed == true)
+            {
+                string babysitter = this.Intent.GetStringExtra("KEY");
+                BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+                decimal payRate = userAppointment.rate;
+
+                FirebaseUser user = auth.CurrentUser;
+                string name = userAppointment.name;
+                string city = userAppointment.city;
+                string eircode = userAppointment.eircode;
+                string address = userAppointment.address;
+
+                validDate = Convert.ToDateTime(selectedDate);
+                DateTime start = Convert.ToDateTime(selectedStartTime);
+                DateTime end = Convert.ToDateTime(selectedEndTime);
+
+                int startHour = start.Hour;
+                int endHour = end.Hour;
+                int totalHours = endHour - startHour;
+                amountDue = totalHours * payRate;
+
+                Appointment appointment = new Appointment();
+                appointment.Date = Convert.ToDateTime(selectedDate);
+                appointment.startTime = selectedStartTime;
+                appointment.endTime = selectedEndTime;
+                appointment.userEmail = auth.CurrentUser.Email;
+                appointment.babysitterEmail = userAppointment.email;
+                appointment.Babysitter = name;
+                appointment.City = city;
+                appointment.Address = address;
+                appointment.Eircode = eircode;
+                appointment.cost = amountDue;
+
+                var firebase = new FirebaseClient(FirebaseURL);
+                var appointmentJson = JsonConvert.SerializeObject(appointment);
+
+                var viewPaymentForm = new Intent(this, typeof(PaymentActivity));
+                viewPaymentForm.PutExtra("KEY", appointmentJson);
+                StartActivity(viewPaymentForm);
+            }
+            else
+            { // please confirm appointment to progress
+            }
         }
 
         protected override Dialog OnCreateDialog(int id)
@@ -293,7 +336,7 @@ namespace HelpingHand
                 var startHour = start.Hour.ToString();
                 int _hour = int.Parse(startHour);
 
-                if (_hour >= 8 && _hour < 12)
+                if (_hour >= 7 && _hour < 12)
                 {
                     timeOfDay = "Morning";
                 }
@@ -303,37 +346,24 @@ namespace HelpingHand
                 else if (_hour >= 16 && _hour < 20)
                 { timeOfDay = "Evening"; }
 
-                else if (_hour >= 20 && _hour < 23)
+                else if (_hour >= 20 && _hour < 24)
                 { timeOfDay = "Night"; }
 
                 var today = dateSelected.DayOfWeek.ToString().TrimEnd();
                 string todaysTime = today + " " + timeOfDay.ToString();
 
-                int itemCount = 0;
+                var availabiltyList = new List<string>();
                 foreach (var item in schedule)
                 {
-                    //if (item.Contains(today))
-                    if (item.Contains(todaysTime))
-                    {
-                        itemCount = 0;
-                        CreateNewAppointment();
-                    }
-                    else {
-                        itemCount++;                       
-                        //refresh = true;
-                    }
+                    availabiltyList.Add(item);
                 }
-                if (itemCount >=1)
+
+                if (availabiltyList.Contains(todaysTime))
                 {
-                    btnCreateApointment.Enabled = false;
-                    Toast.MakeText(this, "Please change appointment, Babysitter not available for selected time", ToastLength.Long).Show();
-                    itemCount = 0;
+                    CreateNewAppointment();
                 }
-                else
-                { btnCreateApointment.Enabled = true; }
-                if (refresh == true)
-                {
-                    refreshActivity();
+                else {
+                    Toast.MakeText(this, "Please change appointment, Babysitter not available for selected time", ToastLength.Short).Show();
                 }
             }
         }
@@ -347,59 +377,17 @@ namespace HelpingHand
 
         private void CreateNewAppointment()
         {
-            string babysitter = this.Intent.GetStringExtra("KEY");
-
-            BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
-            decimal payRate = userAppointment.rate;
-
-            FirebaseUser user = auth.CurrentUser;
-            string name = userAppointment.name;
-            string city = userAppointment.city;
-            string eircode = userAppointment.eircode;
-            string address = userAppointment.address;
-
             validDate = Convert.ToDateTime(selectedDate);
             DateTime start = Convert.ToDateTime(selectedStartTime);
             DateTime end = Convert.ToDateTime(selectedEndTime);
 
-            int startHour = start.Hour;
-            int endHour = end.Hour;
-            int totalHours = endHour - startHour;
-            amountDue = totalHours * payRate;
-
-            Appointment appointment = new Appointment();
-            appointment.Date = Convert.ToDateTime(selectedDate);
-            appointment.startTime = selectedStartTime;
-            appointment.endTime = selectedEndTime;
-            appointment.userEmail = auth.CurrentUser.Email;
-            appointment.babysitterEmail = userAppointment.email;
-            appointment.Babysitter = name;
-            appointment.City = city;
-            appointment.Address = address;
-            appointment.Eircode = eircode;
-            appointment.cost = amountDue;
-
-            Appointment_Confirm(amountDue, validDate);
-
-            if (confirmed == true)
+            if (end < start)
             {
-                if (end < start)
-                {
-                    Toast.MakeText(this, "Please change Appointment end time.", ToastLength.Short).Show();
-                }
-                else
-                {
-                    var firebase = new FirebaseClient(FirebaseURL);
-                    ////Add Item
-                    var appointmentJson = JsonConvert.SerializeObject(appointment);
-
-                    var viewPaymentForm = new Intent(this, typeof(PaymentActivity));
-                    viewPaymentForm.PutExtra("KEY", appointmentJson);
-                    StartActivity(viewPaymentForm);
-                }
+                Toast.MakeText(this, "Please change Appointment end time.", ToastLength.Short).Show();
             }
             else
-            { // please confirm appointment to progress
+            {
+                Appointment_Confirm(amountDue, validDate);
             }
         }
         public override bool OnCreateOptionsMenu(IMenu menu)

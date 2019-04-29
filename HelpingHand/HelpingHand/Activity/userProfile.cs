@@ -676,7 +676,7 @@ namespace HelpingHand
 
                 if (sitters.Any((_) => _.Object.id == auth.CurrentUser.Uid)) // a babysitter has logged into their profile, display according to type - 
                 {
-                    availability_frame.Visibility = ViewStates.Visible;
+                    showAvailability.Visibility = ViewStates.Visible;
                     input_new_age.Visibility = ViewStates.Visible;
                     payRateLayout.Visibility = ViewStates.Visible;
                 }

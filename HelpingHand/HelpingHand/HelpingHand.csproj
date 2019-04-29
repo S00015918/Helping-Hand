@@ -100,11 +100,11 @@
     <Compile Include="Adapter\MessageAdapter.cs" />
     <Compile Include="Activity\CancelAppointment.cs" />
     <Compile Include="Activity\CreditCardFormatter.cs" />
-    <Compile Include="AppointmentRecieptActivity.cs" />
+    <Compile Include="Activity\AppointmentRecieptActivity.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="ImageAdapter.cs" />
     <Compile Include="Interface\IFirebaseLoadDone.cs" />
-    <Compile Include="MapActivity.cs" />
+    <Compile Include="Activity\MapActivity.cs" />
     <Compile Include="MinMaxInputFilter.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\AppointmentDialog.cs" />
