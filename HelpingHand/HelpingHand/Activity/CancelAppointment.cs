@@ -27,7 +27,8 @@ namespace HelpingHand
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
         FirebaseAuth auth;
         List<Appointment> list_appointments = new List<Appointment>();
-        private AppointmentListAdapter AppointmentAdapter;
+        private AppointmentListAdapter ParentAppointmentAdapter;
+        private BabysitterApointmentAdapter BabysitterAppointmentAdapter;
         Appointment selectedAppointment;
         string selectedUser, appointmentCreator;
         Button btnCancelAppointment;
@@ -50,11 +51,13 @@ namespace HelpingHand
                     .Child("appointment")
                     .OnceAsync<Appointment>();
             list_appointments.Clear();
-            AppointmentAdapter = null;
+            ParentAppointmentAdapter = null;
+            BabysitterAppointmentAdapter = null;
             foreach (var item in items)
             {
                 Appointment account = new Appointment();
                 account.Babysitter = item.Object.Babysitter;
+                account.Address = item.Object.Address;
                 account.Date = item.Object.Date;
                 string dateTime = account.Date.ToString();
                 account.startTime = item.Object.startTime;
@@ -69,7 +72,8 @@ namespace HelpingHand
                     if (account.Date > DateTime.Now)
                     {
                         list_appointments.Add(account);
-                        AppointmentAdapter = new AppointmentListAdapter(this, list_appointments);
+                        ParentAppointmentAdapter = new AppointmentListAdapter(this, list_appointments);
+                        list_data.Adapter = ParentAppointmentAdapter;
                     }
                     if (account.Date.Year == DateTime.Now.Year)
                     {
@@ -86,7 +90,8 @@ namespace HelpingHand
                     if (account.Date > DateTime.Now)
                     {
                         list_appointments.Add(account);
-                        AppointmentAdapter = new AppointmentListAdapter(this, list_appointments);
+                        BabysitterAppointmentAdapter = new BabysitterApointmentAdapter(this, list_appointments);
+                        list_data.Adapter = BabysitterAppointmentAdapter;
                     }
                     if (account.Date.Year == DateTime.Now.Year)
                     {
@@ -104,7 +109,6 @@ namespace HelpingHand
 
             list_data.Visibility = ViewStates.Visible;
             //AppointmentAdapter.NotifyDataSetChanged();
-            list_data.Adapter = AppointmentAdapter;
 
             list_data.ItemClick += (s, e) =>
             {
@@ -175,8 +179,9 @@ namespace HelpingHand
             }
             else { }
 
-            AppointmentAdapter.NotifyDataSetChanged();
-            list_data.Adapter = AppointmentAdapter;
+            ParentAppointmentAdapter.NotifyDataSetChanged();
+            BabysitterAppointmentAdapter.NotifyDataSetChanged();
+            //list_data.Adapter = AppointmentAdapter;
         }
 
         public async void SendEmail(string subject, string body, List<string> recipients)

@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Firebase.Auth;
+using Firebase.Xamarin.Database;
 using HelpingHand.Model;
 using Java.Lang;
 
@@ -17,7 +19,6 @@ namespace HelpingHand
     public class AppointmentListAdapter : BaseAdapter
     {
         Activity activity;
-        List<Appointment> originalData;
         List<Appointment> lstAppointments;
         LayoutInflater inflater;
 
@@ -25,8 +26,6 @@ namespace HelpingHand
         {
             this.activity = activity;
             this.lstAppointments = appointments;
-
-            Filter = new AppointmentFilter(this);
         }
 
         public Filter Filter
@@ -47,21 +46,20 @@ namespace HelpingHand
             inflater = (LayoutInflater)activity.BaseContext.GetSystemService(Context.LayoutInflaterService);
             View view = inflater.Inflate(Resource.Layout.list_appointments, null);
 
-            var babysitter = view.FindViewById<TextView>(Resource.Id.list_babysitter);
+            var name = view.FindViewById<TextView>(Resource.Id.list_name);
             var dateList = view.FindViewById<TextView>(Resource.Id.list_date);
             var start = view.FindViewById<TextView>(Resource.Id.list_start);
             var end = view.FindViewById<TextView>(Resource.Id.list_end);
 
             if (lstAppointments.Count > 0)
             {
-                babysitter.Text = lstAppointments[position].Babysitter;
+                name.Text = lstAppointments[position].Babysitter;
                 var datetime = lstAppointments[position].Date.ToString().Split(' ');
-                string date = datetime[0]; 
+                string date = datetime[0];
                 dateList.Text = date.ToString();
                 start.Text = "Start: " + lstAppointments[position].startTime.ToString();
                 end.Text = "End: " + lstAppointments[position].endTime.ToString();
             }
-
             return view;
         }
 
@@ -69,50 +67,7 @@ namespace HelpingHand
         public override int Count
         {
             get { return lstAppointments.Count; }
-        }
-
-        internal class AppointmentFilter : Filter
-        {
-            private AppointmentListAdapter appointmentAdapter;
-
-            public AppointmentFilter(AppointmentListAdapter adapter)
-            {
-                appointmentAdapter = adapter;
-            }
-
-            protected override FilterResults PerformFiltering(ICharSequence constraint)
-            {
-                var returnObj = new FilterResults();
-                var results = new List<Appointment>();
-                if (appointmentAdapter.originalData == null)
-                    appointmentAdapter.originalData = appointmentAdapter.lstAppointments;
-                if (constraint == null) return returnObj;
-
-                if (appointmentAdapter.originalData != null && appointmentAdapter.originalData.Any())
-                {
-                    results.AddRange(
-                        appointmentAdapter.originalData.Where(
-                            user => user.Babysitter.Contains(constraint.ToString())));
-                }
-                returnObj.Values = FromArray(results.Select(r => r.ToJavaObject()).ToArray());
-                returnObj.Count = results.Count;
-
-                constraint.Dispose();
-
-                return returnObj;
-            }
-
-            protected override void PublishResults(ICharSequence constraint, FilterResults results)
-            {
-                using (var values = results.Values)
-                {
-                    appointmentAdapter.lstAppointments = values.ToArray<Java.Lang.Object>()
-                        .Select(r => r.ToNetObject<Appointment>()).ToList();
-                    constraint.Dispose();
-                    results.Dispose();
-                }
-            }
-        }
+        }  
     }
 
     class AppointmentListAdapterViewHolder : Java.Lang.Object

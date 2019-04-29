@@ -103,7 +103,7 @@ namespace HelpingHand
                     int endHour = end[0];
                     int endMinute = end[1];
 
-                    _event.Subject = appointment.startTime + " - " + appointment.endTime + ", " + appointment.Address + ", " + appointment.City + ", " + appointment.Eircode + ", Babysitters Name: " + appointment.Babysitter;
+                    _event.Subject = "Appointment Details: " + appointment.startTime + " - " + appointment.endTime + ", " + appointment.Address + ", " + appointment.City + ", " + appointment.Eircode + ", Babysitters Name: " + appointment.Babysitter;
                     _event.Color = Android.Graphics.Color.LightBlue;
 
                     //starting date of event
@@ -139,7 +139,8 @@ namespace HelpingHand
                     int endHour = end[0];
                     int endMinute = end[1];
 
-                    _event.Subject = appointment.startTime + " - " + appointment.endTime + ", " + appointment.Address + ", " + appointment.City + ", " + appointment.Eircode + ", " + appointment.userEmail;
+                    _event.Subject = appointment.startTime + " - " + appointment.endTime + ", " + appointment.Address + ", " + appointment.City + ", " 
+                        + appointment.Eircode + ", " + appointment.userEmail + " - Please Click Here to view Map of Appointment - ";
                     _event.Color = Android.Graphics.Color.LightBlue;
 
                     //starting date of event
@@ -177,7 +178,7 @@ namespace HelpingHand
             var appointment = e.InlineEvent;
             var userJson = JsonConvert.SerializeObject(appointment);
 
-            Toast.MakeText(this, appointment.Subject + " - " + appointment.StartTime.Time.ToString(), ToastLength.Long).Show();
+            Toast.MakeText(this, appointment.Subject + " - " + appointment.StartTime.Time.ToString(), ToastLength.Short).Show();
 
             var mapAddress = new Intent(this, typeof(MapWithMarkersActivity));
             mapAddress.PutExtra("KEY", Convert.ToString(userJson));

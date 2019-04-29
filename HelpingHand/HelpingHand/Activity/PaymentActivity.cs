@@ -30,7 +30,7 @@ namespace HelpingHand
         EditText creditCardNumber, cardExpiryMonth, cardExpiryYear, cardCVV;
         TextView appointmentCost, appointmentDate;
         Button AcceptPayment;
-        string startTime, endTime, userEmail, babysitterEmail, Babysitter, City, Address, Eircode, _date;
+        string startTime, endTime, userEmail, babysitterEmail, Babysitter, Parent, City, Address, Eircode, _date;
         DateTime Date;
         decimal Cost;
 
@@ -68,6 +68,7 @@ namespace HelpingHand
             userEmail = auth.CurrentUser.Email;
             babysitterEmail = newAppointment.babysitterEmail;
             Babysitter = newAppointment.Babysitter;
+            Parent = newAppointment.parent;
             City = newAppointment.City;
             Address = newAppointment.Address;
             Eircode = newAppointment.Eircode;

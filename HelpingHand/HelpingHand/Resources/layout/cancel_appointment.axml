@@ -14,24 +14,18 @@
 	<RelativeLayout android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:padding="10dp">
-		<SearchView
-			android:minWidth="25px" 
-			android:minHeight="25px" 
-			android:layout_width="match_parent" 
-			android:layout_height="wrap_content"
-			android:layout_below="@+id/icon" 
-			android:id="@+id/searchview"
-			android:layout_marginTop="60dp"/>
+
 		<ListView 
 			android:id="@+id/list_appointments"
 			android:minWidth="25px" 
 			android:minHeight="500px"
+			android:layout_marginTop="80dp"
 			android:theme="@style/MyListViewTheme"
 			android:layout_below="@+id/searchview"	
 			android:layout_width="match_parent"  
-			android:layout_height="300dp"/>
+			android:layout_height="400dp"/>
 
-		<Button android:id="@+id/btnDelete" android:layout_below="@+id/list_appointments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Cancel Appointment" android:textSize="14sp"/>
+		<Button android:id="@+id/btnDelete" android:layout_below="@+id/list_appointments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Cancel Appointment" android:textSize="16sp"/>
 	</RelativeLayout>
 </RelativeLayout>
 </ScrollView>

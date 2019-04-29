@@ -30,7 +30,7 @@ namespace HelpingHand
         RelativeLayout activity_book_appointment;
         DatePicker datePicker;
         FloatingActionButton btnCreateApointment;
-        string selectedStartTime, selectedEndTime, strStart, strEnd;
+        string selectedStartTime, selectedEndTime, strStart, strEnd, parent_name;
         string selectedDate, timeOfDay;
         private const int StartTimeDialog = 1;
         private const int EndTimeDialog = 2;
@@ -111,8 +111,28 @@ namespace HelpingHand
             confirmAppointment.onComplete += ConfirmAppointment_onComplete;
         }
 
+        public async void getParentName()
+        {
+            var firebase = new FirebaseClient(FirebaseURL);
+            var users = await firebase
+                    .Child("parent")
+                    .OnceAsync<Parent>();
+            foreach (var item in users)
+            {
+                Parent account = new Parent();
+                account.name = item.Object.name;
+                account.email = item.Object.email;
+                if (account.email == auth.CurrentUser.Email)
+                {
+                    parent_name = account.name;
+                }
+            }
+        }
+
         private void ConfirmAppointment_onComplete(object sender, AppointmentConfirmed e)
         {
+            getParentName();
+
             confirmed = e.confirmed;
             if (confirmed == true)
             {
@@ -121,7 +141,7 @@ namespace HelpingHand
                 decimal payRate = userAppointment.rate;
 
                 FirebaseUser user = auth.CurrentUser;
-                string name = userAppointment.name;
+                string babysitter_name = userAppointment.name;
                 string city = userAppointment.city;
                 string eircode = userAppointment.eircode;
                 string address = userAppointment.address;
@@ -141,7 +161,8 @@ namespace HelpingHand
                 appointment.endTime = selectedEndTime;
                 appointment.userEmail = auth.CurrentUser.Email;
                 appointment.babysitterEmail = userAppointment.email;
-                appointment.Babysitter = name;
+                appointment.Babysitter = babysitter_name;
+                appointment.parent = parent_name;
                 appointment.City = city;
                 appointment.Address = address;
                 appointment.Eircode = eircode;

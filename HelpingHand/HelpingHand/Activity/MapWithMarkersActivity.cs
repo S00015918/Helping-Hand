@@ -52,11 +52,7 @@ namespace HelpingHand
                 .InvokeMapType(GoogleMap.MapTypeNormal)
                 .InvokeZoomControlsEnabled(false)
                 .InvokeCompassEnabled(true);
-            //FragmentTransaction fragTx = FragmentManager.BeginTransaction();
-            //mapFragment = MapFragment.NewInstance(mapOptions);
-            //fragTx.Add(Resource.Id.map, mapFragment, "map");
-            //fragTx.Commit();
-            //GetLocationFromAddress();
+
             goBack.Click += GoBack_Click;
         }
         private void GoBack_Click(object sender, EventArgs e)
@@ -79,8 +75,6 @@ namespace HelpingHand
             map.UiSettings.ZoomControlsEnabled = true;
             map.UiSettings.CompassEnabled = true;
 
-            //newMarker.SetPosition(new LatLng(53.270962, -9.062691));
-
             try
             {
                 var locations = await Geocoding.GetLocationsAsync(address);
@@ -100,6 +94,7 @@ namespace HelpingHand
                     double lon = Convert.ToDouble(longitude);
 
                     var Nmarker = newMarker.SetPosition(new LatLng(lat, lon));
+                    Nmarker.SetTitle(street);
                     LatLng zoomTo = new LatLng(lat, lon);
 
                     map.AddMarker(Nmarker);

@@ -7,9 +7,9 @@
     android:minHeight="25px"  
     android:paddingBottom="4dp">  
 	<TextView
-        android:id="@+id/list_babysitter"
-        android:text="Babysitter"
-        android:textSize="30sp"
+        android:id="@+id/list_name"
+        android:text="Details"
+        android:textSize="24sp"
         android:textStyle="bold"
 		android:padding="7dp"
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
 		android:padding="7dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:layout_below="@+id/list_babysitter"
+		android:layout_below="@+id/list_name"
 	    android:layout_toRightOf="@+id/list_img"/>
 
     <TextView
@@ -33,10 +33,11 @@
         android:textSize="20sp"
         android:textStyle="italic"
 		android:padding="7dp"
-		android:layout_marginLeft="120dp"
+		android:gravity="right"
+		android:layout_marginLeft="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-	    android:layout_toRightOf="@+id/list_babysitter"/>
+	    android:layout_toRightOf="@+id/list_name"/>
 
 	<TextView
         android:id="@+id/list_end"

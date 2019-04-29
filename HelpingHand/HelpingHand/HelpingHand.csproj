@@ -101,6 +101,7 @@
     <Compile Include="Activity\CancelAppointment.cs" />
     <Compile Include="Activity\CreditCardFormatter.cs" />
     <Compile Include="Activity\AppointmentRecieptActivity.cs" />
+    <Compile Include="Adapter\BabysitterApointmentAdapter.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="ImageAdapter.cs" />
     <Compile Include="Interface\IFirebaseLoadDone.cs" />

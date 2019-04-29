@@ -20,6 +20,7 @@ namespace HelpingHand.Model
         public string startTime { get; set; }
         public string endTime { get; set; }
         public string Babysitter { get; set; }
+        public string parent { get; set; }
         public string userEmail { get; set; }
         public string babysitterEmail { get; set; }
         public string Address { get; set; }

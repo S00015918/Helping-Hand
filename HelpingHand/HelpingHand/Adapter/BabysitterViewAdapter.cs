@@ -89,7 +89,7 @@ namespace HelpingHand.Adapter
             {
                 results.AddRange(
                     babysitterViewAdapter.originalData.Where(
-                        user => user.city.Contains(constraint.ToString())));
+                        user => user.city.ToLower().Contains(constraint.ToString())));
             }
             returnObj.Values = FromArray(results.Select(r => r.ToJavaObject()).ToArray());
             returnObj.Count = results.Count;
