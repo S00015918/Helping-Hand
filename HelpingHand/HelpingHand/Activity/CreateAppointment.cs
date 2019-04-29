@@ -325,6 +325,7 @@ namespace HelpingHand
             else
             {
                 string availabilty = userAppointment.availability; // compare availabilty to book schedule
+
                 var days = availabilty.Split(',');
                 if (days == null)
                 {
@@ -349,13 +350,17 @@ namespace HelpingHand
                 else if (_hour >= 20 && _hour < 24)
                 { timeOfDay = "Night"; }
 
+                else if (_hour >= 1 && _hour < 6)
+                { timeOfDay = "Un-available"; }
+
                 var today = dateSelected.DayOfWeek.ToString().TrimEnd();
                 string todaysTime = today + " " + timeOfDay.ToString();
 
                 var availabiltyList = new List<string>();
                 foreach (var item in schedule)
                 {
-                    availabiltyList.Add(item);
+                    string newItem = item.Trim();
+                    availabiltyList.Add(newItem);
                 }
 
                 if (availabiltyList.Contains(todaysTime))
@@ -363,6 +368,10 @@ namespace HelpingHand
                     CreateNewAppointment();
                 }
                 else {
+                    Toast.MakeText(this, "Please change appointment, Babysitter not available for selected time", ToastLength.Short).Show();
+                }
+                if (todaysTime.Contains("Un-available"))
+                {
                     Toast.MakeText(this, "Please change appointment, Babysitter not available for selected time", ToastLength.Short).Show();
                 }
             }
@@ -377,9 +386,18 @@ namespace HelpingHand
 
         private void CreateNewAppointment()
         {
+            string babysitter = this.Intent.GetStringExtra("KEY");
+            BabySitter userAppointment = JsonConvert.DeserializeObject<BabySitter>(babysitter);
+            decimal payRate = userAppointment.rate;
+
             validDate = Convert.ToDateTime(selectedDate);
             DateTime start = Convert.ToDateTime(selectedStartTime);
             DateTime end = Convert.ToDateTime(selectedEndTime);
+
+            int startHour = start.Hour;
+            int endHour = end.Hour;
+            int totalHours = endHour - startHour;
+            amountDue = totalHours * payRate;
 
             if (end < start)
             {

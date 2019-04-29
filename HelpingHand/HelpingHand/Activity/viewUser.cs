@@ -138,7 +138,7 @@ namespace HelpingHand
                     userCity.Text = user.city;
                     userPhone.Text = user.phone;
                     userEircode.Text = user.eircode;
-                    gardaVetted.Text = user.gardaVetted.ToString();
+                    gardaVetted.Text = "Garda Vetted: " + user.gardaVetted.ToString();
                     string userAvailabilty = user.availability;
                     userRated = userEmail.Text;
                     userRatedName = userName.Text;
@@ -481,7 +481,7 @@ namespace HelpingHand
 
         public void OnFailure(Java.Lang.Exception e)
         {
-            Toast.MakeText(this, "" + e.Message, ToastLength.Short).Show();
+            Toast.MakeText(this, "No Profile Picture Available", ToastLength.Short).Show();
         }
 
         public void OnSuccess(Java.Lang.Object result)

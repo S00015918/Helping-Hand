@@ -135,6 +135,8 @@ namespace HelpingHand
             FirebaseUser user = auth.CurrentUser;
             string currentUserEmail = user.Email;
             string message = edtChat.Text;
+            var babysitterEmailList = new List<string>();
+            var parentEmailList = new List<string>();
 
             var parents = await firebaseClient
                    .Child("parent")
@@ -145,29 +147,51 @@ namespace HelpingHand
             {
                 Parent account = new Parent();
                 account.email = item.Object.email;
-                string parent_email = account.email;
+                parentEmailList.Add(account.email);
+            }
 
-                if (currentUserEmail == parent_email)
+            if (parentEmailList.Contains(auth.CurrentUser.Email))
+            {
+                // current user is a parent -
+                foreach (var item in parents)
                 {
-                    // current user is a parent - 
-                    account.name = item.Object.name;
-                    currentUserName = account.name.ToString();
-                }
-                else
-                {
-                    var Babysitters = await firebase
-                        .Child("babysitter")
-                        .OnceAsync<BabySitter>();
-                    list_babySitters.Clear();
-                    parentAdapter = null;
-                    foreach (var sitters in Babysitters)
+                    Parent account = new Parent();
+                    account.email = item.Object.email;
+                    if (account.email == auth.CurrentUser.Email)
                     {
-                        BabySitter _account = new BabySitter();
-                        _account.name = item.Object.name;
+                        account.name = item.Object.name;
+                        currentUserName = account.name.ToString();
+                    }                  
+                }               
+            }
+
+            var Babysitters = await firebase
+                .Child("babysitter")
+                .OnceAsync<BabySitter>();
+            list_babySitters.Clear();
+            parentAdapter = null;
+            foreach (var sitters in Babysitters)
+            {
+                BabySitter _account = new BabySitter();
+                _account.email = sitters.Object.email;
+                babysitterEmailList.Add(_account.email);
+            }
+
+            if (babysitterEmailList.Contains(auth.CurrentUser.Email))
+            {
+                // current user is a babysitter -
+                foreach (var sitters in Babysitters)
+                {
+                    BabySitter _account = new BabySitter();
+                    _account.email = sitters.Object.email;
+                    if (_account.email == auth.CurrentUser.Email)
+                    {
+                        _account.name = sitters.Object.name;
                         currentUserName = _account.name.ToString();
                     }
                 }
             }
+
             MessageContent messages = new MessageContent();
             messages.recieversEmail = user_email.Text;
             messages.sendersEmail = auth.CurrentUser.Email;
