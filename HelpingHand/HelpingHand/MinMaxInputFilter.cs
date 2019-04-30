@@ -20,6 +20,7 @@ namespace HelpingHand
 
         public MinMaxInputFilter(int min, int max)
         {
+            // input digits to get the maxium number limit it can reach and the minimum it can hit
             _min = min;
             _max = max;
         }

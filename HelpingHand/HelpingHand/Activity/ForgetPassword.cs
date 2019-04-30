@@ -60,6 +60,7 @@ namespace XamarinFirebaseAuth
 
         public void OnComplete(Task task)
         {
+            // If successful send a confirmation email to the user who is re-setting password
             if (task.IsSuccessful == false)
             {
                 Toast.MakeText(this, "Reset Password Failed!", ToastLength.Short).Show();

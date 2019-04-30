@@ -28,7 +28,6 @@ namespace XamarinFirebaseAuth
     {
         TextView txtviewBabysitter, txtviewParent;
         private ListView list_data;
-        //private ArrayList filteredUsers;
 
         List<Parent> list_parents = new List<Parent>();
         List<BabySitter> list_babySitters = new List<BabySitter>();
@@ -38,6 +37,7 @@ namespace XamarinFirebaseAuth
         private ParentViewAdapter parentAdapter;
         RelativeLayout activity_dashboard;
         FirebaseAuth auth;
+        bool parentUser;
 
         private const string FirebaseURL = "https://th-year-project-37928.firebaseio.com/";
 
@@ -91,6 +91,7 @@ namespace XamarinFirebaseAuth
             txtviewParent.Visibility = ViewStates.Invisible;
             list_data.Visibility = ViewStates.Invisible;
 
+            //get all parents from the database
             var users = await firebase
                     .Child("parent")
                     .OnceAsync<Parent>();
@@ -107,13 +108,14 @@ namespace XamarinFirebaseAuth
                 account.email = item.Object.email;
                 account.eircode = item.Object.eircode;
                 account.noOfKids = item.Object.noOfKids;
-                list_parents.Add(account);
+                list_parents.Add(account);  // add all parents to a list
             }
 
             if (users.Any((_) => _.Key == auth.CurrentUser.Uid))
             {
                 // You are a parent
-
+                // current user is a parent
+                parentUser = true;
                 txtviewBabysitter.Visibility = ViewStates.Visible;
                 var items = await firebase.Child("babysitter").OnceAsync<object>();
                 list_babySitters.Clear();
@@ -138,12 +140,14 @@ namespace XamarinFirebaseAuth
                     }
                 }
 
+                // when an item in the listview is clicked get the correspoding details
                 list_data.ItemClick += (s, e) =>
                 {
                     BabySitter selectedBabysitter = list_babySitters[e.Position];
 
                     var babysitterJson = JsonConvert.SerializeObject(selectedBabysitter);
 
+                    // store details in JSON about the selected babysitter and then navigate to the view user page
                     var viewSelectedUser = new Intent(this, typeof(viewUser));
                     viewSelectedUser.PutExtra("KEY", babysitterJson);
                     StartActivity(viewSelectedUser);
@@ -157,7 +161,8 @@ namespace XamarinFirebaseAuth
             else
             {
                 // you are a babysitter
-
+                // current user is a babysitter
+                parentUser = false;
                 txtviewParent.Visibility = ViewStates.Visible;
                 parentAdapter = new ParentViewAdapter(this, list_parents);
                 parentAdapter.NotifyDataSetChanged();
@@ -168,7 +173,7 @@ namespace XamarinFirebaseAuth
                     Parent selectedParent = list_parents[e.Position];
 
                     var parentJson = JsonConvert.SerializeObject(selectedParent);
-
+                    // store details in JSON about the selected parent and then navigate to the view user page
                     var viewSelectedUser = new Intent(this, typeof(viewUser));
                     viewSelectedUser.PutExtra("KEY", parentJson);
                     StartActivity(viewSelectedUser);
@@ -182,9 +187,16 @@ namespace XamarinFirebaseAuth
 
         private void searchChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
+            // search bar used to filter out babysitters or parents based on location, return results based on the search query
             SearchView search = FindViewById<SearchView>(Resource.Id.searchview);
-            search.QueryTextChange += (s, f) => babysitterAdapter.Filter.InvokeFilter(f.NewText);
-            //search.QueryTextChange += (s, f) => parentAdapter.Filter.InvokeFilter(f.NewText);
+            if (parentUser == true)
+            {
+                search.QueryTextChange += (s, f) => babysitterAdapter.Filter.InvokeFilter(f.NewText);
+            }
+            else
+            {
+                search.QueryTextChange += (s, f) => parentAdapter.Filter.InvokeFilter(f.NewText);
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

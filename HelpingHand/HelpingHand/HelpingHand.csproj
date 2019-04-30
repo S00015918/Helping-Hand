@@ -110,6 +110,7 @@
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\AppointmentDialog.cs" />
     <Compile Include="Model\BabySitter.cs" />
+    <Compile Include="Model\CancelAppointmentDialog.cs" />
     <Compile Include="Model\CreditCard.cs" />
     <Compile Include="Model\Dialogclass.cs" />
     <Compile Include="Model\IStripeServices.cs" />
@@ -617,6 +618,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CancelAppointment_fragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

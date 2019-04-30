@@ -146,6 +146,7 @@ namespace HelpingHand
             appointment.userEmail = auth.CurrentUser.Email;
             appointment.babysitterEmail = babysitterEmail;
             appointment.Babysitter = Babysitter;
+            appointment.parent = Parent;
             appointment.City = City;
             appointment.Address = Address;
             appointment.Eircode = Eircode;

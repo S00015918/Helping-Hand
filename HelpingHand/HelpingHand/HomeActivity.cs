@@ -23,6 +23,7 @@ namespace HelpingHand
 
         FirebaseAuth auth;
         GridView gridView;
+        // Display titles of each item in the gridview
         string[] gridViewString = {
             "Dashboard", "Messages",
             "Profile", "Calendar",
@@ -30,6 +31,7 @@ namespace HelpingHand
             "Cancel Appointment", "Logout"
         };
 
+        // also set an image for each of the items in the gridview
         int[] imageId = {
             Resource.Drawable.dashboard , Resource.Drawable.messages,
             Resource.Drawable.user, Resource.Drawable.calendar,
@@ -48,15 +50,11 @@ namespace HelpingHand
 
             CustomGridViewAdapter adapter = new CustomGridViewAdapter(this, gridViewString, imageId);
             gridView = FindViewById<GridView>(Resource.Id.gridView_image);
-            //gridView.Adapter = new ImageAdapter(this);
-            //gridView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
-            //{
-            //    Toast.MakeText(this, args.Position.ToString(), ToastLength.Short).Show();
-            //};
 
             gridView.SetVerticalSpacing(1);
             gridView.SetHorizontalSpacing(1);
             gridView.Adapter = adapter;
+            // depending on which item has been clicked - navigate to the corresponding item
             gridView.ItemClick += (s, e) =>
             {
                 Toast.MakeText(this, gridViewString[e.Position], ToastLength.Long).Show();
@@ -99,6 +97,7 @@ namespace HelpingHand
                 }
                 else if (clicked == 7)
                 {
+                    // Log out of the app
                     auth = FirebaseAuth.GetInstance(MainActivity.app);
                     FirebaseUser user = auth.CurrentUser;
                     auth.SignOut();

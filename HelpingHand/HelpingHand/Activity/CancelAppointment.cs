@@ -33,6 +33,7 @@ namespace HelpingHand
         string selectedUser, appointmentCreator;
         Button btnCancelAppointment;
         DateTime selectedDate;
+        bool userParent;
 
         protected async override void OnCreate(Bundle savedInstanceState)
         {
@@ -69,6 +70,8 @@ namespace HelpingHand
 
                 if (auth.CurrentUser.Email == parentEmail )
                 {
+                    // current user is a parent
+                    userParent = true;
                     if (account.Date > DateTime.Now)
                     {
                         list_appointments.Add(account);
@@ -87,6 +90,8 @@ namespace HelpingHand
                 }
                 if(auth.CurrentUser.Email == babysitterEmail)
                 {
+                    // current user is a babysitter
+                    userParent = false;
                     if (account.Date > DateTime.Now)
                     {
                         list_appointments.Add(account);
@@ -117,19 +122,34 @@ namespace HelpingHand
                 appointmentCreator = list_appointments[e.Position].userEmail;
                 selectedDate = list_appointments[e.Position].Date;
                 string selectedBabysitter = list_appointments[e.Position].Babysitter;
+                string selectedAddress = list_appointments[e.Position].Address;
+                string month = selectedDate.Month.ToString();
+                string day = selectedDate.Day.ToString();
+                string appDate = day + " " + month;
 
-                //list_data.SetBackgroundColor(Android.Graphics.Color.Beige); 
-
-                Toast.MakeText(this, selectedBabysitter + " Selected", ToastLength.Short).Show();
+                if (userParent == true)
+                {
+                    Toast.MakeText(this, selectedBabysitter + "/" + appDate + " Selected", ToastLength.Short).Show();
+                }
+                else
+                {
+                    Toast.MakeText(this, selectedAddress + "/" + appDate + " Selected", ToastLength.Short).Show();
+                }
             };
-
-            //btnCancelAppointment.ItemClick += MListView_ItemClick;
 
             btnCancelAppointment = FindViewById<Button>(Resource.Id.btnDelete);
-            btnCancelAppointment.Click += delegate
+            btnCancelAppointment.Click += (object sender, EventArgs args) =>
             {
-                DeleteAppointment();
+                FragmentTransaction transcation = FragmentManager.BeginTransaction();
+                CancelAppointmentDialog cancelAppointment = new CancelAppointmentDialog();
+                cancelAppointment.Show(transcation, "Dialog Fragment");
+                cancelAppointment.onCancelComplete += CancelAppointment_onCancelComplete;
             };
+        }
+
+        private void CancelAppointment_onCancelComplete(object sender, CancelConfirmed e)
+        {
+            DeleteAppointment();
         }
 
         private async void DeleteAppointment()
@@ -186,6 +206,7 @@ namespace HelpingHand
 
         public async void SendEmail(string subject, string body, List<string> recipients)
         {
+            // send an email to the parent and babysitter involved in the cancelled appointment
             try
             {
                 var message = new EmailMessage
